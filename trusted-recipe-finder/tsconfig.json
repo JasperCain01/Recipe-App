@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+
+    /* Strictness */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+
+    /* Interop */
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
+    /* Build behaviour — type-checking only, Vite handles the actual build */
+    "noEmit": true,
+    "skipLibCheck": true,
+
+    /* All source is now TypeScript — keep allowJs false for strict checking */
+    "allowJs": false,
+    "checkJs": false
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "api"]
+}
