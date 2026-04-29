@@ -1,24 +1,15 @@
-// Centralised style tokens and shared style functions.
-// Inline styles are kept for a few reasons:
-// 1. No build-step dependency on CSS modules / Tailwind
-// 2. Components remain fully self-contained
-// 3. Dynamic styling (chip active states, score colours) is easy
-//
-// Trade-off: no hover states, no media queries beyond JS-driven flexbox.
-// These can be added later via a real CSS file if needed.
-
 import type { CSSProperties } from "react";
 
 export const styles = {
   app: {
     minHeight: "100vh",
-    background: "#0f0f0f",
-    color: "#f5f0e8",
+    background: "#faf7f2",
+    color: "#1c1714",
     fontFamily: "Georgia, serif",
     fontSize: "14px",
   },
   header: {
-    borderBottom: "1px solid #1e1e1e",
+    borderBottom: "1px solid #ece7de",
     padding: "1.25rem 1.5rem",
     display: "flex",
     alignItems: "center",
@@ -29,13 +20,13 @@ export const styles = {
   h1: {
     margin: 0,
     fontSize: "1.35rem",
-    color: "#e8d5b0",
+    color: "#7c5c28",
     letterSpacing: "0.04em",
   },
   sub: {
     margin: "0.2rem 0 0",
     fontSize: "0.65rem",
-    color: "#444",
+    color: "#b0a898",
     letterSpacing: "0.12em",
     textTransform: "uppercase",
   },
@@ -48,22 +39,22 @@ export const styles = {
     fontSize: "0.65rem",
     letterSpacing: "0.15em",
     textTransform: "uppercase",
-    color: "#666",
+    color: "#8c8278",
     display: "block",
     marginBottom: "0.6rem",
   },
   section: { marginBottom: "1.25rem" },
   card: {
-    background: "#141414",
-    border: "1px solid #1e1e1e",
+    background: "#ffffff",
+    border: "1px solid #ece7de",
     borderRadius: "8px",
     padding: "1.5rem",
   },
   textarea: {
     width: "100%",
-    background: "#141414",
-    border: "1px solid #222",
-    color: "#f5f0e8",
+    background: "#f5f1ea",
+    border: "1px solid #ddd5c8",
+    color: "#1c1714",
     padding: "0.875rem",
     borderRadius: "6px",
     fontFamily: "inherit",
@@ -75,9 +66,9 @@ export const styles = {
   },
   input: {
     flex: 1,
-    background: "#0f0f0f",
-    border: "1px solid #222",
-    color: "#f5f0e8",
+    background: "#faf7f2",
+    border: "1px solid #ddd5c8",
+    color: "#1c1714",
     padding: "0.65rem 0.875rem",
     borderRadius: "6px",
     fontFamily: "inherit",
@@ -85,13 +76,13 @@ export const styles = {
     outline: "none",
   },
   errorBanner: {
-    background: "rgba(248,113,113,0.08)",
-    border: "1px solid rgba(248,113,113,0.25)",
+    background: "rgba(220,38,38,0.06)",
+    border: "1px solid rgba(220,38,38,0.2)",
     borderRadius: "6px",
     padding: "0.65rem 0.875rem",
     marginBottom: "0.875rem",
     fontSize: "0.8rem",
-    color: "#f87171",
+    color: "#dc2626",
   },
 } satisfies Record<string, CSSProperties>;
 
@@ -100,11 +91,11 @@ export const chipStyle = (active: boolean, accent?: string): CSSProperties => ({
   padding: "0.35rem 0.85rem",
   border: "1px solid",
   borderRadius: "20px",
-  borderColor: active ? (accent || "#e8d5b0") : "#222",
+  borderColor: active ? (accent || "#7c5c28") : "#ddd5c8",
   background: active
-    ? `rgba(${accent ? "196,169,110" : "232,213,176"},0.12)`
-    : "#141414",
-  color: active ? (accent || "#e8d5b0") : "#444",
+    ? `rgba(${accent ? "124,92,40" : "124,92,40"},0.1)`
+    : "#ffffff",
+  color: active ? (accent || "#7c5c28") : "#9c9288",
   cursor: "pointer",
   fontSize: "0.78rem",
   fontFamily: "inherit",
@@ -114,8 +105,8 @@ export const chipStyle = (active: boolean, accent?: string): CSSProperties => ({
 export const primaryBtn = (disabled: boolean): CSSProperties => ({
   width: "100%",
   padding: "0.875rem",
-  background: disabled ? "#1a1a1a" : "#e8d5b0",
-  color: disabled ? "#444" : "#0f0f0f",
+  background: disabled ? "#f0ebe2" : "#7c5c28",
+  color: disabled ? "#b0a898" : "#ffffff",
   border: "none",
   borderRadius: "6px",
   fontSize: "0.9rem",
@@ -131,9 +122,9 @@ export type ButtonVariant = "primary" | "default";
 export const smBtn = (variant: ButtonVariant): CSSProperties => ({
   padding: "0.45rem 0.9rem",
   border: "1px solid",
-  borderColor: variant === "primary" ? "#e8d5b0" : "#2a2a2a",
-  background: variant === "primary" ? "#e8d5b0" : "transparent",
-  color: variant === "primary" ? "#0f0f0f" : "#555",
+  borderColor: variant === "primary" ? "#7c5c28" : "#cfc7bc",
+  background: variant === "primary" ? "#7c5c28" : "transparent",
+  color: variant === "primary" ? "#ffffff" : "#6c6258",
   borderRadius: "6px",
   cursor: "pointer",
   fontFamily: "inherit",

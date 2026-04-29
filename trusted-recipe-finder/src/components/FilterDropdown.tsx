@@ -17,15 +17,15 @@ const panelStyle = (alignRight: boolean): React.CSSProperties => ({
   top: "calc(100% + 2px)",
   ...(alignRight ? { right: 0 } : { left: 0 }),
   zIndex: 200,
-  background: "#0f0f0f",
-  border: "1px solid #2a2a2a",
+  background: "#ffffff",
+  border: "1px solid #cfc7bc",
   borderRadius: "4px",
   minWidth: "160px",
   maxHeight: "220px",
   overflow: "hidden",
   display: "flex",
   flexDirection: "column",
-  boxShadow: "0 4px 12px rgba(0,0,0,0.6)",
+  boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
 });
 
 export default function FilterDropdown({ options, selected, onChange, alignRight = false }: Props) {
@@ -65,9 +65,9 @@ export default function FilterDropdown({ options, selected, onChange, alignRight
     : options;
 
   const triggerStyle: React.CSSProperties = {
-    background: "#0f0f0f",
-    border: `1px solid ${active ? "#c4a96e" : "#2a2a2a"}`,
-    color: active ? "#c4a96e" : "#666",
+    background: "#faf7f2",
+    border: `1px solid ${active ? "#6b4c1e" : "#cfc7bc"}`,
+    color: active ? "#6b4c1e" : "#8c8278",
     borderRadius: "4px",
     padding: "0.2rem 0.3rem",
     fontSize: "0.65rem",
@@ -103,8 +103,8 @@ export default function FilterDropdown({ options, selected, onChange, alignRight
             style={{
               background: "transparent",
               border: "none",
-              borderBottom: "1px solid #1e1e1e",
-              color: "#888",
+              borderBottom: "1px solid #ece7de",
+              color: "#9c9288",
               padding: "0.3rem 0.5rem",
               fontSize: "0.68rem",
               fontFamily: "inherit",
@@ -116,7 +116,7 @@ export default function FilterDropdown({ options, selected, onChange, alignRight
           />
           <div style={{ overflowY: "auto", flex: 1 }}>
             {filtered.length === 0 && (
-              <div style={{ padding: "0.4rem 0.5rem", color: "#333", fontSize: "0.68rem" }}>
+              <div style={{ padding: "0.4rem 0.5rem", color: "#b0a898", fontSize: "0.68rem" }}>
                 No matches
               </div>
             )}
@@ -135,11 +135,11 @@ export default function FilterDropdown({ options, selected, onChange, alignRight
                   cursor: "pointer",
                   fontFamily: "inherit",
                   fontSize: "0.72rem",
-                  color: selected.has(o.value) ? "#c4a96e" : "#555",
+                  color: selected.has(o.value) ? "#6b4c1e" : "#6c6258",
                   textAlign: "left",
                 }}
               >
-                <span style={{ width: "0.7rem", flexShrink: 0, color: "#c4a96e" }}>
+                <span style={{ width: "0.7rem", flexShrink: 0, color: "#6b4c1e" }}>
                   {selected.has(o.value) ? "✓" : ""}
                 </span>
                 {o.label}

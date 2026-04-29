@@ -24,7 +24,7 @@ export default function CupboardTab({ cupboard, onSave }: CupboardTabProps) {
   return (
     <div>
       <h2 style={{ ...styles.label, marginBottom: "0.3rem" }}>Store Cupboard</h2>
-      <p style={{ color: "#444", fontSize: "0.8rem", marginBottom: "1.25rem" }}>
+      <p style={{ color: "#9c9288", fontSize: "0.8rem", marginBottom: "1.25rem" }}>
         Always assumed present, even when not listed in your search.
       </p>
 
@@ -40,8 +40,8 @@ export default function CupboardTab({ cupboard, onSave }: CupboardTabProps) {
           onClick={addItem}
           style={{
             padding: "0.65rem 1.1rem",
-            background: "#e8d5b0",
-            color: "#0f0f0f",
+            background: "#7c5c28",
+            color: "#ffffff",
             border: "none",
             borderRadius: "6px",
             cursor: "pointer",
@@ -61,20 +61,20 @@ export default function CupboardTab({ cupboard, onSave }: CupboardTabProps) {
               display: "flex",
               alignItems: "center",
               gap: "0.4rem",
-              background: "#141414",
-              border: "1px solid #1e1e1e",
+              background: "#ffffff",
+              border: "1px solid #ece7de",
               borderRadius: "20px",
               padding: "0.3rem 0.6rem 0.3rem 0.875rem",
               fontSize: "0.8rem",
             }}
           >
-            <span style={{ color: "#bbb" }}>{item}</span>
+            <span style={{ color: "#4a4038" }}>{item}</span>
             <button
               onClick={() => onSave(cupboard.filter((i) => i !== item))}
               style={{
                 background: "none",
                 border: "none",
-                color: "#444",
+                color: "#9c9288",
                 cursor: "pointer",
                 padding: "0",
                 fontSize: "0.9rem",
@@ -93,8 +93,8 @@ export default function CupboardTab({ cupboard, onSave }: CupboardTabProps) {
           marginTop: "1.5rem",
           padding: "0.5rem 1rem",
           background: "transparent",
-          border: "1px solid #222",
-          color: "#555",
+          border: "1px solid #ddd5c8",
+          color: "#6c6258",
           borderRadius: "6px",
           cursor: "pointer",
           fontSize: "0.75rem",

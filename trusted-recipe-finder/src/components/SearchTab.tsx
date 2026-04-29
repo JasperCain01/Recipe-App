@@ -156,18 +156,18 @@ export default function SearchTab({
       <section style={styles.section}>
         <label style={styles.label}>
           Recipe Sources
-          <span style={{ color: "#2a2a2a", marginLeft: "0.5rem", fontSize: "0.6rem", textTransform: "none", letterSpacing: 0 }}>
+          <span style={{ color: "#c0b8b0", marginLeft: "0.5rem", fontSize: "0.6rem", textTransform: "none", letterSpacing: 0 }}>
             — manage in Sources tab
           </span>
         </label>
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {sources.length === 0 && (
-            <span style={{ color: "#333", fontSize: "0.8rem" }}>
+            <span style={{ color: "#9c9288", fontSize: "0.8rem" }}>
               No sources yet —{" "}
               <button
                 onClick={onGoToSourcesTab}
                 style={{
-                  background: "none", border: "none", color: "#c4a96e",
+                  background: "none", border: "none", color: "#6b4c1e",
                   cursor: "pointer", padding: 0, fontSize: "0.8rem",
                   fontFamily: "inherit", textDecoration: "underline",
                 }}
@@ -193,7 +193,7 @@ export default function SearchTab({
           })}
         </div>
         {sources.length > 0 && activeEnrichedCount === 0 && (
-          <p style={{ color: "#555", fontSize: "0.72rem", marginTop: "0.5rem" }}>
+          <p style={{ color: "#9c9288", fontSize: "0.72rem", marginTop: "0.5rem" }}>
             No enriched sources selected. Go to Sources tab and click "Enrich now" to enable ingredient matching.
           </p>
         )}
@@ -203,7 +203,7 @@ export default function SearchTab({
       <section style={styles.section}>
         <label style={styles.label}>
           Your Ingredients
-          <span style={{ color: "#2a2a2a", marginLeft: "0.5rem", fontSize: "0.6rem", textTransform: "none", letterSpacing: 0 }}>
+          <span style={{ color: "#c0b8b0", marginLeft: "0.5rem", fontSize: "0.6rem", textTransform: "none", letterSpacing: 0 }}>
             — store cupboard always included
           </span>
         </label>
@@ -227,9 +227,9 @@ export default function SearchTab({
                       style={{
                         padding: "0.35rem 0.6rem",
                         border: "1px solid",
-                        borderColor: entry.required ? "#c4a96e" : "#2a2a2a",
-                        background: entry.required ? "rgba(196,169,110,0.1)" : "transparent",
-                        color: entry.required ? "#c4a96e" : "#444",
+                        borderColor: entry.required ? "#6b4c1e" : "#cfc7bc",
+                        background: entry.required ? "rgba(124,92,40,0.1)" : "transparent",
+                        color: entry.required ? "#6b4c1e" : "#9c9288",
                         borderRadius: "4px",
                         cursor: "pointer",
                         fontFamily: "inherit",
@@ -246,9 +246,9 @@ export default function SearchTab({
                       title="Remove ingredient"
                       style={{
                         padding: "0.35rem 0.5rem",
-                        border: "1px solid #1e1e1e",
+                        border: "1px solid #ece7de",
                         background: "transparent",
-                        color: "#333",
+                        color: "#9c9288",
                         borderRadius: "4px",
                         cursor: "pointer",
                         fontFamily: "inherit",
@@ -284,7 +284,7 @@ export default function SearchTab({
               alignItems: "flex-end",
               gap: "0.75rem",
               padding: "0 1rem 0.6rem",
-              borderBottom: "1px solid #1e1e1e",
+              borderBottom: "1px solid #ece7de",
               marginBottom: "0.25rem",
             }}
           >
@@ -346,7 +346,7 @@ export default function SearchTab({
           </div>
 
           {/* Result count + clear filters */}
-          <div style={{ padding: "0.35rem 1rem 0.5rem", fontSize: "0.68rem", color: "#444", display: "flex", alignItems: "center", gap: "0.75rem" }}>
+          <div style={{ padding: "0.35rem 1rem 0.5rem", fontSize: "0.68rem", color: "#9c9288", display: "flex", alignItems: "center", gap: "0.75rem" }}>
             <span>
               {hasActiveFilter
                 ? `${filteredResults.length} of ${results.length} recipes`
@@ -357,8 +357,8 @@ export default function SearchTab({
                 onClick={clearFilters}
                 style={{
                   background: "none",
-                  border: "1px solid #2a2a2a",
-                  color: "#555",
+                  border: "1px solid #cfc7bc",
+                  color: "#6c6258",
                   borderRadius: "4px",
                   padding: "0.1rem 0.45rem",
                   fontSize: "0.62rem",
@@ -384,9 +384,9 @@ export default function SearchTab({
                     alignItems: "center",
                     gap: "0.75rem",
                     padding: "0.65rem 1rem",
-                    background: expandedIndex === i ? "#1c1c1c" : "#141414",
+                    background: expandedIndex === i ? "#f5f1ea" : "#ffffff",
                     border: "1px solid",
-                    borderColor: expandedIndex === i ? "#2a2a2a" : "#1a1a1a",
+                    borderColor: expandedIndex === i ? "#cfc7bc" : "#ece7de",
                     borderRadius: expandedIndex === i ? "6px 6px 0 0" : "6px",
                     cursor: "pointer",
                     fontFamily: "inherit",
@@ -396,7 +396,7 @@ export default function SearchTab({
                   {/* Recipe + source */}
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{
-                      color: "#e8d5b0",
+                      color: "#1c1714",
                       fontSize: "0.85rem",
                       overflow: "hidden",
                       textOverflow: "ellipsis",
@@ -405,7 +405,7 @@ export default function SearchTab({
                     }}>
                       {r.title}
                     </div>
-                    <div style={{ color: "#3a3a3a", fontSize: "0.68rem", marginTop: "0.1rem" }}>
+                    <div style={{ color: "#b0a898", fontSize: "0.68rem", marginTop: "0.1rem" }}>
                       {r.sourceEmoji} {r.source}
                     </div>
                   </div>
@@ -419,28 +419,28 @@ export default function SearchTab({
 
                   {/* Meal type */}
                   <div style={{ ...colStyle(96), flexShrink: 0 }}>
-                    <span style={{ fontSize: "0.75rem", color: r.mealType ? "#555" : "#2a2a2a" }}>
+                    <span style={{ fontSize: "0.75rem", color: r.mealType ? "#6c6258" : "#c0b8b0" }}>
                       {r.mealType ?? "Unknown"}
                     </span>
                   </div>
 
                   {/* Cuisine */}
                   <div style={{ ...colStyle(104), flexShrink: 0 }}>
-                    <span style={{ fontSize: "0.75rem", color: r.cuisine ? "#555" : "#2a2a2a" }}>
+                    <span style={{ fontSize: "0.75rem", color: r.cuisine ? "#6c6258" : "#c0b8b0" }}>
                       {r.cuisine ?? "Unknown"}
                     </span>
                   </div>
 
                   {/* Time */}
                   <div style={{ ...colStyle(88), flexShrink: 0 }}>
-                    <span style={{ fontSize: "0.75rem", color: r.totalTime ? "#555" : "#2a2a2a" }}>
+                    <span style={{ fontSize: "0.75rem", color: r.totalTime ? "#6c6258" : "#c0b8b0" }}>
                       {r.totalTime ?? "Unknown"}
                     </span>
                   </div>
 
                   {/* Steps */}
                   <div style={{ ...colStyle(96), flexShrink: 0 }}>
-                    <span style={{ fontSize: "0.75rem", color: r.instructionCount > 0 ? "#555" : "#2a2a2a" }}>
+                    <span style={{ fontSize: "0.75rem", color: r.instructionCount > 0 ? "#6c6258" : "#c0b8b0" }}>
                       {r.instructionCount > 0 ? `${r.instructionCount} steps` : "Unknown"}
                     </span>
                   </div>
@@ -448,11 +448,11 @@ export default function SearchTab({
                   {/* Missing count */}
                   <div style={{ ...colStyle(60), flexShrink: 0, textAlign: "right" }}>
                     {r.missingIngredients.length > 0 ? (
-                      <span style={{ fontSize: "0.75rem", color: "#f87171" }}>
+                      <span style={{ fontSize: "0.75rem", color: "#dc2626" }}>
                         {r.missingIngredients.length}
                       </span>
                     ) : (
-                      <span style={{ fontSize: "0.75rem", color: "#4ade80" }}>✓</span>
+                      <span style={{ fontSize: "0.75rem", color: "#16a34a" }}>✓</span>
                     )}
                   </div>
                 </button>
@@ -460,7 +460,7 @@ export default function SearchTab({
                 {/* Expanded detail */}
                 {expandedIndex === i && (
                   <div style={{
-                    border: "1px solid #2a2a2a",
+                    border: "1px solid #cfc7bc",
                     borderTop: "none",
                     borderRadius: "0 0 6px 6px",
                   }}>
@@ -471,7 +471,7 @@ export default function SearchTab({
             ))}
 
             {filteredResults.length === 0 && (
-              <p style={{ color: "#444", fontSize: "0.8rem", padding: "1rem 1rem 0" }}>
+              <p style={{ color: "#9c9288", fontSize: "0.8rem", padding: "1rem 1rem 0" }}>
                 No results match the current filters.
               </p>
             )}
