@@ -47,3 +47,32 @@ export function scoreColor(score: number): string {
   if (score >= 60) return "#facc15"; // amber
   return "#f87171"; // red
 }
+
+const MEAL_TYPE_PATTERNS: [RegExp, string][] = [
+  [/\bbreakfast\b|\bbrunch\b/i, "Breakfast"],
+  [/\bdessert\b|\bsweet treat|\bcake\b|\bcookies?\b|\bbiscuit\b|\bpudding\b|\bpie\b|\btart\b|\bpastry\b|\bmuffin\b|\bbrownie\b|\bfudge\b|\bice cream\b/i, "Dessert"],
+  [/\blunch\b|\bsandwich\b|\bwrap\b|\bpacked lunch\b/i, "Lunch"],
+  [/\bdinner\b|\bsupper\b|\bmain course\b|\bmain dish\b|\bevening meal\b/i, "Dinner"],
+  [/\bstarter\b|\bappetiz|\bcanap/i, "Starter"],
+  [/\bside dish\b|\bside\b/i, "Side"],
+  [/\bsnack\b/i, "Snack"],
+  [/\bsoup\b|\bstew\b|\bbroth\b|\bchowder\b/i, "Soup"],
+  [/\bsalad\b/i, "Salad"],
+  [/\bdrink\b|\bcocktail\b|\bsmoothie\b|\bjuice\b|\bbeverage\b/i, "Drink"],
+];
+
+/**
+ * Derive a meal type label from a recipe's category and keywords fields.
+ * Returns null if no recognisable meal type is found.
+ */
+export function deriveMealType(
+  category: string | null,
+  keywords: string | null
+): string | null {
+  const text = [category, keywords].filter(Boolean).join(" ");
+  if (!text) return null;
+  for (const [pattern, label] of MEAL_TYPE_PATTERNS) {
+    if (pattern.test(text)) return label;
+  }
+  return null;
+}

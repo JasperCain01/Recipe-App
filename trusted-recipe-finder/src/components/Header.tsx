@@ -12,7 +12,7 @@ export default function Header({ activeTab, onTabChange }: HeaderProps) {
     <header style={styles.header}>
       <div>
         <h1 style={styles.h1}>🍽 Trusted Recipe Finder</h1>
-        <p style={styles.sub}>AI Recipe Finder</p>
+        <p style={styles.sub}>Recipe Finder</p>
       </div>
       <nav style={{ display: "flex", gap: "0.25rem", flexWrap: "wrap" }}>
         {TABS.map((tab) => {
