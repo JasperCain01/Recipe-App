@@ -43,9 +43,9 @@ export function makeId(name: string): string {
  * Map a 0-100 match score to a colour for visual feedback.
  */
 export function scoreColor(score: number): string {
-  if (score >= 80) return "#16a34a";
-  if (score >= 60) return "#d97706";
-  return "#dc2626";
+  if (score >= 80) return "#2E7D32"; // Green 800
+  if (score >= 60) return "#E65100"; // Deep Orange 900
+  return "#C62828"; // Red 800
 }
 
 const MEAL_TYPE_PATTERNS: [RegExp, string][] = [

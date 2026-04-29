@@ -21,12 +21,12 @@ export default function RecipeCard({ result: r }: RecipeCardProps) {
         }}
       >
         <div style={{ flex: 1 }}>
-          <h3 style={{ margin: "0 0 0.3rem", fontSize: "1.1rem", color: "#1c1714" }}>
+          <h3 style={{ margin: "0 0 0.3rem", fontSize: "1.1rem", color: "#212121" }}>
             <a
               href={r.sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "#7c5c28", textDecoration: "none" }}
+              style={{ color: "#5D4037", textDecoration: "none" }}
             >
               {r.title} ↗
             </a>
@@ -76,8 +76,8 @@ export default function RecipeCard({ result: r }: RecipeCardProps) {
       {r.missingIngredients.length > 0 && (
         <div
           style={{
-            background: "rgba(220,38,38,0.05)",
-            border: "1px solid rgba(220,38,38,0.15)",
+            background: "rgba(176,0,32,0.06)",
+            border: "1px solid rgba(176,0,32,0.2)",
             borderRadius: "5px",
             padding: "0.6rem 0.875rem",
             marginBottom: "1.25rem",
@@ -86,14 +86,14 @@ export default function RecipeCard({ result: r }: RecipeCardProps) {
           <span
             style={{
               fontSize: "0.68rem",
-              color: "#dc2626",
+              color: "#B00020",
               letterSpacing: "0.08em",
               textTransform: "uppercase",
             }}
           >
             You'll need:{" "}
           </span>
-          <span style={{ fontSize: "0.8rem", color: "#4a4038" }}>
+          <span style={{ fontSize: "0.8rem", color: "#212121" }}>
             {r.missingIngredients.join(" · ")}
           </span>
         </div>
@@ -109,9 +109,9 @@ export default function RecipeCard({ result: r }: RecipeCardProps) {
               key={i}
               style={{
                 padding: "0.3rem 0",
-                borderBottom: "1px solid #ece7de",
+                borderBottom: "1px solid #E0E0E0",
                 fontSize: "0.8rem",
-                color: isMissing ? "#dc2626" : "#4a4038",
+                color: isMissing ? "#B00020" : "#212121",
                 lineHeight: "1.5",
               }}
             >
@@ -129,8 +129,8 @@ export default function RecipeCard({ result: r }: RecipeCardProps) {
         style={{
           display: "inline-block",
           padding: "0.55rem 1.1rem",
-          background: "#7c5c28",
-          color: "#ffffff",
+          background: "#5D4037",
+          color: "#FFFFFF",
           borderRadius: "6px",
           fontSize: "0.8rem",
           fontWeight: "600",
@@ -145,5 +145,5 @@ export default function RecipeCard({ result: r }: RecipeCardProps) {
 }
 
 function Meta({ children }: { children: React.ReactNode }) {
-  return <span style={{ color: "#6c6258", fontSize: "0.75rem" }}>{children}</span>;
+  return <span style={{ color: "#757575", fontSize: "0.75rem" }}>{children}</span>;
 }

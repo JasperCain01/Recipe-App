@@ -24,9 +24,9 @@ export default function Header({ activeTab, onTabChange }: HeaderProps) {
               style={{
                 padding: "0.4rem 0.875rem",
                 border: "1px solid",
-                borderColor: active ? "#7c5c28" : "#ddd5c8",
-                background: active ? "#7c5c28" : "transparent",
-                color: active ? "#ffffff" : "#6c6258",
+                borderColor: active ? "#FFFFFF" : "rgba(255,255,255,0.35)",
+                background: active ? "rgba(255,255,255,0.18)" : "transparent",
+                color: active ? "#FFFFFF" : "rgba(255,255,255,0.65)",
                 borderRadius: "4px",
                 cursor: "pointer",
                 fontSize: "0.72rem",

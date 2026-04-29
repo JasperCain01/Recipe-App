@@ -46,7 +46,7 @@ export default function SourcesTab({
   return (
     <div>
       <h2 style={{ ...styles.label, marginBottom: "0.3rem" }}>Recipe Sources</h2>
-      <p style={{ color: "#9c9288", fontSize: "0.8rem", marginBottom: "1.5rem" }}>
+      <p style={{ color: "#757575", fontSize: "0.8rem", marginBottom: "1.5rem" }}>
         Add any recipe website. Indexing builds a URL list; enriching fetches ingredients so you can search by what you have.
       </p>
 
@@ -80,16 +80,16 @@ export default function SourcesTab({
           </button>
         </div>
         {sourceError && (
-          <p style={{ color: "#dc2626", fontSize: "0.75rem", marginTop: "0.6rem", marginBottom: 0 }}>
+          <p style={{ color: "#B00020", fontSize: "0.75rem", marginTop: "0.6rem", marginBottom: 0 }}>
             ⚠ {sourceError}
           </p>
         )}
         {sourceSuccess && (
-          <p style={{ color: "#16a34a", fontSize: "0.75rem", marginTop: "0.6rem", marginBottom: 0 }}>
+          <p style={{ color: "#2E7D32", fontSize: "0.75rem", marginTop: "0.6rem", marginBottom: 0 }}>
             {sourceSuccess}
           </p>
         )}
-        <p style={{ color: "#c0b8b0", fontSize: "0.7rem", marginTop: "0.75rem", marginBottom: 0 }}>
+        <p style={{ color: "#9E9E9E", fontSize: "0.7rem", marginTop: "0.75rem", marginBottom: 0 }}>
           An emoji is auto-assigned based on the site name. URLs are normalised to root domain.
         </p>
       </div>
@@ -107,8 +107,8 @@ export default function SourcesTab({
             <div
               key={src.id}
               style={{
-                background: "#ffffff",
-                border: "1px solid #ece7de",
+                background: "#FFFFFF",
+                border: "1px solid #E0E0E0",
                 borderRadius: "8px",
                 padding: "0.75rem 1rem",
               }}
@@ -118,13 +118,13 @@ export default function SourcesTab({
                 <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", flex: 1, minWidth: 0 }}>
                   <span style={{ fontSize: "1.25rem", flexShrink: 0 }}>{src.emoji}</span>
                   <div style={{ minWidth: 0 }}>
-                    <div style={{ color: "#1c1714", fontSize: "0.88rem", marginBottom: "0.1rem" }}>{src.name}</div>
+                    <div style={{ color: "#212121", fontSize: "0.88rem", marginBottom: "0.1rem" }}>{src.name}</div>
                     <a
                       href={src.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{
-                        color: "#b0a898",
+                        color: "#9E9E9E",
                         fontSize: "0.72rem",
                         textDecoration: "none",
                         overflow: "hidden",
@@ -149,8 +149,8 @@ export default function SourcesTab({
                     title="Remove source"
                     style={{
                       background: "none",
-                      border: "1px solid #cfc7bc",
-                      color: "#6c6258",
+                      border: "1px solid #E0E0E0",
+                      color: "#757575",
                       borderRadius: "6px",
                       cursor: "pointer",
                       padding: "0.35rem 0.6rem",
@@ -168,7 +168,7 @@ export default function SourcesTab({
                 style={{
                   marginTop: "0.6rem",
                   paddingTop: "0.6rem",
-                  borderTop: "1px solid #ece7de",
+                  borderTop: "1px solid #E0E0E0",
                   display: "flex",
                   flexDirection: "column",
                   gap: "0.45rem",
@@ -177,15 +177,15 @@ export default function SourcesTab({
                 {/* Index status */}
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                   <span style={{ fontSize: "0.7rem" }}>
-                    {isIndexing && <span style={{ color: "#d97706" }}>⏳ Indexing recipes…</span>}
+                    {isIndexing && <span style={{ color: "#FF8F00" }}>⏳ Indexing recipes…</span>}
                     {!isIndexing && hasIndex && (
-                      <span style={{ color: "#16a34a" }}>
+                      <span style={{ color: "#2E7D32" }}>
                         ✓ {src.indexCount} recipes indexed
                         {src.indexedAt && ` · ${new Date(src.indexedAt).toLocaleDateString()}`}
                       </span>
                     )}
                     {!isIndexing && !hasIndex && (
-                      <span style={{ color: "#9c9288" }}>No index yet</span>
+                      <span style={{ color: "#9E9E9E" }}>No index yet</span>
                     )}
                   </span>
                   {!isIndexing && (
@@ -202,21 +202,21 @@ export default function SourcesTab({
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                   <span style={{ fontSize: "0.7rem" }}>
                     {isEnriching && (
-                      <span style={{ color: "#d97706" }}>
+                      <span style={{ color: "#FF8F00" }}>
                         ⏳ Enriching {enrichProgress.done}/{enrichProgress.total} recipes…
                       </span>
                     )}
                     {!isEnriching && hasEnriched && (
-                      <span style={{ color: "#16a34a" }}>
+                      <span style={{ color: "#2E7D32" }}>
                         ✓ {src.enrichedCount}/{src.indexCount} recipes enriched
                         {src.enrichedAt && ` · ${new Date(src.enrichedAt).toLocaleDateString()}`}
                       </span>
                     )}
                     {!isEnriching && !hasEnriched && hasIndex && (
-                      <span style={{ color: "#6c6258" }}>Not enriched — ingredient search unavailable</span>
+                      <span style={{ color: "#757575" }}>Not enriched — ingredient search unavailable</span>
                     )}
                     {!isEnriching && !hasIndex && (
-                      <span style={{ color: "#c0b8b0" }}>Index first to enable enrichment</span>
+                      <span style={{ color: "#9E9E9E" }}>Index first to enable enrichment</span>
                     )}
                   </span>
                   {!isEnriching && hasIndex && (
@@ -226,8 +226,8 @@ export default function SourcesTab({
                         ...smBtn("default"),
                         fontSize: "0.68rem",
                         padding: "0.3rem 0.6rem",
-                        borderColor: hasEnriched ? "#cfc7bc" : "#6b4c1e",
-                        color: hasEnriched ? "#6c6258" : "#6b4c1e",
+                        borderColor: hasEnriched ? "#E0E0E0" : "#5D4037",
+                        color: hasEnriched ? "#757575" : "#5D4037",
                       }}
                     >
                       {hasEnriched ? "Re-enrich" : "Enrich now"}
@@ -240,7 +240,7 @@ export default function SourcesTab({
                   <div
                     style={{
                       height: "3px",
-                      background: "#ece7de",
+                      background: "#E0E0E0",
                       borderRadius: "2px",
                       overflow: "hidden",
                     }}
@@ -249,7 +249,7 @@ export default function SourcesTab({
                       style={{
                         height: "100%",
                         width: `${(enrichProgress.done / enrichProgress.total) * 100}%`,
-                        background: "#7c5c28",
+                        background: "#5D4037",
                         borderRadius: "2px",
                         transition: "width 0.3s ease",
                       }}
@@ -266,12 +266,12 @@ export default function SourcesTab({
             style={{
               textAlign: "center",
               padding: "2.5rem 1rem",
-              border: "1px dashed #ddd5c8",
+              border: "1px dashed #E0E0E0",
               borderRadius: "8px",
             }}
           >
-            <p style={{ color: "#9c9288", fontSize: "0.85rem", margin: "0 0 0.4rem" }}>No sources added yet.</p>
-            <p style={{ color: "#c0b8b0", fontSize: "0.75rem", margin: 0 }}>
+            <p style={{ color: "#757575", fontSize: "0.85rem", margin: "0 0 0.4rem" }}>No sources added yet.</p>
+            <p style={{ color: "#9E9E9E", fontSize: "0.75rem", margin: 0 }}>
               Add a website above to get started — try RecipeTin Eats or BBC Good Food.
             </p>
           </div>
