@@ -9,7 +9,7 @@ import Header from "./components/Header";
 import SearchTab from "./components/SearchTab";
 import SourcesTab from "./components/SourcesTab";
 import CupboardTab from "./components/CupboardTab";
-import type { EnrichedEntry, SearchResult, Source, Tab } from "./lib/types";
+import type { EnrichedEntry, IngredientEntry, SearchResult, Source, Tab } from "./lib/types";
 
 // How many recipe pages to fetch simultaneously during enrichment
 const ENRICH_CONCURRENCY = 5;
@@ -27,7 +27,6 @@ function parseTimeToMinutes(timeStr: string | null): number | null {
 
 export default function App() {
   // ── Search state ──────────────────────────────────────────────────────────
-  const [ingredients, setIngredients] = useState<string>("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [error, setError] = useState<string>("");
 
@@ -282,10 +281,10 @@ export default function App() {
   };
 
   // ── Search ────────────────────────────────────────────────────────────────
-  const handleSearch = (): void => {
+  const handleSearch = (entries: IngredientEntry[]): void => {
     setError("");
-    if (!ingredients.trim()) {
-      setError("Please enter some ingredients.");
+    if (entries.length === 0) {
+      setError("Please enter at least one ingredient.");
       return;
     }
     const activeEnrichedSources = sources.filter(
@@ -297,7 +296,7 @@ export default function App() {
       );
       return;
     }
-    const found = searchRecipes(ingredients, cupboard, sources, selectedSources);
+    const found = searchRecipes(entries, cupboard, sources, selectedSources);
     setResults(found);
     if (found.length === 0) {
       setError("No matches found above 25%. Try fewer or more general ingredients.");
@@ -314,8 +313,6 @@ export default function App() {
             sources={sources}
             selectedSources={selectedSources}
             onToggleSource={toggleSource}
-            ingredients={ingredients}
-            onIngredientsChange={setIngredients}
             error={error}
             onSearch={handleSearch}
             results={results}

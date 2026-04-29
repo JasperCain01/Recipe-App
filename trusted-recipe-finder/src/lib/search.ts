@@ -1,7 +1,7 @@
 // Local ingredient-matching search — no AI required.
 // All computation is in-memory over the enriched index stored in IndexedDB.
 
-import type { Source, SearchResult } from "./types";
+import type { Source, SearchResult, IngredientEntry } from "./types";
 
 // ─── Text normalisation ──────────────────────────────────────────────────────
 
@@ -67,17 +67,13 @@ function normTokens(tokens: string[]): Set<string> {
 
 /**
  * Build the normalised token set for the user's available ingredients
- * (their entered ingredients plus their store cupboard).
+ * (their entered ingredient texts plus their store cupboard).
  */
 export function buildAvailableTokens(
-  ingredientsText: string,
+  ingredientTexts: string[],
   cupboard: string[]
 ): Set<string> {
-  const lines = [
-    ...ingredientsText.split(/[,\n]+/).map((s) => s.trim()).filter(Boolean),
-    ...cupboard,
-  ];
-  return normTokens(lines.flatMap(tokenise));
+  return normTokens([...ingredientTexts, ...cupboard].flatMap(tokenise));
 }
 
 /**
@@ -87,13 +83,19 @@ export function buildAvailableTokens(
  * handled client-side in the results table.
  */
 export function searchRecipes(
-  ingredientsText: string,
+  entries: IngredientEntry[],
   cupboard: string[],
   sources: Source[],
   selectedSourceIds: string[],
   minScore = 25
 ): SearchResult[] {
-  const available = buildAvailableTokens(ingredientsText, cupboard);
+  const available = buildAvailableTokens(entries.map((e) => e.text), cupboard);
+
+  // Token sets for required ingredients — every recipe must match all of them
+  const requiredSets = entries
+    .filter((e) => e.required && e.text.trim())
+    .map((e) => normTokens(tokenise(e.text)));
+
   const results: SearchResult[] = [];
 
   for (const source of sources) {
@@ -102,6 +104,17 @@ export function searchRecipes(
 
     for (const recipe of source.enrichedIndex) {
       if (recipe.ingredients.length === 0) continue;
+
+      // Drop recipe if it doesn't contain every required ingredient
+      if (requiredSets.length > 0) {
+        const meetsRequired = requiredSets.every((reqTokens) =>
+          recipe.ingredients.some((line) => {
+            const lineTokens = normTokens(tokenise(line));
+            return [...reqTokens].some((t) => lineTokens.has(t));
+          })
+        );
+        if (!meetsRequired) continue;
+      }
 
       const matched: string[] = [];
       const missing: string[] = [];

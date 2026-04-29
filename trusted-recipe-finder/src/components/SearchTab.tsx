@@ -1,18 +1,16 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { styles, chipStyle, primaryBtn } from "../lib/styles";
 import { scoreColor } from "../lib/utils";
 import RecipeCard from "./RecipeCard";
 import FilterDropdown, { type FilterOption } from "./FilterDropdown";
-import type { SearchResult, Source } from "../lib/types";
+import type { IngredientEntry, SearchResult, Source } from "../lib/types";
 
 interface SearchTabProps {
   sources: Source[];
   selectedSources: string[];
   onToggleSource: (id: string) => void;
-  ingredients: string;
-  onIngredientsChange: (value: string) => void;
   error: string;
-  onSearch: () => void;
+  onSearch: (entries: IngredientEntry[]) => void;
   results: SearchResult[];
   onGoToSourcesTab: () => void;
 }
@@ -40,14 +38,46 @@ export default function SearchTab({
   sources,
   selectedSources,
   onToggleSource,
-  ingredients,
-  onIngredientsChange,
   error,
   onSearch,
   results,
   onGoToSourcesTab,
 }: SearchTabProps) {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  // ── Ingredient entries ───────────────────────────────────────────────────
+  const nextId = useRef(1);
+  const newEntry = (text = "", required = true): IngredientEntry => ({
+    id: String(nextId.current++),
+    text,
+    required,
+  });
+  const [entries, setEntries] = useState<IngredientEntry[]>([{ id: "0", text: "", required: true }]);
+
+  const handleIngredientChange = (index: number, text: string) => {
+    setEntries((prev) => {
+      const next = prev.map((e, i) => (i === index ? { ...e, text } : e));
+      if (next[next.length - 1].text.trim()) next.push(newEntry());
+      return next;
+    });
+  };
+
+  const toggleRequired = (index: number) => {
+    setEntries((prev) => prev.map((e, i) => (i === index ? { ...e, required: !e.required } : e)));
+  };
+
+  const removeEntry = (index: number) => {
+    setEntries((prev) => {
+      const next = prev.filter((_, i) => i !== index);
+      if (next.length === 0 || next[next.length - 1].text.trim()) next.push(newEntry());
+      return next;
+    });
+  };
+
+  const handleSearch = () => {
+    const filled = entries.filter((e) => e.text.trim());
+    onSearch(filled);
+  };
   const [timeFilters, setTimeFilters] = useState<Set<string>>(new Set());
   const [complexityFilters, setComplexityFilters] = useState<Set<string>>(new Set());
   const [mealTypeFilters, setMealTypeFilters] = useState<Set<string>>(new Set());
@@ -177,18 +207,69 @@ export default function SearchTab({
             — store cupboard always included
           </span>
         </label>
-        <textarea
-          value={ingredients}
-          onChange={(e) => onIngredientsChange(e.target.value)}
-          placeholder="e.g. chicken thighs, cherry tomatoes, courgette, fresh basil…"
-          rows={3}
-          style={styles.textarea}
-        />
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+          {entries.map((entry, i) => {
+            const isTrailing = i === entries.length - 1 && !entry.text.trim();
+            return (
+              <div key={entry.id} style={{ display: "flex", gap: "0.4rem", alignItems: "center" }}>
+                <input
+                  type="text"
+                  value={entry.text}
+                  onChange={(e) => handleIngredientChange(i, e.target.value)}
+                  placeholder={isTrailing ? "Add ingredient…" : ""}
+                  style={styles.input}
+                />
+                {!isTrailing && (
+                  <>
+                    <button
+                      onClick={() => toggleRequired(i)}
+                      title={entry.required ? "This ingredient is required — click to make optional" : "This ingredient is optional — click to require it"}
+                      style={{
+                        padding: "0.35rem 0.6rem",
+                        border: "1px solid",
+                        borderColor: entry.required ? "#c4a96e" : "#2a2a2a",
+                        background: entry.required ? "rgba(196,169,110,0.1)" : "transparent",
+                        color: entry.required ? "#c4a96e" : "#444",
+                        borderRadius: "4px",
+                        cursor: "pointer",
+                        fontFamily: "inherit",
+                        fontSize: "0.65rem",
+                        whiteSpace: "nowrap",
+                        minWidth: "68px",
+                        textAlign: "center",
+                      }}
+                    >
+                      {entry.required ? "Required" : "Optional"}
+                    </button>
+                    <button
+                      onClick={() => removeEntry(i)}
+                      title="Remove ingredient"
+                      style={{
+                        padding: "0.35rem 0.5rem",
+                        border: "1px solid #1e1e1e",
+                        background: "transparent",
+                        color: "#333",
+                        borderRadius: "4px",
+                        cursor: "pointer",
+                        fontFamily: "inherit",
+                        fontSize: "0.8rem",
+                        lineHeight: 1,
+                        flexShrink: 0,
+                      }}
+                    >
+                      ×
+                    </button>
+                  </>
+                )}
+              </div>
+            );
+          })}
+        </div>
       </section>
 
       {error && <div style={styles.errorBanner}>{error}</div>}
 
-      <button onClick={onSearch} style={primaryBtn(false)}>
+      <button onClick={handleSearch} style={primaryBtn(false)}>
         Search Recipes →
       </button>
 

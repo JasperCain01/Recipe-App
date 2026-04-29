@@ -1,5 +1,15 @@
 // Domain types shared across the app.
 
+// ─── Ingredient entries ──────────────────────────────────────────────────────
+
+/** A single ingredient the user has entered, with a required/optional toggle. */
+export interface IngredientEntry {
+  id: string;
+  text: string;
+  /** If true, the recipe must contain this ingredient to appear in results. */
+  required: boolean;
+}
+
 // ─── Recipe sources ─────────────────────────────────────────────────────────
 
 /** A single entry in a source's lightweight URL index. */
