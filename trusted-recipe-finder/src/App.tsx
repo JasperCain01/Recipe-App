@@ -1,68 +1,62 @@
 import { useState, useEffect, useRef } from "react";
 import { styles } from "./lib/styles";
-import { PROVIDERS, CUISINE_OPTIONS, DEFAULT_CUPBOARD } from "./lib/constants";
-import { pickEmoji, normaliseUrl, makeId } from "./lib/utils";
+import { DEFAULT_CUPBOARD } from "./lib/constants";
+import { pickEmoji, normaliseUrl, makeId, deriveMealType } from "./lib/utils";
 import { storage } from "./lib/storage";
-import { indexSource, getSuggestions, fetchRecipe } from "./lib/api";
+import { indexSource, fetchRecipe } from "./lib/api";
+import { searchRecipes } from "./lib/search";
 import Header from "./components/Header";
 import SearchTab from "./components/SearchTab";
 import SourcesTab from "./components/SourcesTab";
 import CupboardTab from "./components/CupboardTab";
-import SettingsTab from "./components/SettingsTab";
-import type { ApiKeys, ProviderId, Recipe, Source, Tab } from "./lib/types";
+import type { EnrichedEntry, IngredientEntry, SearchResult, Source, Tab } from "./lib/types";
+
+// How many recipe pages to fetch simultaneously during enrichment
+const ENRICH_CONCURRENCY = 5;
+// Polite delay (ms) between enrichment batches
+const ENRICH_DELAY_MS = 300;
+
+/** Parse the human-readable time string produced by fetch-recipe into minutes. */
+function parseTimeToMinutes(timeStr: string | null): number | null {
+  if (!timeStr) return null;
+  const h = timeStr.match(/(\d+)\s*h/);
+  const m = timeStr.match(/(\d+)\s*m/);
+  const total = (h ? parseInt(h[1]) * 60 : 0) + (m ? parseInt(m[1]) : 0);
+  return total > 0 ? total : null;
+}
 
 export default function App() {
-  // ── Search state ────────────────────────────────────────────────────────
-  const [ingredients, setIngredients] = useState<string>("");
-  const [selectedCuisines, setSelectedCuisines] = useState<string[]>([...CUISINE_OPTIONS]);
-  const [recipes, setRecipes] = useState<Recipe[]>([]);
-  const [loading, setLoading] = useState<boolean>(false);
+  // ── Search state ──────────────────────────────────────────────────────────
+  const [results, setResults] = useState<SearchResult[]>([]);
   const [error, setError] = useState<string>("");
-  const [expandedRecipe, setExpandedRecipe] = useState<number | null>(null);
-  const [verifying, setVerifying] = useState<Set<number>>(new Set());
 
-  // ── Source state ────────────────────────────────────────────────────────
+  // ── Source state ──────────────────────────────────────────────────────────
   const [sources, setSources] = useState<Source[]>([]);
   const [selectedSources, setSelectedSources] = useState<string[]>([]);
   const [newSourceName, setNewSourceName] = useState<string>("");
   const [newSourceUrl, setNewSourceUrl] = useState<string>("");
   const [sourceError, setSourceError] = useState<string>("");
   const [sourceSuccess, setSourceSuccess] = useState<string>("");
-  /** id of source currently being indexed, or null if none */
   const [indexing, setIndexing] = useState<string | null>(null);
+  const [enriching, setEnriching] = useState<string | null>(null);
+  const [enrichProgress, setEnrichProgress] = useState<{ done: number; total: number }>({
+    done: 0,
+    total: 0,
+  });
+  const [sourcesLoaded, setSourcesLoaded] = useState<boolean>(false);
   const clearMessagesTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // ── Cupboard state ──────────────────────────────────────────────────────
+  // ── Cupboard state ────────────────────────────────────────────────────────
   const [cupboard, setCupboard] = useState<string[]>(DEFAULT_CUPBOARD);
 
-  // ── Settings state ──────────────────────────────────────────────────────
-  const [provider, setProvider] = useState<ProviderId>("anthropic");
-  const [model, setModel] = useState<string>(PROVIDERS[0].models[0].id);
-  const [apiKeys, setApiKeys] = useState<ApiKeys>({});
-
-  // ── UI state ────────────────────────────────────────────────────────────
+  // ── UI state ──────────────────────────────────────────────────────────────
   const [activeTab, setActiveTab] = useState<Tab>("search");
-  /** Gates source-mutating actions until the IndexedDB load completes */
-  const [sourcesLoaded, setSourcesLoaded] = useState<boolean>(false);
 
-  // ── Helpers ─────────────────────────────────────────────────────────────
-  /** Narrow an unknown string to a valid ProviderId, or fall back to anthropic */
-  const asProviderId = (id: string | null): ProviderId => {
-    if (id === "anthropic" || id === "openai") return id;
-    return "anthropic";
-  };
-
-  /** Extract a useful message from an unknown thrown value (TS strict catch). */
-  const errorMessage = (e: unknown): string =>
-    e instanceof Error ? e.message : String(e);
-
-  // ── Load persisted state on mount ───────────────────────────────────────
+  // ── Load persisted state on mount ─────────────────────────────────────────
   useEffect(() => {
     const cup = storage.loadCupboard();
     if (cup) setCupboard(cup);
 
-    // Sources are async — load them and update state when ready.
-    // The sourcesLoaded flag prevents user actions from racing with the load.
     storage.loadSources().then((src) => {
       if (src && src.length > 0) {
         setSources(src);
@@ -70,22 +64,8 @@ export default function App() {
       }
       setSourcesLoaded(true);
     });
-
-    setApiKeys(storage.loadApiKeys());
-
-    const savedProviderRaw = storage.loadProvider();
-    if (savedProviderRaw) {
-      const savedProvider = asProviderId(savedProviderRaw);
-      const providerObj = PROVIDERS.find((p) => p.id === savedProvider);
-      if (providerObj) {
-        setProvider(savedProvider);
-        const savedModel = storage.loadModel(savedProvider);
-        setModel(savedModel ?? providerObj.models[0].id);
-      }
-    }
   }, []);
 
-  // ── Cleanup setTimeout on unmount ───────────────────────────────────────
   useEffect(
     () => () => {
       if (clearMessagesTimerRef.current) clearTimeout(clearMessagesTimerRef.current);
@@ -93,7 +73,10 @@ export default function App() {
     [],
   );
 
-  // ── Helpers ─────────────────────────────────────────────────────────────
+  // ── Helpers ───────────────────────────────────────────────────────────────
+  const errorMessage = (e: unknown): string =>
+    e instanceof Error ? e.message : String(e);
+
   const scheduleClearMessages = (): void => {
     if (clearMessagesTimerRef.current) clearTimeout(clearMessagesTimerRef.current);
     clearMessagesTimerRef.current = setTimeout(() => {
@@ -110,7 +93,7 @@ export default function App() {
     storage.saveCupboard(items);
   };
 
-  // ── Sources ─────────────────────────────────────────────────────────────
+  // ── Sources ───────────────────────────────────────────────────────────────
   const addSource = async (): Promise<void> => {
     setSourceError("");
     setSourceSuccess("");
@@ -149,8 +132,11 @@ export default function App() {
       emoji: pickEmoji(newSourceName),
       active: true,
       index: null,
+      enrichedIndex: null,
       indexedAt: null,
       indexCount: 0,
+      enrichedCount: 0,
+      enrichedAt: null,
     };
     setNewSourceName("");
     setNewSourceUrl("");
@@ -174,7 +160,7 @@ export default function App() {
         persistSources(next);
         return next;
       });
-      setSourceSuccess(`✓ "${newSrc.name}" added — ${data.count} recipes indexed.`);
+      setSourceSuccess(`✓ "${newSrc.name}" added — ${data.count} recipes indexed. Click "Enrich now" to enable ingredient search.`);
     } catch (err) {
       setSourceError(
         `"${newSrc.name}" added but indexing failed: ${errorMessage(err)}. You can re-index from the source list.`,
@@ -211,6 +197,70 @@ export default function App() {
     }
   };
 
+  const enrichSource = async (id: string): Promise<void> => {
+    const src = sources.find((s) => s.id === id);
+    if (!src || !src.index || src.index.length === 0) return;
+
+    setEnriching(id);
+    setEnrichProgress({ done: 0, total: src.index.length });
+
+    const enriched: EnrichedEntry[] = [];
+    const urls = src.index;
+
+    for (let i = 0; i < urls.length; i += ENRICH_CONCURRENCY) {
+      const batch = urls.slice(i, i + ENRICH_CONCURRENCY);
+      const settled = await Promise.allSettled(batch.map((entry) => fetchRecipe(entry.url)));
+
+      settled.forEach((result, j) => {
+        if (result.status === "fulfilled" && result.value.ingredients.length > 0) {
+          const data = result.value;
+          enriched.push({
+            title: batch[j].title,
+            url: batch[j].url,
+            ingredients: data.ingredients,
+            cuisine: data.cuisine,
+            mealType: deriveMealType(data.category, data.keywords),
+            totalTime: data.totalTime,
+            totalTimeMinutes: parseTimeToMinutes(data.totalTime),
+            servings: data.servings,
+            image: data.image,
+            instructionCount: data.instructions.length,
+          });
+        }
+      });
+
+      const done = Math.min(i + ENRICH_CONCURRENCY, urls.length);
+      setEnrichProgress({ done, total: urls.length });
+
+      // Save progress every 10 batches (50 recipes) so data isn't lost on close
+      if (enriched.length > 0 && (i / ENRICH_CONCURRENCY) % 10 === 9) {
+        setSources((prev) => {
+          const next = prev.map((s) =>
+            s.id === id ? { ...s, enrichedIndex: [...enriched], enrichedCount: enriched.length } : s,
+          );
+          persistSources(next);
+          return next;
+        });
+      }
+
+      if (i + ENRICH_CONCURRENCY < urls.length) {
+        await new Promise((r) => setTimeout(r, ENRICH_DELAY_MS));
+      }
+    }
+
+    const enrichedAt = new Date().toISOString();
+    setSources((prev) => {
+      const next = prev.map((s) =>
+        s.id === id
+          ? { ...s, enrichedIndex: enriched, enrichedCount: enriched.length, enrichedAt }
+          : s,
+      );
+      persistSources(next);
+      return next;
+    });
+    setEnriching(null);
+  };
+
   const removeSource = (id: string): void => {
     setSources((prev) => {
       const next = prev.filter((s) => s.id !== id);
@@ -230,138 +280,30 @@ export default function App() {
     setSelectedSources((p) => (nowActive ? [...p, id] : p.filter((s) => s !== id)));
   };
 
-  // ── Cuisines ────────────────────────────────────────────────────────────
-  const toggleCuisine = (c: string): void =>
-    setSelectedCuisines((p) => (p.includes(c) ? p.filter((x) => x !== c) : [...p, c]));
-
-  // ── Settings ────────────────────────────────────────────────────────────
-  const changeProvider = (newProviderId: ProviderId): void => {
-    setProvider(newProviderId);
-    storage.saveProvider(newProviderId);
-    const providerObj = PROVIDERS.find((p) => p.id === newProviderId);
-    if (!providerObj) return;
-    const savedModel = storage.loadModel(newProviderId);
-    setModel(savedModel ?? providerObj.models[0].id);
-  };
-
-  const changeModel = (newModelId: string): void => {
-    setModel(newModelId);
-    storage.saveModel(provider, newModelId);
-  };
-
-  const saveApiKey = (providerId: ProviderId, key: string): void => {
-    const updated: ApiKeys = { ...apiKeys, [providerId]: key };
-    setApiKeys(updated);
-    storage.saveApiKeys(updated);
-  };
-
-  // ── Find recipes ────────────────────────────────────────────────────────
-  const findRecipes = async (): Promise<void> => {
-    const currentKey = apiKeys[provider];
-    if (!ingredients.trim()) {
-      setError("Please enter some ingredients.");
-      return;
-    }
-    if (!selectedSources.length) {
-      setError("Select at least one source.");
-      return;
-    }
-    if (!selectedCuisines.length) {
-      setError("Select at least one cuisine.");
-      return;
-    }
-    if (!currentKey || !currentKey.trim()) {
-      const providerName = PROVIDERS.find((p) => p.id === provider)?.name ?? provider;
-      setError(`Add your ${providerName} API key in Settings.`);
-      return;
-    }
-
-    setLoading(true);
+  // ── Search ────────────────────────────────────────────────────────────────
+  const handleSearch = (entries: IngredientEntry[]): void => {
     setError("");
-    setRecipes([]);
-
-    const activeSources = selectedSources
-      .map((id) => sources.find((s) => s.id === id))
-      .filter((s): s is Source => Boolean(s))
-      .map((s) => ({ name: s.name, url: s.url, index: s.index ?? [] }));
-
-    try {
-      const data = await getSuggestions({
-        provider,
-        apiKey: currentKey,
-        model,
-        ingredients,
-        cupboard,
-        sources: activeSources,
-        cuisines: selectedCuisines,
-      });
-
-      const suggested = data.recipes ?? [];
-      setRecipes(suggested);
-      setExpandedRecipe(suggested.length ? 0 : null);
-      setLoading(false);
-
-      if (!suggested.length) {
-        setError("No good matches found. Try different ingredients or add more recipe sources.");
-        return;
-      }
-
-      // Verify each suggestion against its real source page in parallel
-      const indexes = new Set(suggested.map((_, i) => i));
-      setVerifying(indexes);
-
-      await Promise.all(
-        suggested.map(async (r, i) => {
-          if (!r.sourceUrl) {
-            setVerifying((prev) => {
-              const n = new Set(prev);
-              n.delete(i);
-              return n;
-            });
-            return;
-          }
-          try {
-            const real = await fetchRecipe(r.sourceUrl);
-            setRecipes((prev) =>
-              prev.map((recipe, idx) =>
-                idx === i
-                  ? {
-                      ...recipe,
-                      verified: true,
-                      title: real.title || recipe.title,
-                      totalTime: real.totalTime ?? recipe.totalTime,
-                      servings: real.servings ?? null,
-                      image: real.image ?? null,
-                      ingredients: real.ingredients.map((ing) => ({ name: ing, amount: "" })),
-                      ingredientsRaw: real.ingredients,
-                      instructions:
-                        real.instructions.length > 0 ? real.instructions : recipe.instructions,
-                    }
-                  : recipe,
-              ),
-            );
-          } catch {
-            setRecipes((prev) =>
-              prev.map((recipe, idx) =>
-                idx === i ? { ...recipe, verified: false, verifyFailed: true } : recipe,
-              ),
-            );
-          } finally {
-            setVerifying((prev) => {
-              const n = new Set(prev);
-              n.delete(i);
-              return n;
-            });
-          }
-        }),
+    if (entries.length === 0) {
+      setError("Please enter at least one ingredient.");
+      return;
+    }
+    const activeEnrichedSources = sources.filter(
+      (s) => selectedSources.includes(s.id) && s.enrichedCount > 0,
+    );
+    if (activeEnrichedSources.length === 0) {
+      setError(
+        'No enriched sources selected. Go to Sources tab and click "Enrich now" to enable ingredient search.',
       );
-    } catch (e) {
-      setError(`Error: ${errorMessage(e)}`);
-      setLoading(false);
+      return;
+    }
+    const found = searchRecipes(entries, cupboard, sources, selectedSources);
+    setResults(found);
+    if (found.length === 0) {
+      setError("No matches found above 25%. Try fewer or more general ingredients.");
     }
   };
 
-  // ── Render ──────────────────────────────────────────────────────────────
+  // ── Render ────────────────────────────────────────────────────────────────
   return (
     <div style={styles.app}>
       <Header activeTab={activeTab} onTabChange={setActiveTab} />
@@ -371,17 +313,9 @@ export default function App() {
             sources={sources}
             selectedSources={selectedSources}
             onToggleSource={toggleSource}
-            selectedCuisines={selectedCuisines}
-            onToggleCuisine={toggleCuisine}
-            ingredients={ingredients}
-            onIngredientsChange={setIngredients}
-            loading={loading}
             error={error}
-            onFindRecipes={findRecipes}
-            recipes={recipes}
-            expandedRecipe={expandedRecipe}
-            onExpandRecipe={setExpandedRecipe}
-            verifying={verifying}
+            onSearch={handleSearch}
+            results={results}
             onGoToSourcesTab={() => setActiveTab("sources")}
           />
         )}
@@ -395,34 +329,20 @@ export default function App() {
             sourceError={sourceError}
             sourceSuccess={sourceSuccess}
             indexing={indexing}
-            onNameChange={(v) => {
-              setNewSourceName(v);
-              setSourceError("");
-              setSourceSuccess("");
-            }}
-            onUrlChange={(v) => {
-              setNewSourceUrl(v);
-              setSourceError("");
-              setSourceSuccess("");
-            }}
+            enriching={enriching}
+            enrichProgress={enrichProgress}
+            onNameChange={(v) => { setNewSourceName(v); setSourceError(""); setSourceSuccess(""); }}
+            onUrlChange={(v) => { setNewSourceUrl(v); setSourceError(""); setSourceSuccess(""); }}
             onAdd={addSource}
             onToggle={toggleSource}
             onRemove={removeSource}
             onReindex={reindexSource}
+            onEnrich={enrichSource}
           />
         )}
 
-        {activeTab === "cupboard" && <CupboardTab cupboard={cupboard} onSave={saveCupboard} />}
-
-        {activeTab === "settings" && (
-          <SettingsTab
-            provider={provider}
-            model={model}
-            apiKeys={apiKeys}
-            onProviderChange={changeProvider}
-            onModelChange={changeModel}
-            onApiKeyChange={saveApiKey}
-          />
+        {activeTab === "cupboard" && (
+          <CupboardTab cupboard={cupboard} onSave={saveCupboard} />
         )}
       </main>
     </div>
