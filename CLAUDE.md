@@ -59,6 +59,7 @@ Deploy: `npm run deploy`
 ## Git Workflow
 
 - **Every change request gets its own branch** with the prefix `claude_` (e.g. `claude_multi-select-filters`).
+- **The branch description must include the user's original prompt** that instigated the branch, verbatim. Set it with: `git branch --edit-description`
 - **Commits are small and regular** — commit after each logical unit of work, not just at the end of a request.
 - **No need to ask before committing** — commit freely as work progresses.
 - **After completing a request**, assess whether the branch is ready to merge into `main`. If the work is complete and the build passes, merge and push without waiting to be asked.
