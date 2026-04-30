@@ -44,6 +44,18 @@ function tokenise(text: string): string[] {
     .filter((w) => w.length > 2 && !STOPWORDS.has(w));
 }
 
+/** Strips parenthetical notes and trailing " or ..." alternatives before
+ *  required-ingredient matching, so that "(or chicken)" in a pork recipe
+ *  does not falsely satisfy a "chicken" requirement. */
+function stripIngredientNotes(line: string): string {
+  return line
+    .replace(/\([^)]*\)/g, " ")       // remove (parenthetical content)
+    .replace(/\s*,?\s+or\s+.+/i, "")  // remove " or ..." alternatives
+    .trim();
+}
+
+const STOCK_TERMS = new Set(["broth", "stock"]);
+
 function stem(word: string): string {
   if (word.endsWith("ies") && word.length > 4) return word.slice(0, -3) + "y";
   if (word.endsWith("ves") && word.length > 4) return word.slice(0, -3) + "f";
@@ -109,8 +121,16 @@ export function searchRecipes(
       if (requiredSets.length > 0) {
         const meetsRequired = requiredSets.every((reqTokens) =>
           recipe.ingredients.some((line) => {
-            const lineTokens = normTokens(tokenise(line));
-            return [...reqTokens].some((t) => lineTokens.has(t));
+            // Strip parenthetical notes and " or ..." alternatives before matching,
+            // so "(or chicken)" in a pork recipe doesn't satisfy a "chicken" requirement
+            const lineTokens = normTokens(tokenise(stripIngredientNotes(line)));
+            return [...reqTokens].some((t) => {
+              if (!lineTokens.has(t)) return false;
+              // "chicken broth" / "beef stock" should not satisfy a protein requirement;
+              // only skip if the user didn't explicitly require broth/stock
+              if (!STOCK_TERMS.has(t) && (lineTokens.has("broth") || lineTokens.has("stock"))) return false;
+              return true;
+            });
           })
         );
         if (!meetsRequired) continue;
