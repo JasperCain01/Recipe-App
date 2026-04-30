@@ -105,8 +105,8 @@ export function searchRecipes(
     for (const recipe of source.enrichedIndex) {
       if (recipe.ingredients.length === 0) continue;
 
-      // Drop recipe if it doesn't contain every required ingredient (only when 2+ required)
-      if (requiredSets.length > 1) {
+      // Drop recipe if it doesn't contain every required ingredient
+      if (requiredSets.length > 0) {
         const meetsRequired = requiredSets.every((reqTokens) =>
           recipe.ingredients.some((line) => {
             const lineTokens = normTokens(tokenise(line));
