@@ -26,7 +26,7 @@ export default function RecipeCard({ result: r }: RecipeCardProps) {
               href={r.sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "#5D4037", textDecoration: "none" }}
+              style={{ color: "#00796B", textDecoration: "none" }}
             >
               {r.title} ↗
             </a>
@@ -129,7 +129,7 @@ export default function RecipeCard({ result: r }: RecipeCardProps) {
         style={{
           display: "inline-block",
           padding: "0.55rem 1.1rem",
-          background: "#5D4037",
+          background: "#00796B",
           color: "#FFFFFF",
           borderRadius: "6px",
           fontSize: "0.8rem",

@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
 
 // MD2 color roles:
-//   Primary     #5D4037  (Brown 700)   — app bar, buttons, active states
+//   Primary     #00796B  (Teal 700)    — app bar, buttons, active states
 //   On Primary  #FFFFFF               — text/icons on primary surfaces
 //   Secondary   #FF8F00  (Amber 800)  — accents, in-progress indicators
 //   Surface     #FFFFFF               — cards, sheets, dropdowns
@@ -19,7 +19,7 @@ export const styles = {
     fontSize: "14px",
   },
   header: {
-    background: "#5D4037",
+    background: "#00796B",
     boxShadow: "0 2px 4px rgba(0,0,0,0.25)",
     padding: "1.25rem 1.5rem",
     display: "flex",
@@ -102,9 +102,9 @@ export const chipStyle = (active: boolean, accent?: string): CSSProperties => ({
   padding: "0.35rem 0.85rem",
   border: "1px solid",
   borderRadius: "20px",
-  borderColor: active ? (accent || "#5D4037") : "#E0E0E0",
-  background: active ? "rgba(93,64,55,0.1)" : "#FFFFFF",
-  color: active ? (accent || "#5D4037") : "#9E9E9E",
+  borderColor: active ? (accent || "#00796B") : "#E0E0E0",
+  background: active ? "rgba(0,121,107,0.1)" : "#FFFFFF",
+  color: active ? (accent || "#00796B") : "#9E9E9E",
   cursor: "pointer",
   fontSize: "0.78rem",
   fontFamily: "inherit",
@@ -114,7 +114,7 @@ export const chipStyle = (active: boolean, accent?: string): CSSProperties => ({
 export const primaryBtn = (disabled: boolean): CSSProperties => ({
   width: "100%",
   padding: "0.875rem",
-  background: disabled ? "#E0E0E0" : "#5D4037",
+  background: disabled ? "#E0E0E0" : "#00796B",
   color: disabled ? "#9E9E9E" : "#FFFFFF",
   border: "none",
   borderRadius: "6px",
@@ -131,8 +131,8 @@ export type ButtonVariant = "primary" | "default";
 export const smBtn = (variant: ButtonVariant): CSSProperties => ({
   padding: "0.45rem 0.9rem",
   border: "1px solid",
-  borderColor: variant === "primary" ? "#5D4037" : "#E0E0E0",
-  background: variant === "primary" ? "#5D4037" : "transparent",
+  borderColor: variant === "primary" ? "#00796B" : "#E0E0E0",
+  background: variant === "primary" ? "#00796B" : "transparent",
   color: variant === "primary" ? "#FFFFFF" : "#757575",
   borderRadius: "6px",
   cursor: "pointer",

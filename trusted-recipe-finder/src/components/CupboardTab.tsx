@@ -40,7 +40,7 @@ export default function CupboardTab({ cupboard, onSave }: CupboardTabProps) {
           onClick={addItem}
           style={{
             padding: "0.65rem 1.1rem",
-            background: "#5D4037",
+            background: "#00796B",
             color: "#FFFFFF",
             border: "none",
             borderRadius: "6px",

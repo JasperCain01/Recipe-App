@@ -167,7 +167,7 @@ export default function SearchTab({
               <button
                 onClick={onGoToSourcesTab}
                 style={{
-                  background: "none", border: "none", color: "#5D4037",
+                  background: "none", border: "none", color: "#00796B",
                   cursor: "pointer", padding: 0, fontSize: "0.8rem",
                   fontFamily: "inherit", textDecoration: "underline",
                 }}
@@ -227,9 +227,9 @@ export default function SearchTab({
                       style={{
                         padding: "0.35rem 0.6rem",
                         border: "1px solid",
-                        borderColor: entry.required ? "#5D4037" : "#E0E0E0",
-                        background: entry.required ? "rgba(93,64,55,0.1)" : "transparent",
-                        color: entry.required ? "#5D4037" : "#9E9E9E",
+                        borderColor: entry.required ? "#00796B" : "#E0E0E0",
+                        background: entry.required ? "rgba(0,121,107,0.1)" : "transparent",
+                        color: entry.required ? "#00796B" : "#9E9E9E",
                         borderRadius: "4px",
                         cursor: "pointer",
                         fontFamily: "inherit",

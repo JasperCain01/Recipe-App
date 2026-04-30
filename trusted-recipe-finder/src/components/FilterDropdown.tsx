@@ -66,8 +66,8 @@ export default function FilterDropdown({ options, selected, onChange, alignRight
 
   const triggerStyle: React.CSSProperties = {
     background: "#FAFAFA",
-    border: `1px solid ${active ? "#5D4037" : "#E0E0E0"}`,
-    color: active ? "#5D4037" : "#757575",
+    border: `1px solid ${active ? "#00796B" : "#E0E0E0"}`,
+    color: active ? "#00796B" : "#757575",
     borderRadius: "4px",
     padding: "0.2rem 0.3rem",
     fontSize: "0.65rem",
@@ -135,11 +135,11 @@ export default function FilterDropdown({ options, selected, onChange, alignRight
                   cursor: "pointer",
                   fontFamily: "inherit",
                   fontSize: "0.72rem",
-                  color: selected.has(o.value) ? "#5D4037" : "#757575",
+                  color: selected.has(o.value) ? "#00796B" : "#757575",
                   textAlign: "left",
                 }}
               >
-                <span style={{ width: "0.7rem", flexShrink: 0, color: "#5D4037" }}>
+                <span style={{ width: "0.7rem", flexShrink: 0, color: "#00796B" }}>
                   {selected.has(o.value) ? "✓" : ""}
                 </span>
                 {o.label}

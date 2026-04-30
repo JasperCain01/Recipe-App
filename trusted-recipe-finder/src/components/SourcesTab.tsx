@@ -226,8 +226,8 @@ export default function SourcesTab({
                         ...smBtn("default"),
                         fontSize: "0.68rem",
                         padding: "0.3rem 0.6rem",
-                        borderColor: hasEnriched ? "#E0E0E0" : "#5D4037",
-                        color: hasEnriched ? "#757575" : "#5D4037",
+                        borderColor: hasEnriched ? "#E0E0E0" : "#00796B",
+                        color: hasEnriched ? "#757575" : "#00796B",
                       }}
                     >
                       {hasEnriched ? "Re-enrich" : "Enrich now"}
@@ -249,7 +249,7 @@ export default function SourcesTab({
                       style={{
                         height: "100%",
                         width: `${(enrichProgress.done / enrichProgress.total) * 100}%`,
-                        background: "#5D4037",
+                        background: "#00796B",
                         borderRadius: "2px",
                         transition: "width 0.3s ease",
                       }}
