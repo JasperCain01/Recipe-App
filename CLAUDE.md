@@ -64,6 +64,16 @@ Deploy: `npm run deploy`
 - **No need to ask before committing** — commit freely as work progresses.
 - **After completing a request**, assess whether the branch is ready to merge into `main`. If the work is complete and the build passes, merge and push without waiting to be asked.
 
+## Model Selection
+
+Before starting any task, briefly analyse the steps and recommend whether the current model is appropriate or a cheaper one would do equally well:
+
+- **Haiku 4.5** — simple lookups, trivial edits, text formatting, short Q&A
+- **Sonnet 4.6** — most coding tasks, multi-step reasoning, feature work, refactors
+- **Opus 4.7** — complex architecture, hard reasoning, large cross-file refactors
+
+After giving the recommendation, **stop and wait for the user to confirm** before proceeding. Do not continue with the task until the user explicitly says to.
+
 ## Code Style
 
 - Inline styles throughout (no CSS files, no Tailwind) — keeps components self-contained.
