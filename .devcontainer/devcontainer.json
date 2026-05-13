@@ -1,0 +1,55 @@
+{
+  "name": "Recipe App",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+
+  // ── Dev container features ─────────────────────────────────────────────────
+  "features": {
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1": {}
+  },
+
+  // ── Persistent volume for Claude authentication ────────────────────────────
+  // Scoped to this project so credentials survive container rebuilds without
+  // polluting other projects' volumes.
+  "mounts": [
+    {
+      "source": "recipe-app-claude-auth",
+      "target": "/root/.claude",
+      "type": "volume"
+    }
+  ],
+
+  // ── Port forwarding ────────────────────────────────────────────────────────
+  // 5173 – Vite dev server  (npm run dev)
+  // 3000 – Vercel dev server (npm run dev:all, which runs `vercel dev`)
+  "forwardPorts": [5173, 3000],
+  "portsAttributes": {
+    "5173": { "label": "Vite dev server" },
+    "3000": { "label": "Vercel dev server" }
+  },
+
+  // ── Lifecycle hooks ────────────────────────────────────────────────────────
+  // Install npm dependencies after the container is created (source files are
+  // mounted at this point, not during the Docker build step).
+  "postCreateCommand": "cd trusted-recipe-finder && npm install",
+
+  // ── VS Code / editor settings ──────────────────────────────────────────────
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-typescript-next"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "typescript.tsdk": "trusted-recipe-finder/node_modules/typescript/lib"
+      }
+    }
+  },
+
+  "remoteUser": "root"
+}
