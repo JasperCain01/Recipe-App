@@ -20,6 +20,7 @@ const RECIPES_BY_SOURCE_INDEX = "by-sourceId";
 
 const KEYS = {
   CUPBOARD: "trf_cupboard",
+  MATCH_THRESHOLD: "trf_match_threshold",
   SOURCES_LEGACY: "trf_sources",
   MIGRATED_FLAG: "trf_idb_migrated",
 } as const;
@@ -136,6 +137,14 @@ export const storage = {
   },
   saveCupboard(items: string[]): boolean {
     return writeJSON(KEYS.CUPBOARD, items);
+  },
+
+  // ── Match threshold (localStorage) ───────────────────────────────────────
+  loadMatchThreshold(): number | null {
+    return readJSON<number>(KEYS.MATCH_THRESHOLD);
+  },
+  saveMatchThreshold(value: number): boolean {
+    return writeJSON(KEYS.MATCH_THRESHOLD, value);
   },
 
   // ── Source metadata (IndexedDB) ──────────────────────────────────────────

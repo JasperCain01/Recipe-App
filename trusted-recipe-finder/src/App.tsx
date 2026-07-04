@@ -5,6 +5,7 @@ import { pickEmoji, normaliseUrl, makeId, deriveMealType } from "./lib/utils";
 import { storage } from "./lib/storage";
 import { indexSource, fetchRecipe } from "./lib/api";
 import { searchRecipes } from "./lib/search";
+import { tokensForIngredientLine } from "../shared/tokens.js";
 import Header from "./components/Header";
 import SearchTab from "./components/SearchTab";
 import SourcesTab from "./components/SourcesTab";
@@ -15,6 +16,9 @@ import type { IngredientEntry, RecipeRecord, SearchResult, SourceMeta, Tab } fro
 const ENRICH_CONCURRENCY = 5;
 // Polite delay (ms) between enrichment batches
 const ENRICH_DELAY_MS = 300;
+// Debounce for live search as the user types/toggles ingredients
+const SEARCH_DEBOUNCE_MS = 150;
+const DEFAULT_MATCH_THRESHOLD = 25;
 
 /** Parse the human-readable time string produced by fetch-recipe into minutes. */
 function parseTimeToMinutes(timeStr: string | null): number | null {
@@ -31,6 +35,8 @@ export default function App() {
   const [error, setError] = useState<string>("");
   const nextEntryId = useRef(1);
   const [entries, setEntries] = useState<IngredientEntry[]>([{ id: "0", text: "", required: true }]);
+  const [matchThreshold, setMatchThreshold] = useState<number>(DEFAULT_MATCH_THRESHOLD);
+  const searchDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // ── Source state ──────────────────────────────────────────────────────────
   const [sources, setSources] = useState<SourceMeta[]>([]);
@@ -61,6 +67,9 @@ export default function App() {
   useEffect(() => {
     const cup = storage.loadCupboard();
     if (cup) setCupboard(cup);
+
+    const threshold = storage.loadMatchThreshold();
+    if (threshold !== null) setMatchThreshold(threshold);
 
     storage.loadSourceMetas().then((src) => {
       if (src && src.length > 0) {
@@ -99,13 +108,29 @@ export default function App() {
     const cached = recipeCacheRef.current.get(id);
     if (cached) return cached;
     const recs = await storage.getRecipesBySource(id);
-    recipeCacheRef.current.set(id, recs);
-    return recs;
+
+    // Lazily migrate any pre-Session-2 records that lack precomputed tokens.
+    const toPersist: RecipeRecord[] = [];
+    const upgraded = recs.map((r) => {
+      if (r.tokens) return r;
+      const withTokens: RecipeRecord = { ...r, tokens: r.ingredients.map(tokensForIngredientLine) };
+      toPersist.push(withTokens);
+      return withTokens;
+    });
+    if (toPersist.length > 0) await storage.putRecipes(toPersist);
+
+    recipeCacheRef.current.set(id, upgraded);
+    return upgraded;
   };
 
   const saveCupboard = (items: string[]): void => {
     setCupboard(items);
     storage.saveCupboard(items);
+  };
+
+  const setThreshold = (value: number): void => {
+    setMatchThreshold(value);
+    storage.saveMatchThreshold(value);
   };
 
   // ── Ingredient entries (U1: lifted out of SearchTab so they survive tab switches) ──
@@ -269,6 +294,7 @@ export default function App() {
             servings: data.servings,
             image: data.image,
             instructionCount: data.instructions.length,
+            tokens: data.ingredients.map(tokensForIngredientLine),
           });
         }
       });
@@ -314,13 +340,14 @@ export default function App() {
     setError("");
     const filled = entries.filter((e) => e.text.trim());
     if (filled.length === 0) {
-      setError("Please enter at least one ingredient.");
+      setResults([]);
       return;
     }
     const activeEnrichedSources = sources.filter(
       (s) => selectedSources.includes(s.id) && s.enrichedCount > 0,
     );
     if (activeEnrichedSources.length === 0) {
+      setResults([]);
       setError(
         'No enriched sources selected. Go to Sources tab and click "Enrich now" to enable ingredient search.',
       );
@@ -329,12 +356,25 @@ export default function App() {
     const sourcesWithRecipes = await Promise.all(
       activeEnrichedSources.map(async (meta) => ({ meta, recipes: await getRecipesCached(meta.id) })),
     );
-    const found = searchRecipes(filled, cupboard, sourcesWithRecipes);
+    const found = searchRecipes(filled, cupboard, sourcesWithRecipes, matchThreshold);
     setResults(found);
     if (found.length === 0) {
-      setError("No matches found above 25%. Try fewer or more general ingredients.");
+      setError(`No matches found above ${matchThreshold}%. Try fewer ingredients, more general terms, or lowering the threshold.`);
     }
   };
+
+  // U5: live search — re-run automatically (debounced) as ingredients, the
+  // cupboard, selected sources, or the match threshold change.
+  useEffect(() => {
+    if (searchDebounceRef.current) clearTimeout(searchDebounceRef.current);
+    searchDebounceRef.current = setTimeout(() => {
+      handleSearch();
+    }, SEARCH_DEBOUNCE_MS);
+    return () => {
+      if (searchDebounceRef.current) clearTimeout(searchDebounceRef.current);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [entries, cupboard, selectedSources, matchThreshold]);
 
   // ── Render ────────────────────────────────────────────────────────────────
   return (
@@ -351,8 +391,9 @@ export default function App() {
             onToggleRequired={toggleRequired}
             onRemoveEntry={removeEntry}
             error={error}
-            onSearch={handleSearch}
             results={results}
+            matchThreshold={matchThreshold}
+            onThresholdChange={setThreshold}
             onGoToSourcesTab={() => setActiveTab("sources")}
           />
         )}

@@ -1,81 +1,14 @@
 // Local ingredient-matching search — no AI required.
-// All computation is in-memory over the enriched index stored in IndexedDB.
+// All computation is in-memory over recipe records loaded from IndexedDB.
+// Per-ingredient tokens are precomputed at enrichment time (shared/tokens.js),
+// so the hot loop here is pure Set arithmetic — no regex or tokenising.
 
+import { normTokens, tokenise } from "../../shared/tokens.js";
 import type { SourceMeta, RecipeRecord, SearchResult, IngredientEntry } from "./types";
 
-// ─── Text normalisation ──────────────────────────────────────────────────────
-
-const STOPWORDS = new Set([
-  "fresh", "dried", "large", "small", "medium", "whole", "chopped", "sliced",
-  "diced", "minced", "grated", "ground", "cooked", "raw", "organic", "sea",
-  "fine", "coarse", "extra", "virgin", "the", "and", "or", "for", "with",
-  "into", "from", "plus", "about", "piece", "pieces", "handful", "little",
-  "few", "some", "good", "quality", "best", "homemade", "bought", "store",
-  "approximately", "optional", "taste", "needed", "required",
-]);
-
-// Common UK/US ingredient synonym pairs
-const SYNONYMS: Record<string, string> = {
-  courgette: "zucchini",   zucchini: "courgette",
-  aubergine: "eggplant",   eggplant: "aubergine",
-  coriander: "cilantro",   cilantro: "coriander",
-  capsicum: "pepper",      prawn: "shrimp",
-  shrimp: "prawn",         cornflour: "cornstarch",
-  cornstarch: "cornflour", scallion: "onion",
-  sultana: "raisin",       raisin: "sultana",
-  bacon: "pancetta",       pancetta: "bacon",
-};
-
-function stripQuantities(text: string): string {
-  return text
-    .replace(
-      /\d[\d½¼¾⅓⅔/.\s-]*\s*(?:g|kg|ml|l|oz|lb|lbs|tsp|tbsp|tablespoons?|teaspoons?|cups?|cloves?|bunches?|handfuls?|pinch(?:es)?|slices?|cans?|tins?|bags?|packs?|sprigs?|heads?|stalks?|pieces?|portions?)\b/gi,
-      " "
-    )
-    .replace(/\b\d+\b/g, " ");
-}
-
-function tokenise(text: string): string[] {
-  return stripQuantities(text)
-    .toLowerCase()
-    .replace(/[^a-z\s]/g, " ")
-    .split(/\s+/)
-    .map((w) => w.trim())
-    .filter((w) => w.length > 2 && !STOPWORDS.has(w));
-}
-
-/** Strips parenthetical notes and trailing " or ..." alternatives before
- *  required-ingredient matching, so that "(or chicken)" in a pork recipe
- *  does not falsely satisfy a "chicken" requirement. */
-function stripIngredientNotes(line: string): string {
-  return line
-    .replace(/\([^)]*\)/g, " ")       // remove (parenthetical content)
-    .replace(/\s*,?\s+or\s+.+/i, "")  // remove " or ..." alternatives
-    .trim();
-}
-
+// "Chicken broth" / "beef stock" should not satisfy a plain protein
+// requirement unless the user explicitly required broth/stock.
 const STOCK_TERMS = new Set(["broth", "stock"]);
-
-function stem(word: string): string {
-  if (word.endsWith("ies") && word.length > 4) return word.slice(0, -3) + "y";
-  if (word.endsWith("ves") && word.length > 4) return word.slice(0, -3) + "f";
-  if (word.endsWith("es") && word.length > 4) return word.slice(0, -2);
-  if (word.endsWith("s") && word.length > 3) return word.slice(0, -1);
-  return word;
-}
-
-function normTokens(tokens: string[]): Set<string> {
-  const result = new Set<string>();
-  for (const t of tokens) {
-    const s = stem(t);
-    result.add(s);
-    const syn = SYNONYMS[t];
-    if (syn) result.add(stem(syn));
-  }
-  return result;
-}
-
-// ─── Public API ──────────────────────────────────────────────────────────────
 
 /**
  * Build the normalised token set for the user's available ingredients
@@ -93,6 +26,10 @@ export function buildAvailableTokens(
  * user's available ingredients. Returns all matches above minScore, sorted
  * by match score descending. Post-search filtering (time, complexity) is
  * handled client-side in the results table.
+ *
+ * Recipes must already carry precomputed `tokens` (see
+ * `tokensForIngredientLine` / the lazy-migration step in App.tsx) — a recipe
+ * without them is skipped rather than tokenised here.
  */
 export function searchRecipes(
   entries: IngredientEntry[],
@@ -111,20 +48,19 @@ export function searchRecipes(
 
   for (const { meta: source, recipes } of sources) {
     for (const recipe of recipes) {
-      if (recipe.ingredients.length === 0) continue;
+      if (recipe.ingredients.length === 0 || !recipe.tokens) continue;
+      const tokens = recipe.tokens;
 
       // Drop recipe if it doesn't contain every required ingredient
       if (requiredSets.length > 0) {
         const meetsRequired = requiredSets.every((reqTokens) =>
-          recipe.ingredients.some((line) => {
-            // Strip parenthetical notes and " or ..." alternatives before matching,
-            // so "(or chicken)" in a pork recipe doesn't satisfy a "chicken" requirement
-            const lineTokens = normTokens(tokenise(stripIngredientNotes(line)));
+          tokens.some(({ strict }) => {
+            const strictSet = new Set(strict);
             return [...reqTokens].some((t) => {
-              if (!lineTokens.has(t)) return false;
+              if (!strictSet.has(t)) return false;
               // "chicken broth" / "beef stock" should not satisfy a protein requirement;
               // only skip if the user didn't explicitly require broth/stock
-              if (!STOCK_TERMS.has(t) && (lineTokens.has("broth") || lineTokens.has("stock"))) return false;
+              if (!STOCK_TERMS.has(t) && (strictSet.has("broth") || strictSet.has("stock"))) return false;
               return true;
             });
           })
@@ -135,15 +71,14 @@ export function searchRecipes(
       const matched: string[] = [];
       const missing: string[] = [];
 
-      for (const line of recipe.ingredients) {
-        const tokens = normTokens(tokenise(line));
-        const isMatched = [...tokens].some((t) => available.has(t));
+      recipe.ingredients.forEach((line, i) => {
+        const isMatched = tokens[i].all.some((t) => available.has(t));
         if (isMatched) {
           matched.push(line);
         } else {
           missing.push(line);
         }
-      }
+      });
 
       const matchScore = Math.round(
         (matched.length / recipe.ingredients.length) * 100

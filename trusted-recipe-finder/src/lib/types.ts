@@ -18,6 +18,14 @@ export interface IndexEntry {
   url: string;
 }
 
+/** Precomputed token sets for one ingredient line — `all` for general match
+ *  scoring, `strict` (notes/alternatives stripped) for required-ingredient
+ *  matching. See `shared/tokens.js`. */
+export interface IngredientTokens {
+  all: string[];
+  strict: string[];
+}
+
 /** A single enriched recipe, stored in the `recipes` IndexedDB store keyed by `[sourceId, url]`. */
 export interface RecipeRecord {
   sourceId: string;
@@ -33,8 +41,9 @@ export interface RecipeRecord {
   image: string | null;
   /** Number of instruction steps, used as a complexity proxy. */
   instructionCount: number;
-  /** Precomputed normalised token sets per ingredient line. Filled in by Session 2 — absent on older records until they're re-searched. */
-  tokens?: string[][];
+  /** Precomputed tokens, one entry per `ingredients` line. Absent on records
+   *  enriched before Session 2 until they're lazily migrated on first search. */
+  tokens?: IngredientTokens[];
 }
 
 /** A recipe website the user has added — lightweight metadata only. Full recipe

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { styles, chipStyle, primaryBtn } from "../lib/styles";
+import { styles, chipStyle } from "../lib/styles";
 import { scoreColor } from "../lib/utils";
 import RecipeCard from "./RecipeCard";
 import FilterDropdown, { type FilterOption } from "./FilterDropdown";
@@ -14,8 +14,9 @@ interface SearchTabProps {
   onToggleRequired: (index: number) => void;
   onRemoveEntry: (index: number) => void;
   error: string;
-  onSearch: () => void;
   results: SearchResult[];
+  matchThreshold: number;
+  onThresholdChange: (value: number) => void;
   onGoToSourcesTab: () => void;
 }
 
@@ -47,8 +48,9 @@ export default function SearchTab({
   onToggleRequired,
   onRemoveEntry,
   error,
-  onSearch,
   results,
+  matchThreshold,
+  onThresholdChange,
   onGoToSourcesTab,
 }: SearchTabProps) {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
@@ -244,9 +246,28 @@ export default function SearchTab({
 
       {error && <div style={styles.errorBanner}>{error}</div>}
 
-      <button onClick={onSearch} style={primaryBtn(false)}>
-        Search Recipes →
-      </button>
+      {/* Match threshold (U11) */}
+      <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", margin: "1.25rem 0 0.5rem" }}>
+        <label htmlFor="match-threshold" style={{ ...styles.label, marginBottom: 0, whiteSpace: "nowrap" }}>
+          Show matches above {matchThreshold}%
+        </label>
+        <input
+          id="match-threshold"
+          type="range"
+          min={10}
+          max={90}
+          step={5}
+          value={matchThreshold}
+          onChange={(e) => onThresholdChange(Number(e.target.value))}
+          style={{ flex: 1, maxWidth: "220px" }}
+        />
+        <span
+          title="Match % is the share of a recipe's ingredients you already have (from your entered ingredients plus your store cupboard). Required ingredients must always be present."
+          style={{ color: "#9E9E9E", fontSize: "0.75rem", cursor: "help" }}
+        >
+          ⓘ
+        </span>
+      </div>
 
       {/* Results table */}
       {results.length > 0 && (
