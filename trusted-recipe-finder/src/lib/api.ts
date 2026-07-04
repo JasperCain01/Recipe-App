@@ -1,10 +1,16 @@
-// Thin wrapper over the backend Vercel Functions, plus the static prebuilt
-// data pipeline output served same-origin from /data.
+// Thin wrapper over the backend — a same-origin Vercel Function today, or a
+// separately-hosted Cloudflare Worker (VITE_API_BASE) when deployed to
+// GitHub Pages — plus the static prebuilt data pipeline output served
+// same-origin from /data regardless of where the API lives.
 
 import type { FetchRecipeResponse, IndexEntry, IndexSourceResponse, Manifest, RecipeRecord } from "./types";
 
+// Empty string keeps requests same-origin (relative /api/...), matching
+// today's Vercel deployment; set to the Worker's URL for GitHub Pages.
+const API_BASE = import.meta.env.VITE_API_BASE ?? "";
+
 async function postJSON<T>(path: string, body: unknown): Promise<T> {
-  const res = await fetch(path, {
+  const res = await fetch(`${API_BASE}${path}`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),

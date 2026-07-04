@@ -1,0 +1,10 @@
+name = "trusted-recipe-finder-api"
+main = "index.js"
+compatibility_date = "2024-09-23"
+
+[vars]
+# Origin of the deployed GitHub Pages site — only this origin (plus localhost,
+# always allowed below) is granted CORS access. Update if you move to a custom
+# domain, via `wrangler.toml` for local dev or a dashboard/`wrangler secret`-style
+# var override for the deployed Worker.
+ALLOWED_ORIGIN = "https://jaspercain01.github.io"

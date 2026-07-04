@@ -31,3 +31,6 @@ public/data
 .env.local
 .env.*.local
 .vercel
+
+# wrangler dev's local Miniflare persistence (cache/KV/etc simulated on disk)
+.wrangler
