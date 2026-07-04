@@ -1,7 +1,7 @@
 // Local ingredient-matching search — no AI required.
 // All computation is in-memory over the enriched index stored in IndexedDB.
 
-import type { Source, SearchResult, IngredientEntry } from "./types";
+import type { SourceMeta, RecipeRecord, SearchResult, IngredientEntry } from "./types";
 
 // ─── Text normalisation ──────────────────────────────────────────────────────
 
@@ -97,8 +97,7 @@ export function buildAvailableTokens(
 export function searchRecipes(
   entries: IngredientEntry[],
   cupboard: string[],
-  sources: Source[],
-  selectedSourceIds: string[],
+  sources: { meta: SourceMeta; recipes: RecipeRecord[] }[],
   minScore = 25
 ): SearchResult[] {
   const available = buildAvailableTokens(entries.map((e) => e.text), cupboard);
@@ -110,11 +109,8 @@ export function searchRecipes(
 
   const results: SearchResult[] = [];
 
-  for (const source of sources) {
-    if (!selectedSourceIds.includes(source.id)) continue;
-    if (!source.enrichedIndex || source.enrichedIndex.length === 0) continue;
-
-    for (const recipe of source.enrichedIndex) {
+  for (const { meta: source, recipes } of sources) {
+    for (const recipe of recipes) {
       if (recipe.ingredients.length === 0) continue;
 
       // Drop recipe if it doesn't contain every required ingredient

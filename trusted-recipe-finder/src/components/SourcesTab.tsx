@@ -1,5 +1,5 @@
 import { styles, smBtn } from "../lib/styles";
-import type { Source } from "../lib/types";
+import type { SourceMeta } from "../lib/types";
 
 interface EnrichProgress {
   done: number;
@@ -7,7 +7,7 @@ interface EnrichProgress {
 }
 
 interface SourcesTabProps {
-  sources: Source[];
+  sources: SourceMeta[];
   selectedSources: string[];
   newSourceName: string;
   newSourceUrl: string;
@@ -23,6 +23,7 @@ interface SourcesTabProps {
   onRemove: (id: string) => void;
   onReindex: (id: string) => void;
   onEnrich: (id: string) => void;
+  onCancelEnrich: () => void;
 }
 
 export default function SourcesTab({
@@ -42,6 +43,7 @@ export default function SourcesTab({
   onRemove,
   onReindex,
   onEnrich,
+  onCancelEnrich,
 }: SourcesTabProps) {
   return (
     <div>
@@ -231,6 +233,20 @@ export default function SourcesTab({
                       }}
                     >
                       {hasEnriched ? "Re-enrich" : "Enrich now"}
+                    </button>
+                  )}
+                  {isEnriching && (
+                    <button
+                      onClick={onCancelEnrich}
+                      style={{
+                        ...smBtn("default"),
+                        fontSize: "0.68rem",
+                        padding: "0.3rem 0.6rem",
+                        borderColor: "#B00020",
+                        color: "#B00020",
+                      }}
+                    >
+                      Cancel
                     </button>
                   )}
                 </div>

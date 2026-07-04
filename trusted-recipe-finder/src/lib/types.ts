@@ -18,8 +18,11 @@ export interface IndexEntry {
   url: string;
 }
 
-/** A recipe with full ingredient data fetched from its source page. */
-export interface EnrichedEntry extends IndexEntry {
+/** A single enriched recipe, stored in the `recipes` IndexedDB store keyed by `[sourceId, url]`. */
+export interface RecipeRecord {
+  sourceId: string;
+  url: string;
+  title: string;
   ingredients: string[];
   cuisine: string | null;
   mealType: string | null;
@@ -30,23 +33,26 @@ export interface EnrichedEntry extends IndexEntry {
   image: string | null;
   /** Number of instruction steps, used as a complexity proxy. */
   instructionCount: number;
+  /** Precomputed normalised token sets per ingredient line. Filled in by Session 2 — absent on older records until they're re-searched. */
+  tokens?: string[][];
 }
 
-/** A recipe website the user has added. */
-export interface Source {
+/** A recipe website the user has added — lightweight metadata only. Full recipe
+ *  data lives in the `recipes` IndexedDB store, keyed by source id. */
+export interface SourceMeta {
   id: string;
   name: string;
   url: string;
   emoji: string;
   active: boolean;
-  /** Lightweight URL+title index, or null if not yet indexed */
+  /** Lightweight URL+title index (all recipes found by indexing), or null if not yet indexed. */
   index: IndexEntry[] | null;
-  /** Enriched recipes with ingredient data */
-  enrichedIndex: EnrichedEntry[] | null;
   indexedAt: string | null;
   indexCount: number;
   enrichedCount: number;
   enrichedAt: string | null;
+  /** True for sources shipped as prebuilt data rather than added by the user. */
+  builtin?: boolean;
 }
 
 // ─── Search filters ──────────────────────────────────────────────────────────

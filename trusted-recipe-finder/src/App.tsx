@@ -9,7 +9,7 @@ import Header from "./components/Header";
 import SearchTab from "./components/SearchTab";
 import SourcesTab from "./components/SourcesTab";
 import CupboardTab from "./components/CupboardTab";
-import type { EnrichedEntry, IngredientEntry, SearchResult, Source, Tab } from "./lib/types";
+import type { IngredientEntry, RecipeRecord, SearchResult, SourceMeta, Tab } from "./lib/types";
 
 // How many recipe pages to fetch simultaneously during enrichment
 const ENRICH_CONCURRENCY = 5;
@@ -29,9 +29,11 @@ export default function App() {
   // ── Search state ──────────────────────────────────────────────────────────
   const [results, setResults] = useState<SearchResult[]>([]);
   const [error, setError] = useState<string>("");
+  const nextEntryId = useRef(1);
+  const [entries, setEntries] = useState<IngredientEntry[]>([{ id: "0", text: "", required: true }]);
 
   // ── Source state ──────────────────────────────────────────────────────────
-  const [sources, setSources] = useState<Source[]>([]);
+  const [sources, setSources] = useState<SourceMeta[]>([]);
   const [selectedSources, setSelectedSources] = useState<string[]>([]);
   const [newSourceName, setNewSourceName] = useState<string>("");
   const [newSourceUrl, setNewSourceUrl] = useState<string>("");
@@ -45,6 +47,9 @@ export default function App() {
   });
   const [sourcesLoaded, setSourcesLoaded] = useState<boolean>(false);
   const clearMessagesTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const enrichCancelRef = useRef<boolean>(false);
+  // Recipe records loaded from IndexedDB, cached per source until enrich/remove invalidates them.
+  const recipeCacheRef = useRef<Map<string, RecipeRecord[]>>(new Map());
 
   // ── Cupboard state ────────────────────────────────────────────────────────
   const [cupboard, setCupboard] = useState<string[]>(DEFAULT_CUPBOARD);
@@ -57,7 +62,7 @@ export default function App() {
     const cup = storage.loadCupboard();
     if (cup) setCupboard(cup);
 
-    storage.loadSources().then((src) => {
+    storage.loadSourceMetas().then((src) => {
       if (src && src.length > 0) {
         setSources(src);
         setSelectedSources(src.filter((s) => s.active).map((s) => s.id));
@@ -86,14 +91,61 @@ export default function App() {
     }, 5000);
   };
 
-  const persistSources = (next: Source[]): Promise<boolean> => storage.saveSources(next);
+  const invalidateRecipeCache = (id: string): void => {
+    recipeCacheRef.current.delete(id);
+  };
+
+  const getRecipesCached = async (id: string): Promise<RecipeRecord[]> => {
+    const cached = recipeCacheRef.current.get(id);
+    if (cached) return cached;
+    const recs = await storage.getRecipesBySource(id);
+    recipeCacheRef.current.set(id, recs);
+    return recs;
+  };
 
   const saveCupboard = (items: string[]): void => {
     setCupboard(items);
     storage.saveCupboard(items);
   };
 
+  // ── Ingredient entries (U1: lifted out of SearchTab so they survive tab switches) ──
+  const newEntry = (text = "", required = true): IngredientEntry => ({
+    id: String(nextEntryId.current++),
+    text,
+    required,
+  });
+
+  const handleIngredientChange = (index: number, text: string): void => {
+    setEntries((prev) => {
+      const next = prev.map((e, i) => (i === index ? { ...e, text } : e));
+      if (next[next.length - 1].text.trim()) next.push(newEntry());
+      return next;
+    });
+  };
+
+  const toggleRequired = (index: number): void => {
+    setEntries((prev) => prev.map((e, i) => (i === index ? { ...e, required: !e.required } : e)));
+  };
+
+  const removeEntry = (index: number): void => {
+    setEntries((prev) => {
+      const next = prev.filter((_, i) => i !== index);
+      if (next.length === 0 || next[next.length - 1].text.trim()) next.push(newEntry());
+      return next;
+    });
+  };
+
   // ── Sources ───────────────────────────────────────────────────────────────
+  /** Patch one source's metadata in state and persist just that record to IndexedDB. */
+  const updateSource = (id: string, patch: Partial<SourceMeta>): void => {
+    setSources((prev) => {
+      const next = prev.map((s) => (s.id === id ? { ...s, ...patch } : s));
+      const updated = next.find((s) => s.id === id);
+      if (updated) storage.putSource(updated);
+      return next;
+    });
+  };
+
   const addSource = async (): Promise<void> => {
     setSourceError("");
     setSourceSuccess("");
@@ -125,14 +177,13 @@ export default function App() {
       return;
     }
 
-    const newSrc: Source = {
+    const newSrc: SourceMeta = {
       id: makeId(newSourceName),
       name: newSourceName.trim(),
       url,
       emoji: pickEmoji(newSourceName),
       active: true,
       index: null,
-      enrichedIndex: null,
       indexedAt: null,
       indexCount: 0,
       enrichedCount: 0,
@@ -141,25 +192,14 @@ export default function App() {
     setNewSourceName("");
     setNewSourceUrl("");
 
-    setSources((prev) => {
-      const next = [...prev, newSrc];
-      persistSources(next);
-      return next;
-    });
+    setSources((prev) => [...prev, newSrc]);
+    storage.putSource(newSrc);
     setSelectedSources((prev) => [...prev, newSrc.id]);
     setIndexing(newSrc.id);
 
     try {
       const data = await indexSource(url);
-      setSources((prev) => {
-        const next = prev.map((s) =>
-          s.id === newSrc.id
-            ? { ...s, index: data.recipes, indexedAt: data.indexed_at, indexCount: data.count }
-            : s,
-        );
-        persistSources(next);
-        return next;
-      });
+      updateSource(newSrc.id, { index: data.recipes, indexedAt: data.indexed_at, indexCount: data.count });
       setSourceSuccess(`✓ "${newSrc.name}" added — ${data.count} recipes indexed. Click "Enrich now" to enable ingredient search.`);
     } catch (err) {
       setSourceError(
@@ -179,15 +219,7 @@ export default function App() {
     setSourceSuccess("");
     try {
       const data = await indexSource(src.url);
-      setSources((prev) => {
-        const next = prev.map((s) =>
-          s.id === id
-            ? { ...s, index: data.recipes, indexedAt: data.indexed_at, indexCount: data.count }
-            : s,
-        );
-        persistSources(next);
-        return next;
-      });
+      updateSource(id, { index: data.recipes, indexedAt: data.indexed_at, indexCount: data.count });
       setSourceSuccess(`✓ "${src.name}" re-indexed — ${data.count} recipes found.`);
     } catch (err) {
       setSourceError(`Re-indexing failed: ${errorMessage(err)}`);
@@ -197,24 +229,36 @@ export default function App() {
     }
   };
 
+  const cancelEnrich = (): void => {
+    enrichCancelRef.current = true;
+  };
+
   const enrichSource = async (id: string): Promise<void> => {
     const src = sources.find((s) => s.id === id);
     if (!src || !src.index || src.index.length === 0) return;
 
+    enrichCancelRef.current = false;
     setEnriching(id);
-    setEnrichProgress({ done: 0, total: src.index.length });
 
-    const enriched: EnrichedEntry[] = [];
     const urls = src.index;
+    const alreadyDone = await storage.getRecipeUrlsBySource(id);
+    const remaining = urls.filter((u) => !alreadyDone.has(u.url));
+    let enrichedCount = alreadyDone.size;
+    let attempted = alreadyDone.size;
+    setEnrichProgress({ done: attempted, total: urls.length });
 
-    for (let i = 0; i < urls.length; i += ENRICH_CONCURRENCY) {
-      const batch = urls.slice(i, i + ENRICH_CONCURRENCY);
+    for (let i = 0; i < remaining.length; i += ENRICH_CONCURRENCY) {
+      if (enrichCancelRef.current) break;
+
+      const batch = remaining.slice(i, i + ENRICH_CONCURRENCY);
       const settled = await Promise.allSettled(batch.map((entry) => fetchRecipe(entry.url)));
 
+      const batchRecords: RecipeRecord[] = [];
       settled.forEach((result, j) => {
         if (result.status === "fulfilled" && result.value.ingredients.length > 0) {
           const data = result.value;
-          enriched.push({
+          batchRecords.push({
+            sourceId: id,
             title: batch[j].title,
             url: batch[j].url,
             ingredients: data.ingredients,
@@ -229,61 +273,47 @@ export default function App() {
         }
       });
 
-      const done = Math.min(i + ENRICH_CONCURRENCY, urls.length);
-      setEnrichProgress({ done, total: urls.length });
-
-      // Save progress every 10 batches (50 recipes) so data isn't lost on close
-      if (enriched.length > 0 && (i / ENRICH_CONCURRENCY) % 10 === 9) {
-        setSources((prev) => {
-          const next = prev.map((s) =>
-            s.id === id ? { ...s, enrichedIndex: [...enriched], enrichedCount: enriched.length } : s,
-          );
-          persistSources(next);
-          return next;
-        });
+      // Write each batch immediately so progress survives a closed tab or a cancel.
+      if (batchRecords.length > 0) {
+        await storage.putRecipes(batchRecords);
+        invalidateRecipeCache(id);
+        enrichedCount += batchRecords.length;
+        updateSource(id, { enrichedCount });
       }
 
-      if (i + ENRICH_CONCURRENCY < urls.length) {
+      attempted += batch.length;
+      setEnrichProgress({ done: Math.min(attempted, urls.length), total: urls.length });
+
+      if (i + ENRICH_CONCURRENCY < remaining.length && !enrichCancelRef.current) {
         await new Promise((r) => setTimeout(r, ENRICH_DELAY_MS));
       }
     }
 
-    const enrichedAt = new Date().toISOString();
-    setSources((prev) => {
-      const next = prev.map((s) =>
-        s.id === id
-          ? { ...s, enrichedIndex: enriched, enrichedCount: enriched.length, enrichedAt }
-          : s,
-      );
-      persistSources(next);
-      return next;
-    });
+    if (!enrichCancelRef.current) {
+      updateSource(id, { enrichedAt: new Date().toISOString() });
+    }
     setEnriching(null);
+    enrichCancelRef.current = false;
   };
 
   const removeSource = (id: string): void => {
-    setSources((prev) => {
-      const next = prev.filter((s) => s.id !== id);
-      persistSources(next);
-      return next;
-    });
+    setSources((prev) => prev.filter((s) => s.id !== id));
     setSelectedSources((prev) => prev.filter((s) => s !== id));
+    invalidateRecipeCache(id);
+    storage.deleteSource(id);
   };
 
   const toggleSource = (id: string): void => {
     const nowActive = !selectedSources.includes(id);
-    setSources((prev) => {
-      const next = prev.map((s) => (s.id === id ? { ...s, active: nowActive } : s));
-      persistSources(next);
-      return next;
-    });
+    updateSource(id, { active: nowActive });
     setSelectedSources((p) => (nowActive ? [...p, id] : p.filter((s) => s !== id)));
   };
 
   // ── Search ────────────────────────────────────────────────────────────────
-  const handleSearch = (entries: IngredientEntry[]): void => {
+  const handleSearch = async (): Promise<void> => {
     setError("");
-    if (entries.length === 0) {
+    const filled = entries.filter((e) => e.text.trim());
+    if (filled.length === 0) {
       setError("Please enter at least one ingredient.");
       return;
     }
@@ -296,7 +326,10 @@ export default function App() {
       );
       return;
     }
-    const found = searchRecipes(entries, cupboard, sources, selectedSources);
+    const sourcesWithRecipes = await Promise.all(
+      activeEnrichedSources.map(async (meta) => ({ meta, recipes: await getRecipesCached(meta.id) })),
+    );
+    const found = searchRecipes(filled, cupboard, sourcesWithRecipes);
     setResults(found);
     if (found.length === 0) {
       setError("No matches found above 25%. Try fewer or more general ingredients.");
@@ -313,6 +346,10 @@ export default function App() {
             sources={sources}
             selectedSources={selectedSources}
             onToggleSource={toggleSource}
+            entries={entries}
+            onIngredientChange={handleIngredientChange}
+            onToggleRequired={toggleRequired}
+            onRemoveEntry={removeEntry}
             error={error}
             onSearch={handleSearch}
             results={results}
@@ -338,6 +375,7 @@ export default function App() {
             onRemove={removeSource}
             onReindex={reindexSource}
             onEnrich={enrichSource}
+            onCancelEnrich={cancelEnrich}
           />
         )}
 

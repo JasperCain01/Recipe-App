@@ -1,16 +1,20 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { styles, chipStyle, primaryBtn } from "../lib/styles";
 import { scoreColor } from "../lib/utils";
 import RecipeCard from "./RecipeCard";
 import FilterDropdown, { type FilterOption } from "./FilterDropdown";
-import type { IngredientEntry, SearchResult, Source } from "../lib/types";
+import type { IngredientEntry, SearchResult, SourceMeta } from "../lib/types";
 
 interface SearchTabProps {
-  sources: Source[];
+  sources: SourceMeta[];
   selectedSources: string[];
   onToggleSource: (id: string) => void;
+  entries: IngredientEntry[];
+  onIngredientChange: (index: number, text: string) => void;
+  onToggleRequired: (index: number) => void;
+  onRemoveEntry: (index: number) => void;
   error: string;
-  onSearch: (entries: IngredientEntry[]) => void;
+  onSearch: () => void;
   results: SearchResult[];
   onGoToSourcesTab: () => void;
 }
@@ -38,6 +42,10 @@ export default function SearchTab({
   sources,
   selectedSources,
   onToggleSource,
+  entries,
+  onIngredientChange,
+  onToggleRequired,
+  onRemoveEntry,
   error,
   onSearch,
   results,
@@ -45,39 +53,6 @@ export default function SearchTab({
 }: SearchTabProps) {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
-  // ── Ingredient entries ───────────────────────────────────────────────────
-  const nextId = useRef(1);
-  const newEntry = (text = "", required = true): IngredientEntry => ({
-    id: String(nextId.current++),
-    text,
-    required,
-  });
-  const [entries, setEntries] = useState<IngredientEntry[]>([{ id: "0", text: "", required: true }]);
-
-  const handleIngredientChange = (index: number, text: string) => {
-    setEntries((prev) => {
-      const next = prev.map((e, i) => (i === index ? { ...e, text } : e));
-      if (next[next.length - 1].text.trim()) next.push(newEntry());
-      return next;
-    });
-  };
-
-  const toggleRequired = (index: number) => {
-    setEntries((prev) => prev.map((e, i) => (i === index ? { ...e, required: !e.required } : e)));
-  };
-
-  const removeEntry = (index: number) => {
-    setEntries((prev) => {
-      const next = prev.filter((_, i) => i !== index);
-      if (next.length === 0 || next[next.length - 1].text.trim()) next.push(newEntry());
-      return next;
-    });
-  };
-
-  const handleSearch = () => {
-    const filled = entries.filter((e) => e.text.trim());
-    onSearch(filled);
-  };
   const [timeFilters, setTimeFilters] = useState<Set<string>>(new Set());
   const [complexityFilters, setComplexityFilters] = useState<Set<string>>(new Set());
   const [mealTypeFilters, setMealTypeFilters] = useState<Set<string>>(new Set());
@@ -215,14 +190,14 @@ export default function SearchTab({
                 <input
                   type="text"
                   value={entry.text}
-                  onChange={(e) => handleIngredientChange(i, e.target.value)}
+                  onChange={(e) => onIngredientChange(i, e.target.value)}
                   placeholder={isTrailing ? "Add ingredient…" : ""}
                   style={styles.input}
                 />
                 {!isTrailing && (
                   <>
                     <button
-                      onClick={() => toggleRequired(i)}
+                      onClick={() => onToggleRequired(i)}
                       title={entry.required ? "This ingredient is required — click to make optional" : "This ingredient is optional — click to require it"}
                       style={{
                         padding: "0.35rem 0.6rem",
@@ -242,7 +217,7 @@ export default function SearchTab({
                       {entry.required ? "Required" : "Optional"}
                     </button>
                     <button
-                      onClick={() => removeEntry(i)}
+                      onClick={() => onRemoveEntry(i)}
                       title="Remove ingredient"
                       style={{
                         padding: "0.35rem 0.5rem",
@@ -269,7 +244,7 @@ export default function SearchTab({
 
       {error && <div style={styles.errorBanner}>{error}</div>}
 
-      <button onClick={handleSearch} style={primaryBtn(false)}>
+      <button onClick={onSearch} style={primaryBtn(false)}>
         Search Recipes →
       </button>
 
