@@ -4,13 +4,17 @@
   "version": "0.2.0",
   "type": "module",
   "scripts": {
+    "predev": "node scripts/copy-data.mjs",
     "dev": "vite",
+    "predev:all": "node scripts/copy-data.mjs",
     "dev:all": "vercel dev",
+    "prebuild": "node scripts/copy-data.mjs",
     "build": "tsc && vite build",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "preview": "vite preview",
-    "deploy": "vercel --prod"
+    "deploy": "vercel --prod",
+    "build-index": "node scripts/build-index.mjs"
   },
   "dependencies": {
     "idb": "^8.0.0",

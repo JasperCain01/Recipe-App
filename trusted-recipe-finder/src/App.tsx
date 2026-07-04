@@ -6,6 +6,7 @@ import { storage } from "./lib/storage";
 import { indexSource, fetchRecipe } from "./lib/api";
 import { searchRecipes } from "./lib/search";
 import { tokensForIngredientLine } from "../shared/tokens.js";
+import { parseTimeToMinutes } from "../shared/recipe-meta.js";
 import Header from "./components/Header";
 import SearchTab from "./components/SearchTab";
 import SourcesTab from "./components/SourcesTab";
@@ -19,15 +20,6 @@ const ENRICH_DELAY_MS = 300;
 // Debounce for live search as the user types/toggles ingredients
 const SEARCH_DEBOUNCE_MS = 150;
 const DEFAULT_MATCH_THRESHOLD = 25;
-
-/** Parse the human-readable time string produced by fetch-recipe into minutes. */
-function parseTimeToMinutes(timeStr: string | null): number | null {
-  if (!timeStr) return null;
-  const h = timeStr.match(/(\d+)\s*h/);
-  const m = timeStr.match(/(\d+)\s*m/);
-  const total = (h ? parseInt(h[1]) * 60 : 0) + (m ? parseInt(m[1]) : 0);
-  return total > 0 ? total : null;
-}
 
 export default function App() {
   // ── Search state ──────────────────────────────────────────────────────────

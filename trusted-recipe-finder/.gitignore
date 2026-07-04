@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Copied from data/ by scripts/copy-data.mjs at dev/build time — data/ is the source of truth
+public/data
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
