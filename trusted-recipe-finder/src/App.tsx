@@ -3,7 +3,7 @@ import { styles } from "./lib/styles";
 import { DEFAULT_CUPBOARD } from "./lib/constants";
 import { pickEmoji, normaliseUrl, makeId, deriveMealType } from "./lib/utils";
 import { storage } from "./lib/storage";
-import { indexSource, fetchRecipe } from "./lib/api";
+import { indexSource, fetchRecipe, fetchManifest, fetchBuiltinSource } from "./lib/api";
 import { searchRecipes } from "./lib/search";
 import { tokensForIngredientLine } from "../shared/tokens.js";
 import { parseTimeToMinutes } from "../shared/recipe-meta.js";
@@ -69,6 +69,7 @@ export default function App() {
         setSelectedSources(src.filter((s) => s.active).map((s) => s.id));
       }
       setSourcesLoaded(true);
+      importBuiltinSources(src ?? []);
     });
   }, []);
 
@@ -161,6 +162,72 @@ export default function App() {
       if (updated) storage.putSource(updated);
       return next;
     });
+  };
+
+  /**
+   * Import/refresh built-in (prebuilt) sources from the static data pipeline
+   * (data/manifest.json + data/<id>.json, built weekly by an Action). Silently
+   * does nothing if the manifest is unreachable (offline, 404, first deploy
+   * before any data has been built). Only re-fetches a source's recipe file
+   * when the manifest's timestamp has advanced past what's already stored.
+   */
+  const importBuiltinSources = async (existing: SourceMeta[]): Promise<void> => {
+    const manifest = await fetchManifest();
+    if (!manifest) return;
+
+    const existingById = new Map(existing.map((s) => [s.id, s]));
+    const imported: SourceMeta[] = [];
+
+    for (const entry of manifest.sources) {
+      const current = existingById.get(entry.id);
+      if (current?.enrichedAt && current.enrichedAt >= entry.updated_at) continue;
+
+      try {
+        const records = await fetchBuiltinSource(entry.file);
+        await storage.putRecipes(records);
+        const meta: SourceMeta = {
+          id: entry.id,
+          name: entry.name,
+          url: entry.url,
+          emoji: entry.emoji,
+          // Active by default only on first import — respect the user's choice on refresh.
+          active: current ? current.active : true,
+          hidden: current?.hidden ?? false,
+          index: null,
+          indexedAt: entry.updated_at,
+          indexCount: entry.count,
+          enrichedCount: records.length,
+          enrichedAt: entry.updated_at,
+          builtin: true,
+        };
+        await storage.putSource(meta);
+        imported.push(meta);
+      } catch {
+        // Skip this source on fetch failure — keep whatever was already stored.
+      }
+    }
+
+    if (imported.length === 0) return;
+    for (const m of imported) invalidateRecipeCache(m.id);
+    setSources((prev) => {
+      const byId = new Map(prev.map((s) => [s.id, s]));
+      for (const m of imported) byId.set(m.id, m);
+      return [...byId.values()];
+    });
+    setSelectedSources((prev) => {
+      const set = new Set(prev);
+      for (const m of imported) {
+        if (m.active) set.add(m.id);
+        else set.delete(m.id);
+      }
+      return [...set];
+    });
+  };
+
+  /** Hide a built-in source from the Sources list without deleting its data (it can reappear on the next manifest refresh if re-imported). */
+  const hideSource = (id: string): void => {
+    updateSource(id, { hidden: true, active: false });
+    setSelectedSources((prev) => prev.filter((s) => s !== id));
   };
 
   const addSource = async (): Promise<void> => {
@@ -341,7 +408,7 @@ export default function App() {
     if (activeEnrichedSources.length === 0) {
       setResults([]);
       setError(
-        'No enriched sources selected. Go to Sources tab and click "Enrich now" to enable ingredient search.',
+        "No sources selected. Enable one above, or add and enrich a custom source in the Sources tab.",
       );
       return;
     }
@@ -369,13 +436,15 @@ export default function App() {
   }, [entries, cupboard, selectedSources, matchThreshold]);
 
   // ── Render ────────────────────────────────────────────────────────────────
+  const visibleSources = sources.filter((s) => !s.hidden);
+
   return (
     <div style={styles.app}>
       <Header activeTab={activeTab} onTabChange={setActiveTab} />
       <main style={styles.main}>
         {activeTab === "search" && (
           <SearchTab
-            sources={sources}
+            sources={visibleSources}
             selectedSources={selectedSources}
             onToggleSource={toggleSource}
             entries={entries}
@@ -392,7 +461,7 @@ export default function App() {
 
         {activeTab === "sources" && (
           <SourcesTab
-            sources={sources}
+            sources={visibleSources}
             selectedSources={selectedSources}
             newSourceName={newSourceName}
             newSourceUrl={newSourceUrl}
@@ -409,6 +478,7 @@ export default function App() {
             onReindex={reindexSource}
             onEnrich={enrichSource}
             onCancelEnrich={cancelEnrich}
+            onHide={hideSource}
           />
         )}
 

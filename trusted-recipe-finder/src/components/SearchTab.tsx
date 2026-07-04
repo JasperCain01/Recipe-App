@@ -140,7 +140,7 @@ export default function SearchTab({
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {sources.length === 0 && (
             <span style={{ color: "#757575", fontSize: "0.8rem" }}>
-              No sources yet —{" "}
+              Built-in default recipes couldn't be loaded (offline?) —{" "}
               <button
                 onClick={onGoToSourcesTab}
                 style={{
@@ -149,7 +149,7 @@ export default function SearchTab({
                   fontFamily: "inherit", textDecoration: "underline",
                 }}
               >
-                add one in Sources
+                add your own in Sources
               </button>
             </span>
           )}
@@ -171,7 +171,7 @@ export default function SearchTab({
         </div>
         {sources.length > 0 && activeEnrichedCount === 0 && (
           <p style={{ color: "#757575", fontSize: "0.72rem", marginTop: "0.5rem" }}>
-            No enriched sources selected. Go to Sources tab and click "Enrich now" to enable ingredient matching.
+            No sources selected. Enable one above, or enrich a custom source in the Sources tab first.
           </p>
         )}
       </section>
