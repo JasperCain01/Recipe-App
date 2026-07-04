@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { styles, chipStyle } from "../lib/styles";
-import { scoreColor } from "../lib/utils";
-import RecipeCard from "./RecipeCard";
+import { useNarrowViewport, useWindowedRange } from "../lib/hooks";
+import ResultRow from "./ResultRow";
 import FilterDropdown, { type FilterOption } from "./FilterDropdown";
 import type { IngredientEntry, SearchResult, SourceMeta } from "../lib/types";
 
@@ -19,6 +19,12 @@ interface SearchTabProps {
   onThresholdChange: (value: number) => void;
   onGoToSourcesTab: () => void;
 }
+
+const NARROW_BREAKPOINT = 640;
+// Nominal collapsed-row heights used for windowing math (see useWindowedRange).
+const DESKTOP_ROW_HEIGHT = 64;
+const NARROW_ROW_HEIGHT = 118;
+const VIRTUALIZE_THRESHOLD = 200;
 
 const colStyle = (width: number | string): React.CSSProperties => ({
   width: typeof width === "number" ? `${width}px` : width,
@@ -39,6 +45,43 @@ const COMPLEXITY_OPTIONS: FilterOption[] = [
   { value: "unknown", label: "Unknown" },
 ];
 
+type SortColumn = "title" | "match" | "time" | "steps";
+type SortDirection = "asc" | "desc";
+
+const DEFAULT_SORT_DIRECTION: Record<SortColumn, SortDirection> = {
+  title: "asc",
+  match: "desc",
+  time: "asc",
+  steps: "asc",
+};
+
+function compareResults(a: SearchResult, b: SearchResult, column: SortColumn, direction: SortDirection): number {
+  const dir = direction === "asc" ? 1 : -1;
+  switch (column) {
+    case "title":
+      return a.title.localeCompare(b.title) * dir;
+    case "match":
+      return (a.matchScore - b.matchScore) * dir;
+    case "time": {
+      if (a.totalTimeMinutes === null && b.totalTimeMinutes === null) return 0;
+      if (a.totalTimeMinutes === null) return 1; // unknown always sorts last
+      if (b.totalTimeMinutes === null) return -1;
+      return (a.totalTimeMinutes - b.totalTimeMinutes) * dir;
+    }
+    case "steps": {
+      if (a.instructionCount === 0 && b.instructionCount === 0) return 0;
+      if (a.instructionCount === 0) return 1; // unknown always sorts last
+      if (b.instructionCount === 0) return -1;
+      return (a.instructionCount - b.instructionCount) * dir;
+    }
+  }
+}
+
+function SortArrow({ direction }: { direction: SortDirection | null }) {
+  if (!direction) return null;
+  return <span style={{ marginLeft: "0.2rem" }}>{direction === "asc" ? "↑" : "↓"}</span>;
+}
+
 export default function SearchTab({
   sources,
   selectedSources,
@@ -53,12 +96,20 @@ export default function SearchTab({
   onThresholdChange,
   onGoToSourcesTab,
 }: SearchTabProps) {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [expandedUrl, setExpandedUrl] = useState<string | null>(null);
 
   const [timeFilters, setTimeFilters] = useState<Set<string>>(new Set());
   const [complexityFilters, setComplexityFilters] = useState<Set<string>>(new Set());
   const [mealTypeFilters, setMealTypeFilters] = useState<Set<string>>(new Set());
   const [cuisineFilters, setCuisineFilters] = useState<Set<string>>(new Set());
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const [sort, setSort] = useState<{ column: SortColumn; direction: SortDirection }>({
+    column: "match",
+    direction: "desc",
+  });
+
+  const narrow = useNarrowViewport(NARROW_BREAKPOINT);
+  const listContainerRef = useRef<HTMLDivElement>(null);
 
   const enrichedSources = sources.filter((s) => s.enrichedCount > 0);
   const activeEnrichedCount = selectedSources.filter((id) =>
@@ -66,29 +117,32 @@ export default function SearchTab({
   ).length;
 
   // Unique options for each filterable column, derived from the full result set
-  const mealTypeOptions: FilterOption[] = [];
-  const cuisineOptions: FilterOption[] = [];
-  {
-    const seen = new Set<string>(); let hasUnknown = false;
-    for (const r of results) {
-      if (r.mealType) { if (!seen.has(r.mealType)) { seen.add(r.mealType); mealTypeOptions.push({ value: r.mealType, label: r.mealType }); } }
-      else hasUnknown = true;
+  const { mealTypeOptions, cuisineOptions } = useMemo(() => {
+    const mealTypes: FilterOption[] = [];
+    const cuisines: FilterOption[] = [];
+    {
+      const seen = new Set<string>(); let hasUnknown = false;
+      for (const r of results) {
+        if (r.mealType) { if (!seen.has(r.mealType)) { seen.add(r.mealType); mealTypes.push({ value: r.mealType, label: r.mealType }); } }
+        else hasUnknown = true;
+      }
+      mealTypes.sort((a, b) => a.label.localeCompare(b.label));
+      if (hasUnknown) mealTypes.push({ value: "Unknown", label: "Unknown" });
     }
-    mealTypeOptions.sort((a, b) => a.label.localeCompare(b.label));
-    if (hasUnknown) mealTypeOptions.push({ value: "Unknown", label: "Unknown" });
-  }
-  {
-    const seen = new Set<string>(); let hasUnknown = false;
-    for (const r of results) {
-      if (r.cuisine) { if (!seen.has(r.cuisine)) { seen.add(r.cuisine); cuisineOptions.push({ value: r.cuisine, label: r.cuisine }); } }
-      else hasUnknown = true;
+    {
+      const seen = new Set<string>(); let hasUnknown = false;
+      for (const r of results) {
+        if (r.cuisine) { if (!seen.has(r.cuisine)) { seen.add(r.cuisine); cuisines.push({ value: r.cuisine, label: r.cuisine }); } }
+        else hasUnknown = true;
+      }
+      cuisines.sort((a, b) => a.label.localeCompare(b.label));
+      if (hasUnknown) cuisines.push({ value: "Unknown", label: "Unknown" });
     }
-    cuisineOptions.sort((a, b) => a.label.localeCompare(b.label));
-    if (hasUnknown) cuisineOptions.push({ value: "Unknown", label: "Unknown" });
-  }
+    return { mealTypeOptions: mealTypes, cuisineOptions: cuisines };
+  }, [results]);
 
   // Apply column filters — OR logic within each filter, AND across filters
-  const filteredResults = results.filter((r) => {
+  const filteredResults = useMemo(() => results.filter((r) => {
     if (timeFilters.size > 0) {
       const ok = [...timeFilters].some((tf) => {
         if (tf === "unknown") return r.totalTimeMinutes === null;
@@ -114,7 +168,12 @@ export default function SearchTab({
       if (!cuisineFilters.has(r.cuisine ?? "Unknown")) return false;
     }
     return true;
-  });
+  }), [results, timeFilters, complexityFilters, mealTypeFilters, cuisineFilters]);
+
+  const sortedResults = useMemo(
+    () => [...filteredResults].sort((a, b) => compareResults(a, b, sort.column, sort.direction)),
+    [filteredResults, sort.column, sort.direction],
+  );
 
   const hasActiveFilter =
     timeFilters.size > 0 || complexityFilters.size > 0 ||
@@ -126,6 +185,27 @@ export default function SearchTab({
     setMealTypeFilters(new Set());
     setCuisineFilters(new Set());
   };
+
+  const handleSortClick = (column: SortColumn) => {
+    setSort((prev) =>
+      prev.column === column
+        ? { column, direction: prev.direction === "asc" ? "desc" : "asc" }
+        : { column, direction: DEFAULT_SORT_DIRECTION[column] },
+    );
+  };
+
+  const toggleExpanded = (url: string) => {
+    setExpandedUrl((prev) => (prev === url ? null : url));
+  };
+
+  // E6: virtualise the list once it's large — but not while a row is expanded,
+  // since fixed-row-height windowing math doesn't account for the expanded
+  // row's extra height (see useWindowedRange).
+  const rowHeight = narrow ? NARROW_ROW_HEIGHT : DESKTOP_ROW_HEIGHT;
+  const shouldVirtualize = sortedResults.length > VIRTUALIZE_THRESHOLD && expandedUrl === null;
+  const virtualCount = shouldVirtualize ? sortedResults.length : 0;
+  const [rangeStart, rangeEnd] = useWindowedRange(virtualCount, rowHeight, listContainerRef);
+  const visibleResults = shouldVirtualize ? sortedResults.slice(rangeStart, rangeEnd) : sortedResults;
 
   return (
     <div>
@@ -161,7 +241,7 @@ export default function SearchTab({
                 key={src.id}
                 onClick={() => onToggleSource(src.id)}
                 title={enriched ? `${src.enrichedCount} recipes enriched` : "Not enriched — enrich in Sources tab to enable ingredient search"}
-                style={{ ...chipStyle(active), opacity: enriched ? 1 : 0.45 }}
+                style={{ ...chipStyle(active), opacity: enriched ? 1 : 0.45, minHeight: "40px" }}
               >
                 {src.emoji} {src.name}
                 {!enriched && <span style={{ marginLeft: "0.3rem", fontSize: "0.65rem" }}>⚠</span>}
@@ -203,6 +283,7 @@ export default function SearchTab({
                       title={entry.required ? "This ingredient is required — click to make optional" : "This ingredient is optional — click to require it"}
                       style={{
                         padding: "0.35rem 0.6rem",
+                        minHeight: "40px",
                         border: "1px solid",
                         borderColor: entry.required ? "#00796B" : "#E0E0E0",
                         background: entry.required ? "rgba(0,121,107,0.1)" : "transparent",
@@ -223,6 +304,8 @@ export default function SearchTab({
                       title="Remove ingredient"
                       style={{
                         padding: "0.35rem 0.5rem",
+                        minWidth: "40px",
+                        minHeight: "40px",
                         border: "1px solid #E0E0E0",
                         background: "transparent",
                         color: "#9E9E9E",
@@ -269,77 +352,136 @@ export default function SearchTab({
         </span>
       </div>
 
-      {/* Results table */}
+      {/* Results */}
       {results.length > 0 && (
         <div style={{ marginTop: "2rem" }}>
-
-          {/* Column header row */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "flex-end",
-              gap: "0.75rem",
-              padding: "0 1rem 0.6rem",
-              borderBottom: "1px solid #E0E0E0",
-              marginBottom: "0.25rem",
-            }}
-          >
-            {/* Recipe column — no filter */}
-            <div style={{ flex: 1, minWidth: 0 }}>
-              <span style={{ ...styles.label, marginBottom: 0 }}>Recipe</span>
+          {narrow ? (
+            <div style={{ marginBottom: "0.5rem" }}>
+              <button
+                onClick={() => setFiltersOpen((o) => !o)}
+                style={{
+                  width: "100%",
+                  minHeight: "40px",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  padding: "0.5rem 0.75rem",
+                  background: "#FFFFFF",
+                  border: "1px solid #E0E0E0",
+                  borderRadius: "6px",
+                  color: "#757575",
+                  fontFamily: "inherit",
+                  fontSize: "0.78rem",
+                  cursor: "pointer",
+                }}
+              >
+                <span>Filters{hasActiveFilter ? " •" : ""}</span>
+                <span style={{ opacity: 0.5 }}>{filtersOpen ? "▴" : "▾"}</span>
+              </button>
+              {filtersOpen && (
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "0.6rem",
+                    padding: "0.75rem",
+                    border: "1px solid #E0E0E0",
+                    borderTop: "none",
+                    borderRadius: "0 0 6px 6px",
+                  }}
+                >
+                  <FilterField label="Meal">
+                    <FilterDropdown options={mealTypeOptions} selected={mealTypeFilters} onChange={(next) => { setMealTypeFilters(next); setExpandedUrl(null); }} />
+                  </FilterField>
+                  <FilterField label="Cuisine">
+                    <FilterDropdown options={cuisineOptions} selected={cuisineFilters} onChange={(next) => { setCuisineFilters(next); setExpandedUrl(null); }} />
+                  </FilterField>
+                  <FilterField label="Time">
+                    <FilterDropdown options={TIME_OPTIONS} selected={timeFilters} onChange={(next) => { setTimeFilters(next); setExpandedUrl(null); }} />
+                  </FilterField>
+                  <FilterField label="Steps">
+                    <FilterDropdown options={COMPLEXITY_OPTIONS} selected={complexityFilters} onChange={(next) => { setComplexityFilters(next); setExpandedUrl(null); }} />
+                  </FilterField>
+                  {hasActiveFilter && (
+                    <button onClick={clearFilters} style={{ ...clearFiltersBtnStyle, alignSelf: "flex-start" }}>
+                      Clear filters ×
+                    </button>
+                  )}
+                </div>
+              )}
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.35rem", marginTop: "0.6rem" }}>
+                {(["match", "time", "steps", "title"] as SortColumn[]).map((col) => (
+                  <button key={col} onClick={() => handleSortClick(col)} style={sortChipStyle(sort.column === col)}>
+                    {sortLabel(col)}
+                    <SortArrow direction={sort.column === col ? sort.direction : null} />
+                  </button>
+                ))}
+              </div>
             </div>
+          ) : (
+            <>
+              {/* Column header row */}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "flex-end",
+                  gap: "0.75rem",
+                  padding: "0 1rem 0.6rem",
+                  borderBottom: "1px solid #E0E0E0",
+                  marginBottom: "0.25rem",
+                }}
+              >
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <SortHeaderButton column="title" sort={sort} onClick={handleSortClick} label="Recipe" />
+                </div>
 
-            {/* Match column */}
-            <div style={colStyle(52)}>
-              <span style={{ ...styles.label, marginBottom: 0 }}>Match ↓</span>
-            </div>
+                <div style={colStyle(52)}>
+                  <SortHeaderButton column="match" sort={sort} onClick={handleSortClick} label="Match" />
+                </div>
 
-            {/* Meal type column */}
-            <div style={colStyle(96)}>
-              <span style={{ ...styles.label, marginBottom: 0 }}>Meal</span>
-              <FilterDropdown
-                options={mealTypeOptions}
-                selected={mealTypeFilters}
-                onChange={(next) => { setMealTypeFilters(next); setExpandedIndex(null); }}
-              />
-            </div>
+                <div style={colStyle(96)}>
+                  <span style={{ ...styles.label, marginBottom: 0 }}>Meal</span>
+                  <FilterDropdown
+                    options={mealTypeOptions}
+                    selected={mealTypeFilters}
+                    onChange={(next) => { setMealTypeFilters(next); setExpandedUrl(null); }}
+                  />
+                </div>
 
-            {/* Cuisine column */}
-            <div style={colStyle(104)}>
-              <span style={{ ...styles.label, marginBottom: 0 }}>Cuisine</span>
-              <FilterDropdown
-                options={cuisineOptions}
-                selected={cuisineFilters}
-                onChange={(next) => { setCuisineFilters(next); setExpandedIndex(null); }}
-              />
-            </div>
+                <div style={colStyle(104)}>
+                  <span style={{ ...styles.label, marginBottom: 0 }}>Cuisine</span>
+                  <FilterDropdown
+                    options={cuisineOptions}
+                    selected={cuisineFilters}
+                    onChange={(next) => { setCuisineFilters(next); setExpandedUrl(null); }}
+                  />
+                </div>
 
-            {/* Time column */}
-            <div style={colStyle(88)}>
-              <span style={{ ...styles.label, marginBottom: 0 }}>Time</span>
-              <FilterDropdown
-                options={TIME_OPTIONS}
-                selected={timeFilters}
-                onChange={(next) => { setTimeFilters(next); setExpandedIndex(null); }}
-              />
-            </div>
+                <div style={colStyle(88)}>
+                  <SortHeaderButton column="time" sort={sort} onClick={handleSortClick} label="Time" />
+                  <FilterDropdown
+                    options={TIME_OPTIONS}
+                    selected={timeFilters}
+                    onChange={(next) => { setTimeFilters(next); setExpandedUrl(null); }}
+                  />
+                </div>
 
-            {/* Steps column */}
-            <div style={colStyle(96)}>
-              <span style={{ ...styles.label, marginBottom: 0 }}>Steps</span>
-              <FilterDropdown
-                options={COMPLEXITY_OPTIONS}
-                selected={complexityFilters}
-                onChange={(next) => { setComplexityFilters(next); setExpandedIndex(null); }}
-                alignRight
-              />
-            </div>
+                <div style={colStyle(96)}>
+                  <SortHeaderButton column="steps" sort={sort} onClick={handleSortClick} label="Steps" />
+                  <FilterDropdown
+                    options={COMPLEXITY_OPTIONS}
+                    selected={complexityFilters}
+                    onChange={(next) => { setComplexityFilters(next); setExpandedUrl(null); }}
+                    alignRight
+                  />
+                </div>
 
-            {/* Missing column */}
-            <div style={colStyle(60)}>
-              <span style={{ ...styles.label, marginBottom: 0 }}>Missing</span>
-            </div>
-          </div>
+                <div style={colStyle(60)}>
+                  <span style={{ ...styles.label, marginBottom: 0 }}>Missing</span>
+                </div>
+              </div>
+            </>
+          )}
 
           {/* Result count + clear filters */}
           <div style={{ padding: "0.35rem 1rem 0.5rem", fontSize: "0.68rem", color: "#757575", display: "flex", alignItems: "center", gap: "0.75rem" }}>
@@ -348,123 +490,40 @@ export default function SearchTab({
                 ? `${filteredResults.length} of ${results.length} recipes`
                 : `${results.length} ${results.length === 1 ? "recipe" : "recipes"}`}
             </span>
-            {hasActiveFilter && (
-              <button
-                onClick={clearFilters}
-                style={{
-                  background: "none",
-                  border: "1px solid #E0E0E0",
-                  color: "#757575",
-                  borderRadius: "4px",
-                  padding: "0.1rem 0.45rem",
-                  fontSize: "0.62rem",
-                  fontFamily: "inherit",
-                  cursor: "pointer",
-                }}
-              >
+            {!narrow && hasActiveFilter && (
+              <button onClick={clearFilters} style={clearFiltersBtnStyle}>
                 Clear filters ×
               </button>
             )}
           </div>
 
           {/* Rows */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
-            {filteredResults.map((r, i) => (
-              <div key={i}>
-                {/* Collapsed row */}
-                <button
-                  onClick={() => setExpandedIndex(expandedIndex === i ? null : i)}
-                  style={{
-                    width: "100%",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "0.75rem",
-                    padding: "0.65rem 1rem",
-                    background: expandedIndex === i ? "rgba(93,64,55,0.04)" : "#FFFFFF",
-                    border: "1px solid",
-                    borderColor: expandedIndex === i ? "#BDBDBD" : "#E0E0E0",
-                    borderRadius: expandedIndex === i ? "6px 6px 0 0" : "6px",
-                    cursor: "pointer",
-                    fontFamily: "inherit",
-                    textAlign: "left",
-                  }}
+          <div
+            ref={listContainerRef}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "2px",
+              position: "relative",
+              ...(shouldVirtualize ? { height: sortedResults.length * rowHeight } : {}),
+            }}
+          >
+            {visibleResults.map((r, i) => {
+              const actualIndex = shouldVirtualize ? rangeStart + i : i;
+              return (
+                <div
+                  key={r.sourceUrl}
+                  style={shouldVirtualize ? { position: "absolute", top: actualIndex * rowHeight, left: 0, right: 0 } : undefined}
                 >
-                  {/* Recipe + source */}
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <div style={{
-                      color: "#212121",
-                      fontSize: "0.85rem",
-                      overflow: "hidden",
-                      textOverflow: "ellipsis",
-                      whiteSpace: "nowrap",
-                      lineHeight: "1.3",
-                    }}>
-                      {r.title}
-                    </div>
-                    <div style={{ color: "#9E9E9E", fontSize: "0.68rem", marginTop: "0.1rem" }}>
-                      {r.sourceEmoji} {r.source}
-                    </div>
-                  </div>
-
-                  {/* Match % */}
-                  <div style={{ ...colStyle(52), textAlign: "right", flexShrink: 0 }}>
-                    <span style={{ fontSize: "0.92rem", fontWeight: "bold", color: scoreColor(r.matchScore) }}>
-                      {r.matchScore}%
-                    </span>
-                  </div>
-
-                  {/* Meal type */}
-                  <div style={{ ...colStyle(96), flexShrink: 0 }}>
-                    <span style={{ fontSize: "0.75rem", color: r.mealType ? "#757575" : "#BDBDBD" }}>
-                      {r.mealType ?? "Unknown"}
-                    </span>
-                  </div>
-
-                  {/* Cuisine */}
-                  <div style={{ ...colStyle(104), flexShrink: 0 }}>
-                    <span style={{ fontSize: "0.75rem", color: r.cuisine ? "#757575" : "#BDBDBD" }}>
-                      {r.cuisine ?? "Unknown"}
-                    </span>
-                  </div>
-
-                  {/* Time */}
-                  <div style={{ ...colStyle(88), flexShrink: 0 }}>
-                    <span style={{ fontSize: "0.75rem", color: r.totalTime ? "#757575" : "#BDBDBD" }}>
-                      {r.totalTime ?? "Unknown"}
-                    </span>
-                  </div>
-
-                  {/* Steps */}
-                  <div style={{ ...colStyle(96), flexShrink: 0 }}>
-                    <span style={{ fontSize: "0.75rem", color: r.instructionCount > 0 ? "#757575" : "#BDBDBD" }}>
-                      {r.instructionCount > 0 ? `${r.instructionCount} steps` : "Unknown"}
-                    </span>
-                  </div>
-
-                  {/* Missing count */}
-                  <div style={{ ...colStyle(60), flexShrink: 0, textAlign: "right" }}>
-                    {r.missingIngredients.length > 0 ? (
-                      <span style={{ fontSize: "0.75rem", color: "#B00020" }}>
-                        {r.missingIngredients.length}
-                      </span>
-                    ) : (
-                      <span style={{ fontSize: "0.75rem", color: "#2E7D32" }}>✓</span>
-                    )}
-                  </div>
-                </button>
-
-                {/* Expanded detail */}
-                {expandedIndex === i && (
-                  <div style={{
-                    border: "1px solid #BDBDBD",
-                    borderTop: "none",
-                    borderRadius: "0 0 6px 6px",
-                  }}>
-                    <RecipeCard result={r} />
-                  </div>
-                )}
-              </div>
-            ))}
+                  <ResultRow
+                    result={r}
+                    expanded={expandedUrl === r.sourceUrl}
+                    onToggleExpand={() => toggleExpanded(r.sourceUrl)}
+                    narrow={narrow}
+                  />
+                </div>
+              );
+            })}
 
             {filteredResults.length === 0 && (
               <p style={{ color: "#757575", fontSize: "0.8rem", padding: "1rem 1rem 0" }}>
@@ -474,6 +533,82 @@ export default function SearchTab({
           </div>
         </div>
       )}
+    </div>
+  );
+}
+
+const clearFiltersBtnStyle: React.CSSProperties = {
+  background: "none",
+  border: "1px solid #E0E0E0",
+  color: "#757575",
+  borderRadius: "4px",
+  padding: "0.1rem 0.45rem",
+  fontSize: "0.62rem",
+  fontFamily: "inherit",
+  cursor: "pointer",
+};
+
+function sortLabel(column: SortColumn): string {
+  switch (column) {
+    case "title": return "Title";
+    case "match": return "Match";
+    case "time": return "Time";
+    case "steps": return "Steps";
+  }
+}
+
+function sortChipStyle(active: boolean): React.CSSProperties {
+  return {
+    minHeight: "40px",
+    padding: "0.3rem 0.7rem",
+    border: "1px solid",
+    borderColor: active ? "#00796B" : "#E0E0E0",
+    background: active ? "rgba(0,121,107,0.1)" : "#FFFFFF",
+    color: active ? "#00796B" : "#757575",
+    borderRadius: "20px",
+    fontFamily: "inherit",
+    fontSize: "0.72rem",
+    cursor: "pointer",
+  };
+}
+
+function SortHeaderButton({
+  column,
+  sort,
+  onClick,
+  label,
+}: {
+  column: SortColumn;
+  sort: { column: SortColumn; direction: SortDirection };
+  onClick: (column: SortColumn) => void;
+  label: string;
+}) {
+  const active = sort.column === column;
+  return (
+    <button
+      onClick={() => onClick(column)}
+      style={{
+        ...styles.label,
+        marginBottom: 0,
+        background: "none",
+        border: "none",
+        padding: 0,
+        cursor: "pointer",
+        fontFamily: "inherit",
+        color: active ? "#00796B" : "#757575",
+      }}
+    >
+      {label}
+      <SortArrow direction={active ? sort.direction : null} />
+    </button>
+  );
+}
+
+function FilterField({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
+      <span style={{ ...styles.label, marginBottom: 0 }}>{label}</span>
+      {children}
     </div>
   );
 }
