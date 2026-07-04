@@ -5,13 +5,13 @@ import { pickEmoji, normaliseUrl, makeId, deriveMealType } from "./lib/utils";
 import { storage } from "./lib/storage";
 import { indexSource, fetchRecipe, fetchManifest, fetchBuiltinSource } from "./lib/api";
 import { searchRecipes } from "./lib/search";
-import { tokensForIngredientLine } from "../shared/tokens.js";
+import { tokensForIngredientLine, tokenise } from "../shared/tokens.js";
 import { parseTimeToMinutes } from "../shared/recipe-meta.js";
 import Header from "./components/Header";
 import SearchTab from "./components/SearchTab";
 import SourcesTab from "./components/SourcesTab";
 import CupboardTab from "./components/CupboardTab";
-import type { IngredientEntry, RecipeRecord, SearchResult, SourceMeta, Tab } from "./lib/types";
+import type { IndexEntry, IngredientEntry, RecipeRecord, SearchResult, SourceMeta, Tab } from "./lib/types";
 
 // How many recipe pages to fetch simultaneously during enrichment
 const ENRICH_CONCURRENCY = 5;
@@ -20,15 +20,19 @@ const ENRICH_DELAY_MS = 300;
 // Debounce for live search as the user types/toggles ingredients
 const SEARCH_DEBOUNCE_MS = 150;
 const DEFAULT_MATCH_THRESHOLD = 25;
+// Top-N ingredient words (by frequency) kept for the autocomplete vocabulary
+const VOCABULARY_SIZE = 500;
 
 export default function App() {
   // ── Search state ──────────────────────────────────────────────────────────
   const [results, setResults] = useState<SearchResult[]>([]);
   const [error, setError] = useState<string>("");
   const nextEntryId = useRef(1);
-  const [entries, setEntries] = useState<IngredientEntry[]>([{ id: "0", text: "", required: true }]);
+  const [entries, setEntries] = useState<IngredientEntry[]>([]);
   const [matchThreshold, setMatchThreshold] = useState<number>(DEFAULT_MATCH_THRESHOLD);
   const searchDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // U4 autocomplete: ranked ingredient vocabulary built once per session from enriched recipe data.
+  const [vocabulary, setVocabulary] = useState<string[]>([]);
 
   // ── Source state ──────────────────────────────────────────────────────────
   const [sources, setSources] = useState<SourceMeta[]>([]);
@@ -63,13 +67,14 @@ export default function App() {
     const threshold = storage.loadMatchThreshold();
     if (threshold !== null) setMatchThreshold(threshold);
 
-    storage.loadSourceMetas().then((src) => {
+    storage.loadSourceMetas().then(async (src) => {
       if (src && src.length > 0) {
         setSources(src);
         setSelectedSources(src.filter((s) => s.active).map((s) => s.id));
       }
       setSourcesLoaded(true);
-      importBuiltinSources(src ?? []);
+      const merged = await importBuiltinSources(src ?? []);
+      buildVocabulary(merged);
     });
   }, []);
 
@@ -127,18 +132,13 @@ export default function App() {
   };
 
   // ── Ingredient entries (U1: lifted out of SearchTab so they survive tab switches) ──
-  const newEntry = (text = "", required = true): IngredientEntry => ({
-    id: String(nextEntryId.current++),
-    text,
-    required,
-  });
-
-  const handleIngredientChange = (index: number, text: string): void => {
-    setEntries((prev) => {
-      const next = prev.map((e, i) => (i === index ? { ...e, text } : e));
-      if (next[next.length - 1].text.trim()) next.push(newEntry());
-      return next;
-    });
+  // U4: chip model — entries only ever hold committed (non-blank) ingredients;
+  // the in-progress text being typed lives as local state inside SearchTab.
+  const addIngredient = (text: string): void => {
+    const trimmed = text.trim();
+    if (!trimmed) return;
+    if (entries.some((e) => e.text.toLowerCase() === trimmed.toLowerCase())) return;
+    setEntries((prev) => [...prev, { id: String(nextEntryId.current++), text: trimmed, required: true }]);
   };
 
   const toggleRequired = (index: number): void => {
@@ -146,11 +146,7 @@ export default function App() {
   };
 
   const removeEntry = (index: number): void => {
-    setEntries((prev) => {
-      const next = prev.filter((_, i) => i !== index);
-      if (next.length === 0 || next[next.length - 1].text.trim()) next.push(newEntry());
-      return next;
-    });
+    setEntries((prev) => prev.filter((_, i) => i !== index));
   };
 
   // ── Sources ───────────────────────────────────────────────────────────────
@@ -171,9 +167,9 @@ export default function App() {
    * before any data has been built). Only re-fetches a source's recipe file
    * when the manifest's timestamp has advanced past what's already stored.
    */
-  const importBuiltinSources = async (existing: SourceMeta[]): Promise<void> => {
+  const importBuiltinSources = async (existing: SourceMeta[]): Promise<SourceMeta[]> => {
     const manifest = await fetchManifest();
-    if (!manifest) return;
+    if (!manifest) return existing;
 
     const existingById = new Map(existing.map((s) => [s.id, s]));
     const imported: SourceMeta[] = [];
@@ -207,13 +203,16 @@ export default function App() {
       }
     }
 
-    if (imported.length === 0) return;
+    const merged = [...existingById.values()];
+    for (const m of imported) {
+      const i = merged.findIndex((s) => s.id === m.id);
+      if (i === -1) merged.push(m);
+      else merged[i] = m;
+    }
+
+    if (imported.length === 0) return merged;
     for (const m of imported) invalidateRecipeCache(m.id);
-    setSources((prev) => {
-      const byId = new Map(prev.map((s) => [s.id, s]));
-      for (const m of imported) byId.set(m.id, m);
-      return [...byId.values()];
-    });
+    setSources(merged);
     setSelectedSources((prev) => {
       const set = new Set(prev);
       for (const m of imported) {
@@ -222,12 +221,38 @@ export default function App() {
       }
       return [...set];
     });
+    return merged;
   };
 
   /** Hide a built-in source from the Sources list without deleting its data (it can reappear on the next manifest refresh if re-imported). */
   const hideSource = (id: string): void => {
     updateSource(id, { hidden: true, active: false });
     setSelectedSources((prev) => prev.filter((s) => s !== id));
+  };
+
+  /**
+   * U4 autocomplete: build a ranked ingredient-word vocabulary from every
+   * enriched source's recipe tokens, once per session (not rebuilt as
+   * sources change later — see the mount effect below).
+   */
+  const buildVocabulary = async (sourcesToScan: SourceMeta[]): Promise<void> => {
+    const freq = new Map<string, number>();
+    for (const meta of sourcesToScan) {
+      if (meta.enrichedCount === 0) continue;
+      const recipes = await getRecipesCached(meta.id);
+      for (const recipe of recipes) {
+        for (const line of recipe.ingredients) {
+          for (const word of tokenise(line)) {
+            freq.set(word, (freq.get(word) ?? 0) + 1);
+          }
+        }
+      }
+    }
+    const ranked = [...freq.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, VOCABULARY_SIZE)
+      .map(([word]) => word);
+    setVocabulary(ranked);
   };
 
   const addSource = async (): Promise<void> => {
@@ -284,13 +309,17 @@ export default function App() {
     try {
       const data = await indexSource(url);
       updateSource(newSrc.id, { index: data.recipes, indexedAt: data.indexed_at, indexCount: data.count });
-      setSourceSuccess(`✓ "${newSrc.name}" added — ${data.count} recipes indexed. Click "Enrich now" to enable ingredient search.`);
+      setIndexing(null);
+      // U7: chain straight into enrichment — no separate manual step for a new source.
+      // Session 1's incremental writes mean it's searchable before this finishes.
+      await enrichSource(newSrc.id, data.recipes);
+      setSourceSuccess(`✓ "${newSrc.name}" ready — ${data.count} recipes searchable.`);
     } catch (err) {
       setSourceError(
         `"${newSrc.name}" added but indexing failed: ${errorMessage(err)}. You can re-index from the source list.`,
       );
-    } finally {
       setIndexing(null);
+    } finally {
       scheduleClearMessages();
     }
   };
@@ -317,14 +346,18 @@ export default function App() {
     enrichCancelRef.current = true;
   };
 
-  const enrichSource = async (id: string): Promise<void> => {
-    const src = sources.find((s) => s.id === id);
-    if (!src || !src.index || src.index.length === 0) return;
+  /**
+   * `indexOverride` lets addSource chain straight into enrichment (U7) with
+   * the just-fetched index, instead of reading `sources` state — which
+   * hasn't re-rendered yet and would still be missing it at that point.
+   */
+  const enrichSource = async (id: string, indexOverride?: IndexEntry[]): Promise<void> => {
+    const urls = indexOverride ?? sources.find((s) => s.id === id)?.index;
+    if (!urls || urls.length === 0) return;
 
     enrichCancelRef.current = false;
     setEnriching(id);
 
-    const urls = src.index;
     const alreadyDone = await storage.getRecipeUrlsBySource(id);
     const remaining = urls.filter((u) => !alreadyDone.has(u.url));
     let enrichedCount = alreadyDone.size;
@@ -397,8 +430,7 @@ export default function App() {
   // ── Search ────────────────────────────────────────────────────────────────
   const handleSearch = async (): Promise<void> => {
     setError("");
-    const filled = entries.filter((e) => e.text.trim());
-    if (filled.length === 0) {
+    if (entries.length === 0) {
       setResults([]);
       return;
     }
@@ -415,7 +447,7 @@ export default function App() {
     const sourcesWithRecipes = await Promise.all(
       activeEnrichedSources.map(async (meta) => ({ meta, recipes: await getRecipesCached(meta.id) })),
     );
-    const found = searchRecipes(filled, cupboard, sourcesWithRecipes, matchThreshold);
+    const found = searchRecipes(entries, cupboard, sourcesWithRecipes, matchThreshold);
     setResults(found);
     if (found.length === 0) {
       setError(`No matches found above ${matchThreshold}%. Try fewer ingredients, more general terms, or lowering the threshold.`);
@@ -448,9 +480,10 @@ export default function App() {
             selectedSources={selectedSources}
             onToggleSource={toggleSource}
             entries={entries}
-            onIngredientChange={handleIngredientChange}
+            onAddIngredient={addIngredient}
             onToggleRequired={toggleRequired}
             onRemoveEntry={removeEntry}
+            vocabulary={vocabulary}
             error={error}
             results={results}
             matchThreshold={matchThreshold}

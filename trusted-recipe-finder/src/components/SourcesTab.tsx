@@ -107,6 +107,9 @@ export default function SourcesTab({
           const hasEnriched = src.enrichedCount > 0;
           const isActive = selectedSources.includes(src.id);
           const isBuiltin = !!src.builtin;
+          // U7: a brand-new source chains index -> enrich automatically (App.tsx addSource);
+          // show one combined progress line for that first pass instead of two separate ones.
+          const isFirstPass = !isBuiltin && !src.enrichedAt && (isIndexing || isEnriching);
 
           return (
             <div
@@ -221,6 +224,44 @@ export default function SourcesTab({
                   <span style={{ fontSize: "0.7rem", color: "#2E7D32" }}>
                     ✓ {src.enrichedCount} recipes ready to search — no indexing or enriching needed
                   </span>
+                ) : isFirstPass ? (
+                  <>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                      <span style={{ fontSize: "0.7rem", color: "#FF8F00" }}>
+                        ⏳ Adding {src.name}…{" "}
+                        {isIndexing
+                          ? "finding recipes…"
+                          : `${enrichProgress.done}/${enrichProgress.total} recipes ready — searchable now`}
+                      </span>
+                      {isEnriching && (
+                        <button
+                          onClick={onCancelEnrich}
+                          style={{
+                            ...smBtn("default"),
+                            fontSize: "0.68rem",
+                            padding: "0.3rem 0.6rem",
+                            borderColor: "#B00020",
+                            color: "#B00020",
+                          }}
+                        >
+                          Cancel
+                        </button>
+                      )}
+                    </div>
+                    {isEnriching && enrichProgress.total > 0 && (
+                      <div style={{ height: "3px", background: "#E0E0E0", borderRadius: "2px", overflow: "hidden" }}>
+                        <div
+                          style={{
+                            height: "100%",
+                            width: `${(enrichProgress.done / enrichProgress.total) * 100}%`,
+                            background: "#00796B",
+                            borderRadius: "2px",
+                            transition: "width 0.3s ease",
+                          }}
+                        />
+                      </div>
+                    )}
+                  </>
                 ) : (
                   <>
                     {/* Index status */}

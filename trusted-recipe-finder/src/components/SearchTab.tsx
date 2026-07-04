@@ -2,6 +2,7 @@ import { useMemo, useRef, useState } from "react";
 import { styles, chipStyle } from "../lib/styles";
 import { useNarrowViewport, useWindowedRange } from "../lib/hooks";
 import ResultRow from "./ResultRow";
+import IngredientEntryBox from "./IngredientEntryBox";
 import FilterDropdown, { type FilterOption } from "./FilterDropdown";
 import type { IngredientEntry, SearchResult, SourceMeta } from "../lib/types";
 
@@ -10,9 +11,10 @@ interface SearchTabProps {
   selectedSources: string[];
   onToggleSource: (id: string) => void;
   entries: IngredientEntry[];
-  onIngredientChange: (index: number, text: string) => void;
+  onAddIngredient: (text: string) => void;
   onToggleRequired: (index: number) => void;
   onRemoveEntry: (index: number) => void;
+  vocabulary: string[];
   error: string;
   results: SearchResult[];
   matchThreshold: number;
@@ -87,9 +89,10 @@ export default function SearchTab({
   selectedSources,
   onToggleSource,
   entries,
-  onIngredientChange,
+  onAddIngredient,
   onToggleRequired,
   onRemoveEntry,
+  vocabulary,
   error,
   results,
   matchThreshold,
@@ -256,7 +259,7 @@ export default function SearchTab({
         )}
       </section>
 
-      {/* Ingredients */}
+      {/* Ingredients (U4: chip entry + autocomplete) */}
       <section style={styles.section}>
         <label style={styles.label}>
           Your Ingredients
@@ -264,67 +267,13 @@ export default function SearchTab({
             — store cupboard always included
           </span>
         </label>
-        <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
-          {entries.map((entry, i) => {
-            const isTrailing = i === entries.length - 1 && !entry.text.trim();
-            return (
-              <div key={entry.id} style={{ display: "flex", gap: "0.4rem", alignItems: "center" }}>
-                <input
-                  type="text"
-                  value={entry.text}
-                  onChange={(e) => onIngredientChange(i, e.target.value)}
-                  placeholder={isTrailing ? "Add ingredient…" : ""}
-                  style={styles.input}
-                />
-                {!isTrailing && (
-                  <>
-                    <button
-                      onClick={() => onToggleRequired(i)}
-                      title={entry.required ? "This ingredient is required — click to make optional" : "This ingredient is optional — click to require it"}
-                      style={{
-                        padding: "0.35rem 0.6rem",
-                        minHeight: "40px",
-                        border: "1px solid",
-                        borderColor: entry.required ? "#00796B" : "#E0E0E0",
-                        background: entry.required ? "rgba(0,121,107,0.1)" : "transparent",
-                        color: entry.required ? "#00796B" : "#9E9E9E",
-                        borderRadius: "4px",
-                        cursor: "pointer",
-                        fontFamily: "inherit",
-                        fontSize: "0.65rem",
-                        whiteSpace: "nowrap",
-                        minWidth: "68px",
-                        textAlign: "center",
-                      }}
-                    >
-                      {entry.required ? "Required" : "Optional"}
-                    </button>
-                    <button
-                      onClick={() => onRemoveEntry(i)}
-                      title="Remove ingredient"
-                      style={{
-                        padding: "0.35rem 0.5rem",
-                        minWidth: "40px",
-                        minHeight: "40px",
-                        border: "1px solid #E0E0E0",
-                        background: "transparent",
-                        color: "#9E9E9E",
-                        borderRadius: "4px",
-                        cursor: "pointer",
-                        fontFamily: "inherit",
-                        fontSize: "0.8rem",
-                        lineHeight: 1,
-                        flexShrink: 0,
-                      }}
-                    >
-                      ×
-                    </button>
-                  </>
-                )}
-              </div>
-            );
-          })}
-        </div>
+        <IngredientEntryBox
+          entries={entries}
+          onAdd={onAddIngredient}
+          onToggleRequired={onToggleRequired}
+          onRemove={onRemoveEntry}
+          vocabulary={vocabulary}
+        />
       </section>
 
       {error && <div style={styles.errorBanner}>{error}</div>}
