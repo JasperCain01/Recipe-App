@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { styles } from "../lib/styles";
+import { getStyles } from "../lib/styles";
+import { useTheme } from "../lib/ThemeContext";
 import { DEFAULT_CUPBOARD } from "../lib/constants";
 
 interface CupboardTabProps {
@@ -8,6 +9,8 @@ interface CupboardTabProps {
 }
 
 export default function CupboardTab({ cupboard, onSave }: CupboardTabProps) {
+  const { tokens } = useTheme();
+  const styles = getStyles(tokens);
   const [newItem, setNewItem] = useState("");
 
   const addItem = () => {
@@ -24,7 +27,7 @@ export default function CupboardTab({ cupboard, onSave }: CupboardTabProps) {
   return (
     <div>
       <h2 style={{ ...styles.label, marginBottom: "0.3rem" }}>Store Cupboard</h2>
-      <p style={{ color: "#757575", fontSize: "0.8rem", marginBottom: "1.25rem" }}>
+      <p style={{ color: tokens.textMuted, fontSize: "0.8rem", marginBottom: "1.25rem" }}>
         Always assumed present, even when not listed in your search.
       </p>
 
@@ -40,8 +43,9 @@ export default function CupboardTab({ cupboard, onSave }: CupboardTabProps) {
           onClick={addItem}
           style={{
             padding: "0.65rem 1.1rem",
-            background: "#00796B",
-            color: "#FFFFFF",
+            minHeight: "40px",
+            background: tokens.accentSolid,
+            color: tokens.onAccent,
             border: "none",
             borderRadius: "6px",
             cursor: "pointer",
@@ -61,21 +65,24 @@ export default function CupboardTab({ cupboard, onSave }: CupboardTabProps) {
               display: "flex",
               alignItems: "center",
               gap: "0.4rem",
-              background: "#FFFFFF",
-              border: "1px solid #E0E0E0",
+              background: tokens.surface,
+              border: `1px solid ${tokens.border}`,
               borderRadius: "20px",
               padding: "0.3rem 0.6rem 0.3rem 0.875rem",
               fontSize: "0.8rem",
             }}
           >
-            <span style={{ color: "#212121" }}>{item}</span>
+            <span style={{ color: tokens.text }}>{item}</span>
             <button
               onClick={() => onSave(cupboard.filter((i) => i !== item))}
+              aria-label={`Remove ${item} from cupboard`}
               style={{
                 background: "none",
                 border: "none",
-                color: "#616161",
+                color: tokens.textFaint,
                 cursor: "pointer",
+                minWidth: "40px",
+                minHeight: "40px",
                 padding: "0",
                 fontSize: "0.9rem",
                 lineHeight: 1,
@@ -92,9 +99,10 @@ export default function CupboardTab({ cupboard, onSave }: CupboardTabProps) {
         style={{
           marginTop: "1.5rem",
           padding: "0.5rem 1rem",
+          minHeight: "40px",
           background: "transparent",
-          border: "1px solid #E0E0E0",
-          color: "#757575",
+          border: `1px solid ${tokens.border}`,
+          color: tokens.textMuted,
           borderRadius: "6px",
           cursor: "pointer",
           fontSize: "0.75rem",

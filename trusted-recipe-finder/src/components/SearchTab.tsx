@@ -1,5 +1,6 @@
 import { useMemo, useRef, useState } from "react";
-import { styles, chipStyle } from "../lib/styles";
+import { getStyles, chipStyle, type ThemeTokens } from "../lib/styles";
+import { useTheme } from "../lib/ThemeContext";
 import { useNarrowViewport, useWindowedRange } from "../lib/hooks";
 import ResultRow from "./ResultRow";
 import IngredientEntryBox from "./IngredientEntryBox";
@@ -107,6 +108,8 @@ export default function SearchTab({
   onToggleFavouritesOnly,
   onGoToSourcesTab,
 }: SearchTabProps) {
+  const { tokens: t } = useTheme();
+  const styles = getStyles(t);
   const [expandedUrl, setExpandedUrl] = useState<string | null>(null);
 
   const [timeFilters, setTimeFilters] = useState<Set<string>>(new Set());
@@ -224,18 +227,18 @@ export default function SearchTab({
       <section style={styles.section}>
         <label style={styles.label}>
           Recipe Sources
-          <span style={{ color: "#616161", marginLeft: "0.5rem", fontSize: "0.7rem", textTransform: "none", letterSpacing: 0 }}>
+          <span style={{ color: t.textFaint, marginLeft: "0.5rem", fontSize: "0.7rem", textTransform: "none", letterSpacing: 0 }}>
             — manage in Sources tab
           </span>
         </label>
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {sources.length === 0 && (
-            <span style={{ color: "#757575", fontSize: "0.8rem" }}>
+            <span style={{ color: t.textMuted, fontSize: "0.8rem" }}>
               Built-in default recipes couldn't be loaded (offline?) —{" "}
               <button
                 onClick={onGoToSourcesTab}
                 style={{
-                  background: "none", border: "none", color: "#00796B",
+                  background: "none", border: "none", color: t.accent,
                   cursor: "pointer", padding: 0, fontSize: "0.8rem",
                   fontFamily: "inherit", textDecoration: "underline",
                 }}
@@ -252,7 +255,7 @@ export default function SearchTab({
                 key={src.id}
                 onClick={() => onToggleSource(src.id)}
                 title={enriched ? `${src.enrichedCount} recipes enriched` : "Not enriched — enrich in Sources tab to enable ingredient search"}
-                style={{ ...chipStyle(active), opacity: enriched ? 1 : 0.45, minHeight: "40px" }}
+                style={{ ...chipStyle(t, active), opacity: enriched ? 1 : 0.45, minHeight: "40px" }}
               >
                 {src.emoji} {src.name}
                 {!enriched && <span style={{ marginLeft: "0.3rem", fontSize: "0.7rem" }}>⚠</span>}
@@ -261,7 +264,7 @@ export default function SearchTab({
           })}
         </div>
         {sources.length > 0 && activeEnrichedCount === 0 && (
-          <p style={{ color: "#757575", fontSize: "0.72rem", marginTop: "0.5rem" }}>
+          <p style={{ color: t.textMuted, fontSize: "0.72rem", marginTop: "0.5rem" }}>
             No sources selected. Enable one above, or enrich a custom source in the Sources tab first.
           </p>
         )}
@@ -271,7 +274,7 @@ export default function SearchTab({
       <section style={styles.section}>
         <label style={styles.label}>
           Your Ingredients
-          <span style={{ color: "#616161", marginLeft: "0.5rem", fontSize: "0.7rem", textTransform: "none", letterSpacing: 0 }}>
+          <span style={{ color: t.textFaint, marginLeft: "0.5rem", fontSize: "0.7rem", textTransform: "none", letterSpacing: 0 }}>
             — store cupboard always included
           </span>
         </label>
@@ -303,7 +306,7 @@ export default function SearchTab({
         />
         <span
           title="Match % is the share of a recipe's ingredients you already have (from your entered ingredients plus your store cupboard). Required ingredients must always be present."
-          style={{ color: "#616161", fontSize: "0.75rem", cursor: "help" }}
+          style={{ color: t.textFaint, fontSize: "0.75rem", cursor: "help" }}
         >
           ⓘ
         </span>
@@ -313,7 +316,7 @@ export default function SearchTab({
       <button
         onClick={onToggleFavouritesOnly}
         aria-pressed={showFavouritesOnly}
-        style={{ ...chipStyle(showFavouritesOnly, "#FF8F00"), minHeight: "40px", marginBottom: "0.5rem" }}
+        style={{ ...chipStyle(t, showFavouritesOnly, t.secondaryAccent), minHeight: "40px", marginBottom: "0.5rem" }}
       >
         ★ Favourites
       </button>
@@ -333,10 +336,10 @@ export default function SearchTab({
                   justifyContent: "space-between",
                   alignItems: "center",
                   padding: "0.5rem 0.75rem",
-                  background: "#FFFFFF",
-                  border: "1px solid #E0E0E0",
+                  background: t.surface,
+                  border: `1px solid ${t.border}`,
                   borderRadius: "6px",
-                  color: "#757575",
+                  color: t.textMuted,
                   fontFamily: "inherit",
                   fontSize: "0.78rem",
                   cursor: "pointer",
@@ -352,25 +355,25 @@ export default function SearchTab({
                     flexDirection: "column",
                     gap: "0.6rem",
                     padding: "0.75rem",
-                    border: "1px solid #E0E0E0",
+                    border: `1px solid ${t.border}`,
                     borderTop: "none",
                     borderRadius: "0 0 6px 6px",
                   }}
                 >
-                  <FilterField label="Meal">
+                  <FilterField label="Meal" t={t}>
                     <FilterDropdown options={mealTypeOptions} selected={mealTypeFilters} onChange={(next) => { setMealTypeFilters(next); setExpandedUrl(null); }} />
                   </FilterField>
-                  <FilterField label="Cuisine">
+                  <FilterField label="Cuisine" t={t}>
                     <FilterDropdown options={cuisineOptions} selected={cuisineFilters} onChange={(next) => { setCuisineFilters(next); setExpandedUrl(null); }} />
                   </FilterField>
-                  <FilterField label="Time">
+                  <FilterField label="Time" t={t}>
                     <FilterDropdown options={TIME_OPTIONS} selected={timeFilters} onChange={(next) => { setTimeFilters(next); setExpandedUrl(null); }} />
                   </FilterField>
-                  <FilterField label="Steps">
+                  <FilterField label="Steps" t={t}>
                     <FilterDropdown options={COMPLEXITY_OPTIONS} selected={complexityFilters} onChange={(next) => { setComplexityFilters(next); setExpandedUrl(null); }} />
                   </FilterField>
                   {hasActiveFilter && (
-                    <button onClick={clearFilters} style={{ ...clearFiltersBtnStyle, alignSelf: "flex-start" }}>
+                    <button onClick={clearFilters} style={{ ...clearFiltersBtnStyle(t), alignSelf: "flex-start" }}>
                       Clear filters ×
                     </button>
                   )}
@@ -378,7 +381,7 @@ export default function SearchTab({
               )}
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.35rem", marginTop: "0.6rem" }}>
                 {(["match", "time", "steps", "title"] as SortColumn[]).map((col) => (
-                  <button key={col} onClick={() => handleSortClick(col)} style={sortChipStyle(sort.column === col)}>
+                  <button key={col} onClick={() => handleSortClick(col)} style={sortChipStyle(t, sort.column === col)}>
                     {sortLabel(col)}
                     <SortArrow direction={sort.column === col ? sort.direction : null} />
                   </button>
@@ -394,16 +397,16 @@ export default function SearchTab({
                   alignItems: "flex-end",
                   gap: "0.75rem",
                   padding: "0 1rem 0.6rem",
-                  borderBottom: "1px solid #E0E0E0",
+                  borderBottom: `1px solid ${t.border}`,
                   marginBottom: "0.25rem",
                 }}
               >
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <SortHeaderButton column="title" sort={sort} onClick={handleSortClick} label="Recipe" />
+                  <SortHeaderButton column="title" sort={sort} onClick={handleSortClick} label="Recipe" t={t} />
                 </div>
 
                 <div style={colStyle(52)}>
-                  <SortHeaderButton column="match" sort={sort} onClick={handleSortClick} label="Match" />
+                  <SortHeaderButton column="match" sort={sort} onClick={handleSortClick} label="Match" t={t} />
                 </div>
 
                 <div style={colStyle(96)}>
@@ -425,7 +428,7 @@ export default function SearchTab({
                 </div>
 
                 <div style={colStyle(88)}>
-                  <SortHeaderButton column="time" sort={sort} onClick={handleSortClick} label="Time" />
+                  <SortHeaderButton column="time" sort={sort} onClick={handleSortClick} label="Time" t={t} />
                   <FilterDropdown
                     options={TIME_OPTIONS}
                     selected={timeFilters}
@@ -434,7 +437,7 @@ export default function SearchTab({
                 </div>
 
                 <div style={colStyle(96)}>
-                  <SortHeaderButton column="steps" sort={sort} onClick={handleSortClick} label="Steps" />
+                  <SortHeaderButton column="steps" sort={sort} onClick={handleSortClick} label="Steps" t={t} />
                   <FilterDropdown
                     options={COMPLEXITY_OPTIONS}
                     selected={complexityFilters}
@@ -451,14 +454,14 @@ export default function SearchTab({
           )}
 
           {/* Result count + clear filters */}
-          <div style={{ padding: "0.35rem 1rem 0.5rem", fontSize: "0.7rem", color: "#757575", display: "flex", alignItems: "center", gap: "0.75rem" }}>
+          <div style={{ padding: "0.35rem 1rem 0.5rem", fontSize: "0.7rem", color: t.textMuted, display: "flex", alignItems: "center", gap: "0.75rem" }}>
             <span>
               {hasActiveFilter
                 ? `${filteredResults.length} of ${results.length} recipes`
                 : `${results.length} ${results.length === 1 ? "recipe" : "recipes"}`}
             </span>
             {!narrow && hasActiveFilter && (
-              <button onClick={clearFilters} style={clearFiltersBtnStyle}>
+              <button onClick={clearFilters} style={clearFiltersBtnStyle(t)}>
                 Clear filters ×
               </button>
             )}
@@ -495,7 +498,7 @@ export default function SearchTab({
             })}
 
             {filteredResults.length === 0 && (
-              <p style={{ color: "#757575", fontSize: "0.8rem", padding: "1rem 1rem 0" }}>
+              <p style={{ color: t.textMuted, fontSize: "0.8rem", padding: "1rem 1rem 0" }}>
                 No results match the current filters.
               </p>
             )}
@@ -506,16 +509,18 @@ export default function SearchTab({
   );
 }
 
-const clearFiltersBtnStyle: React.CSSProperties = {
-  background: "none",
-  border: "1px solid #E0E0E0",
-  color: "#757575",
-  borderRadius: "4px",
-  padding: "0.1rem 0.45rem",
-  fontSize: "0.7rem",
-  fontFamily: "inherit",
-  cursor: "pointer",
-};
+function clearFiltersBtnStyle(t: ThemeTokens): React.CSSProperties {
+  return {
+    background: "none",
+    border: `1px solid ${t.border}`,
+    color: t.textMuted,
+    borderRadius: "4px",
+    padding: "0.1rem 0.45rem",
+    fontSize: "0.7rem",
+    fontFamily: "inherit",
+    cursor: "pointer",
+  };
+}
 
 function sortLabel(column: SortColumn): string {
   switch (column) {
@@ -526,14 +531,14 @@ function sortLabel(column: SortColumn): string {
   }
 }
 
-function sortChipStyle(active: boolean): React.CSSProperties {
+function sortChipStyle(t: ThemeTokens, active: boolean): React.CSSProperties {
   return {
     minHeight: "40px",
     padding: "0.3rem 0.7rem",
     border: "1px solid",
-    borderColor: active ? "#00796B" : "#E0E0E0",
-    background: active ? "rgba(0,121,107,0.1)" : "#FFFFFF",
-    color: active ? "#00796B" : "#757575",
+    borderColor: active ? t.accent : t.border,
+    background: active ? t.accentTint : t.surface,
+    color: active ? t.accent : t.textMuted,
     borderRadius: "20px",
     fontFamily: "inherit",
     fontSize: "0.72rem",
@@ -546,25 +551,27 @@ function SortHeaderButton({
   sort,
   onClick,
   label,
+  t,
 }: {
   column: SortColumn;
   sort: { column: SortColumn; direction: SortDirection };
   onClick: (column: SortColumn) => void;
   label: string;
+  t: ThemeTokens;
 }) {
   const active = sort.column === column;
   return (
     <button
       onClick={() => onClick(column)}
       style={{
-        ...styles.label,
+        ...getStyles(t).label,
         marginBottom: 0,
         background: "none",
         border: "none",
         padding: 0,
         cursor: "pointer",
         fontFamily: "inherit",
-        color: active ? "#00796B" : "#757575",
+        color: active ? t.accent : t.textMuted,
       }}
     >
       {label}
@@ -573,10 +580,10 @@ function SortHeaderButton({
   );
 }
 
-function FilterField({ label, children }: { label: string; children: React.ReactNode }) {
+function FilterField({ label, children, t }: { label: string; children: React.ReactNode; t: ThemeTokens }) {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
-      <span style={{ ...styles.label, marginBottom: 0 }}>{label}</span>
+      <span style={{ ...getStyles(t).label, marginBottom: 0 }}>{label}</span>
       {children}
     </div>
   );

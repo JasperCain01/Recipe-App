@@ -1,5 +1,6 @@
 import { useMemo, useRef, useState } from "react";
-import { styles } from "../lib/styles";
+import { getStyles } from "../lib/styles";
+import { useTheme } from "../lib/ThemeContext";
 import { QUICK_ADD_INGREDIENTS } from "../lib/constants";
 import type { IngredientEntry } from "../lib/types";
 
@@ -15,6 +16,8 @@ interface IngredientEntryBoxProps {
 const MAX_SUGGESTIONS = 6;
 
 export default function IngredientEntryBox({ entries, onAdd, onToggleRequired, onRemove, vocabulary }: IngredientEntryBoxProps) {
+  const { tokens: t } = useTheme();
+  const styles = getStyles(t);
   const [draft, setDraft] = useState("");
   const [highlightIndex, setHighlightIndex] = useState(-1);
   const [suggestionsOpen, setSuggestionsOpen] = useState(false);
@@ -89,8 +92,8 @@ export default function IngredientEntryBox({ entries, onAdd, onToggleRequired, o
                 display: "inline-flex",
                 alignItems: "stretch",
                 border: "1px solid",
-                borderColor: entry.required ? "#00796B" : "#E0E0E0",
-                background: entry.required ? "rgba(0,121,107,0.1)" : "#F5F5F5",
+                borderColor: entry.required ? t.accent : t.border,
+                background: entry.required ? t.accentTint : t.surfaceAlt,
                 borderRadius: "20px",
                 overflow: "hidden",
               }}
@@ -103,7 +106,7 @@ export default function IngredientEntryBox({ entries, onAdd, onToggleRequired, o
                   border: "none",
                   padding: "0.3rem 0.4rem 0.3rem 0.85rem",
                   minHeight: "40px",
-                  color: entry.required ? "#00796B" : "#757575",
+                  color: entry.required ? t.accent : t.textMuted,
                   fontFamily: "inherit",
                   fontSize: "0.8rem",
                   cursor: "pointer",
@@ -122,10 +125,10 @@ export default function IngredientEntryBox({ entries, onAdd, onToggleRequired, o
                 style={{
                   background: "none",
                   border: "none",
-                  borderLeft: "1px solid rgba(0,0,0,0.08)",
+                  borderLeft: `1px solid ${t.border}`,
                   minWidth: "40px",
                   minHeight: "40px",
-                  color: "#616161",
+                  color: t.textFaint,
                   fontFamily: "inherit",
                   fontSize: "0.9rem",
                   cursor: "pointer",
@@ -164,10 +167,10 @@ export default function IngredientEntryBox({ entries, onAdd, onToggleRequired, o
               left: 0,
               right: 0,
               zIndex: 200,
-              background: "#FFFFFF",
-              border: "1px solid #E0E0E0",
+              background: t.surface,
+              border: `1px solid ${t.border}`,
               borderRadius: "6px",
-              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              boxShadow: `0 4px 12px ${t.shadow}`,
               overflow: "hidden",
             }}
           >
@@ -184,8 +187,8 @@ export default function IngredientEntryBox({ entries, onAdd, onToggleRequired, o
                   minHeight: "40px",
                   padding: "0.5rem 0.85rem",
                   border: "none",
-                  background: i === highlightIndex ? "rgba(0,121,107,0.1)" : "none",
-                  color: "#212121",
+                  background: i === highlightIndex ? t.accentTint : "none",
+                  color: t.text,
                   fontFamily: "inherit",
                   fontSize: "0.85rem",
                   textAlign: "left",
@@ -209,9 +212,9 @@ export default function IngredientEntryBox({ entries, onAdd, onToggleRequired, o
               style={{
                 minHeight: "40px",
                 padding: "0.3rem 0.7rem",
-                border: "1px solid #E0E0E0",
-                background: "#FFFFFF",
-                color: "#757575",
+                border: `1px solid ${t.border}`,
+                background: t.surface,
+                color: t.textMuted,
                 borderRadius: "20px",
                 fontFamily: "inherit",
                 fontSize: "0.72rem",

@@ -1,5 +1,7 @@
 // Pure functions used across the app — no React, no side effects.
 
+import type { ThemeTokens } from "./styles";
+
 export { deriveMealType } from "../../shared/recipe-meta.js";
 
 /**
@@ -44,8 +46,8 @@ export function makeId(name: string): string {
 /**
  * Map a 0-100 match score to a colour for visual feedback.
  */
-export function scoreColor(score: number): string {
-  if (score >= 80) return "#2E7D32"; // Green 800
-  if (score >= 60) return "#E65100"; // Deep Orange 900
-  return "#C62828"; // Red 800
+export function scoreColor(score: number, t: ThemeTokens): string {
+  if (score >= 80) return t.success;
+  if (score >= 60) return t.scoreMid;
+  return t.scoreLow;
 }

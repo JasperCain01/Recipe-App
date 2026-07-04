@@ -1,5 +1,7 @@
 import { memo } from "react";
 import { scoreColor } from "../lib/utils";
+import { useTheme } from "../lib/ThemeContext";
+import type { ThemeTokens } from "../lib/styles";
 import RecipeCard from "./RecipeCard";
 import type { SearchResult } from "../lib/types";
 
@@ -17,7 +19,7 @@ const colStyle = (width: number | string): React.CSSProperties => ({
   flexShrink: 0,
 });
 
-function Thumbnail({ image, emoji, size = 40 }: { image: string | null; emoji: string; size?: number }) {
+function Thumbnail({ image, emoji, size = 40, t }: { image: string | null; emoji: string; size?: number; t: ThemeTokens }) {
   const shared: React.CSSProperties = {
     width: size,
     height: size,
@@ -30,7 +32,7 @@ function Thumbnail({ image, emoji, size = 40 }: { image: string | null; emoji: s
         src={image}
         alt=""
         loading="lazy"
-        style={{ ...shared, objectFit: "cover", background: "#EEEEEE" }}
+        style={{ ...shared, objectFit: "cover", background: t.surfaceAlt }}
       />
     );
   }
@@ -38,7 +40,7 @@ function Thumbnail({ image, emoji, size = 40 }: { image: string | null; emoji: s
     <div
       style={{
         ...shared,
-        background: "#EEEEEE",
+        background: t.surfaceAlt,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -50,7 +52,7 @@ function Thumbnail({ image, emoji, size = 40 }: { image: string | null; emoji: s
   );
 }
 
-function StarButton({ isFavourite, onToggle, title }: { isFavourite: boolean; onToggle: () => void; title: string }) {
+function StarButton({ isFavourite, onToggle, title, t }: { isFavourite: boolean; onToggle: () => void; title: string; t: ThemeTokens }) {
   return (
     <button
       onClick={(e) => { e.stopPropagation(); onToggle(); }}
@@ -62,7 +64,7 @@ function StarButton({ isFavourite, onToggle, title }: { isFavourite: boolean; on
         border: "none",
         minWidth: "40px",
         minHeight: "40px",
-        color: isFavourite ? "#FF8F00" : "#616161",
+        color: isFavourite ? t.secondaryAccent : t.textFaint,
         fontSize: "1.1rem",
         cursor: "pointer",
         lineHeight: 1,
@@ -74,13 +76,13 @@ function StarButton({ isFavourite, onToggle, title }: { isFavourite: boolean; on
   );
 }
 
-function MetaChip({ children }: { children: React.ReactNode }) {
+function MetaChip({ children, t }: { children: React.ReactNode; t: ThemeTokens }) {
   return (
     <span
       style={{
         fontSize: "0.7rem",
-        color: "#757575",
-        background: "#F5F5F5",
+        color: t.textMuted,
+        background: t.surfaceAlt,
         borderRadius: "10px",
         padding: "0.15rem 0.55rem",
         whiteSpace: "nowrap",
@@ -99,6 +101,7 @@ function handleActivateKey(e: React.KeyboardEvent, onActivate: () => void) {
 }
 
 function ResultRow({ result: r, expanded, onToggleExpand, narrow, isFavourite, onToggleFavourite }: ResultRowProps) {
+  const { tokens: t } = useTheme();
   const favouriteTitle = isFavourite ? `Remove ${r.title} from favourites` : `Add ${r.title} to favourites`;
 
   return (
@@ -117,9 +120,9 @@ function ResultRow({ result: r, expanded, onToggleExpand, narrow, isFavourite, o
             gap: "0.5rem",
             padding: "0.75rem",
             minHeight: "40px",
-            background: expanded ? "rgba(93,64,55,0.04)" : "#FFFFFF",
+            background: expanded ? t.highlightBg : t.surface,
             border: "1px solid",
-            borderColor: expanded ? "#BDBDBD" : "#E0E0E0",
+            borderColor: expanded ? t.borderStrong : t.border,
             borderRadius: expanded ? "8px 8px 0 0" : "8px",
             cursor: "pointer",
             fontFamily: "inherit",
@@ -127,11 +130,11 @@ function ResultRow({ result: r, expanded, onToggleExpand, narrow, isFavourite, o
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: "0.65rem" }}>
-            <Thumbnail image={r.image} emoji={r.sourceEmoji} />
+            <Thumbnail image={r.image} emoji={r.sourceEmoji} t={t} />
             <div style={{ flex: 1, minWidth: 0 }}>
               <div
                 style={{
-                  color: "#212121",
+                  color: t.text,
                   fontSize: "0.9rem",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
@@ -141,27 +144,27 @@ function ResultRow({ result: r, expanded, onToggleExpand, narrow, isFavourite, o
               >
                 {r.title}
               </div>
-              <div style={{ color: "#616161", fontSize: "0.7rem", marginTop: "0.15rem" }}>
+              <div style={{ color: t.textFaint, fontSize: "0.7rem", marginTop: "0.15rem" }}>
                 {r.sourceEmoji} {r.source}
               </div>
             </div>
-            <StarButton isFavourite={isFavourite} onToggle={onToggleFavourite} title={favouriteTitle} />
+            <StarButton isFavourite={isFavourite} onToggle={onToggleFavourite} title={favouriteTitle} t={t} />
             <div style={{ textAlign: "right", flexShrink: 0 }}>
-              <div style={{ fontSize: "1rem", fontWeight: "bold", color: scoreColor(r.matchScore) }}>
+              <div style={{ fontSize: "1rem", fontWeight: "bold", color: scoreColor(r.matchScore, t) }}>
                 {r.matchScore}%
               </div>
               {r.missingIngredients.length > 0 ? (
-                <div style={{ fontSize: "0.7rem", color: "#B00020" }}>{r.missingIngredients.length} missing</div>
+                <div style={{ fontSize: "0.7rem", color: t.danger }}>{r.missingIngredients.length} missing</div>
               ) : (
-                <div style={{ fontSize: "0.7rem", color: "#2E7D32" }}>✓ have all</div>
+                <div style={{ fontSize: "0.7rem", color: t.success }}>✓ have all</div>
               )}
             </div>
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.35rem" }}>
-            <MetaChip>{r.mealType ?? "Unknown meal"}</MetaChip>
-            <MetaChip>{r.cuisine ?? "Unknown cuisine"}</MetaChip>
-            <MetaChip>{r.totalTime ?? "Unknown time"}</MetaChip>
-            <MetaChip>{r.instructionCount > 0 ? `${r.instructionCount} steps` : "Unknown steps"}</MetaChip>
+            <MetaChip t={t}>{r.mealType ?? "Unknown meal"}</MetaChip>
+            <MetaChip t={t}>{r.cuisine ?? "Unknown cuisine"}</MetaChip>
+            <MetaChip t={t}>{r.totalTime ?? "Unknown time"}</MetaChip>
+            <MetaChip t={t}>{r.instructionCount > 0 ? `${r.instructionCount} steps` : "Unknown steps"}</MetaChip>
           </div>
         </div>
       ) : (
@@ -178,22 +181,22 @@ function ResultRow({ result: r, expanded, onToggleExpand, narrow, isFavourite, o
             gap: "0.75rem",
             padding: "0.65rem 1rem",
             minHeight: "40px",
-            background: expanded ? "rgba(93,64,55,0.04)" : "#FFFFFF",
+            background: expanded ? t.highlightBg : t.surface,
             border: "1px solid",
-            borderColor: expanded ? "#BDBDBD" : "#E0E0E0",
+            borderColor: expanded ? t.borderStrong : t.border,
             borderRadius: expanded ? "6px 6px 0 0" : "6px",
             cursor: "pointer",
             fontFamily: "inherit",
             textAlign: "left",
           }}
         >
-          <Thumbnail image={r.image} emoji={r.sourceEmoji} />
+          <Thumbnail image={r.image} emoji={r.sourceEmoji} t={t} />
 
           {/* Recipe + source */}
           <div style={{ flex: 1, minWidth: 0 }}>
             <div
               style={{
-                color: "#212121",
+                color: t.text,
                 fontSize: "0.85rem",
                 overflow: "hidden",
                 textOverflow: "ellipsis",
@@ -203,44 +206,44 @@ function ResultRow({ result: r, expanded, onToggleExpand, narrow, isFavourite, o
             >
               {r.title}
             </div>
-            <div style={{ color: "#616161", fontSize: "0.7rem", marginTop: "0.1rem" }}>
+            <div style={{ color: t.textFaint, fontSize: "0.7rem", marginTop: "0.1rem" }}>
               {r.sourceEmoji} {r.source}
             </div>
           </div>
 
-          <StarButton isFavourite={isFavourite} onToggle={onToggleFavourite} title={favouriteTitle} />
+          <StarButton isFavourite={isFavourite} onToggle={onToggleFavourite} title={favouriteTitle} t={t} />
 
           {/* Match % */}
           <div style={{ ...colStyle(52), textAlign: "right", flexShrink: 0 }}>
-            <span style={{ fontSize: "0.92rem", fontWeight: "bold", color: scoreColor(r.matchScore) }}>
+            <span style={{ fontSize: "0.92rem", fontWeight: "bold", color: scoreColor(r.matchScore, t) }}>
               {r.matchScore}%
             </span>
           </div>
 
           {/* Meal type */}
           <div style={{ ...colStyle(96), flexShrink: 0 }}>
-            <span style={{ fontSize: "0.75rem", color: r.mealType ? "#757575" : "#616161" }}>
+            <span style={{ fontSize: "0.75rem", color: r.mealType ? t.textMuted : t.textFaint }}>
               {r.mealType ?? "Unknown"}
             </span>
           </div>
 
           {/* Cuisine */}
           <div style={{ ...colStyle(104), flexShrink: 0 }}>
-            <span style={{ fontSize: "0.75rem", color: r.cuisine ? "#757575" : "#616161" }}>
+            <span style={{ fontSize: "0.75rem", color: r.cuisine ? t.textMuted : t.textFaint }}>
               {r.cuisine ?? "Unknown"}
             </span>
           </div>
 
           {/* Time */}
           <div style={{ ...colStyle(88), flexShrink: 0 }}>
-            <span style={{ fontSize: "0.75rem", color: r.totalTime ? "#757575" : "#616161" }}>
+            <span style={{ fontSize: "0.75rem", color: r.totalTime ? t.textMuted : t.textFaint }}>
               {r.totalTime ?? "Unknown"}
             </span>
           </div>
 
           {/* Steps */}
           <div style={{ ...colStyle(96), flexShrink: 0 }}>
-            <span style={{ fontSize: "0.75rem", color: r.instructionCount > 0 ? "#757575" : "#616161" }}>
+            <span style={{ fontSize: "0.75rem", color: r.instructionCount > 0 ? t.textMuted : t.textFaint }}>
               {r.instructionCount > 0 ? `${r.instructionCount} steps` : "Unknown"}
             </span>
           </div>
@@ -248,9 +251,9 @@ function ResultRow({ result: r, expanded, onToggleExpand, narrow, isFavourite, o
           {/* Missing count */}
           <div style={{ ...colStyle(60), flexShrink: 0, textAlign: "right" }}>
             {r.missingIngredients.length > 0 ? (
-              <span style={{ fontSize: "0.75rem", color: "#B00020" }}>{r.missingIngredients.length}</span>
+              <span style={{ fontSize: "0.75rem", color: t.danger }}>{r.missingIngredients.length}</span>
             ) : (
-              <span style={{ fontSize: "0.75rem", color: "#2E7D32" }}>✓</span>
+              <span style={{ fontSize: "0.75rem", color: t.success }}>✓</span>
             )}
           </div>
         </div>
@@ -259,7 +262,7 @@ function ResultRow({ result: r, expanded, onToggleExpand, narrow, isFavourite, o
       {expanded && (
         <div
           style={{
-            border: "1px solid #BDBDBD",
+            border: `1px solid ${t.borderStrong}`,
             borderTop: "none",
             borderRadius: "0 0 6px 6px",
           }}

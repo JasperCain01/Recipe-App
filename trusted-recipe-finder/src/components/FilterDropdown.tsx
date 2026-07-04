@@ -1,4 +1,6 @@
 import { useState, useRef, useEffect } from "react";
+import { useTheme } from "../lib/ThemeContext";
+import type { ThemeTokens } from "../lib/styles";
 
 export interface FilterOption {
   value: string;
@@ -12,23 +14,24 @@ interface Props {
   alignRight?: boolean;
 }
 
-const panelStyle = (alignRight: boolean): React.CSSProperties => ({
+const panelStyle = (t: ThemeTokens, alignRight: boolean): React.CSSProperties => ({
   position: "absolute",
   top: "calc(100% + 2px)",
   ...(alignRight ? { right: 0 } : { left: 0 }),
   zIndex: 200,
-  background: "#FFFFFF",
-  border: "1px solid #E0E0E0",
+  background: t.surface,
+  border: `1px solid ${t.border}`,
   borderRadius: "4px",
   minWidth: "160px",
   maxHeight: "220px",
   overflow: "hidden",
   display: "flex",
   flexDirection: "column",
-  boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+  boxShadow: `0 4px 12px ${t.shadow}`,
 });
 
 export default function FilterDropdown({ options, selected, onChange, alignRight = false }: Props) {
+  const { tokens: t } = useTheme();
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [highlightIndex, setHighlightIndex] = useState(-1);
@@ -112,9 +115,9 @@ export default function FilterDropdown({ options, selected, onChange, alignRight
   };
 
   const triggerStyle: React.CSSProperties = {
-    background: "#FAFAFA",
-    border: `1px solid ${active ? "#00796B" : "#E0E0E0"}`,
-    color: active ? "#00796B" : "#616161",
+    background: t.background,
+    border: `1px solid ${active ? t.accent : t.border}`,
+    color: active ? t.accent : t.textFaint,
     borderRadius: "4px",
     padding: "0.2rem 0.3rem",
     fontSize: "0.7rem",
@@ -145,7 +148,7 @@ export default function FilterDropdown({ options, selected, onChange, alignRight
       </button>
 
       {open && (
-        <div ref={panelRef} style={panelStyle(alignRight)} onKeyDown={handlePanelKeyDown}>
+        <div ref={panelRef} style={panelStyle(t, alignRight)} onKeyDown={handlePanelKeyDown}>
           <input
             ref={searchInputRef}
             type="text"
@@ -156,8 +159,8 @@ export default function FilterDropdown({ options, selected, onChange, alignRight
             style={{
               background: "transparent",
               border: "none",
-              borderBottom: "1px solid #E0E0E0",
-              color: "#757575",
+              borderBottom: `1px solid ${t.border}`,
+              color: t.textMuted,
               padding: "0.3rem 0.5rem",
               fontSize: "0.7rem",
               fontFamily: "inherit",
@@ -168,7 +171,7 @@ export default function FilterDropdown({ options, selected, onChange, alignRight
           />
           <div role="listbox" style={{ overflowY: "auto", flex: 1 }}>
             {filtered.length === 0 && (
-              <div style={{ padding: "0.4rem 0.5rem", color: "#616161", fontSize: "0.7rem" }}>
+              <div style={{ padding: "0.4rem 0.5rem", color: t.textFaint, fontSize: "0.7rem" }}>
                 No matches
               </div>
             )}
@@ -186,16 +189,16 @@ export default function FilterDropdown({ options, selected, onChange, alignRight
                   width: "100%",
                   minHeight: "40px",
                   padding: "0.3rem 0.5rem",
-                  background: i === highlightIndex ? "rgba(0,121,107,0.1)" : "none",
+                  background: i === highlightIndex ? t.accentTint : "none",
                   border: "none",
                   cursor: "pointer",
                   fontFamily: "inherit",
                   fontSize: "0.72rem",
-                  color: selected.has(o.value) ? "#00796B" : "#757575",
+                  color: selected.has(o.value) ? t.accent : t.textMuted,
                   textAlign: "left",
                 }}
               >
-                <span aria-hidden="true" style={{ width: "0.7rem", flexShrink: 0, color: "#00796B" }}>
+                <span aria-hidden="true" style={{ width: "0.7rem", flexShrink: 0, color: t.accent }}>
                   {selected.has(o.value) ? "✓" : ""}
                 </span>
                 {o.label}

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import { styles, GLOBAL_CSS } from "./lib/styles";
+import { getStyles, globalCss } from "./lib/styles";
+import { useTheme } from "./lib/ThemeContext";
 import { DEFAULT_CUPBOARD } from "./lib/constants";
 import { pickEmoji, normaliseUrl, makeId, deriveMealType } from "./lib/utils";
 import { storage } from "./lib/storage";
@@ -24,6 +25,9 @@ const DEFAULT_MATCH_THRESHOLD = 25;
 const VOCABULARY_SIZE = 500;
 
 export default function App() {
+  const { theme, tokens, toggleTheme } = useTheme();
+  const styles = getStyles(tokens);
+
   // ── Search state ──────────────────────────────────────────────────────────
   const [results, setResults] = useState<SearchResult[]>([]);
   const [error, setError] = useState<string>("");
@@ -497,8 +501,8 @@ export default function App() {
 
   return (
     <div style={styles.app}>
-      <style>{GLOBAL_CSS}</style>
-      <Header activeTab={activeTab} onTabChange={setActiveTab} />
+      <style>{globalCss(tokens)}</style>
+      <Header activeTab={activeTab} onTabChange={setActiveTab} theme={theme} onToggleTheme={toggleTheme} />
       <main style={styles.main}>
         {activeTab === "search" && (
           <SearchTab
