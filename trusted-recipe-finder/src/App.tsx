@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { styles } from "./lib/styles";
+import { styles, GLOBAL_CSS } from "./lib/styles";
 import { DEFAULT_CUPBOARD } from "./lib/constants";
 import { pickEmoji, normaliseUrl, makeId, deriveMealType } from "./lib/utils";
 import { storage } from "./lib/storage";
@@ -33,6 +33,9 @@ export default function App() {
   const searchDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   // U4 autocomplete: ranked ingredient vocabulary built once per session from enriched recipe data.
   const [vocabulary, setVocabulary] = useState<string[]>([]);
+  // U9: favourites, keyed by recipe URL.
+  const [favourites, setFavourites] = useState<Set<string>>(new Set());
+  const [showFavouritesOnly, setShowFavouritesOnly] = useState<boolean>(false);
 
   // ── Source state ──────────────────────────────────────────────────────────
   const [sources, setSources] = useState<SourceMeta[]>([]);
@@ -66,6 +69,9 @@ export default function App() {
 
     const threshold = storage.loadMatchThreshold();
     if (threshold !== null) setMatchThreshold(threshold);
+
+    const favs = storage.loadFavourites();
+    if (favs) setFavourites(new Set(favs));
 
     storage.loadSourceMetas().then(async (src) => {
       if (src && src.length > 0) {
@@ -129,6 +135,16 @@ export default function App() {
   const setThreshold = (value: number): void => {
     setMatchThreshold(value);
     storage.saveMatchThreshold(value);
+  };
+
+  const toggleFavourite = (url: string): void => {
+    setFavourites((prev) => {
+      const next = new Set(prev);
+      if (next.has(url)) next.delete(url);
+      else next.add(url);
+      storage.saveFavourites([...next]);
+      return next;
+    });
   };
 
   // ── Ingredient entries (U1: lifted out of SearchTab so they survive tab switches) ──
@@ -430,7 +446,9 @@ export default function App() {
   // ── Search ────────────────────────────────────────────────────────────────
   const handleSearch = async (): Promise<void> => {
     setError("");
-    if (entries.length === 0) {
+    // U9: the favourites view lists every favourited recipe regardless of
+    // ingredients entered, so it's exempt from the "no ingredients" guard.
+    if (entries.length === 0 && !showFavouritesOnly) {
       setResults([]);
       return;
     }
@@ -447,15 +465,22 @@ export default function App() {
     const sourcesWithRecipes = await Promise.all(
       activeEnrichedSources.map(async (meta) => ({ meta, recipes: await getRecipesCached(meta.id) })),
     );
-    const found = searchRecipes(entries, cupboard, sourcesWithRecipes, matchThreshold);
-    setResults(found);
-    if (found.length === 0) {
-      setError(`No matches found above ${matchThreshold}%. Try fewer ingredients, more general terms, or lowering the threshold.`);
+    // Favourites view ignores the match threshold — a favourite should show
+    // up even at 0% match — and is filtered down to favourited URLs after.
+    const found = searchRecipes(entries, cupboard, sourcesWithRecipes, showFavouritesOnly ? 0 : matchThreshold);
+    const finalResults = showFavouritesOnly ? found.filter((r) => favourites.has(r.sourceUrl)) : found;
+    setResults(finalResults);
+    if (finalResults.length === 0) {
+      setError(
+        showFavouritesOnly
+          ? "No favourites yet — star a recipe to save it here."
+          : `No matches found above ${matchThreshold}%. Try fewer ingredients, more general terms, or lowering the threshold.`,
+      );
     }
   };
 
   // U5: live search — re-run automatically (debounced) as ingredients, the
-  // cupboard, selected sources, or the match threshold change.
+  // cupboard, selected sources, the match threshold, or the favourites view change.
   useEffect(() => {
     if (searchDebounceRef.current) clearTimeout(searchDebounceRef.current);
     searchDebounceRef.current = setTimeout(() => {
@@ -465,13 +490,14 @@ export default function App() {
       if (searchDebounceRef.current) clearTimeout(searchDebounceRef.current);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [entries, cupboard, selectedSources, matchThreshold]);
+  }, [entries, cupboard, selectedSources, matchThreshold, showFavouritesOnly, favourites]);
 
   // ── Render ────────────────────────────────────────────────────────────────
   const visibleSources = sources.filter((s) => !s.hidden);
 
   return (
     <div style={styles.app}>
+      <style>{GLOBAL_CSS}</style>
       <Header activeTab={activeTab} onTabChange={setActiveTab} />
       <main style={styles.main}>
         {activeTab === "search" && (
@@ -488,6 +514,10 @@ export default function App() {
             results={results}
             matchThreshold={matchThreshold}
             onThresholdChange={setThreshold}
+            favourites={favourites}
+            onToggleFavourite={toggleFavourite}
+            showFavouritesOnly={showFavouritesOnly}
+            onToggleFavouritesOnly={() => setShowFavouritesOnly((v) => !v)}
             onGoToSourcesTab={() => setActiveTab("sources")}
           />
         )}

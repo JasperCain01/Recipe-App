@@ -111,7 +111,7 @@ export default function IngredientEntryBox({ entries, onAdd, onToggleRequired, o
                 }}
               >
                 {entry.text}
-                <span style={{ marginLeft: "0.4rem", fontSize: "0.6rem", opacity: 0.75 }}>
+                <span style={{ marginLeft: "0.4rem", fontSize: "0.7rem", opacity: 0.75 }}>
                   {entry.required ? "REQUIRED" : "optional"}
                 </span>
               </button>
@@ -125,7 +125,7 @@ export default function IngredientEntryBox({ entries, onAdd, onToggleRequired, o
                   borderLeft: "1px solid rgba(0,0,0,0.08)",
                   minWidth: "40px",
                   minHeight: "40px",
-                  color: "#9E9E9E",
+                  color: "#616161",
                   fontFamily: "inherit",
                   fontSize: "0.9rem",
                   cursor: "pointer",

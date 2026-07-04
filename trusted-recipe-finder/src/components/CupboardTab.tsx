@@ -74,7 +74,7 @@ export default function CupboardTab({ cupboard, onSave }: CupboardTabProps) {
               style={{
                 background: "none",
                 border: "none",
-                color: "#9E9E9E",
+                color: "#616161",
                 cursor: "pointer",
                 padding: "0",
                 fontSize: "0.9rem",

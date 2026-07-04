@@ -21,6 +21,7 @@ const RECIPES_BY_SOURCE_INDEX = "by-sourceId";
 const KEYS = {
   CUPBOARD: "trf_cupboard",
   MATCH_THRESHOLD: "trf_match_threshold",
+  FAVOURITES: "trf_favourites",
   SOURCES_LEGACY: "trf_sources",
   MIGRATED_FLAG: "trf_idb_migrated",
 } as const;
@@ -145,6 +146,14 @@ export const storage = {
   },
   saveMatchThreshold(value: number): boolean {
     return writeJSON(KEYS.MATCH_THRESHOLD, value);
+  },
+
+  // ── Favourites (localStorage, keyed by recipe URL) ───────────────────────
+  loadFavourites(): string[] | null {
+    return readJSON<string[]>(KEYS.FAVOURITES);
+  },
+  saveFavourites(urls: string[]): boolean {
+    return writeJSON(KEYS.FAVOURITES, urls);
   },
 
   // ── Source metadata (IndexedDB) ──────────────────────────────────────────

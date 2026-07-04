@@ -36,8 +36,8 @@ export const styles = {
   },
   sub: {
     margin: "0.2rem 0 0",
-    fontSize: "0.65rem",
-    color: "rgba(255,255,255,0.60)",
+    fontSize: "0.7rem",
+    color: "rgba(255,255,255,0.9)",
     letterSpacing: "0.12em",
     textTransform: "uppercase",
   },
@@ -47,7 +47,7 @@ export const styles = {
     padding: "1.5rem",
   },
   label: {
-    fontSize: "0.65rem",
+    fontSize: "0.7rem",
     letterSpacing: "0.15em",
     textTransform: "uppercase",
     color: "#757575",
@@ -71,7 +71,6 @@ export const styles = {
     fontFamily: "inherit",
     fontSize: "0.88rem",
     resize: "vertical",
-    outline: "none",
     boxSizing: "border-box",
     lineHeight: "1.6",
   },
@@ -84,7 +83,6 @@ export const styles = {
     borderRadius: "6px",
     fontFamily: "inherit",
     fontSize: "0.85rem",
-    outline: "none",
   },
   errorBanner: {
     background: "rgba(176,0,32,0.06)",
@@ -104,7 +102,7 @@ export const chipStyle = (active: boolean, accent?: string): CSSProperties => ({
   borderRadius: "20px",
   borderColor: active ? (accent || "#00796B") : "#E0E0E0",
   background: active ? "rgba(0,121,107,0.1)" : "#FFFFFF",
-  color: active ? (accent || "#00796B") : "#9E9E9E",
+  color: active ? (accent || "#00796B") : "#616161",
   cursor: "pointer",
   fontSize: "0.78rem",
   fontFamily: "inherit",
@@ -125,6 +123,17 @@ export const primaryBtn = (disabled: boolean): CSSProperties => ({
   letterSpacing: "0.03em",
   transition: "all 0.2s",
 });
+
+// U10: a11y — visible keyboard-focus outline. Rendered once via a <style> tag
+// (see App.tsx) since inline `style` props can't express the :focus-visible
+// pseudo-class; the `input`/`textarea` styles above no longer set
+// `outline: "none"` so this isn't overridden by a competing inline style.
+export const GLOBAL_CSS = `
+  :focus-visible {
+    outline: 2px solid #00796B;
+    outline-offset: 2px;
+  }
+`;
 
 export type ButtonVariant = "primary" | "default";
 

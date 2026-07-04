@@ -19,6 +19,10 @@ interface SearchTabProps {
   results: SearchResult[];
   matchThreshold: number;
   onThresholdChange: (value: number) => void;
+  favourites: Set<string>;
+  onToggleFavourite: (url: string) => void;
+  showFavouritesOnly: boolean;
+  onToggleFavouritesOnly: () => void;
   onGoToSourcesTab: () => void;
 }
 
@@ -97,6 +101,10 @@ export default function SearchTab({
   results,
   matchThreshold,
   onThresholdChange,
+  favourites,
+  onToggleFavourite,
+  showFavouritesOnly,
+  onToggleFavouritesOnly,
   onGoToSourcesTab,
 }: SearchTabProps) {
   const [expandedUrl, setExpandedUrl] = useState<string | null>(null);
@@ -216,7 +224,7 @@ export default function SearchTab({
       <section style={styles.section}>
         <label style={styles.label}>
           Recipe Sources
-          <span style={{ color: "#9E9E9E", marginLeft: "0.5rem", fontSize: "0.6rem", textTransform: "none", letterSpacing: 0 }}>
+          <span style={{ color: "#616161", marginLeft: "0.5rem", fontSize: "0.7rem", textTransform: "none", letterSpacing: 0 }}>
             — manage in Sources tab
           </span>
         </label>
@@ -247,7 +255,7 @@ export default function SearchTab({
                 style={{ ...chipStyle(active), opacity: enriched ? 1 : 0.45, minHeight: "40px" }}
               >
                 {src.emoji} {src.name}
-                {!enriched && <span style={{ marginLeft: "0.3rem", fontSize: "0.65rem" }}>⚠</span>}
+                {!enriched && <span style={{ marginLeft: "0.3rem", fontSize: "0.7rem" }}>⚠</span>}
               </button>
             );
           })}
@@ -263,7 +271,7 @@ export default function SearchTab({
       <section style={styles.section}>
         <label style={styles.label}>
           Your Ingredients
-          <span style={{ color: "#9E9E9E", marginLeft: "0.5rem", fontSize: "0.6rem", textTransform: "none", letterSpacing: 0 }}>
+          <span style={{ color: "#616161", marginLeft: "0.5rem", fontSize: "0.7rem", textTransform: "none", letterSpacing: 0 }}>
             — store cupboard always included
           </span>
         </label>
@@ -295,11 +303,20 @@ export default function SearchTab({
         />
         <span
           title="Match % is the share of a recipe's ingredients you already have (from your entered ingredients plus your store cupboard). Required ingredients must always be present."
-          style={{ color: "#9E9E9E", fontSize: "0.75rem", cursor: "help" }}
+          style={{ color: "#616161", fontSize: "0.75rem", cursor: "help" }}
         >
           ⓘ
         </span>
       </div>
+
+      {/* Favourites (U9) — shows favourited recipes even with no ingredients entered */}
+      <button
+        onClick={onToggleFavouritesOnly}
+        aria-pressed={showFavouritesOnly}
+        style={{ ...chipStyle(showFavouritesOnly, "#FF8F00"), minHeight: "40px", marginBottom: "0.5rem" }}
+      >
+        ★ Favourites
+      </button>
 
       {/* Results */}
       {results.length > 0 && (
@@ -308,6 +325,7 @@ export default function SearchTab({
             <div style={{ marginBottom: "0.5rem" }}>
               <button
                 onClick={() => setFiltersOpen((o) => !o)}
+                aria-expanded={filtersOpen}
                 style={{
                   width: "100%",
                   minHeight: "40px",
@@ -325,7 +343,7 @@ export default function SearchTab({
                 }}
               >
                 <span>Filters{hasActiveFilter ? " •" : ""}</span>
-                <span style={{ opacity: 0.5 }}>{filtersOpen ? "▴" : "▾"}</span>
+                <span aria-hidden="true" style={{ opacity: 0.5 }}>{filtersOpen ? "▴" : "▾"}</span>
               </button>
               {filtersOpen && (
                 <div
@@ -433,7 +451,7 @@ export default function SearchTab({
           )}
 
           {/* Result count + clear filters */}
-          <div style={{ padding: "0.35rem 1rem 0.5rem", fontSize: "0.68rem", color: "#757575", display: "flex", alignItems: "center", gap: "0.75rem" }}>
+          <div style={{ padding: "0.35rem 1rem 0.5rem", fontSize: "0.7rem", color: "#757575", display: "flex", alignItems: "center", gap: "0.75rem" }}>
             <span>
               {hasActiveFilter
                 ? `${filteredResults.length} of ${results.length} recipes`
@@ -469,6 +487,8 @@ export default function SearchTab({
                     expanded={expandedUrl === r.sourceUrl}
                     onToggleExpand={() => toggleExpanded(r.sourceUrl)}
                     narrow={narrow}
+                    isFavourite={favourites.has(r.sourceUrl)}
+                    onToggleFavourite={() => onToggleFavourite(r.sourceUrl)}
                   />
                 </div>
               );
@@ -492,7 +512,7 @@ const clearFiltersBtnStyle: React.CSSProperties = {
   color: "#757575",
   borderRadius: "4px",
   padding: "0.1rem 0.45rem",
-  fontSize: "0.62rem",
+  fontSize: "0.7rem",
   fontFamily: "inherit",
   cursor: "pointer",
 };

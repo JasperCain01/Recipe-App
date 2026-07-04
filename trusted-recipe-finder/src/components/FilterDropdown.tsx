@@ -31,7 +31,11 @@ const panelStyle = (alignRight: boolean): React.CSSProperties => ({
 export default function FilterDropdown({ options, selected, onChange, alignRight = false }: Props) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
+  const [highlightIndex, setHighlightIndex] = useState(-1);
   const containerRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (!open) return;
@@ -39,11 +43,23 @@ export default function FilterDropdown({ options, selected, onChange, alignRight
       if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
         setOpen(false);
         setQuery("");
+        setHighlightIndex(-1);
       }
     };
     document.addEventListener("mousedown", onDown);
     return () => document.removeEventListener("mousedown", onDown);
   }, [open]);
+
+  useEffect(() => {
+    if (open) searchInputRef.current?.focus();
+  }, [open]);
+
+  const closePanel = (returnFocus: boolean) => {
+    setOpen(false);
+    setQuery("");
+    setHighlightIndex(-1);
+    if (returnFocus) triggerRef.current?.focus();
+  };
 
   const toggle = (value: string) => {
     const next = new Set(selected);
@@ -64,16 +80,46 @@ export default function FilterDropdown({ options, selected, onChange, alignRight
     ? options.filter((o) => o.label.toLowerCase().includes(query.toLowerCase()))
     : options;
 
+  // U10: Escape closes (returning focus to the trigger), arrow keys move the
+  // highlighted option, Enter toggles it, and Tab is trapped within the
+  // panel while it's open.
+  const handlePanelKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Escape") {
+      e.preventDefault();
+      closePanel(true);
+    } else if (e.key === "ArrowDown") {
+      e.preventDefault();
+      setHighlightIndex((i) => Math.min(i + 1, filtered.length - 1));
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      setHighlightIndex((i) => Math.max(i - 1, 0));
+    } else if (e.key === "Enter" && highlightIndex >= 0 && filtered[highlightIndex]) {
+      e.preventDefault();
+      toggle(filtered[highlightIndex].value);
+    } else if (e.key === "Tab") {
+      const focusables = panelRef.current?.querySelectorAll<HTMLElement>("input, button:not([disabled])");
+      if (!focusables || focusables.length === 0) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  };
+
   const triggerStyle: React.CSSProperties = {
     background: "#FAFAFA",
     border: `1px solid ${active ? "#00796B" : "#E0E0E0"}`,
-    color: active ? "#00796B" : "#757575",
+    color: active ? "#00796B" : "#616161",
     borderRadius: "4px",
     padding: "0.2rem 0.3rem",
-    fontSize: "0.65rem",
+    fontSize: "0.7rem",
     fontFamily: "inherit",
     cursor: "pointer",
-    outline: "none",
     width: "100%",
     marginTop: "0.3rem",
     textAlign: "left",
@@ -85,52 +131,62 @@ export default function FilterDropdown({ options, selected, onChange, alignRight
 
   return (
     <div ref={containerRef} style={{ position: "relative" }}>
-      <button onClick={() => setOpen((o) => !o)} style={triggerStyle}>
+      <button
+        ref={triggerRef}
+        onClick={() => setOpen((o) => !o)}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        style={triggerStyle}
+      >
         <span style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", flex: 1 }}>
           {summary}
         </span>
-        <span style={{ opacity: 0.4, flexShrink: 0, fontSize: "0.55rem" }}>▾</span>
+        <span aria-hidden="true" style={{ opacity: 0.4, flexShrink: 0, fontSize: "0.7rem" }}>▾</span>
       </button>
 
       {open && (
-        <div style={panelStyle(alignRight)}>
+        <div ref={panelRef} style={panelStyle(alignRight)} onKeyDown={handlePanelKeyDown}>
           <input
+            ref={searchInputRef}
             type="text"
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => { setQuery(e.target.value); setHighlightIndex(-1); }}
             placeholder="Search…"
-            autoFocus
+            aria-label="Filter options"
             style={{
               background: "transparent",
               border: "none",
               borderBottom: "1px solid #E0E0E0",
               color: "#757575",
               padding: "0.3rem 0.5rem",
-              fontSize: "0.68rem",
+              fontSize: "0.7rem",
               fontFamily: "inherit",
-              outline: "none",
               flexShrink: 0,
               width: "100%",
               boxSizing: "border-box",
             }}
           />
-          <div style={{ overflowY: "auto", flex: 1 }}>
+          <div role="listbox" style={{ overflowY: "auto", flex: 1 }}>
             {filtered.length === 0 && (
-              <div style={{ padding: "0.4rem 0.5rem", color: "#9E9E9E", fontSize: "0.68rem" }}>
+              <div style={{ padding: "0.4rem 0.5rem", color: "#616161", fontSize: "0.7rem" }}>
                 No matches
               </div>
             )}
-            {filtered.map((o) => (
+            {filtered.map((o, i) => (
               <button
                 key={o.value}
+                role="option"
+                aria-selected={selected.has(o.value)}
                 onClick={() => toggle(o.value)}
+                onMouseEnter={() => setHighlightIndex(i)}
                 style={{
                   display: "flex",
                   alignItems: "center",
                   gap: "0.4rem",
                   width: "100%",
+                  minHeight: "40px",
                   padding: "0.3rem 0.5rem",
-                  background: "none",
+                  background: i === highlightIndex ? "rgba(0,121,107,0.1)" : "none",
                   border: "none",
                   cursor: "pointer",
                   fontFamily: "inherit",
@@ -139,7 +195,7 @@ export default function FilterDropdown({ options, selected, onChange, alignRight
                   textAlign: "left",
                 }}
               >
-                <span style={{ width: "0.7rem", flexShrink: 0, color: "#00796B" }}>
+                <span aria-hidden="true" style={{ width: "0.7rem", flexShrink: 0, color: "#00796B" }}>
                   {selected.has(o.value) ? "✓" : ""}
                 </span>
                 {o.label}

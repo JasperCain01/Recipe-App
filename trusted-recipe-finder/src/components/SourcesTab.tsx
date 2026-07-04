@@ -93,7 +93,7 @@ export default function SourcesTab({
             {sourceSuccess}
           </p>
         )}
-        <p style={{ color: "#9E9E9E", fontSize: "0.7rem", marginTop: "0.75rem", marginBottom: 0 }}>
+        <p style={{ color: "#616161", fontSize: "0.7rem", marginTop: "0.75rem", marginBottom: 0 }}>
           An emoji is auto-assigned based on the site name. URLs are normalised to root domain.
         </p>
       </div>
@@ -132,7 +132,7 @@ export default function SourcesTab({
                         <span
                           title="Ships with the app, kept up to date automatically — no indexing or enriching needed"
                           style={{
-                            fontSize: "0.6rem",
+                            fontSize: "0.7rem",
                             color: "#00796B",
                             background: "rgba(0,121,107,0.1)",
                             border: "1px solid rgba(0,121,107,0.3)",
@@ -151,7 +151,7 @@ export default function SourcesTab({
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{
-                        color: "#9E9E9E",
+                        color: "#616161",
                         fontSize: "0.72rem",
                         textDecoration: "none",
                         overflow: "hidden",
@@ -182,7 +182,7 @@ export default function SourcesTab({
                         borderRadius: "6px",
                         cursor: "pointer",
                         padding: "0.35rem 0.6rem",
-                        fontSize: "0.68rem",
+                        fontSize: "0.7rem",
                         lineHeight: 1,
                       }}
                     >
@@ -192,6 +192,7 @@ export default function SourcesTab({
                     <button
                       onClick={() => onRemove(src.id)}
                       title="Remove source"
+                      aria-label={`Remove ${src.name}`}
                       style={{
                         background: "none",
                         border: "1px solid #E0E0E0",
@@ -238,7 +239,7 @@ export default function SourcesTab({
                           onClick={onCancelEnrich}
                           style={{
                             ...smBtn("default"),
-                            fontSize: "0.68rem",
+                            fontSize: "0.7rem",
                             padding: "0.3rem 0.6rem",
                             borderColor: "#B00020",
                             color: "#B00020",
@@ -275,13 +276,13 @@ export default function SourcesTab({
                           </span>
                         )}
                         {!isIndexing && !hasIndex && (
-                          <span style={{ color: "#9E9E9E" }}>No index yet</span>
+                          <span style={{ color: "#616161" }}>No index yet</span>
                         )}
                       </span>
                       {!isIndexing && (
                         <button
                           onClick={() => onReindex(src.id)}
-                          style={{ ...smBtn("default"), fontSize: "0.68rem", padding: "0.3rem 0.6rem" }}
+                          style={{ ...smBtn("default"), fontSize: "0.7rem", padding: "0.3rem 0.6rem" }}
                         >
                           {hasIndex ? "Re-index" : "Index now"}
                         </button>
@@ -306,7 +307,7 @@ export default function SourcesTab({
                           <span style={{ color: "#757575" }}>Not enriched — ingredient search unavailable</span>
                         )}
                         {!isEnriching && !hasIndex && (
-                          <span style={{ color: "#9E9E9E" }}>Index first to enable enrichment</span>
+                          <span style={{ color: "#616161" }}>Index first to enable enrichment</span>
                         )}
                       </span>
                       {!isEnriching && hasIndex && (
@@ -314,7 +315,7 @@ export default function SourcesTab({
                           onClick={() => onEnrich(src.id)}
                           style={{
                             ...smBtn("default"),
-                            fontSize: "0.68rem",
+                            fontSize: "0.7rem",
                             padding: "0.3rem 0.6rem",
                             borderColor: hasEnriched ? "#E0E0E0" : "#00796B",
                             color: hasEnriched ? "#757575" : "#00796B",
@@ -328,7 +329,7 @@ export default function SourcesTab({
                           onClick={onCancelEnrich}
                           style={{
                             ...smBtn("default"),
-                            fontSize: "0.68rem",
+                            fontSize: "0.7rem",
                             padding: "0.3rem 0.6rem",
                             borderColor: "#B00020",
                             color: "#B00020",
@@ -377,7 +378,7 @@ export default function SourcesTab({
             }}
           >
             <p style={{ color: "#757575", fontSize: "0.85rem", margin: "0 0 0.4rem" }}>No sources yet.</p>
-            <p style={{ color: "#9E9E9E", fontSize: "0.75rem", margin: 0 }}>
+            <p style={{ color: "#616161", fontSize: "0.75rem", margin: 0 }}>
               Built-in defaults couldn't be loaded (offline?) — add a website above to get started.
             </p>
           </div>
