@@ -33,7 +33,7 @@
   // ── Lifecycle hooks ────────────────────────────────────────────────────────
   // Install npm dependencies after the container is created (source files are
   // mounted at this point, not during the Docker build step).
-  "postCreateCommand": "cd trusted-recipe-finder && npm install",
+  "postCreateCommand": "npm install",
 
   // ── VS Code / editor settings ──────────────────────────────────────────────
   "customizations": {
@@ -46,7 +46,7 @@
       "settings": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "typescript.tsdk": "trusted-recipe-finder/node_modules/typescript/lib"
+        "typescript.tsdk": "node_modules/typescript/lib"
       }
     }
   },

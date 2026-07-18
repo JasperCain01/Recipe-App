@@ -11,9 +11,6 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: trusted-recipe-finder
     steps:
       - uses: actions/checkout@v4
 
