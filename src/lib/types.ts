@@ -118,7 +118,7 @@ export interface Manifest {
   sources: ManifestSourceEntry[];
 }
 
-// ─── API responses (mirror what the Vercel functions return) ─────────────────
+// ─── API responses (mirror what the Worker routes return) ────────────────────
 
 export interface IndexSourceResponse {
   source: string;

@@ -1,16 +1,19 @@
 // Shared recipe-site scraping/extraction logic — plain ESM so it can be
-// imported by the Vercel/Worker API handlers *and* the build script (Session 4)
-// without a TypeScript toolchain. `fetch` is injected so callers can swap in
+// imported by the Worker API handlers *and* the build script without a
+// TypeScript toolchain. `fetch` is injected so callers can swap in
 // a platform-specific implementation.
 
+// Recipe sites behind CDN bot protection (Cloudflare et al) hard-403 anything
+// that self-identifies as a bot, so the UA has to look like a real browser.
 const DEFAULT_USER_AGENT =
-  "Mozilla/5.0 (compatible; TrustedRecipeFinder/1.0; +https://github.com/your-username/trusted-recipe-finder)";
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
 
 async function fetchWithUA(url, fetchImpl) {
   const res = await fetchImpl(url, {
     headers: {
       "User-Agent": DEFAULT_USER_AGENT,
       Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Accept-Language": "en-GB,en;q=0.9",
     },
     redirect: "follow",
   });
@@ -18,13 +21,34 @@ async function fetchWithUA(url, fetchImpl) {
   return res.text();
 }
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+// Sitemap child fetches get their own retries: CDN rate limiting shows up as
+// intermittent 403/429 on burst traffic, and losing a child sitemap silently
+// loses every recipe underneath it.
+async function fetchWithUARetries(url, fetchImpl, retries = 2, delayMs = 750) {
+  let lastErr;
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      return await fetchWithUA(url, fetchImpl);
+    } catch (err) {
+      lastErr = err;
+      if (attempt < retries) await sleep(delayMs * (attempt + 1));
+    }
+  }
+  throw lastErr;
+}
+
 /** Fetch a batch of URLs with bounded concurrency, tolerating individual failures. */
-async function fetchAllSettled(urls, fetchImpl, concurrency = 5) {
+async function fetchAllSettled(urls, fetchImpl, concurrency = 3, batchDelayMs = 250) {
   const results = [];
   for (let i = 0; i < urls.length; i += concurrency) {
     const batch = urls.slice(i, i + concurrency);
-    const settled = await Promise.allSettled(batch.map((u) => fetchWithUA(u, fetchImpl)));
+    const settled = await Promise.allSettled(batch.map((u) => fetchWithUARetries(u, fetchImpl)));
     results.push(...settled);
+    if (i + concurrency < urls.length) await sleep(batchDelayMs);
   }
   return results;
 }
@@ -49,8 +73,20 @@ function titleFromUrl(url) {
   }
 }
 
-async function findSitemap(baseUrl, fetchImpl) {
+// The sites' own robots.txt is the authoritative place sitemaps are declared;
+// guessed paths are only a fallback for sites that don't declare one.
+async function sitemapsFromRobots(baseUrl, fetchImpl) {
+  try {
+    const text = await fetchWithUARetries(`${baseUrl}/robots.txt`, fetchImpl);
+    return [...text.matchAll(/^\s*Sitemap:\s*(\S+)/gim)].map((m) => m[1]);
+  } catch {
+    return [];
+  }
+}
+
+async function findSitemap(baseUrl, fetchImpl, diagnostics) {
   const candidates = [
+    ...(await sitemapsFromRobots(baseUrl, fetchImpl)),
     `${baseUrl}/sitemap.xml`,
     `${baseUrl}/sitemap_index.xml`,
     `${baseUrl}/sitemap`,
@@ -60,32 +96,64 @@ async function findSitemap(baseUrl, fetchImpl) {
 
   for (const candidate of candidates) {
     try {
-      const text = await fetchWithUA(candidate, fetchImpl);
+      const text = await fetchWithUARetries(candidate, fetchImpl);
       // Only accept if it looks like XML with <loc> tags — either a regular
       // <urlset> sitemap or a <sitemapindex> of child sitemaps (the latter
       // has no <url> tags of its own, only <sitemap> ones).
-      if (text.includes("<loc>") && (text.includes("<url") || text.includes("<sitemap"))) return text;
-    } catch {
-      // Try next candidate
+      if (text.includes("<loc>") && (text.includes("<url") || text.includes("<sitemap"))) {
+        if (diagnostics) diagnostics.sitemapUrl = candidate;
+        return text;
+      }
+      if (diagnostics) diagnostics.errors.push(`${candidate}: not a sitemap`);
+    } catch (err) {
+      if (diagnostics) diagnostics.errors.push(`${candidate}: ${err.message}`);
     }
   }
   throw new Error(`No sitemap found at ${baseUrl}. Tried: ${candidates.join(", ")}`);
 }
 
+// Crawl budgets: enough to cover a large recipe site's full sitemap index
+// without letting a pathological one (news sites list hundreds of children)
+// run away with the build.
+const MAX_CHILD_SITEMAPS = 50;
+const MAX_LEAF_URLS = 20000;
+
+// Children whose URL looks recipe/content-bearing are fetched first, so the
+// leaf-URL budget is spent on the sitemaps most likely to contain recipes.
+function childPriority(url) {
+  if (/recipe/i.test(url)) return 0;
+  if (/post|content|page-?\d/i.test(url)) return 1;
+  return 2;
+}
+
 /** Recursively resolve a sitemap index into the full list of leaf URLs. */
-async function resolveAllUrls(xml, fetchImpl, depth = 0) {
+async function resolveAllUrls(xml, fetchImpl, depth = 0, diagnostics = null) {
   const locs = extractLocs(xml);
 
   const isSitemapIndex = xml.includes("<sitemapindex") || xml.includes("<sitemap>");
   if (isSitemapIndex && depth < 2) {
-    const childSitemaps = locs.filter((l) => l.endsWith(".xml") || l.includes("sitemap"));
-    // Limit to 10 child sitemaps to stay within time budget; fetched concurrently (E5)
-    // instead of serially so large sitemap indexes fit inside the free-tier 10s window.
-    const settled = await fetchAllSettled(childSitemaps.slice(0, 10), fetchImpl, 5);
-    const nested = await Promise.all(
-      settled.map((r) => (r.status === "fulfilled" ? resolveAllUrls(r.value, fetchImpl, depth + 1) : [])),
-    );
-    return nested.flat();
+    const childSitemaps = locs
+      .filter((l) => l.endsWith(".xml") || l.includes("sitemap"))
+      .sort((a, b) => childPriority(a) - childPriority(b))
+      .slice(0, MAX_CHILD_SITEMAPS);
+    if (diagnostics && depth === 0) diagnostics.childSitemaps = childSitemaps.length;
+
+    const urls = [];
+    // Batches of 3 with a pause, rather than one big concurrent burst, to stay
+    // under CDN rate limits — a burst is how child sitemaps got dropped before.
+    for (let i = 0; i < childSitemaps.length && urls.length < MAX_LEAF_URLS; i += 3) {
+      const batch = childSitemaps.slice(i, i + 3);
+      const settled = await fetchAllSettled(batch, fetchImpl, 3);
+      for (let j = 0; j < settled.length; j++) {
+        const r = settled[j];
+        if (r.status === "fulfilled") {
+          urls.push(...(await resolveAllUrls(r.value, fetchImpl, depth + 1, diagnostics)));
+        } else if (diagnostics) {
+          diagnostics.errors.push(`${batch[j]}: ${String(r.reason?.message || r.reason)}`);
+        }
+      }
+    }
+    return urls;
   }
 
   return locs;
@@ -116,8 +184,12 @@ function filterRecipeUrls(urls, baseUrl) {
   ];
 
   const baseHost = new URL(baseUrl).hostname.replace(/^www\./, "");
-  // E5: computed once up front, not per-URL inside the filter callback (was O(n^2)).
-  const hasRecipePaths = urls.some((u) => recipePatterns.some((p) => p.test(u)));
+  // Only trust recipe-specific paths when they form a real cluster. Sites like
+  // RecipeTin Eats keep recipes at root level (/<slug>/) with a single
+  // /recipes/ hub page — treating that one match as "the recipe section"
+  // used to swallow the entire site down to that hub URL.
+  const recipeMatchCount = urls.filter((u) => recipePatterns.some((p) => p.test(u))).length;
+  const hasRecipePaths = recipeMatchCount >= Math.max(10, urls.length * 0.01);
 
   return urls.filter((url) => {
     try {
@@ -145,11 +217,13 @@ function filterRecipeUrls(urls, baseUrl) {
  * `fetchImpl` is the injected fetch function (e.g. global `fetch`).
  */
 export async function indexSite(baseUrl, fetchImpl) {
-  const sitemapXml = await findSitemap(baseUrl, fetchImpl);
-  const allUrls = await resolveAllUrls(sitemapXml, fetchImpl);
+  const diagnostics = { sitemapUrl: null, childSitemaps: 0, leafUrls: 0, errors: [] };
+  const sitemapXml = await findSitemap(baseUrl, fetchImpl, diagnostics);
+  const allUrls = [...new Set(await resolveAllUrls(sitemapXml, fetchImpl, 0, diagnostics))];
+  diagnostics.leafUrls = allUrls.length;
   const recipeUrls = filterRecipeUrls(allUrls, baseUrl);
   const recipes = recipeUrls.slice(0, 2000).map((url) => ({ title: titleFromUrl(url), url }));
-  return { recipes, count: recipes.length };
+  return { recipes, count: recipes.length, diagnostics };
 }
 
 /** Fetch a single page's HTML via the injected fetch, with a browser-like UA. */

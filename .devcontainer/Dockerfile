@@ -8,10 +8,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
-# ── Node.js global tooling ───────────────────────────────────────────────────
-# The Vercel CLI is already a devDependency (v52) so npm run dev:all works
-# via the local binary. No global install is needed.
-
 # ── npm dependency installation ──────────────────────────────────────────────
 # Dependencies are installed at container-creation time via the
 # postCreateCommand in devcontainer.json (source files are not present at

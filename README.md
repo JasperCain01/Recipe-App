@@ -1,6 +1,8 @@
 # 🍽 Trusted Recipe Finder
 
-A recipe finder that matches recipes from your own trusted recipe websites against the ingredients you have at home. No AI API keys required — all matching runs locally in the browser. Built with React + Vite for the frontend, with a small backend (Vercel Functions today, an additive Cloudflare Worker alternative) used only for indexing and enriching recipe sites.
+A recipe finder that matches recipes from your own trusted recipe websites against the ingredients you have at home. No AI API keys required — all matching runs locally in the browser. Built with React + Vite for the frontend (deployed to GitHub Pages), with a small Cloudflare Worker backend used only for indexing and enriching recipe sites.
+
+**Live app:** https://jaspercain01.github.io/Recipe-App/
 
 ## Features
 
@@ -19,14 +21,11 @@ A recipe finder that matches recipes from your own trusted recipe websites again
 ## Architecture
 
 ```
-trusted-recipe-finder/
-├── api/                    ← Vercel Functions (current default backend)
-│   ├── scrape.js             fetches & parses a site's sitemap
-│   └── fetch-recipe.js       extracts structured recipe data from a page
-├── worker/                  ← Cloudflare Worker (additive alternative backend, not yet default)
-│   ├── index.js               same routes as api/, CORS-locked to the deployed Pages origin
+Recipe-App/
+├── worker/                  ← Cloudflare Worker backend
+│   ├── index.js               /api/scrape + /api/fetch-recipe, CORS-locked to the deployed Pages origin
 │   └── wrangler.toml
-├── shared/                  ← plain ESM, used by both api/, worker/, and scripts/ (no TS toolchain needed)
+├── shared/                  ← plain ESM, used by both worker/ and scripts/ (no TS toolchain needed)
 │   ├── scrape-lib.js          sitemap indexing + schema.org/Recipe extraction
 │   ├── tokens.js              ingredient tokenising for search
 │   └── recipe-meta.js         meal-type/cuisine/time derivation
@@ -60,28 +59,27 @@ trusted-recipe-finder/
 ├── index.html
 ├── tsconfig.json
 ├── vite.config.js
-├── vercel.json               ← Vercel build + routing config
 └── package.json
 ```
 
 The frontend is a Vite + React app. All ingredient matching happens client-side in `src/lib/search.ts` — no API key, no network call, no AI provider. The backend exists only to fetch pages a browser can't fetch cross-origin:
 
-- **`api/scrape.js`** (or the Worker's equivalent route) — fetches and parses a recipe site's sitemap to build an index of recipe URLs
-- **`api/fetch-recipe.js`** (or the Worker's equivalent route) — fetches a recipe page and extracts its real ingredients/instructions/metadata from embedded `schema.org/Recipe` structured data
+- **`/api/scrape`** — fetches and parses a recipe site's sitemap to build an index of recipe URLs
+- **`/api/fetch-recipe`** — fetches a recipe page and extracts its real ingredients/instructions/metadata from embedded `schema.org/Recipe` structured data
 
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js 18+
-- For the Vercel backend locally: a [Vercel account](https://vercel.com) (free tier is fine) and the Vercel CLI
+- To deploy the Worker: a [Cloudflare account](https://dash.cloudflare.com) (free tier is fine)
 
 ### Local Development
 
 ```bash
 # Clone the repo
 git clone https://github.com/JasperCain01/Recipe-App.git
-cd Recipe-App/trusted-recipe-finder
+cd Recipe-App
 
 # Install dependencies
 npm install
@@ -91,33 +89,28 @@ npm install
 npm run dev
 ```
 
-To also run the indexing/enrichment backend locally, pick one:
+To also run the indexing/enrichment backend locally:
 
 ```bash
-# Vercel Functions (today's default backend)
-npm i -g vercel   # first time only
-vercel login      # first time only
-npm run dev:all   # runs Vite + the Vercel functions together
-
-# Cloudflare Worker (additive alternative backend)
 npm run dev:worker
 ```
 
 ### TypeScript
 
-The frontend is fully TypeScript with strict mode enabled. The shared types in `src/lib/types.ts` are the single source of truth for `SourceMeta`, `RecipeRecord`, `SearchResult`, etc. Run `npm run typecheck` to validate types without producing a build. The backend functions in `api/` and `worker/`, and the shared modules in `shared/`, stay as plain JS since they're consumed directly by Vercel/Cloudflare/Node without bundling.
+The frontend is fully TypeScript with strict mode enabled. The shared types in `src/lib/types.ts` are the single source of truth for `SourceMeta`, `RecipeRecord`, `SearchResult`, etc. Run `npm run typecheck` to validate types without producing a build. The Worker in `worker/` and the shared modules in `shared/` stay as plain JS since they're consumed directly by Cloudflare/Node without bundling.
 
 ## Deploying
 
-**Vercel (current default):**
+**Frontend (GitHub Pages):** `.github/workflows/deploy-pages.yml` builds the frontend with `VITE_API_BASE` set to the deployed Worker's URL (the `VITE_API_BASE` repo Actions variable) and publishes to GitHub Pages on every push to `main`, or via manual dispatch from the Actions tab.
+
+**Backend (Cloudflare Worker):**
 
 ```bash
-npm run deploy
+npx wrangler login                                # first time only
+npx wrangler deploy --config worker/wrangler.toml
 ```
 
-Or connect the repo to Vercel at [vercel.com/new](https://vercel.com/new) for automatic deployments on every push.
-
-**Cloudflare Worker + GitHub Pages (additive, not yet the default):** `worker/index.js` serves the same two routes as the Vercel functions, restricted by CORS to the origin set in `worker/wrangler.toml`. `.github/workflows/deploy-pages.yml` builds the frontend against that Worker's URL and publishes to GitHub Pages on every push to `main`. This path requires GitHub Pages to be enabled (repo must be public) and a Cloudflare account to deploy the Worker; it hasn't yet replaced the Vercel deployment.
+The Worker only accepts requests from the origin set as `ALLOWED_ORIGIN` in `worker/wrangler.toml` (plus localhost for dev).
 
 ## How It Works
 
@@ -128,7 +121,7 @@ Or connect the repo to Vercel at [vercel.com/new](https://vercel.com/new) for au
 
 ### Adding a custom source
 1. Go to the **Sources** tab, enter a name and URL, and click **Add**.
-2. The app calls `api/scrape.js` (or the Worker equivalent), which fetches and parses the site's `sitemap.xml` (handling nested sitemaps) and filters URLs down to recipe pages.
+2. The app calls the Worker's `/api/scrape` route, which fetches and parses the site's `sitemap.xml` (handling nested sitemaps) and filters URLs down to recipe pages.
 3. The resulting `{ title, url }` pairs are stored as the source's index in IndexedDB.
 4. Click **Enrich now** to fetch each recipe page and extract its real ingredients, cooking time, servings, cuisine, meal type, and image from its `schema.org/Recipe` structured data.
 
@@ -144,7 +137,6 @@ Sources and their recipe records live in IndexedDB (via the `idb` library, split
 - [ ] Dietary filters (vegetarian, vegan, gluten-free)
 - [ ] Serving size adjuster
 - [ ] PWA support
-- [ ] Cut over from Vercel to the Cloudflare Worker + GitHub Pages deployment once verified end-to-end
 
 ## License
 

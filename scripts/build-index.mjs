@@ -52,7 +52,13 @@ async function fetchPageWithRetries(url) {
 
 /** Fetch + extract one source's recipes with bounded concurrency and retries. */
 async function enrichSource(source) {
-  const { recipes: index, count: indexCount } = await indexSite(source.url, fetch);
+  const { recipes: index, count: indexCount, diagnostics } = await indexSite(source.url, fetch);
+  console.log(
+    `  ${source.id}: sitemap ${diagnostics.sitemapUrl} → ` +
+      `${diagnostics.childSitemaps} child sitemaps, ${diagnostics.leafUrls} URLs, ${indexCount} recipe URLs`,
+  );
+  for (const err of diagnostics.errors.slice(0, 5)) console.log(`    ! ${err}`);
+  if (diagnostics.errors.length > 5) console.log(`    ! ... and ${diagnostics.errors.length - 5} more`);
 
   const records = [];
   const failures = [];
@@ -120,6 +126,19 @@ async function main() {
     try {
       const { indexCount, records, failures } = await enrichSource(source);
       const file = `${source.id}.json`;
+
+      // A run that produced nothing must never clobber previously good data —
+      // an upstream block or sitemap change would otherwise silently empty the
+      // built-in source until someone noticed.
+      const existing = await readJsonIfExists(path.join(DATA_DIR, file), []);
+      if (records.length === 0 && existing.length > 0) {
+        console.error(
+          `  ✗ ${source.id}: produced 0 recipes but ${file} already has ${existing.length} — keeping existing data.`,
+        );
+        summary.push({ id: source.id, ok: false, error: `produced 0 recipes (kept ${existing.length} existing)` });
+        continue;
+      }
+
       await writeFile(path.join(DATA_DIR, file), JSON.stringify(records, null, 2) + "\n");
 
       manifestById.set(source.id, {
@@ -131,6 +150,13 @@ async function main() {
         file,
         updated_at: new Date().toISOString(),
       });
+
+      if (failures.length > 0) {
+        const reasons = new Map();
+        for (const f of failures) reasons.set(f.reason, (reasons.get(f.reason) || 0) + 1);
+        const top = [...reasons.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3);
+        for (const [reason, n] of top) console.log(`    ${source.id}: ${n}× ${reason}`);
+      }
 
       summary.push({
         id: source.id,
