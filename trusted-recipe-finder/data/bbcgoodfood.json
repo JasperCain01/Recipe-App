@@ -1,0 +1,7284 @@
+[
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/how-to-make-a-roux",
+    "title": "How to make a roux",
+    "ingredients": [
+      "50g butter",
+      "50g plain flour",
+      "500ml whole milk"
+    ],
+    "cuisine": null,
+    "mealType": null,
+    "totalTime": "32 mins",
+    "totalTimeMinutes": 32,
+    "servings": "4",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/06/roux-c424521.jpg?resize=768,512",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "butter"
+        ],
+        "strict": [
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "plain",
+          "flour"
+        ],
+        "strict": [
+          "plain",
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "milk"
+        ],
+        "strict": [
+          "milk"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/collection/4th-of-july-recipes",
+    "title": "40+ Fourth of July recipes: grills, sides & show-stopping desserts",
+    "ingredients": [
+      "Tomatoes, lettuce, beef mince,"
+    ],
+    "cuisine": null,
+    "mealType": null,
+    "totalTime": null,
+    "totalTimeMinutes": null,
+    "servings": null,
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2024/05/bbq-pulled-pork-ee8d1a5.jpg?resize=768,512",
+    "instructionCount": 0,
+    "tokens": [
+      {
+        "all": [
+          "tomato",
+          "lettuce",
+          "beef",
+          "mince"
+        ],
+        "strict": [
+          "tomato",
+          "lettuce",
+          "beef",
+          "mince"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/collection/date-recipes",
+    "title": "Date recipes",
+    "ingredients": [
+      "date, dates"
+    ],
+    "cuisine": null,
+    "mealType": null,
+    "totalTime": null,
+    "totalTimeMinutes": null,
+    "servings": null,
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/05/Pistachio-date-cake-70dcc07.jpg?resize=768,698",
+    "instructionCount": 0,
+    "tokens": [
+      {
+        "all": [
+          "date",
+          "dat"
+        ],
+        "strict": [
+          "date",
+          "dat"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/collection/oat-recipes",
+    "title": "Oat recipes",
+    "ingredients": [
+      "oats, rolled oats, jumbo oats, porridge oats"
+    ],
+    "cuisine": null,
+    "mealType": "Breakfast",
+    "totalTime": null,
+    "totalTimeMinutes": null,
+    "servings": null,
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2025/05/GFDrChintalAppV2OvernightOats-fc433fe.jpg?resize=768,734",
+    "instructionCount": 0,
+    "tokens": [
+      {
+        "all": [
+          "oat",
+          "rolled",
+          "jumbo",
+          "porridge"
+        ],
+        "strict": [
+          "oat",
+          "rolled",
+          "jumbo",
+          "porridge"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/rock-cakes",
+    "title": "Rock cakes",
+    "ingredients": [
+      "200g/7oz self-raising flour",
+      "1 tsp baking powder",
+      "1 ½ tsp mixed spice",
+      "100g/4oz butter",
+      "85g/3oz light muscovado sugar",
+      "100g/4oz mixed dried fruit",
+      "1 egg beaten",
+      "2 tbsp/30ml milk",
+      "demerara sugar or roughly crushed sugar cubes, for sprinkling"
+    ],
+    "cuisine": "British",
+    "mealType": "Dessert",
+    "totalTime": "40 mins",
+    "totalTimeMinutes": 40,
+    "servings": "Makes 10",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-967630_11-1783761.jpg?resize=440,400",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "self",
+          "raising",
+          "flour"
+        ],
+        "strict": [
+          "self",
+          "raising",
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "baking",
+          "powder"
+        ],
+        "strict": [
+          "baking",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "mixed",
+          "spice"
+        ],
+        "strict": [
+          "mixed",
+          "spice"
+        ]
+      },
+      {
+        "all": [
+          "butter"
+        ],
+        "strict": [
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "light",
+          "muscovado",
+          "sugar"
+        ],
+        "strict": [
+          "light",
+          "muscovado",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "mixed",
+          "fruit"
+        ],
+        "strict": [
+          "mixed",
+          "fruit"
+        ]
+      },
+      {
+        "all": [
+          "egg",
+          "beaten"
+        ],
+        "strict": [
+          "egg",
+          "beaten"
+        ]
+      },
+      {
+        "all": [
+          "milk"
+        ],
+        "strict": [
+          "milk"
+        ]
+      },
+      {
+        "all": [
+          "demerara",
+          "sugar",
+          "roughly",
+          "crushed",
+          "cub",
+          "sprinkling"
+        ],
+        "strict": [
+          "demerara",
+          "sugar"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/chocolate-crunch",
+    "title": "Chocolate concrete",
+    "ingredients": [
+      "170g unsalted butter melted, plus extra for the tin",
+      "1 tsp vanilla extract",
+      "170g caster sugar",
+      "225g self-raising flour",
+      "25g cocoa powder",
+      "1 large egg beaten",
+      "2 tbsp granulated sugar"
+    ],
+    "cuisine": null,
+    "mealType": null,
+    "totalTime": "45 mins",
+    "totalTimeMinutes": 45,
+    "servings": "Makes 8-10",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/10/Chocolate-crunch-a246b90.jpg?resize=768,713",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "unsalted",
+          "butter",
+          "melted",
+          "tin"
+        ],
+        "strict": [
+          "unsalted",
+          "butter",
+          "melted",
+          "tin"
+        ]
+      },
+      {
+        "all": [
+          "vanilla",
+          "extract"
+        ],
+        "strict": [
+          "vanilla",
+          "extract"
+        ]
+      },
+      {
+        "all": [
+          "caster",
+          "sugar"
+        ],
+        "strict": [
+          "caster",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "self",
+          "raising",
+          "flour"
+        ],
+        "strict": [
+          "self",
+          "raising",
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "cocoa",
+          "powder"
+        ],
+        "strict": [
+          "cocoa",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "egg",
+          "beaten"
+        ],
+        "strict": [
+          "egg",
+          "beaten"
+        ]
+      },
+      {
+        "all": [
+          "granulated",
+          "sugar"
+        ],
+        "strict": [
+          "granulated",
+          "sugar"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/gochujang-maple-chicken-tacos-with-sesame-cabbage-lime-mayo",
+    "title": "Gochujang-maple chicken tacos with sesame cabbage & lime mayo",
+    "ingredients": [
+      "1 tbsp  dark soy sauce",
+      "2 tbsp  gochujang",
+      "1 tbsp  maple syrup",
+      "thumb-sized piece of  ginger",
+      "2 garlic cloves",
+      "4 skinless chicken thighs",
+      "6-8 small  corn tortillas",
+      "2 spring onions",
+      "¼ white cabbage",
+      "1 tbsp  sesame seeds plus extra to serve",
+      "1 tbsp  rice vinegar",
+      "small handful of  coriander",
+      "3 tbsp mayonnaise",
+      "1 lime"
+    ],
+    "cuisine": null,
+    "mealType": "Dinner",
+    "totalTime": "55 mins",
+    "totalTimeMinutes": 55,
+    "servings": "2",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/06/Gochujang-maple-chicken-tacos-with-sesame-cabbage-and-lime-mayo-a3bc3bf.jpg?resize=768,698",
+    "instructionCount": 4,
+    "tokens": [
+      {
+        "all": [
+          "dark",
+          "soy",
+          "sauce"
+        ],
+        "strict": [
+          "dark",
+          "soy",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "gochujang"
+        ],
+        "strict": [
+          "gochujang"
+        ]
+      },
+      {
+        "all": [
+          "maple",
+          "syrup"
+        ],
+        "strict": [
+          "maple",
+          "syrup"
+        ]
+      },
+      {
+        "all": [
+          "thumb",
+          "sized",
+          "ginger"
+        ],
+        "strict": [
+          "thumb",
+          "sized",
+          "ginger"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "skinles",
+          "chicken",
+          "thigh"
+        ],
+        "strict": [
+          "skinles",
+          "chicken",
+          "thigh"
+        ]
+      },
+      {
+        "all": [
+          "corn",
+          "tortilla"
+        ],
+        "strict": [
+          "corn",
+          "tortilla"
+        ]
+      },
+      {
+        "all": [
+          "spring",
+          "onion"
+        ],
+        "strict": [
+          "spring",
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "cabbage"
+        ],
+        "strict": [
+          "white",
+          "cabbage"
+        ]
+      },
+      {
+        "all": [
+          "sesame",
+          "seed",
+          "serve"
+        ],
+        "strict": [
+          "sesame",
+          "seed",
+          "serve"
+        ]
+      },
+      {
+        "all": [
+          "rice",
+          "vinegar"
+        ],
+        "strict": [
+          "rice",
+          "vinegar"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro"
+        ]
+      },
+      {
+        "all": [
+          "mayonnaise"
+        ],
+        "strict": [
+          "mayonnaise"
+        ]
+      },
+      {
+        "all": [
+          "lime"
+        ],
+        "strict": [
+          "lime"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/smoky-beef-bean-chilli-pasties-with-soured-cream-cheese",
+    "title": "Smoky beef & bean chilli pasties with soured cream & cheese",
+    "ingredients": [
+      "2 tbsp  plain flour",
+      "500g  beef shin cut into 4-5cm pieces",
+      "1 tbsp  vegetable oil plus a little extra if needed",
+      "2 red onions roughly chopped",
+      "2 garlic cloves grated",
+      "1 tbsp  chipotle paste",
+      "2 tbsp  tomato purée",
+      "2 tsp  ground cumin",
+      "1 tsp  ground coriander",
+      "2 tsp  chilli powder",
+      "400g can  chopped tomatoes",
+      "1 beef stock cube",
+      "400g can  black beans drained",
+      "100g  grated mozzarella",
+      "120ml  soured cream",
+      "1 1/2 tsp  English mustard",
+      "2 eggs",
+      "700g  plain flour",
+      "150g  cold salted butter cut into cubes",
+      "100g  red leicester coarsely grated"
+    ],
+    "cuisine": null,
+    "mealType": "Lunch",
+    "totalTime": "4h 30m",
+    "totalTimeMinutes": 270,
+    "servings": "12",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/06/Smoky-beef-and-bean-chilli-pasties-7f3c3e6.jpg?resize=768,698",
+    "instructionCount": 6,
+    "tokens": [
+      {
+        "all": [
+          "plain",
+          "flour"
+        ],
+        "strict": [
+          "plain",
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "beef",
+          "shin",
+          "cut"
+        ],
+        "strict": [
+          "beef",
+          "shin",
+          "cut"
+        ]
+      },
+      {
+        "all": [
+          "vegetable",
+          "oil"
+        ],
+        "strict": [
+          "vegetable",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "onion",
+          "roughly"
+        ],
+        "strict": [
+          "red",
+          "onion",
+          "roughly"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "chipotle",
+          "paste"
+        ],
+        "strict": [
+          "chipotle",
+          "paste"
+        ]
+      },
+      {
+        "all": [
+          "tomato",
+          "pur"
+        ],
+        "strict": [
+          "tomato",
+          "pur"
+        ]
+      },
+      {
+        "all": [
+          "cumin"
+        ],
+        "strict": [
+          "cumin"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro"
+        ]
+      },
+      {
+        "all": [
+          "chilli",
+          "powder"
+        ],
+        "strict": [
+          "chilli",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "can",
+          "tomato"
+        ],
+        "strict": [
+          "can",
+          "tomato"
+        ]
+      },
+      {
+        "all": [
+          "beef",
+          "stock",
+          "cube"
+        ],
+        "strict": [
+          "beef",
+          "stock",
+          "cube"
+        ]
+      },
+      {
+        "all": [
+          "can",
+          "black",
+          "bean",
+          "drained"
+        ],
+        "strict": [
+          "can",
+          "black",
+          "bean",
+          "drained"
+        ]
+      },
+      {
+        "all": [
+          "mozzarella"
+        ],
+        "strict": [
+          "mozzarella"
+        ]
+      },
+      {
+        "all": [
+          "soured",
+          "cream"
+        ],
+        "strict": [
+          "soured",
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "english",
+          "mustard"
+        ],
+        "strict": [
+          "english",
+          "mustard"
+        ]
+      },
+      {
+        "all": [
+          "egg"
+        ],
+        "strict": [
+          "egg"
+        ]
+      },
+      {
+        "all": [
+          "plain",
+          "flour"
+        ],
+        "strict": [
+          "plain",
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "cold",
+          "salted",
+          "butter",
+          "cut",
+          "cub"
+        ],
+        "strict": [
+          "cold",
+          "salted",
+          "butter",
+          "cut",
+          "cub"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "leicester",
+          "coarsely"
+        ],
+        "strict": [
+          "red",
+          "leicester",
+          "coarsely"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/boursin-pasta",
+    "title": "Boursin pasta",
+    "ingredients": [
+      "2 x 150g  Boursin Garlic &amp; Herbs Cheese",
+      "20  cherry tomatoes",
+      "1 red onion finely diced",
+      "few sprigs  thyme optional",
+      "250g frozen spinach",
+      "400g  pasta",
+      "25g  parmesan finely grated"
+    ],
+    "cuisine": null,
+    "mealType": "Dinner",
+    "totalTime": "40 mins",
+    "totalTimeMinutes": 40,
+    "servings": "4",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/06/Boursin-pasta-a81a715.jpg?resize=768,512",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "boursin",
+          "garlic",
+          "amp",
+          "herb",
+          "cheese"
+        ],
+        "strict": [
+          "boursin",
+          "garlic",
+          "amp",
+          "herb",
+          "cheese"
+        ]
+      },
+      {
+        "all": [
+          "cherry",
+          "tomato"
+        ],
+        "strict": [
+          "cherry",
+          "tomato"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "onion",
+          "finely"
+        ],
+        "strict": [
+          "red",
+          "onion",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "sprig",
+          "thyme"
+        ],
+        "strict": [
+          "sprig",
+          "thyme"
+        ]
+      },
+      {
+        "all": [
+          "frozen",
+          "spinach"
+        ],
+        "strict": [
+          "frozen",
+          "spinach"
+        ]
+      },
+      {
+        "all": [
+          "pasta"
+        ],
+        "strict": [
+          "pasta"
+        ]
+      },
+      {
+        "all": [
+          "parmesan",
+          "finely"
+        ],
+        "strict": [
+          "parmesan",
+          "finely"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/oreo-ice-cream",
+    "title": "Oreo ice cream",
+    "ingredients": [
+      "2 x 156g packs of  Oreos",
+      "700ml  double cream",
+      "397g can condensed milk"
+    ],
+    "cuisine": null,
+    "mealType": "Dessert",
+    "totalTime": "10 mins",
+    "totalTimeMinutes": 10,
+    "servings": "8",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/06/Oreo-ice-cream-9a103f7.jpg?resize=768,512",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "pack",
+          "oreo"
+        ],
+        "strict": [
+          "pack",
+          "oreo"
+        ]
+      },
+      {
+        "all": [
+          "double",
+          "cream"
+        ],
+        "strict": [
+          "double",
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "can",
+          "condensed",
+          "milk"
+        ],
+        "strict": [
+          "can",
+          "condensed",
+          "milk"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/tuna-tartare",
+    "title": "Tuna tartare",
+    "ingredients": [
+      "400g  sashimi-grade yellow fin tuna block or steak",
+      "thumb-sized piece of ginger finely grated",
+      "2 garlic cloves crushed",
+      "1 red chilli deseeded and finely chopped",
+      "small handful of coriander leaves picked and roughly chopped, stalks finely chopped",
+      "1 lime juiced, plus extra wedges to serve",
+      "3 tbsp  soy sauce",
+      "1 tbsp  honey",
+      "2 tbsp  toasted sesame oil",
+      "1 tbsp  toasted sesame seeds",
+      "toasted bread or ciabatta slices, to serve"
+    ],
+    "cuisine": null,
+    "mealType": "Lunch",
+    "totalTime": "20 mins",
+    "totalTimeMinutes": 20,
+    "servings": "Serves 4 as a starter or lunch",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/06/Tuna-tartare-ccdbfef.jpg?resize=768,512",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "sashimi",
+          "grade",
+          "yellow",
+          "fin",
+          "tuna",
+          "block",
+          "steak"
+        ],
+        "strict": [
+          "sashimi",
+          "grade",
+          "yellow",
+          "fin",
+          "tuna",
+          "block"
+        ]
+      },
+      {
+        "all": [
+          "thumb",
+          "sized",
+          "ginger",
+          "finely"
+        ],
+        "strict": [
+          "thumb",
+          "sized",
+          "ginger",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "crushed"
+        ],
+        "strict": [
+          "garlic",
+          "clof",
+          "crushed"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "chilli",
+          "deseeded",
+          "finely"
+        ],
+        "strict": [
+          "red",
+          "chilli",
+          "deseeded",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro",
+          "leaf",
+          "picked",
+          "roughly",
+          "stalk",
+          "finely"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro",
+          "leaf",
+          "picked",
+          "roughly",
+          "stalk",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "lime",
+          "juiced",
+          "wedg",
+          "serve"
+        ],
+        "strict": [
+          "lime",
+          "juiced",
+          "wedg",
+          "serve"
+        ]
+      },
+      {
+        "all": [
+          "soy",
+          "sauce"
+        ],
+        "strict": [
+          "soy",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "honey"
+        ],
+        "strict": [
+          "honey"
+        ]
+      },
+      {
+        "all": [
+          "toasted",
+          "sesame",
+          "oil"
+        ],
+        "strict": [
+          "toasted",
+          "sesame",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "toasted",
+          "sesame",
+          "seed"
+        ],
+        "strict": [
+          "toasted",
+          "sesame",
+          "seed"
+        ]
+      },
+      {
+        "all": [
+          "toasted",
+          "bread",
+          "ciabatta",
+          "slic",
+          "serve"
+        ],
+        "strict": [
+          "toasted",
+          "bread"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/biscoff-rocky-road",
+    "title": "Biscoff rocky road",
+    "ingredients": [
+      "175g  Lotus Biscoff smooth spread",
+      "150g  salted butter cut into cubes",
+      "250g  white chocolate roughly chopped",
+      "150g  Lotus Biscoff biscuits",
+      "60g  mini marshmallows (vegetarian, if needed)",
+      "80g  pecans roughly chopped"
+    ],
+    "cuisine": null,
+    "mealType": "Dessert",
+    "totalTime": "20 mins",
+    "totalTimeMinutes": 20,
+    "servings": "Cuts into 16 squares",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/06/Biscoff-Rocky-Road-6191772.jpg?resize=768,512",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "lotu",
+          "biscoff",
+          "smooth",
+          "spread"
+        ],
+        "strict": [
+          "lotu",
+          "biscoff",
+          "smooth",
+          "spread"
+        ]
+      },
+      {
+        "all": [
+          "salted",
+          "butter",
+          "cut",
+          "cub"
+        ],
+        "strict": [
+          "salted",
+          "butter",
+          "cut",
+          "cub"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "chocolate",
+          "roughly"
+        ],
+        "strict": [
+          "white",
+          "chocolate",
+          "roughly"
+        ]
+      },
+      {
+        "all": [
+          "lotu",
+          "biscoff",
+          "biscuit"
+        ],
+        "strict": [
+          "lotu",
+          "biscoff",
+          "biscuit"
+        ]
+      },
+      {
+        "all": [
+          "mini",
+          "marshmallow",
+          "vegetarian"
+        ],
+        "strict": [
+          "mini",
+          "marshmallow"
+        ]
+      },
+      {
+        "all": [
+          "pecan",
+          "roughly"
+        ],
+        "strict": [
+          "pecan",
+          "roughly"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/confit-garlic",
+    "title": "Confit garlic",
+    "ingredients": [
+      "2 bulbs of  garlic peeled and left whole (our peeled garlic cloves weighed 115g)",
+      "2  thyme sprigs",
+      "250ml  olive oil"
+    ],
+    "cuisine": null,
+    "mealType": "Side",
+    "totalTime": "1h 35m",
+    "totalTimeMinutes": 95,
+    "servings": "Makes 1 small jar",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/06/Confit-garlic-e36d3f3.jpg?resize=768,512",
+    "instructionCount": 4,
+    "tokens": [
+      {
+        "all": [
+          "bulb",
+          "garlic",
+          "peeled",
+          "left",
+          "our",
+          "clof",
+          "weighed"
+        ],
+        "strict": [
+          "bulb",
+          "garlic",
+          "peeled",
+          "left"
+        ]
+      },
+      {
+        "all": [
+          "thyme",
+          "sprig"
+        ],
+        "strict": [
+          "thyme",
+          "sprig"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/homemade-chocolate-custard",
+    "title": "Homemade chocolate custard",
+    "ingredients": [
+      "5 tbsp  custard powder",
+      "3 tbsp  caster sugar",
+      "½ tsp  vanilla extract",
+      "1.25 litres  whole milk",
+      "50g  milk chocolate drops or roughly chopped chocolate",
+      "100g  dark chocolate drops or roughly chopped chocolate"
+    ],
+    "cuisine": null,
+    "mealType": "Dessert",
+    "totalTime": "15 mins",
+    "totalTimeMinutes": 15,
+    "servings": "8",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/06/Homemade-chocolate-custard-294981f.jpg?resize=768,512",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "custard",
+          "powder"
+        ],
+        "strict": [
+          "custard",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "caster",
+          "sugar"
+        ],
+        "strict": [
+          "caster",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "tsp",
+          "vanilla",
+          "extract"
+        ],
+        "strict": [
+          "tsp",
+          "vanilla",
+          "extract"
+        ]
+      },
+      {
+        "all": [
+          "litr",
+          "milk"
+        ],
+        "strict": [
+          "litr",
+          "milk"
+        ]
+      },
+      {
+        "all": [
+          "milk",
+          "chocolate",
+          "drop",
+          "roughly"
+        ],
+        "strict": [
+          "milk",
+          "chocolate",
+          "drop"
+        ]
+      },
+      {
+        "all": [
+          "dark",
+          "chocolate",
+          "drop",
+          "roughly"
+        ],
+        "strict": [
+          "dark",
+          "chocolate",
+          "drop"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/vegan-cream",
+    "title": "Vegan cream",
+    "ingredients": [
+      "100g  raw cashews"
+    ],
+    "cuisine": null,
+    "mealType": "Side",
+    "totalTime": "7 mins",
+    "totalTimeMinutes": 7,
+    "servings": "Makes 300ml",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/06/Vegan-cream-3d91e22.jpg?resize=768,512",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "cashew"
+        ],
+        "strict": [
+          "cashew"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/chicken-marsala",
+    "title": "Chicken marsala",
+    "ingredients": [
+      "4 boneless, skinless chicken breasts",
+      "3 tbsp  flour",
+      "3 tbsp  vegetable, sunflower or olive oil",
+      "25g  butter",
+      "500g  mushrooms sliced",
+      "2 shallots finely diced",
+      "2 large  garlic cloves",
+      "200ml  marsala wine",
+      "150ml  chicken stock",
+      "150ml  double cream",
+      "handful of chopped parsley to serve",
+      "lemon wedges to serve (optional)"
+    ],
+    "cuisine": null,
+    "mealType": "Dinner",
+    "totalTime": "1h",
+    "totalTimeMinutes": 60,
+    "servings": "4",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/06/Chicken-marsala-5c23142.jpg?resize=768,512",
+    "instructionCount": 6,
+    "tokens": [
+      {
+        "all": [
+          "boneles",
+          "skinles",
+          "chicken",
+          "breast"
+        ],
+        "strict": [
+          "boneles",
+          "skinles",
+          "chicken",
+          "breast"
+        ]
+      },
+      {
+        "all": [
+          "flour"
+        ],
+        "strict": [
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "vegetable",
+          "sunflower",
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "vegetable",
+          "sunflower"
+        ]
+      },
+      {
+        "all": [
+          "butter"
+        ],
+        "strict": [
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "mushroom"
+        ],
+        "strict": [
+          "mushroom"
+        ]
+      },
+      {
+        "all": [
+          "shallot",
+          "finely"
+        ],
+        "strict": [
+          "shallot",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "marsala",
+          "wine"
+        ],
+        "strict": [
+          "marsala",
+          "wine"
+        ]
+      },
+      {
+        "all": [
+          "chicken",
+          "stock"
+        ],
+        "strict": [
+          "chicken",
+          "stock"
+        ]
+      },
+      {
+        "all": [
+          "double",
+          "cream"
+        ],
+        "strict": [
+          "double",
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "parsley",
+          "serve"
+        ],
+        "strict": [
+          "parsley",
+          "serve"
+        ]
+      },
+      {
+        "all": [
+          "lemon",
+          "wedg",
+          "serve"
+        ],
+        "strict": [
+          "lemon",
+          "wedg",
+          "serve"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/malteser-cheesecake",
+    "title": "Malteser cheesecake",
+    "ingredients": [
+      "250g  malted milk biscuits",
+      "125g  unsalted butter melted and cooled",
+      "400g  full-fat soft cheese at room temperature",
+      "75g  malted milk powder (we used Horlicks)",
+      "100g  dark chocolate melted and cooled",
+      "75g  milk chocolate melted and cooled",
+      "175g  caster sugar",
+      "400ml  double cream at room temperature",
+      "200ml  double cream",
+      "1 tbsp  malted milk powder",
+      "50g  Maltesers roughly chopped or crushed"
+    ],
+    "cuisine": null,
+    "mealType": "Dessert",
+    "totalTime": "45 mins",
+    "totalTimeMinutes": 45,
+    "servings": "10",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/06/Malteser-Cheesecake-40a80db.jpg?resize=768,512",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "malted",
+          "milk",
+          "biscuit"
+        ],
+        "strict": [
+          "malted",
+          "milk",
+          "biscuit"
+        ]
+      },
+      {
+        "all": [
+          "unsalted",
+          "butter",
+          "melted",
+          "cooled"
+        ],
+        "strict": [
+          "unsalted",
+          "butter",
+          "melted",
+          "cooled"
+        ]
+      },
+      {
+        "all": [
+          "full",
+          "fat",
+          "soft",
+          "cheese",
+          "room",
+          "temperature"
+        ],
+        "strict": [
+          "full",
+          "fat",
+          "soft",
+          "cheese",
+          "room",
+          "temperature"
+        ]
+      },
+      {
+        "all": [
+          "malted",
+          "milk",
+          "powder",
+          "used",
+          "horlick"
+        ],
+        "strict": [
+          "malted",
+          "milk",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "dark",
+          "chocolate",
+          "melted",
+          "cooled"
+        ],
+        "strict": [
+          "dark",
+          "chocolate",
+          "melted",
+          "cooled"
+        ]
+      },
+      {
+        "all": [
+          "milk",
+          "chocolate",
+          "melted",
+          "cooled"
+        ],
+        "strict": [
+          "milk",
+          "chocolate",
+          "melted",
+          "cooled"
+        ]
+      },
+      {
+        "all": [
+          "caster",
+          "sugar"
+        ],
+        "strict": [
+          "caster",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "double",
+          "cream",
+          "room",
+          "temperature"
+        ],
+        "strict": [
+          "double",
+          "cream",
+          "room",
+          "temperature"
+        ]
+      },
+      {
+        "all": [
+          "double",
+          "cream"
+        ],
+        "strict": [
+          "double",
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "malted",
+          "milk",
+          "powder"
+        ],
+        "strict": [
+          "malted",
+          "milk",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "malteser",
+          "roughly",
+          "crushed"
+        ],
+        "strict": [
+          "malteser",
+          "roughly"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/ezekiel-style-bread",
+    "title": "Ezekiel-style bread",
+    "ingredients": [
+      "100g  dry sprouting mix or 220g of pre-sprouted grains",
+      "450g  strong wholemeal bread flour",
+      "50g  wholemeal rye flour",
+      "7g  fast-action dried yeast",
+      "1 tbsp  runny honey",
+      "1 tbsp  olive oil",
+      "50g  mixed seeds for topping, optional"
+    ],
+    "cuisine": null,
+    "mealType": "Side",
+    "totalTime": "1h 20m",
+    "totalTimeMinutes": 80,
+    "servings": "Makes 1 loaf",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/06/Ezekiel-Bread-7535f19.jpg?resize=768,512",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "dry",
+          "sprouting",
+          "mix",
+          "pre",
+          "sprouted",
+          "grain"
+        ],
+        "strict": [
+          "dry",
+          "sprouting",
+          "mix"
+        ]
+      },
+      {
+        "all": [
+          "strong",
+          "wholemeal",
+          "bread",
+          "flour"
+        ],
+        "strict": [
+          "strong",
+          "wholemeal",
+          "bread",
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "wholemeal",
+          "rye",
+          "flour"
+        ],
+        "strict": [
+          "wholemeal",
+          "rye",
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "fast",
+          "action",
+          "yeast"
+        ],
+        "strict": [
+          "fast",
+          "action",
+          "yeast"
+        ]
+      },
+      {
+        "all": [
+          "runny",
+          "honey"
+        ],
+        "strict": [
+          "runny",
+          "honey"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "mixed",
+          "seed",
+          "topping"
+        ],
+        "strict": [
+          "mixed",
+          "seed",
+          "topping"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/lamb-karahi",
+    "title": "Lamb karahi",
+    "ingredients": [
+      "600g bone-in lamb (shoulder or chops) chopped into roughly 5cm chunks through the bone (see tip)",
+      "5 large  tomatoes chopped",
+      "4 garlic cloves crushed",
+      "20g  fresh ginger grated",
+      "2 tbsp  ghee",
+      "2 tbsp  vegetable oil",
+      "1 tsp  cumin seeds",
+      "1 tsp  fennel seeds",
+      "1 tsp  black peppercorns",
+      "1cm piece  ginger peeled and finely chopped",
+      "1–2  garlic cloves roughly chopped",
+      "¼ tsp ground turmeric",
+      "1 tsp  chilli powder (any heat)",
+      "1 tsp coriander seeds ground into a powder (or use ground coriander)",
+      "handful of  coriander finely chopped",
+      "10  mint leaves chopped",
+      "1–3  green chillies finely chopped (deseeded if you prefer less heat)",
+      "thumb-sized piece  of ginger cut into small matchsticks",
+      "naans or cooked basmati rice"
+    ],
+    "cuisine": "Indian",
+    "mealType": "Dinner",
+    "totalTime": "1h 50m",
+    "totalTimeMinutes": 110,
+    "servings": "4",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/06/Lamb-kahari-febc3e4.jpg?resize=768,512",
+    "instructionCount": 4,
+    "tokens": [
+      {
+        "all": [
+          "bone",
+          "lamb",
+          "shoulder",
+          "chop",
+          "roughly",
+          "chunk",
+          "through",
+          "see",
+          "tip"
+        ],
+        "strict": [
+          "bone",
+          "lamb",
+          "roughly",
+          "chunk",
+          "through"
+        ]
+      },
+      {
+        "all": [
+          "tomato"
+        ],
+        "strict": [
+          "tomato"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "crushed"
+        ],
+        "strict": [
+          "garlic",
+          "clof",
+          "crushed"
+        ]
+      },
+      {
+        "all": [
+          "ginger"
+        ],
+        "strict": [
+          "ginger"
+        ]
+      },
+      {
+        "all": [
+          "ghee"
+        ],
+        "strict": [
+          "ghee"
+        ]
+      },
+      {
+        "all": [
+          "vegetable",
+          "oil"
+        ],
+        "strict": [
+          "vegetable",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "cumin",
+          "seed"
+        ],
+        "strict": [
+          "cumin",
+          "seed"
+        ]
+      },
+      {
+        "all": [
+          "fennel",
+          "seed"
+        ],
+        "strict": [
+          "fennel",
+          "seed"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "peppercorn"
+        ],
+        "strict": [
+          "black",
+          "peppercorn"
+        ]
+      },
+      {
+        "all": [
+          "ginger",
+          "peeled",
+          "finely"
+        ],
+        "strict": [
+          "ginger",
+          "peeled",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "roughly"
+        ],
+        "strict": [
+          "garlic",
+          "clof",
+          "roughly"
+        ]
+      },
+      {
+        "all": [
+          "tsp",
+          "turmeric"
+        ],
+        "strict": [
+          "tsp",
+          "turmeric"
+        ]
+      },
+      {
+        "all": [
+          "chilli",
+          "powder",
+          "any",
+          "heat"
+        ],
+        "strict": [
+          "chilli",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro",
+          "seed",
+          "powder",
+          "use"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro",
+          "seed",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro",
+          "finely"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "mint",
+          "leaf"
+        ],
+        "strict": [
+          "mint",
+          "leaf"
+        ]
+      },
+      {
+        "all": [
+          "green",
+          "chilly",
+          "finely",
+          "deseeded",
+          "you",
+          "prefer",
+          "les",
+          "heat"
+        ],
+        "strict": [
+          "green",
+          "chilly",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "thumb",
+          "sized",
+          "ginger",
+          "cut",
+          "matchstick"
+        ],
+        "strict": [
+          "thumb",
+          "sized",
+          "ginger",
+          "cut",
+          "matchstick"
+        ]
+      },
+      {
+        "all": [
+          "naan",
+          "basmati",
+          "rice"
+        ],
+        "strict": [
+          "naan"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/seekh-kebab-pakistani-beef-skewers",
+    "title": "Seekh kebab (Pakistani beef skewers)",
+    "ingredients": [
+      "500g  beef mince 20% fat (see tip)",
+      "1 medium red onion very finely grated and any excess moisture squeezed out  (see tip)",
+      "5 garlic cloves crushed",
+      "20g  ginger grated",
+      "3 green chillies very finely chopped",
+      "30g fresh coriander finely chopped",
+      "15g fresh mint leaves finely chopped",
+      "1½ tsp  ground cumin",
+      "1 tsp  ground coriander",
+      "1 tsp  chilli powder plus extra to serve",
+      "½ tsp  garam masala",
+      "2 egg whites (use the yolks in another recipe)",
+      "1 tbsp  oil for basting, plus extra to brush",
+      "1 tsp  chaat masala",
+      "chutney, raw onion rings and lemon wedges",
+      "yogurt",
+      "flatbreads gluten-free if necessary (optional)",
+      "bamboo or metal skewers"
+    ],
+    "cuisine": null,
+    "mealType": "Dinner",
+    "totalTime": "30 mins",
+    "totalTimeMinutes": 30,
+    "servings": "Makes 8 kebabs",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/06/Seekh-kebab-e2af72d.jpg?resize=768,512",
+    "instructionCount": 4,
+    "tokens": [
+      {
+        "all": [
+          "beef",
+          "mince",
+          "fat",
+          "see",
+          "tip"
+        ],
+        "strict": [
+          "beef",
+          "mince",
+          "fat"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "onion",
+          "very",
+          "finely",
+          "any",
+          "exces",
+          "moisture",
+          "squeezed",
+          "out",
+          "see",
+          "tip"
+        ],
+        "strict": [
+          "red",
+          "onion",
+          "very",
+          "finely",
+          "any",
+          "exces",
+          "moisture",
+          "squeezed",
+          "out"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "crushed"
+        ],
+        "strict": [
+          "garlic",
+          "clof",
+          "crushed"
+        ]
+      },
+      {
+        "all": [
+          "ginger"
+        ],
+        "strict": [
+          "ginger"
+        ]
+      },
+      {
+        "all": [
+          "green",
+          "chilly",
+          "very",
+          "finely"
+        ],
+        "strict": [
+          "green",
+          "chilly",
+          "very",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro",
+          "finely"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "mint",
+          "leaf",
+          "finely"
+        ],
+        "strict": [
+          "mint",
+          "leaf",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "cumin"
+        ],
+        "strict": [
+          "cumin"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro"
+        ]
+      },
+      {
+        "all": [
+          "chilli",
+          "powder",
+          "serve"
+        ],
+        "strict": [
+          "chilli",
+          "powder",
+          "serve"
+        ]
+      },
+      {
+        "all": [
+          "tsp",
+          "garam",
+          "masala"
+        ],
+        "strict": [
+          "tsp",
+          "garam",
+          "masala"
+        ]
+      },
+      {
+        "all": [
+          "egg",
+          "whit",
+          "use",
+          "yolk",
+          "another",
+          "recipe"
+        ],
+        "strict": [
+          "egg",
+          "whit"
+        ]
+      },
+      {
+        "all": [
+          "oil",
+          "basting",
+          "brush"
+        ],
+        "strict": [
+          "oil",
+          "basting",
+          "brush"
+        ]
+      },
+      {
+        "all": [
+          "chaat",
+          "masala"
+        ],
+        "strict": [
+          "chaat",
+          "masala"
+        ]
+      },
+      {
+        "all": [
+          "chutney",
+          "onion",
+          "ring",
+          "lemon",
+          "wedg"
+        ],
+        "strict": [
+          "chutney",
+          "onion",
+          "ring",
+          "lemon",
+          "wedg"
+        ]
+      },
+      {
+        "all": [
+          "yogurt"
+        ],
+        "strict": [
+          "yogurt"
+        ]
+      },
+      {
+        "all": [
+          "flatbread",
+          "gluten",
+          "free",
+          "necessary"
+        ],
+        "strict": [
+          "flatbread",
+          "gluten",
+          "free",
+          "necessary"
+        ]
+      },
+      {
+        "all": [
+          "bamboo",
+          "metal",
+          "skewer"
+        ],
+        "strict": [
+          "bamboo"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/batata-harra-lebanese-spicy-potatoes",
+    "title": "Batata harra (Lebanese spicy potatoes)",
+    "ingredients": [
+      "3-4 large  baking potatoes (roughly 1kg), peeled",
+      "6 tbsp  olive oil (or use vegetable oil)",
+      "4 garlic cloves crushed",
+      "1 tsp  red chilli paste",
+      "1 lemon juiced",
+      "handful of coriander chopped"
+    ],
+    "cuisine": "Lebanese, Middle Eastern",
+    "mealType": "Side",
+    "totalTime": "1h 10m",
+    "totalTimeMinutes": 70,
+    "servings": "4",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/06/Batata-harra-ced615d.jpg?resize=768,512",
+    "instructionCount": 4,
+    "tokens": [
+      {
+        "all": [
+          "baking",
+          "potato",
+          "roughly",
+          "peeled"
+        ],
+        "strict": [
+          "baking",
+          "potato",
+          "peeled"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil",
+          "use",
+          "vegetable"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "crushed"
+        ],
+        "strict": [
+          "garlic",
+          "clof",
+          "crushed"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "chilli",
+          "paste"
+        ],
+        "strict": [
+          "red",
+          "chilli",
+          "paste"
+        ]
+      },
+      {
+        "all": [
+          "lemon",
+          "juiced"
+        ],
+        "strict": [
+          "lemon",
+          "juiced"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/fatayer-spinach-hand-pies",
+    "title": "Fatayer (spinach hand pies)",
+    "ingredients": [
+      "1 tbsp  dried fast-action yeast",
+      "½ tbsp  caster sugar",
+      "540g  plain flour plus extra for dusting",
+      "60ml  olive oil",
+      "125g  natural yogurt",
+      "1 tbsp  olive oil plus extra for the tray",
+      "1 large  onion finely chopped",
+      "1 kg  fresh or frozen chopped spinach",
+      "2 tsp  sumac",
+      "2 lemons juiced"
+    ],
+    "cuisine": "Middle Eastern",
+    "mealType": "Lunch",
+    "totalTime": "1h 10m",
+    "totalTimeMinutes": 70,
+    "servings": "Serves 8 (4 fatayer per serving)",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/06/Fatayer-ca95992.jpg?resize=768,512",
+    "instructionCount": 7,
+    "tokens": [
+      {
+        "all": [
+          "fast",
+          "action",
+          "yeast"
+        ],
+        "strict": [
+          "fast",
+          "action",
+          "yeast"
+        ]
+      },
+      {
+        "all": [
+          "tbsp",
+          "caster",
+          "sugar"
+        ],
+        "strict": [
+          "tbsp",
+          "caster",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "plain",
+          "flour",
+          "dusting"
+        ],
+        "strict": [
+          "plain",
+          "flour",
+          "dusting"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "natural",
+          "yogurt"
+        ],
+        "strict": [
+          "natural",
+          "yogurt"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil",
+          "tray"
+        ],
+        "strict": [
+          "olive",
+          "oil",
+          "tray"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "finely"
+        ],
+        "strict": [
+          "onion",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "frozen",
+          "spinach"
+        ],
+        "strict": []
+      },
+      {
+        "all": [
+          "sumac"
+        ],
+        "strict": [
+          "sumac"
+        ]
+      },
+      {
+        "all": [
+          "lemon",
+          "juiced"
+        ],
+        "strict": [
+          "lemon",
+          "juiced"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/duck-breast",
+    "title": "How to cook duck breast (pan seared method)",
+    "ingredients": [
+      "2 duck breasts",
+      "a knob of butter"
+    ],
+    "cuisine": null,
+    "mealType": "Dinner",
+    "totalTime": "35 mins",
+    "totalTimeMinutes": 35,
+    "servings": "0",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2018/10/orange-glazed-duck-breasts-2b9427d.jpg?resize=700,637",
+    "instructionCount": 6,
+    "tokens": [
+      {
+        "all": [
+          "duck",
+          "breast"
+        ],
+        "strict": [
+          "duck",
+          "breast"
+        ]
+      },
+      {
+        "all": [
+          "knob",
+          "butter"
+        ],
+        "strict": [
+          "knob",
+          "butter"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/iced-tea",
+    "title": "How to make iced tea",
+    "ingredients": [
+      "6 tea bags",
+      "2 tbsp golden caster sugar",
+      "1 tbsp runny honey plus extra to serve",
+      "2 lemons 1 juiced, 1 sliced",
+      "1 orange sliced",
+      "small bunch mint leaves picked",
+      "ice"
+    ],
+    "cuisine": null,
+    "mealType": "Drink",
+    "totalTime": "5 mins",
+    "totalTimeMinutes": 5,
+    "servings": "6",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/iced_tea-cf2a3a3.jpg?resize=440,400",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "tea",
+          "bag"
+        ],
+        "strict": [
+          "tea",
+          "bag"
+        ]
+      },
+      {
+        "all": [
+          "golden",
+          "caster",
+          "sugar"
+        ],
+        "strict": [
+          "golden",
+          "caster",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "runny",
+          "honey",
+          "serve"
+        ],
+        "strict": [
+          "runny",
+          "honey",
+          "serve"
+        ]
+      },
+      {
+        "all": [
+          "lemon",
+          "juiced"
+        ],
+        "strict": [
+          "lemon",
+          "juiced"
+        ]
+      },
+      {
+        "all": [
+          "orange"
+        ],
+        "strict": [
+          "orange"
+        ]
+      },
+      {
+        "all": [
+          "bunch",
+          "mint",
+          "leaf",
+          "picked"
+        ],
+        "strict": [
+          "bunch",
+          "mint",
+          "leaf",
+          "picked"
+        ]
+      },
+      {
+        "all": [
+          "ice"
+        ],
+        "strict": [
+          "ice"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/black-bean-chilli-fries-with-pickled-red-onion-feta-lime",
+    "title": "Black bean chilli fries with pickled red onion, feta & lime",
+    "ingredients": [
+      "2 tbsp olive oil",
+      "2 red onions finely chopped",
+      "2 roasted red peppers from a jar finely chopped",
+      "3 garlic cloves finely chopped",
+      "1 red chilli finely chopped",
+      "2 tsp smoked sweet paprika",
+      "2 tsp ground cumin",
+      "1 tbsp chipotle chilli paste",
+      "2 tbsp tomato purée",
+      "400g can chopped tomatoes",
+      "540g jar   black beans",
+      "2 tbsp red wine vinegar",
+      "1 tbsp light brown soft sugar",
+      "500g sweet potato fries",
+      "60g feta",
+      "50g pickled red onions",
+      "1 avocado peeled, halved, stoned and cubed (optional)",
+      "15g coriander roughly chopped",
+      "1 lime sliced into wedges"
+    ],
+    "cuisine": null,
+    "mealType": null,
+    "totalTime": "55 mins",
+    "totalTimeMinutes": 55,
+    "servings": "6",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/04/cropped-black-bean-chilli-friesstrong-roots-138f984.jpg?resize=768,845",
+    "instructionCount": 5,
+    "tokens": [
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "onion",
+          "finely"
+        ],
+        "strict": [
+          "red",
+          "onion",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "roasted",
+          "red",
+          "pepper",
+          "jar",
+          "finely"
+        ],
+        "strict": [
+          "roasted",
+          "red",
+          "pepper",
+          "jar",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "finely"
+        ],
+        "strict": [
+          "garlic",
+          "clof",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "chilli",
+          "finely"
+        ],
+        "strict": [
+          "red",
+          "chilli",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "smoked",
+          "sweet",
+          "paprika"
+        ],
+        "strict": [
+          "smoked",
+          "sweet",
+          "paprika"
+        ]
+      },
+      {
+        "all": [
+          "cumin"
+        ],
+        "strict": [
+          "cumin"
+        ]
+      },
+      {
+        "all": [
+          "chipotle",
+          "chilli",
+          "paste"
+        ],
+        "strict": [
+          "chipotle",
+          "chilli",
+          "paste"
+        ]
+      },
+      {
+        "all": [
+          "tomato",
+          "pur"
+        ],
+        "strict": [
+          "tomato",
+          "pur"
+        ]
+      },
+      {
+        "all": [
+          "can",
+          "tomato"
+        ],
+        "strict": [
+          "can",
+          "tomato"
+        ]
+      },
+      {
+        "all": [
+          "jar",
+          "black",
+          "bean"
+        ],
+        "strict": [
+          "jar",
+          "black",
+          "bean"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "wine",
+          "vinegar"
+        ],
+        "strict": [
+          "red",
+          "wine",
+          "vinegar"
+        ]
+      },
+      {
+        "all": [
+          "light",
+          "brown",
+          "soft",
+          "sugar"
+        ],
+        "strict": [
+          "light",
+          "brown",
+          "soft",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "sweet",
+          "potato",
+          "fry"
+        ],
+        "strict": [
+          "sweet",
+          "potato",
+          "fry"
+        ]
+      },
+      {
+        "all": [
+          "feta"
+        ],
+        "strict": [
+          "feta"
+        ]
+      },
+      {
+        "all": [
+          "pickled",
+          "red",
+          "onion"
+        ],
+        "strict": [
+          "pickled",
+          "red",
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "avocado",
+          "peeled",
+          "halved",
+          "stoned",
+          "cubed"
+        ],
+        "strict": [
+          "avocado",
+          "peeled",
+          "halved",
+          "stoned",
+          "cubed"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro",
+          "roughly"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro",
+          "roughly"
+        ]
+      },
+      {
+        "all": [
+          "lime",
+          "wedg"
+        ],
+        "strict": [
+          "lime",
+          "wedg"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/piri-piri-chicken-sweet-potato-fry-traybake",
+    "title": "Piri-piri chicken & sweet potato fry traybake",
+    "ingredients": [
+      "2 tsp smoked paprika",
+      "2 tsp cumin",
+      "1 tsp ground coriander",
+      "1 tsp onion granules",
+      "½ tsp  chilli flakes",
+      "1 tbsp honey",
+      "1 lime zested and juiced, plus extra wedges to serve",
+      "1 tbsp red wine vinegar",
+      "2 garlic cloves grated",
+      "3 tbsp olive oil",
+      "1kg bone-in, skin-on chicken thighs (we used 6 large ones)",
+      "2 red and yellow peppers sliced into thick strips",
+      "1 red onion sliced into wedges",
+      "500g sweet potato fries",
+      "coriander leaves to serve",
+      "Greek yogurt to serve (optional)"
+    ],
+    "cuisine": null,
+    "mealType": null,
+    "totalTime": "55 mins",
+    "totalTimeMinutes": 55,
+    "servings": "6",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/04/cropped-peri-peri-chickenstrong-roots-b9d5609.jpg?resize=768,845",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "smoked",
+          "paprika"
+        ],
+        "strict": [
+          "smoked",
+          "paprika"
+        ]
+      },
+      {
+        "all": [
+          "cumin"
+        ],
+        "strict": [
+          "cumin"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "granul"
+        ],
+        "strict": [
+          "onion",
+          "granul"
+        ]
+      },
+      {
+        "all": [
+          "tsp",
+          "chilli",
+          "flak"
+        ],
+        "strict": [
+          "tsp",
+          "chilli",
+          "flak"
+        ]
+      },
+      {
+        "all": [
+          "honey"
+        ],
+        "strict": [
+          "honey"
+        ]
+      },
+      {
+        "all": [
+          "lime",
+          "zested",
+          "juiced",
+          "wedg",
+          "serve"
+        ],
+        "strict": [
+          "lime",
+          "zested",
+          "juiced",
+          "wedg",
+          "serve"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "wine",
+          "vinegar"
+        ],
+        "strict": [
+          "red",
+          "wine",
+          "vinegar"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "bone",
+          "skin",
+          "chicken",
+          "thigh",
+          "used",
+          "one"
+        ],
+        "strict": [
+          "bone",
+          "skin",
+          "chicken",
+          "thigh"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "yellow",
+          "pepper",
+          "thick",
+          "strip"
+        ],
+        "strict": [
+          "red",
+          "yellow",
+          "pepper",
+          "thick",
+          "strip"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "onion",
+          "wedg"
+        ],
+        "strict": [
+          "red",
+          "onion",
+          "wedg"
+        ]
+      },
+      {
+        "all": [
+          "sweet",
+          "potato",
+          "fry"
+        ],
+        "strict": [
+          "sweet",
+          "potato",
+          "fry"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro",
+          "leaf",
+          "serve"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro",
+          "leaf",
+          "serve"
+        ]
+      },
+      {
+        "all": [
+          "greek",
+          "yogurt",
+          "serve"
+        ],
+        "strict": [
+          "greek",
+          "yogurt",
+          "serve"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/how-to-cook-salmon",
+    "title": "How to cook salmon",
+    "ingredients": [
+      "4 pieces of salmon fillet",
+      "1 tbsp olive oil or melted butter",
+      "chopped herbs, a slice of lemon or a sprinkle of spices"
+    ],
+    "cuisine": null,
+    "mealType": null,
+    "totalTime": "20 mins",
+    "totalTimeMinutes": 20,
+    "servings": "0",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/04/salmon-fillet-04ca266.jpg?resize=768,733",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "salmon",
+          "fillet"
+        ],
+        "strict": [
+          "salmon",
+          "fillet"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil",
+          "melted",
+          "butter"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "herb",
+          "slice",
+          "lemon",
+          "sprinkle",
+          "spic"
+        ],
+        "strict": [
+          "herb",
+          "slice",
+          "lemon"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/tamales",
+    "title": "Tamales",
+    "ingredients": [
+      "16 dried corn husks",
+      "115g lard or vegetable shortening softened",
+      "300g masa harina",
+      "1 tsp baking powder",
+      "350ml chicken broth",
+      "1 rotisserie chicken",
+      "240ml salsa verde plus extra to serve",
+      "crema",
+      "coriander leaves",
+      "chopped onion"
+    ],
+    "cuisine": null,
+    "mealType": null,
+    "totalTime": "1h 30m",
+    "totalTimeMinutes": 90,
+    "servings": "4",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/05/tamalefilled-26e726d.jpg?resize=768,1024",
+    "instructionCount": 8,
+    "tokens": [
+      {
+        "all": [
+          "corn",
+          "husk"
+        ],
+        "strict": [
+          "corn",
+          "husk"
+        ]
+      },
+      {
+        "all": [
+          "lard",
+          "vegetable",
+          "shortening",
+          "softened"
+        ],
+        "strict": [
+          "lard"
+        ]
+      },
+      {
+        "all": [
+          "masa",
+          "harina"
+        ],
+        "strict": [
+          "masa",
+          "harina"
+        ]
+      },
+      {
+        "all": [
+          "baking",
+          "powder"
+        ],
+        "strict": [
+          "baking",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "chicken",
+          "broth"
+        ],
+        "strict": [
+          "chicken",
+          "broth"
+        ]
+      },
+      {
+        "all": [
+          "rotisserie",
+          "chicken"
+        ],
+        "strict": [
+          "rotisserie",
+          "chicken"
+        ]
+      },
+      {
+        "all": [
+          "salsa",
+          "verde",
+          "serve"
+        ],
+        "strict": [
+          "salsa",
+          "verde",
+          "serve"
+        ]
+      },
+      {
+        "all": [
+          "crema"
+        ],
+        "strict": [
+          "crema"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro",
+          "leaf"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro",
+          "leaf"
+        ]
+      },
+      {
+        "all": [
+          "onion"
+        ],
+        "strict": [
+          "onion"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/espagueti-verde-green-spaghetti",
+    "title": "Espagueti verde (green spaghetti)",
+    "ingredients": [
+      "5 poblano peppers halved, stems removed, seeded",
+      "2 tbsp olive oil",
+      "4  garlic cloves chopped",
+      "1 fresh jalapeño stem removed, seeded",
+      "225g cream cheese",
+      "240ml chicken or vegetable stock",
+      "15g coriander leaves",
+      "450g spaghetti",
+      "115g queso fresco grated, plus extra to serve"
+    ],
+    "cuisine": null,
+    "mealType": null,
+    "totalTime": "30 mins",
+    "totalTimeMinutes": 30,
+    "servings": "0",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/05/greenspagh-04a0513.jpg?resize=768,1024",
+    "instructionCount": 4,
+    "tokens": [
+      {
+        "all": [
+          "poblano",
+          "pepper",
+          "halved",
+          "stem",
+          "removed",
+          "seeded"
+        ],
+        "strict": [
+          "poblano",
+          "pepper",
+          "halved",
+          "stem",
+          "removed",
+          "seeded"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "jalape",
+          "stem",
+          "removed",
+          "seeded"
+        ],
+        "strict": [
+          "jalape",
+          "stem",
+          "removed",
+          "seeded"
+        ]
+      },
+      {
+        "all": [
+          "cream",
+          "cheese"
+        ],
+        "strict": [
+          "cream",
+          "cheese"
+        ]
+      },
+      {
+        "all": [
+          "chicken",
+          "vegetable",
+          "stock"
+        ],
+        "strict": [
+          "chicken"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro",
+          "leaf"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro",
+          "leaf"
+        ]
+      },
+      {
+        "all": [
+          "spaghetti"
+        ],
+        "strict": [
+          "spaghetti"
+        ]
+      },
+      {
+        "all": [
+          "queso",
+          "fresco",
+          "serve"
+        ],
+        "strict": [
+          "queso",
+          "fresco",
+          "serve"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/garlic-bread-hot-dog-with-cheesy-rosemary-truffle-fries",
+    "title": "Garlic bread hot dog with cheesy rosemary & truffle fries",
+    "ingredients": [
+      "3 potatoes",
+      "5g rosemary leaves only",
+      "olive oil for drizzling",
+      "2 pork sausages",
+      "1 red onion finely sliced",
+      "15ml balsamic vinegar",
+      "pinch of sugar",
+      "knob of softened  butter",
+      "1 garlic clove grated",
+      "5g parsley finely chopped",
+      "2 brioche hot dog buns",
+      "1 Little Gem lettuce",
+      "1 tomato roughly chopped",
+      "8ml truffle oil",
+      "30g Italian hard cheese grated"
+    ],
+    "cuisine": null,
+    "mealType": null,
+    "totalTime": "55 mins",
+    "totalTimeMinutes": 55,
+    "servings": "2",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/05/cropped-Gousto-Garlic-Bread-Meat-Free-Hot-Dog-With-Cheesy-Rosemary-Truffle-Fries-168d04b.jpg?resize=768,768",
+    "instructionCount": 8,
+    "tokens": [
+      {
+        "all": [
+          "potato"
+        ],
+        "strict": [
+          "potato"
+        ]
+      },
+      {
+        "all": [
+          "rosemary",
+          "leaf",
+          "only"
+        ],
+        "strict": [
+          "rosemary",
+          "leaf",
+          "only"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil",
+          "drizzling"
+        ],
+        "strict": [
+          "olive",
+          "oil",
+          "drizzling"
+        ]
+      },
+      {
+        "all": [
+          "pork",
+          "sausag"
+        ],
+        "strict": [
+          "pork",
+          "sausag"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "onion",
+          "finely"
+        ],
+        "strict": [
+          "red",
+          "onion",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "balsamic",
+          "vinegar"
+        ],
+        "strict": [
+          "balsamic",
+          "vinegar"
+        ]
+      },
+      {
+        "all": [
+          "pinch",
+          "sugar"
+        ],
+        "strict": [
+          "pinch",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "knob",
+          "softened",
+          "butter"
+        ],
+        "strict": [
+          "knob",
+          "softened",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clove"
+        ],
+        "strict": [
+          "garlic",
+          "clove"
+        ]
+      },
+      {
+        "all": [
+          "parsley",
+          "finely"
+        ],
+        "strict": [
+          "parsley",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "brioche",
+          "hot",
+          "dog",
+          "bun"
+        ],
+        "strict": [
+          "brioche",
+          "hot",
+          "dog",
+          "bun"
+        ]
+      },
+      {
+        "all": [
+          "gem",
+          "lettuce"
+        ],
+        "strict": [
+          "gem",
+          "lettuce"
+        ]
+      },
+      {
+        "all": [
+          "tomato",
+          "roughly"
+        ],
+        "strict": [
+          "tomato",
+          "roughly"
+        ]
+      },
+      {
+        "all": [
+          "truffle",
+          "oil"
+        ],
+        "strict": [
+          "truffle",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "italian",
+          "hard",
+          "cheese"
+        ],
+        "strict": [
+          "italian",
+          "hard",
+          "cheese"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/muffuletta-sandwich",
+    "title": "Muffuletta sandwich",
+    "ingredients": [
+      "100ml white wine vinegar",
+      "1 tbsp caster sugar",
+      "1 carrot cut into thin matchsticks",
+      "1 celery stick thinly sliced",
+      "100g cauliflower cut into small florets",
+      "1 small  green chilli thinly sliced",
+      "1 garlic clove thinly sliced",
+      "½ tsp  black peppercorns",
+      "½ tsp  fennel seeds",
+      "2 tbsp extra virgin olive oil",
+      "100g  green olives pitted",
+      "100g  black olives pitted",
+      "100g roasted red peppers from a jar, drained",
+      "1 tbsp capers drained",
+      "1 garlic clove roughly chopped",
+      "2 tbsp chopped flat-leaf parsley",
+      "3 tbsp extra virgin olive oil",
+      "1 tbsp red wine vinegar",
+      "1 large, round  white loaf (such as a muffuletta-style loaf, soft focaccia or round cob)",
+      "2 tbsp extra virgin olive oil",
+      "125g mortadella",
+      "125g sweet or mild salami",
+      "125g prosciutto cotto",
+      "150g provolone sliced"
+    ],
+    "cuisine": null,
+    "mealType": "Lunch",
+    "totalTime": "40 mins",
+    "totalTimeMinutes": 40,
+    "servings": "6",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/05/Next-level-muffuletta-sandwich2-790e728.jpg?resize=768,698",
+    "instructionCount": 4,
+    "tokens": [
+      {
+        "all": [
+          "white",
+          "wine",
+          "vinegar"
+        ],
+        "strict": [
+          "white",
+          "wine",
+          "vinegar"
+        ]
+      },
+      {
+        "all": [
+          "caster",
+          "sugar"
+        ],
+        "strict": [
+          "caster",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "carrot",
+          "cut",
+          "thin",
+          "matchstick"
+        ],
+        "strict": [
+          "carrot",
+          "cut",
+          "thin",
+          "matchstick"
+        ]
+      },
+      {
+        "all": [
+          "celery",
+          "stick",
+          "thinly"
+        ],
+        "strict": [
+          "celery",
+          "stick",
+          "thinly"
+        ]
+      },
+      {
+        "all": [
+          "cauliflower",
+          "cut",
+          "floret"
+        ],
+        "strict": [
+          "cauliflower",
+          "cut",
+          "floret"
+        ]
+      },
+      {
+        "all": [
+          "green",
+          "chilli",
+          "thinly"
+        ],
+        "strict": [
+          "green",
+          "chilli",
+          "thinly"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clove",
+          "thinly"
+        ],
+        "strict": [
+          "garlic",
+          "clove",
+          "thinly"
+        ]
+      },
+      {
+        "all": [
+          "tsp",
+          "black",
+          "peppercorn"
+        ],
+        "strict": [
+          "tsp",
+          "black",
+          "peppercorn"
+        ]
+      },
+      {
+        "all": [
+          "tsp",
+          "fennel",
+          "seed"
+        ],
+        "strict": [
+          "tsp",
+          "fennel",
+          "seed"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "green",
+          "olif",
+          "pitted"
+        ],
+        "strict": [
+          "green",
+          "olif",
+          "pitted"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "olif",
+          "pitted"
+        ],
+        "strict": [
+          "black",
+          "olif",
+          "pitted"
+        ]
+      },
+      {
+        "all": [
+          "roasted",
+          "red",
+          "pepper",
+          "jar",
+          "drained"
+        ],
+        "strict": [
+          "roasted",
+          "red",
+          "pepper",
+          "jar",
+          "drained"
+        ]
+      },
+      {
+        "all": [
+          "caper",
+          "drained"
+        ],
+        "strict": [
+          "caper",
+          "drained"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clove",
+          "roughly"
+        ],
+        "strict": [
+          "garlic",
+          "clove",
+          "roughly"
+        ]
+      },
+      {
+        "all": [
+          "flat",
+          "leaf",
+          "parsley"
+        ],
+        "strict": [
+          "flat",
+          "leaf",
+          "parsley"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "wine",
+          "vinegar"
+        ],
+        "strict": [
+          "red",
+          "wine",
+          "vinegar"
+        ]
+      },
+      {
+        "all": [
+          "round",
+          "white",
+          "loaf",
+          "such",
+          "muffuletta",
+          "style",
+          "soft",
+          "focaccia",
+          "cob"
+        ],
+        "strict": [
+          "round",
+          "white",
+          "loaf"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "mortadella"
+        ],
+        "strict": [
+          "mortadella"
+        ]
+      },
+      {
+        "all": [
+          "sweet",
+          "mild",
+          "salami"
+        ],
+        "strict": [
+          "sweet"
+        ]
+      },
+      {
+        "all": [
+          "prosciutto",
+          "cotto"
+        ],
+        "strict": [
+          "prosciutto",
+          "cotto"
+        ]
+      },
+      {
+        "all": [
+          "provolone"
+        ],
+        "strict": [
+          "provolone"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/jam-coconut-sponge",
+    "title": "Jam & coconut sponge",
+    "ingredients": [
+      "200g unsalted butter softened, plus extra for the tin",
+      "50g desiccated coconut",
+      "200g caster sugar",
+      "4 medium eggs",
+      "200ml can  coconut milk (see tip)",
+      "200g self-raising flour",
+      "1 tsp baking powder",
+      "150g raspberries (see tip, below)",
+      "300g icing sugar",
+      "sprinkles of your choice (optional)"
+    ],
+    "cuisine": null,
+    "mealType": "Dessert",
+    "totalTime": "1h 10m",
+    "totalTimeMinutes": 70,
+    "servings": "16",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/05/Coconut-and-raspberry-school-cake-4988a0e.jpg?resize=768,698",
+    "instructionCount": 4,
+    "tokens": [
+      {
+        "all": [
+          "unsalted",
+          "butter",
+          "softened",
+          "tin"
+        ],
+        "strict": [
+          "unsalted",
+          "butter",
+          "softened",
+          "tin"
+        ]
+      },
+      {
+        "all": [
+          "desiccated",
+          "coconut"
+        ],
+        "strict": [
+          "desiccated",
+          "coconut"
+        ]
+      },
+      {
+        "all": [
+          "caster",
+          "sugar"
+        ],
+        "strict": [
+          "caster",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "egg"
+        ],
+        "strict": [
+          "egg"
+        ]
+      },
+      {
+        "all": [
+          "can",
+          "coconut",
+          "milk",
+          "see",
+          "tip"
+        ],
+        "strict": [
+          "can",
+          "coconut",
+          "milk"
+        ]
+      },
+      {
+        "all": [
+          "self",
+          "raising",
+          "flour"
+        ],
+        "strict": [
+          "self",
+          "raising",
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "baking",
+          "powder"
+        ],
+        "strict": [
+          "baking",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "raspberry",
+          "see",
+          "tip",
+          "below"
+        ],
+        "strict": [
+          "raspberry"
+        ]
+      },
+      {
+        "all": [
+          "icing",
+          "sugar"
+        ],
+        "strict": [
+          "icing",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "sprinkl",
+          "your",
+          "choice"
+        ],
+        "strict": [
+          "sprinkl",
+          "your",
+          "choice"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/homemade-whipped-cream",
+    "title": "Homemade whipped cream",
+    "ingredients": [
+      "300ml  double or whipping cream chilled",
+      "flavouring of your choice (such as vanilla extract or rose water; optional)"
+    ],
+    "cuisine": null,
+    "mealType": null,
+    "totalTime": "5 mins",
+    "totalTimeMinutes": 5,
+    "servings": "Makes 600ml",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2023/08/Key-lime-pie-b1916c4.jpg?resize=768,512",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "double",
+          "whipping",
+          "cream",
+          "chilled"
+        ],
+        "strict": [
+          "double"
+        ]
+      },
+      {
+        "all": [
+          "flavouring",
+          "your",
+          "choice",
+          "such",
+          "vanilla",
+          "extract",
+          "rose",
+          "water"
+        ],
+        "strict": [
+          "flavouring",
+          "your",
+          "choice"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/red-thai-curry-crispy-chicken-tacos",
+    "title": "Red Thai curry crispy chicken tacos",
+    "ingredients": [
+      "40g panko breadcrumbs",
+      "1 tsp ground paprika",
+      "vegetable oil for frying",
+      "2 chicken breasts sliced into strips",
+      "40g red Thai curry paste",
+      "50ml mayonnaise",
+      "160g carrot &amp; cabbage slaw mix",
+      "6 plain tortillas",
+      "8ml sriracha",
+      "5g coriander roughly chopped"
+    ],
+    "cuisine": null,
+    "mealType": "Dinner",
+    "totalTime": "30 mins",
+    "totalTimeMinutes": 30,
+    "servings": "2",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/05/cropped-Gousto-chicken-taco-92cb6e5.jpg?resize=768,845",
+    "instructionCount": 7,
+    "tokens": [
+      {
+        "all": [
+          "panko",
+          "breadcrumb"
+        ],
+        "strict": [
+          "panko",
+          "breadcrumb"
+        ]
+      },
+      {
+        "all": [
+          "paprika"
+        ],
+        "strict": [
+          "paprika"
+        ]
+      },
+      {
+        "all": [
+          "vegetable",
+          "oil",
+          "frying"
+        ],
+        "strict": [
+          "vegetable",
+          "oil",
+          "frying"
+        ]
+      },
+      {
+        "all": [
+          "chicken",
+          "breast",
+          "strip"
+        ],
+        "strict": [
+          "chicken",
+          "breast",
+          "strip"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "thai",
+          "curry",
+          "paste"
+        ],
+        "strict": [
+          "red",
+          "thai",
+          "curry",
+          "paste"
+        ]
+      },
+      {
+        "all": [
+          "mayonnaise"
+        ],
+        "strict": [
+          "mayonnaise"
+        ]
+      },
+      {
+        "all": [
+          "carrot",
+          "amp",
+          "cabbage",
+          "slaw",
+          "mix"
+        ],
+        "strict": [
+          "carrot",
+          "amp",
+          "cabbage",
+          "slaw",
+          "mix"
+        ]
+      },
+      {
+        "all": [
+          "plain",
+          "tortilla"
+        ],
+        "strict": [
+          "plain",
+          "tortilla"
+        ]
+      },
+      {
+        "all": [
+          "sriracha"
+        ],
+        "strict": [
+          "sriracha"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro",
+          "roughly"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro",
+          "roughly"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/the-best-chicken-marinade",
+    "title": "The best chicken marinade",
+    "ingredients": [
+      "1 garlic clove crushed",
+      "2 tbsp lemon juice",
+      "2 tbsp olive oil",
+      "1 hanful of fresh herbs such as parsley, basil or coriander finely chopped"
+    ],
+    "cuisine": null,
+    "mealType": null,
+    "totalTime": "5 mins",
+    "totalTimeMinutes": 5,
+    "servings": "400g chicken",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/05/Best-chicken-marinade-e8bcf89.jpg?resize=768,512",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "garlic",
+          "clove",
+          "crushed"
+        ],
+        "strict": [
+          "garlic",
+          "clove",
+          "crushed"
+        ]
+      },
+      {
+        "all": [
+          "lemon",
+          "juice"
+        ],
+        "strict": [
+          "lemon",
+          "juice"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "hanful",
+          "herb",
+          "such",
+          "parsley",
+          "basil",
+          "coriander",
+          "cilantro",
+          "finely"
+        ],
+        "strict": [
+          "hanful",
+          "herb",
+          "such",
+          "parsley",
+          "basil"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/beef-taco-casserole",
+    "title": "Beef taco casserole",
+    "ingredients": [
+      "2 tbsp  vegetable oil",
+      "450g lean beef mince",
+      "1 medium  onion diced",
+      "2  garlic cloves chopped",
+      "2 tbsp  taco seasoning (such as Old El Paso)",
+      "475ml spicy tomato salsa (such as Mateo’s)",
+      "400g tin black beans drained and rinsed",
+      "160 frozen or tinned corn",
+      "225g shredded monterey jack or mature cheddar cheese",
+      "55g tortilla chips lightly crushed",
+      "Mexican crema or thin sour cream",
+      "guacamole",
+      "sliced red or green jalapeños",
+      "chopped coriander",
+      "pico de gallo"
+    ],
+    "cuisine": "Mexican",
+    "mealType": "Dinner",
+    "totalTime": "30 mins",
+    "totalTimeMinutes": 30,
+    "servings": "4",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/05/Beef-taco-casserole-cd440b6.jpg?resize=768,698",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "vegetable",
+          "oil"
+        ],
+        "strict": [
+          "vegetable",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "lean",
+          "beef",
+          "mince"
+        ],
+        "strict": [
+          "lean",
+          "beef",
+          "mince"
+        ]
+      },
+      {
+        "all": [
+          "onion"
+        ],
+        "strict": [
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "taco",
+          "seasoning",
+          "such",
+          "old",
+          "paso"
+        ],
+        "strict": [
+          "taco",
+          "seasoning"
+        ]
+      },
+      {
+        "all": [
+          "spicy",
+          "tomato",
+          "salsa",
+          "such",
+          "mateo"
+        ],
+        "strict": [
+          "spicy",
+          "tomato",
+          "salsa"
+        ]
+      },
+      {
+        "all": [
+          "tin",
+          "black",
+          "bean",
+          "drained",
+          "rinsed"
+        ],
+        "strict": [
+          "tin",
+          "black",
+          "bean",
+          "drained",
+          "rinsed"
+        ]
+      },
+      {
+        "all": [
+          "frozen",
+          "tinned",
+          "corn"
+        ],
+        "strict": [
+          "frozen"
+        ]
+      },
+      {
+        "all": [
+          "shredded",
+          "monterey",
+          "jack",
+          "mature",
+          "cheddar",
+          "cheese"
+        ],
+        "strict": [
+          "shredded",
+          "monterey",
+          "jack"
+        ]
+      },
+      {
+        "all": [
+          "tortilla",
+          "chip",
+          "lightly",
+          "crushed"
+        ],
+        "strict": [
+          "tortilla",
+          "chip",
+          "lightly",
+          "crushed"
+        ]
+      },
+      {
+        "all": [
+          "mexican",
+          "crema",
+          "thin",
+          "sour",
+          "cream"
+        ],
+        "strict": [
+          "mexican",
+          "crema"
+        ]
+      },
+      {
+        "all": [
+          "guacamole"
+        ],
+        "strict": [
+          "guacamole"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "green",
+          "jalape"
+        ],
+        "strict": [
+          "red"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro"
+        ]
+      },
+      {
+        "all": [
+          "pico",
+          "gallo"
+        ],
+        "strict": [
+          "pico",
+          "gallo"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/bunuelos",
+    "title": "Buñuelos",
+    "ingredients": [
+      "250g plain flour plus extra for dusting",
+      "½ tsp  ground cinnamon",
+      "1 tsp  baking powder",
+      "25g  caster sugar",
+      "55g butter softened",
+      "1 tsp  vanilla extract",
+      "250ml vegetable oil",
+      "1 tsp  ground cinnamon",
+      "4 tbsp  caster sugar"
+    ],
+    "cuisine": "Mexican",
+    "mealType": "Dessert",
+    "totalTime": "40 mins",
+    "totalTimeMinutes": 40,
+    "servings": "Makes 18 pastries",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/05/Bunuelos-9830999.jpg?resize=768,698",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "plain",
+          "flour",
+          "dusting"
+        ],
+        "strict": [
+          "plain",
+          "flour",
+          "dusting"
+        ]
+      },
+      {
+        "all": [
+          "tsp",
+          "cinnamon"
+        ],
+        "strict": [
+          "tsp",
+          "cinnamon"
+        ]
+      },
+      {
+        "all": [
+          "baking",
+          "powder"
+        ],
+        "strict": [
+          "baking",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "caster",
+          "sugar"
+        ],
+        "strict": [
+          "caster",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "butter",
+          "softened"
+        ],
+        "strict": [
+          "butter",
+          "softened"
+        ]
+      },
+      {
+        "all": [
+          "vanilla",
+          "extract"
+        ],
+        "strict": [
+          "vanilla",
+          "extract"
+        ]
+      },
+      {
+        "all": [
+          "vegetable",
+          "oil"
+        ],
+        "strict": [
+          "vegetable",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "cinnamon"
+        ],
+        "strict": [
+          "cinnamon"
+        ]
+      },
+      {
+        "all": [
+          "caster",
+          "sugar"
+        ],
+        "strict": [
+          "caster",
+          "sugar"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/chilaquiles",
+    "title": "Chilaquiles",
+    "ingredients": [
+      "225g unflavoured corn tortilla chips (see tip)",
+      "1 tbsp  vegetable oil",
+      "2 tbsp  vegetable oil",
+      "450g ripe tomatoes halved",
+      "1 small onion thickly sliced",
+      "4  garlic cloves unpeeled",
+      "2 fresh jalapeños sliced",
+      "1 chipotle pepper in adobo sauce",
+      "1 lime juiced",
+      "small handful of coriander",
+      "4 eggs",
+      "60g queso fresco or crumbled feta",
+      "small handful of coriander chopped",
+      "1 avocado peeled, halved, stone removed, diced",
+      "1 small  red onion thinly sliced"
+    ],
+    "cuisine": "Mexican",
+    "mealType": "Breakfast",
+    "totalTime": "25 mins",
+    "totalTimeMinutes": 25,
+    "servings": "4",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/05/Chilaquiles-eaa604b.jpg?resize=768,698",
+    "instructionCount": 5,
+    "tokens": [
+      {
+        "all": [
+          "unflavoured",
+          "corn",
+          "tortilla",
+          "chip",
+          "see",
+          "tip"
+        ],
+        "strict": [
+          "unflavoured",
+          "corn",
+          "tortilla",
+          "chip"
+        ]
+      },
+      {
+        "all": [
+          "vegetable",
+          "oil"
+        ],
+        "strict": [
+          "vegetable",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "vegetable",
+          "oil"
+        ],
+        "strict": [
+          "vegetable",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "ripe",
+          "tomato",
+          "halved"
+        ],
+        "strict": [
+          "ripe",
+          "tomato",
+          "halved"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "thickly"
+        ],
+        "strict": [
+          "onion",
+          "thickly"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "unpeeled"
+        ],
+        "strict": [
+          "garlic",
+          "clof",
+          "unpeeled"
+        ]
+      },
+      {
+        "all": [
+          "jalape"
+        ],
+        "strict": [
+          "jalape"
+        ]
+      },
+      {
+        "all": [
+          "chipotle",
+          "pepper",
+          "adobo",
+          "sauce"
+        ],
+        "strict": [
+          "chipotle",
+          "pepper",
+          "adobo",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "lime",
+          "juiced"
+        ],
+        "strict": [
+          "lime",
+          "juiced"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro"
+        ]
+      },
+      {
+        "all": [
+          "egg"
+        ],
+        "strict": [
+          "egg"
+        ]
+      },
+      {
+        "all": [
+          "queso",
+          "fresco",
+          "crumbled",
+          "feta"
+        ],
+        "strict": [
+          "queso",
+          "fresco"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro"
+        ]
+      },
+      {
+        "all": [
+          "avocado",
+          "peeled",
+          "halved",
+          "stone",
+          "removed"
+        ],
+        "strict": [
+          "avocado",
+          "peeled",
+          "halved",
+          "stone",
+          "removed"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "onion",
+          "thinly"
+        ],
+        "strict": [
+          "red",
+          "onion",
+          "thinly"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/mexican-chicken-casserole",
+    "title": "Mexican chicken casserole",
+    "ingredients": [
+      "2 tbsp  vegetable oil",
+      "1 medium  onion chopped",
+      "2 garlic cloves chopped",
+      "2 tbsp  taco seasoning (such as Old El Paso)",
+      "295g tin condensed cream of mushroom soup",
+      "400g tin chopped tomatoes",
+      "120ml chicken stock",
+      "225g shredded rotisserie chicken",
+      "160g frozen corn",
+      "400g tin black beans drained and rinsed",
+      "340g shredded monterey jack or mature cheddar cheese",
+      "225g tortilla chips",
+      "crema",
+      "chopped avocado",
+      "chopped red onion",
+      "chopped coriander",
+      "hot sauce",
+      "Tajín seasoning"
+    ],
+    "cuisine": "Mexican",
+    "mealType": "Dinner",
+    "totalTime": "40 mins",
+    "totalTimeMinutes": 40,
+    "servings": "4",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/05/Mexican-chicken-casserole-2e1e586.jpg?resize=768,698",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "vegetable",
+          "oil"
+        ],
+        "strict": [
+          "vegetable",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "onion"
+        ],
+        "strict": [
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "taco",
+          "seasoning",
+          "such",
+          "old",
+          "paso"
+        ],
+        "strict": [
+          "taco",
+          "seasoning"
+        ]
+      },
+      {
+        "all": [
+          "tin",
+          "condensed",
+          "cream",
+          "mushroom",
+          "soup"
+        ],
+        "strict": [
+          "tin",
+          "condensed",
+          "cream",
+          "mushroom",
+          "soup"
+        ]
+      },
+      {
+        "all": [
+          "tin",
+          "tomato"
+        ],
+        "strict": [
+          "tin",
+          "tomato"
+        ]
+      },
+      {
+        "all": [
+          "chicken",
+          "stock"
+        ],
+        "strict": [
+          "chicken",
+          "stock"
+        ]
+      },
+      {
+        "all": [
+          "shredded",
+          "rotisserie",
+          "chicken"
+        ],
+        "strict": [
+          "shredded",
+          "rotisserie",
+          "chicken"
+        ]
+      },
+      {
+        "all": [
+          "frozen",
+          "corn"
+        ],
+        "strict": [
+          "frozen",
+          "corn"
+        ]
+      },
+      {
+        "all": [
+          "tin",
+          "black",
+          "bean",
+          "drained",
+          "rinsed"
+        ],
+        "strict": [
+          "tin",
+          "black",
+          "bean",
+          "drained",
+          "rinsed"
+        ]
+      },
+      {
+        "all": [
+          "shredded",
+          "monterey",
+          "jack",
+          "mature",
+          "cheddar",
+          "cheese"
+        ],
+        "strict": [
+          "shredded",
+          "monterey",
+          "jack"
+        ]
+      },
+      {
+        "all": [
+          "tortilla",
+          "chip"
+        ],
+        "strict": [
+          "tortilla",
+          "chip"
+        ]
+      },
+      {
+        "all": [
+          "crema"
+        ],
+        "strict": [
+          "crema"
+        ]
+      },
+      {
+        "all": [
+          "avocado"
+        ],
+        "strict": [
+          "avocado"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "onion"
+        ],
+        "strict": [
+          "red",
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro"
+        ]
+      },
+      {
+        "all": [
+          "hot",
+          "sauce"
+        ],
+        "strict": [
+          "hot",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "taj",
+          "seasoning"
+        ],
+        "strict": [
+          "taj",
+          "seasoning"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/mexican-street-corn-salad",
+    "title": "Mexican street corn salad",
+    "ingredients": [
+      "4 tbsp  mayonnaise",
+      "6 corn cobs",
+      "2 limes zested and juiced",
+      "1 tsp  smoked paprika",
+      "2 fresh jalapeños stems removed, sliced",
+      "1 small  red onion diced",
+      "large handful of coriander chopped",
+      "60g cotija, queso fresco or feta cheese"
+    ],
+    "cuisine": "Mexican",
+    "mealType": "Side",
+    "totalTime": "25 mins",
+    "totalTimeMinutes": 25,
+    "servings": "Serves 4 as side dish",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/05/Mexican-street-corn-salad-ae1fdae.jpg?resize=768,698",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "mayonnaise"
+        ],
+        "strict": [
+          "mayonnaise"
+        ]
+      },
+      {
+        "all": [
+          "corn",
+          "cob"
+        ],
+        "strict": [
+          "corn",
+          "cob"
+        ]
+      },
+      {
+        "all": [
+          "lim",
+          "zested",
+          "juiced"
+        ],
+        "strict": [
+          "lim",
+          "zested",
+          "juiced"
+        ]
+      },
+      {
+        "all": [
+          "smoked",
+          "paprika"
+        ],
+        "strict": [
+          "smoked",
+          "paprika"
+        ]
+      },
+      {
+        "all": [
+          "jalape",
+          "stem",
+          "removed"
+        ],
+        "strict": [
+          "jalape",
+          "stem",
+          "removed"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "onion"
+        ],
+        "strict": [
+          "red",
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro"
+        ]
+      },
+      {
+        "all": [
+          "cotija",
+          "queso",
+          "fresco",
+          "feta",
+          "cheese"
+        ],
+        "strict": [
+          "cotija",
+          "queso",
+          "fresco"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/mexican-wedding-cookies",
+    "title": "Mexican wedding cookies",
+    "ingredients": [
+      "110g pecan halves",
+      "120g icing sugar",
+      "225g butter at room temperature",
+      "250g plain flour",
+      "1 tsp  vanilla extract"
+    ],
+    "cuisine": "Mexican",
+    "mealType": "Dessert",
+    "totalTime": "40 mins",
+    "totalTimeMinutes": 40,
+    "servings": "Makes 40 cookies",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/05/Mexican-wedding-cookies-f62ebf5.jpg?resize=768,698",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "pecan",
+          "half"
+        ],
+        "strict": [
+          "pecan",
+          "half"
+        ]
+      },
+      {
+        "all": [
+          "icing",
+          "sugar"
+        ],
+        "strict": [
+          "icing",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "butter",
+          "room",
+          "temperature"
+        ],
+        "strict": [
+          "butter",
+          "room",
+          "temperature"
+        ]
+      },
+      {
+        "all": [
+          "plain",
+          "flour"
+        ],
+        "strict": [
+          "plain",
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "vanilla",
+          "extract"
+        ],
+        "strict": [
+          "vanilla",
+          "extract"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/pork-pozole",
+    "title": "Pork pozole",
+    "ingredients": [
+      "4 tbsp  olive oil",
+      "900g pork shoulder excess fat removed",
+      "1 large  onion chopped",
+      "6 garlic cloves chopped",
+      "4  dried pasilla chillies seeded",
+      "2 dried morita or chipotle chillies stems removed, seeded",
+      "2 tsp  cumin seeds",
+      "2 tsp  dried oregano",
+      "950ml chicken stock",
+      "2 tbsp  apple cider vinegar",
+      "2 x 400g tins hominy (pozole) drained",
+      "radishes sliced",
+      "coriander leaves",
+      "fried tortilla chips (totopos)",
+      "white onion chopped",
+      "cabbage thinly sliced",
+      "queso fresco crumbled",
+      "lime wedges"
+    ],
+    "cuisine": "Mexican",
+    "mealType": "Dinner",
+    "totalTime": "2h 15m",
+    "totalTimeMinutes": 135,
+    "servings": "4",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/05/Pork-pozole-139a870.jpg?resize=768,698",
+    "instructionCount": 4,
+    "tokens": [
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "pork",
+          "shoulder",
+          "exces",
+          "fat",
+          "removed"
+        ],
+        "strict": [
+          "pork",
+          "shoulder",
+          "exces",
+          "fat",
+          "removed"
+        ]
+      },
+      {
+        "all": [
+          "onion"
+        ],
+        "strict": [
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "pasilla",
+          "chilly",
+          "seeded"
+        ],
+        "strict": [
+          "pasilla",
+          "chilly",
+          "seeded"
+        ]
+      },
+      {
+        "all": [
+          "morita",
+          "chipotle",
+          "chilly",
+          "stem",
+          "removed",
+          "seeded"
+        ],
+        "strict": [
+          "morita"
+        ]
+      },
+      {
+        "all": [
+          "cumin",
+          "seed"
+        ],
+        "strict": [
+          "cumin",
+          "seed"
+        ]
+      },
+      {
+        "all": [
+          "oregano"
+        ],
+        "strict": [
+          "oregano"
+        ]
+      },
+      {
+        "all": [
+          "chicken",
+          "stock"
+        ],
+        "strict": [
+          "chicken",
+          "stock"
+        ]
+      },
+      {
+        "all": [
+          "apple",
+          "cider",
+          "vinegar"
+        ],
+        "strict": [
+          "apple",
+          "cider",
+          "vinegar"
+        ]
+      },
+      {
+        "all": [
+          "tin",
+          "hominy",
+          "pozole",
+          "drained"
+        ],
+        "strict": [
+          "tin",
+          "hominy",
+          "drained"
+        ]
+      },
+      {
+        "all": [
+          "radish"
+        ],
+        "strict": [
+          "radish"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro",
+          "leaf"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro",
+          "leaf"
+        ]
+      },
+      {
+        "all": [
+          "fried",
+          "tortilla",
+          "chip",
+          "totopo"
+        ],
+        "strict": [
+          "fried",
+          "tortilla",
+          "chip"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "onion"
+        ],
+        "strict": [
+          "white",
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "cabbage",
+          "thinly"
+        ],
+        "strict": [
+          "cabbage",
+          "thinly"
+        ]
+      },
+      {
+        "all": [
+          "queso",
+          "fresco",
+          "crumbled"
+        ],
+        "strict": [
+          "queso",
+          "fresco",
+          "crumbled"
+        ]
+      },
+      {
+        "all": [
+          "lime",
+          "wedg"
+        ],
+        "strict": [
+          "lime",
+          "wedg"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/smoky-salsa-verde",
+    "title": "Smoky salsa verde",
+    "ingredients": [
+      "450g tomatillos papery husks removed, washed",
+      "5 garlic cloves unpeeled",
+      "1 small  white onion thickly sliced",
+      "2 fresh jalapeños or serrano chiles stems removed",
+      "3 chipotle peppers in adobo sauce",
+      "15g coriander leaves",
+      "2 limes juiced"
+    ],
+    "cuisine": "Mexican",
+    "mealType": "Side",
+    "totalTime": "1h 30m",
+    "totalTimeMinutes": 90,
+    "servings": "4",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/05/Salsa-verde-dc56c6d.jpg?resize=768,698",
+    "instructionCount": 1,
+    "tokens": [
+      {
+        "all": [
+          "tomatillo",
+          "papery",
+          "husk",
+          "removed",
+          "washed"
+        ],
+        "strict": [
+          "tomatillo",
+          "papery",
+          "husk",
+          "removed",
+          "washed"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "unpeeled"
+        ],
+        "strict": [
+          "garlic",
+          "clof",
+          "unpeeled"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "onion",
+          "thickly"
+        ],
+        "strict": [
+          "white",
+          "onion",
+          "thickly"
+        ]
+      },
+      {
+        "all": [
+          "jalape",
+          "serrano",
+          "chil",
+          "stem",
+          "removed"
+        ],
+        "strict": [
+          "jalape"
+        ]
+      },
+      {
+        "all": [
+          "chipotle",
+          "pepper",
+          "adobo",
+          "sauce"
+        ],
+        "strict": [
+          "chipotle",
+          "pepper",
+          "adobo",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro",
+          "leaf"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro",
+          "leaf"
+        ]
+      },
+      {
+        "all": [
+          "lim",
+          "juiced"
+        ],
+        "strict": [
+          "lim",
+          "juiced"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/enchilada-casserole",
+    "title": "Enchilada casserole",
+    "ingredients": [
+      "3 tbsp  vegetable oil",
+      "25g plain flour",
+      "3 tbsp  chili powder (such as chipolte, pasilla or ancho)",
+      "1 tsp  onion powder",
+      "1 tsp  garlic powder",
+      "1 tsp  ground cumin",
+      "2 tbsp  chipotle peppers in adobo sauce finely chopped",
+      "2 tbsp  tomato purée",
+      "3 tbsp  apple cider vinegar",
+      "700ml chicken or vegetable stock",
+      "1 tbsp  vegetable oil",
+      "1 medium  onion chopped",
+      "2 fresh jalapeños seeded and chopped (or use canned chilis)",
+      "450g lean beef mince",
+      "400g tin black beans drained and rinsed",
+      "12 corn tortillas",
+      "250g shredded monterey jack or mature cheddar cheese",
+      "pico de gallo",
+      "sour cream",
+      "chopped coriander",
+      "sliced jalapeños"
+    ],
+    "cuisine": "Mexican",
+    "mealType": "Dinner",
+    "totalTime": "1h 5m",
+    "totalTimeMinutes": 65,
+    "servings": "4",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/05/Enchilada-casserole-2d20d85.jpg?resize=768,698",
+    "instructionCount": 4,
+    "tokens": [
+      {
+        "all": [
+          "vegetable",
+          "oil"
+        ],
+        "strict": [
+          "vegetable",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "plain",
+          "flour"
+        ],
+        "strict": [
+          "plain",
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "chili",
+          "powder",
+          "such",
+          "chipolte",
+          "pasilla",
+          "ancho"
+        ],
+        "strict": [
+          "chili",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "powder"
+        ],
+        "strict": [
+          "onion",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "powder"
+        ],
+        "strict": [
+          "garlic",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "cumin"
+        ],
+        "strict": [
+          "cumin"
+        ]
+      },
+      {
+        "all": [
+          "chipotle",
+          "pepper",
+          "adobo",
+          "sauce",
+          "finely"
+        ],
+        "strict": [
+          "chipotle",
+          "pepper",
+          "adobo",
+          "sauce",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "tomato",
+          "pur"
+        ],
+        "strict": [
+          "tomato",
+          "pur"
+        ]
+      },
+      {
+        "all": [
+          "apple",
+          "cider",
+          "vinegar"
+        ],
+        "strict": [
+          "apple",
+          "cider",
+          "vinegar"
+        ]
+      },
+      {
+        "all": [
+          "chicken",
+          "vegetable",
+          "stock"
+        ],
+        "strict": [
+          "chicken"
+        ]
+      },
+      {
+        "all": [
+          "vegetable",
+          "oil"
+        ],
+        "strict": [
+          "vegetable",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "onion"
+        ],
+        "strict": [
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "jalape",
+          "seeded",
+          "use",
+          "canned",
+          "chili"
+        ],
+        "strict": [
+          "jalape",
+          "seeded"
+        ]
+      },
+      {
+        "all": [
+          "lean",
+          "beef",
+          "mince"
+        ],
+        "strict": [
+          "lean",
+          "beef",
+          "mince"
+        ]
+      },
+      {
+        "all": [
+          "tin",
+          "black",
+          "bean",
+          "drained",
+          "rinsed"
+        ],
+        "strict": [
+          "tin",
+          "black",
+          "bean",
+          "drained",
+          "rinsed"
+        ]
+      },
+      {
+        "all": [
+          "corn",
+          "tortilla"
+        ],
+        "strict": [
+          "corn",
+          "tortilla"
+        ]
+      },
+      {
+        "all": [
+          "shredded",
+          "monterey",
+          "jack",
+          "mature",
+          "cheddar",
+          "cheese"
+        ],
+        "strict": [
+          "shredded",
+          "monterey",
+          "jack"
+        ]
+      },
+      {
+        "all": [
+          "pico",
+          "gallo"
+        ],
+        "strict": [
+          "pico",
+          "gallo"
+        ]
+      },
+      {
+        "all": [
+          "sour",
+          "cream"
+        ],
+        "strict": [
+          "sour",
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro"
+        ]
+      },
+      {
+        "all": [
+          "jalape"
+        ],
+        "strict": [
+          "jalape"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/raspberry-ripple-frozen-yoghurt-bites",
+    "title": "Raspberry ripple frozen yoghurt bites",
+    "ingredients": [
+      "75g dark chocolate",
+      "3 tbsp reduced sugar raspberry jam",
+      "250g Danone Skyr Plain Yoghurt",
+      "200g frozen raspberries"
+    ],
+    "cuisine": null,
+    "mealType": "Snack",
+    "totalTime": "13 mins",
+    "totalTimeMinutes": 13,
+    "servings": "0",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/04/cropped-Danone-Native-YogBites69-45d1cd7.png?resize=768,845",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "dark",
+          "chocolate"
+        ],
+        "strict": [
+          "dark",
+          "chocolate"
+        ]
+      },
+      {
+        "all": [
+          "reduced",
+          "sugar",
+          "raspberry",
+          "jam"
+        ],
+        "strict": [
+          "reduced",
+          "sugar",
+          "raspberry",
+          "jam"
+        ]
+      },
+      {
+        "all": [
+          "danone",
+          "skyr",
+          "plain",
+          "yoghurt"
+        ],
+        "strict": [
+          "danone",
+          "skyr",
+          "plain",
+          "yoghurt"
+        ]
+      },
+      {
+        "all": [
+          "frozen",
+          "raspberry"
+        ],
+        "strict": [
+          "frozen",
+          "raspberry"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/yogurt-pancakes-with-roasted-strawberries-vanilla-yoghurt",
+    "title": "Yoghurt pancakes with roasted strawberries & vanilla yoghurt",
+    "ingredients": [
+      "400g strawberries hulled and halved",
+      "1 lemon",
+      "1 tbsp caster sugar",
+      "250g Danone Skyr Plain Yoghurt",
+      "2 eggs",
+      "1-2 tbsp caster sugar (to taste)",
+      "4 tbsp semi-skimmed milk",
+      "175g self-raising flour",
+      "½ tsp baking powder",
+      "vegetable oil or butter for frying",
+      "2 tsp vanilla extract",
+      "100g Danone Skyr Plain Yoghurt",
+      "honey (optional)"
+    ],
+    "cuisine": null,
+    "mealType": "Breakfast",
+    "totalTime": "1h",
+    "totalTimeMinutes": 60,
+    "servings": "2",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/04/cropped-Danone-Native-Pancakes41.jpg-d050a11.png?resize=768,845",
+    "instructionCount": 4,
+    "tokens": [
+      {
+        "all": [
+          "strawberry",
+          "hulled",
+          "halved"
+        ],
+        "strict": [
+          "strawberry",
+          "hulled",
+          "halved"
+        ]
+      },
+      {
+        "all": [
+          "lemon"
+        ],
+        "strict": [
+          "lemon"
+        ]
+      },
+      {
+        "all": [
+          "caster",
+          "sugar"
+        ],
+        "strict": [
+          "caster",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "danone",
+          "skyr",
+          "plain",
+          "yoghurt"
+        ],
+        "strict": [
+          "danone",
+          "skyr",
+          "plain",
+          "yoghurt"
+        ]
+      },
+      {
+        "all": [
+          "egg"
+        ],
+        "strict": [
+          "egg"
+        ]
+      },
+      {
+        "all": [
+          "caster",
+          "sugar"
+        ],
+        "strict": [
+          "caster",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "semi",
+          "skimmed",
+          "milk"
+        ],
+        "strict": [
+          "semi",
+          "skimmed",
+          "milk"
+        ]
+      },
+      {
+        "all": [
+          "self",
+          "raising",
+          "flour"
+        ],
+        "strict": [
+          "self",
+          "raising",
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "tsp",
+          "baking",
+          "powder"
+        ],
+        "strict": [
+          "tsp",
+          "baking",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "vegetable",
+          "oil",
+          "butter",
+          "frying"
+        ],
+        "strict": [
+          "vegetable",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "vanilla",
+          "extract"
+        ],
+        "strict": [
+          "vanilla",
+          "extract"
+        ]
+      },
+      {
+        "all": [
+          "danone",
+          "skyr",
+          "plain",
+          "yoghurt"
+        ],
+        "strict": [
+          "danone",
+          "skyr",
+          "plain",
+          "yoghurt"
+        ]
+      },
+      {
+        "all": [
+          "honey"
+        ],
+        "strict": [
+          "honey"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/lemon-poppy-seed-overnight-oats",
+    "title": "Lemon & poppy seed overnight oats",
+    "ingredients": [
+      "40g porridge oats",
+      "1 tbsp poppy seeds",
+      "½ tbsp  chia seeds",
+      "100ml semi-skimmed milk",
+      "2 tbsp Danone Skyr Plain Yoghurt",
+      "1 tbsp lemon curd",
+      "2 tbsp Danone Skyr Plain Yogurt",
+      "1 tbsp lemon curd",
+      "½ tsp poppy seeds",
+      "10g pistachios roughly chopped, to garnish (optional)"
+    ],
+    "cuisine": null,
+    "mealType": "Breakfast",
+    "totalTime": "5 mins",
+    "totalTimeMinutes": 5,
+    "servings": "1",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/04/cropped-Danone-Native-OvernightOats7-08bbedd.png?resize=768,845",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "porridge",
+          "oat"
+        ],
+        "strict": [
+          "porridge",
+          "oat"
+        ]
+      },
+      {
+        "all": [
+          "poppy",
+          "seed"
+        ],
+        "strict": [
+          "poppy",
+          "seed"
+        ]
+      },
+      {
+        "all": [
+          "tbsp",
+          "chia",
+          "seed"
+        ],
+        "strict": [
+          "tbsp",
+          "chia",
+          "seed"
+        ]
+      },
+      {
+        "all": [
+          "semi",
+          "skimmed",
+          "milk"
+        ],
+        "strict": [
+          "semi",
+          "skimmed",
+          "milk"
+        ]
+      },
+      {
+        "all": [
+          "danone",
+          "skyr",
+          "plain",
+          "yoghurt"
+        ],
+        "strict": [
+          "danone",
+          "skyr",
+          "plain",
+          "yoghurt"
+        ]
+      },
+      {
+        "all": [
+          "lemon",
+          "curd"
+        ],
+        "strict": [
+          "lemon",
+          "curd"
+        ]
+      },
+      {
+        "all": [
+          "danone",
+          "skyr",
+          "plain",
+          "yogurt"
+        ],
+        "strict": [
+          "danone",
+          "skyr",
+          "plain",
+          "yogurt"
+        ]
+      },
+      {
+        "all": [
+          "lemon",
+          "curd"
+        ],
+        "strict": [
+          "lemon",
+          "curd"
+        ]
+      },
+      {
+        "all": [
+          "tsp",
+          "poppy",
+          "seed"
+        ],
+        "strict": [
+          "tsp",
+          "poppy",
+          "seed"
+        ]
+      },
+      {
+        "all": [
+          "pistachio",
+          "roughly",
+          "garnish"
+        ],
+        "strict": [
+          "pistachio",
+          "roughly",
+          "garnish"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/mango-lassi-inspired-breakfast-smoothie",
+    "title": "Mango lassi-inspired breakfast smoothie",
+    "ingredients": [
+      "150g frozen mango",
+      "2 tbsp porridge oats",
+      "100g Danone Skyr Plain Yoghurt",
+      "150ml coconut water",
+      "½ tsp  ground cardamom",
+      "1-2 tbsp honey to taste"
+    ],
+    "cuisine": null,
+    "mealType": "Breakfast",
+    "totalTime": "5 mins",
+    "totalTimeMinutes": 5,
+    "servings": "2",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/04/cropped-Danone-Native-Smoothie22-8e35f5e.png?resize=768,845",
+    "instructionCount": 1,
+    "tokens": [
+      {
+        "all": [
+          "frozen",
+          "mango"
+        ],
+        "strict": [
+          "frozen",
+          "mango"
+        ]
+      },
+      {
+        "all": [
+          "porridge",
+          "oat"
+        ],
+        "strict": [
+          "porridge",
+          "oat"
+        ]
+      },
+      {
+        "all": [
+          "danone",
+          "skyr",
+          "plain",
+          "yoghurt"
+        ],
+        "strict": [
+          "danone",
+          "skyr",
+          "plain",
+          "yoghurt"
+        ]
+      },
+      {
+        "all": [
+          "coconut",
+          "water"
+        ],
+        "strict": [
+          "coconut",
+          "water"
+        ]
+      },
+      {
+        "all": [
+          "tsp",
+          "cardamom"
+        ],
+        "strict": [
+          "tsp",
+          "cardamom"
+        ]
+      },
+      {
+        "all": [
+          "honey"
+        ],
+        "strict": [
+          "honey"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/lamb-koftas-with-mango-yoghurt-sauce-flatbreads-pickles",
+    "title": "Lamb koftas with mango yoghurt sauce, flatbreads & pickles",
+    "ingredients": [
+      "1 small head of red cabbage finely shredded",
+      "3 tbsp red wine vinegar",
+      "½ tsp  caster sugar",
+      "3 tbsp vegetable oil for frying",
+      "500g lamb mince",
+      "2 tsp ground cumin",
+      "2 tsp ground coriander",
+      "2 tsp za'atar",
+      "2 garlic cloves finely grated",
+      "1 red onion finely grated",
+      "200g Danone Skyr Plain Yoghurt",
+      "3 tbsp mango chutney",
+      "4-6 soft wholemeal flatbreads or pittas",
+      "15g dill leaves picked",
+      "pickled red onions, pickled red chillies and olives"
+    ],
+    "cuisine": null,
+    "mealType": "Lunch",
+    "totalTime": "40 mins",
+    "totalTimeMinutes": 40,
+    "servings": "4",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/04/cropped-Danone-Native-Lamb30-d14d1ac.png?resize=768,845",
+    "instructionCount": 5,
+    "tokens": [
+      {
+        "all": [
+          "head",
+          "red",
+          "cabbage",
+          "finely",
+          "shredded"
+        ],
+        "strict": [
+          "head",
+          "red",
+          "cabbage",
+          "finely",
+          "shredded"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "wine",
+          "vinegar"
+        ],
+        "strict": [
+          "red",
+          "wine",
+          "vinegar"
+        ]
+      },
+      {
+        "all": [
+          "tsp",
+          "caster",
+          "sugar"
+        ],
+        "strict": [
+          "tsp",
+          "caster",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "vegetable",
+          "oil",
+          "frying"
+        ],
+        "strict": [
+          "vegetable",
+          "oil",
+          "frying"
+        ]
+      },
+      {
+        "all": [
+          "lamb",
+          "mince"
+        ],
+        "strict": [
+          "lamb",
+          "mince"
+        ]
+      },
+      {
+        "all": [
+          "cumin"
+        ],
+        "strict": [
+          "cumin"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro"
+        ]
+      },
+      {
+        "all": [
+          "atar"
+        ],
+        "strict": [
+          "atar"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "finely"
+        ],
+        "strict": [
+          "garlic",
+          "clof",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "onion",
+          "finely"
+        ],
+        "strict": [
+          "red",
+          "onion",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "danone",
+          "skyr",
+          "plain",
+          "yoghurt"
+        ],
+        "strict": [
+          "danone",
+          "skyr",
+          "plain",
+          "yoghurt"
+        ]
+      },
+      {
+        "all": [
+          "mango",
+          "chutney"
+        ],
+        "strict": [
+          "mango",
+          "chutney"
+        ]
+      },
+      {
+        "all": [
+          "soft",
+          "wholemeal",
+          "flatbread",
+          "pitta"
+        ],
+        "strict": [
+          "soft",
+          "wholemeal",
+          "flatbread"
+        ]
+      },
+      {
+        "all": [
+          "dill",
+          "leaf",
+          "picked"
+        ],
+        "strict": [
+          "dill",
+          "leaf",
+          "picked"
+        ]
+      },
+      {
+        "all": [
+          "pickled",
+          "red",
+          "onion",
+          "chilly",
+          "olif"
+        ],
+        "strict": [
+          "pickled",
+          "red",
+          "onion",
+          "chilly",
+          "olif"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/chocolate-cherry-porridge",
+    "title": "Chocolate & cherry porridge",
+    "ingredients": [
+      "175g frozen cherries",
+      "1 tbsp caster sugar (if desired)",
+      "½ lemon juiced",
+      "½ tsp  cornflour",
+      "50g porridge oats",
+      "2 tbsp milled seed mix",
+      "1 tbsp cocoa powder",
+      "1 tbsp maple syrup (adjust to your desired sweetness)",
+      "220ml semi-skimmed milk",
+      "2-3 tbsp Danone Skyr Plain Yoghurt",
+      "15g pistachios or walnuts finely chopped"
+    ],
+    "cuisine": null,
+    "mealType": "Breakfast",
+    "totalTime": "20 mins",
+    "totalTimeMinutes": 20,
+    "servings": "2",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/04/cropped-Danone-Native-ChocPorridge36-82f3608.png?resize=768,845",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "frozen",
+          "cherry"
+        ],
+        "strict": [
+          "frozen",
+          "cherry"
+        ]
+      },
+      {
+        "all": [
+          "caster",
+          "sugar",
+          "desired"
+        ],
+        "strict": [
+          "caster",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "lemon",
+          "juiced"
+        ],
+        "strict": [
+          "lemon",
+          "juiced"
+        ]
+      },
+      {
+        "all": [
+          "tsp",
+          "cornflour",
+          "cornstarch"
+        ],
+        "strict": [
+          "tsp",
+          "cornflour",
+          "cornstarch"
+        ]
+      },
+      {
+        "all": [
+          "porridge",
+          "oat"
+        ],
+        "strict": [
+          "porridge",
+          "oat"
+        ]
+      },
+      {
+        "all": [
+          "milled",
+          "seed",
+          "mix"
+        ],
+        "strict": [
+          "milled",
+          "seed",
+          "mix"
+        ]
+      },
+      {
+        "all": [
+          "cocoa",
+          "powder"
+        ],
+        "strict": [
+          "cocoa",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "maple",
+          "syrup",
+          "adjust",
+          "your",
+          "desired",
+          "sweetnes"
+        ],
+        "strict": [
+          "maple",
+          "syrup"
+        ]
+      },
+      {
+        "all": [
+          "semi",
+          "skimmed",
+          "milk"
+        ],
+        "strict": [
+          "semi",
+          "skimmed",
+          "milk"
+        ]
+      },
+      {
+        "all": [
+          "danone",
+          "skyr",
+          "plain",
+          "yoghurt"
+        ],
+        "strict": [
+          "danone",
+          "skyr",
+          "plain",
+          "yoghurt"
+        ]
+      },
+      {
+        "all": [
+          "pistachio",
+          "walnut",
+          "finely"
+        ],
+        "strict": [
+          "pistachio"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/slow-cooker-12-plant-minestrone",
+    "title": "Slow cooker 12-plant minestrone",
+    "ingredients": [
+      "1 onion finely chopped",
+      "2 celery sticks finely chopped",
+      "1 large  carrot finely chopped",
+      "1 courgette grated",
+      "5g parsley leaves and stalks separated, both finely chopped",
+      "400g can  mixed beans",
+      "400g can  chopped tomatoes",
+      "1 tbsp tomato purée",
+      "1 litre hot vegetable stock",
+      "2 tsp garlic granules",
+      "1 tbsp dried oregano",
+      "2 bay leaves",
+      "150g wholemeal spaghetti broken into small pieces",
+      "100g kale or cavolo nero, tough  stalks removed, leaves sliced",
+      "150g frozen peas",
+      "2 tbsp olive oil",
+      "handful of  seeds such as pumpkin and sesame seeds (optional)",
+      "crusty bread rolls to serve (optional)"
+    ],
+    "cuisine": null,
+    "mealType": "Lunch",
+    "totalTime": "4h 30m",
+    "totalTimeMinutes": 270,
+    "servings": "8",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/04/Slow-Cooker-Minestrone-72e6042.jpg?resize=768,698",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "onion",
+          "finely"
+        ],
+        "strict": [
+          "onion",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "celery",
+          "stick",
+          "finely"
+        ],
+        "strict": [
+          "celery",
+          "stick",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "carrot",
+          "finely"
+        ],
+        "strict": [
+          "carrot",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "courgette",
+          "zucchini"
+        ],
+        "strict": [
+          "courgette",
+          "zucchini"
+        ]
+      },
+      {
+        "all": [
+          "parsley",
+          "leaf",
+          "stalk",
+          "separated",
+          "both",
+          "finely"
+        ],
+        "strict": [
+          "parsley",
+          "leaf",
+          "stalk",
+          "separated",
+          "both",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "can",
+          "mixed",
+          "bean"
+        ],
+        "strict": [
+          "can",
+          "mixed",
+          "bean"
+        ]
+      },
+      {
+        "all": [
+          "can",
+          "tomato"
+        ],
+        "strict": [
+          "can",
+          "tomato"
+        ]
+      },
+      {
+        "all": [
+          "tomato",
+          "pur"
+        ],
+        "strict": [
+          "tomato",
+          "pur"
+        ]
+      },
+      {
+        "all": [
+          "litre",
+          "hot",
+          "vegetable",
+          "stock"
+        ],
+        "strict": [
+          "litre",
+          "hot",
+          "vegetable",
+          "stock"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "granul"
+        ],
+        "strict": [
+          "garlic",
+          "granul"
+        ]
+      },
+      {
+        "all": [
+          "oregano"
+        ],
+        "strict": [
+          "oregano"
+        ]
+      },
+      {
+        "all": [
+          "bay",
+          "leaf"
+        ],
+        "strict": [
+          "bay",
+          "leaf"
+        ]
+      },
+      {
+        "all": [
+          "wholemeal",
+          "spaghetti",
+          "broken"
+        ],
+        "strict": [
+          "wholemeal",
+          "spaghetti",
+          "broken"
+        ]
+      },
+      {
+        "all": [
+          "kale",
+          "cavolo",
+          "nero",
+          "tough",
+          "stalk",
+          "removed",
+          "leaf"
+        ],
+        "strict": [
+          "kale"
+        ]
+      },
+      {
+        "all": [
+          "frozen",
+          "pea"
+        ],
+        "strict": [
+          "frozen",
+          "pea"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "seed",
+          "such",
+          "pumpkin",
+          "sesame"
+        ],
+        "strict": [
+          "seed",
+          "such",
+          "pumpkin",
+          "sesame"
+        ]
+      },
+      {
+        "all": [
+          "crusty",
+          "bread",
+          "roll",
+          "serve"
+        ],
+        "strict": [
+          "crusty",
+          "bread",
+          "roll",
+          "serve"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/slow-cooker-bean-chilli",
+    "title": "Slow cooker bean chilli",
+    "ingredients": [
+      "1 onion finely chopped",
+      "2 peppers (a mix of colours works well), chopped",
+      "400g can  red kidney beans",
+      "400g can  black beans",
+      "400g can  pinto beans",
+      "2 tsp chilli powder",
+      "1 tbsp smoked paprika",
+      "1 tsp garlic granules",
+      "1 tsp ground cumin",
+      "½ tsp  ground coriander",
+      "2 tsp dried mixed herbs",
+      "2 tbsp tomato purée",
+      "2 x 400g cans  chopped tomatoes",
+      "few  coriander leaves to serve"
+    ],
+    "cuisine": null,
+    "mealType": "Dinner",
+    "totalTime": "4h 20m",
+    "totalTimeMinutes": 260,
+    "servings": "8",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/04/Slow-Cooker-Chilli-ecdb9ee.jpg?resize=768,698",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "onion",
+          "finely"
+        ],
+        "strict": [
+          "onion",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "pepper",
+          "mix",
+          "colour",
+          "work",
+          "well"
+        ],
+        "strict": [
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "can",
+          "red",
+          "kidney",
+          "bean"
+        ],
+        "strict": [
+          "can",
+          "red",
+          "kidney",
+          "bean"
+        ]
+      },
+      {
+        "all": [
+          "can",
+          "black",
+          "bean"
+        ],
+        "strict": [
+          "can",
+          "black",
+          "bean"
+        ]
+      },
+      {
+        "all": [
+          "can",
+          "pinto",
+          "bean"
+        ],
+        "strict": [
+          "can",
+          "pinto",
+          "bean"
+        ]
+      },
+      {
+        "all": [
+          "chilli",
+          "powder"
+        ],
+        "strict": [
+          "chilli",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "smoked",
+          "paprika"
+        ],
+        "strict": [
+          "smoked",
+          "paprika"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "granul"
+        ],
+        "strict": [
+          "garlic",
+          "granul"
+        ]
+      },
+      {
+        "all": [
+          "cumin"
+        ],
+        "strict": [
+          "cumin"
+        ]
+      },
+      {
+        "all": [
+          "tsp",
+          "coriander",
+          "cilantro"
+        ],
+        "strict": [
+          "tsp",
+          "coriander",
+          "cilantro"
+        ]
+      },
+      {
+        "all": [
+          "mixed",
+          "herb"
+        ],
+        "strict": [
+          "mixed",
+          "herb"
+        ]
+      },
+      {
+        "all": [
+          "tomato",
+          "pur"
+        ],
+        "strict": [
+          "tomato",
+          "pur"
+        ]
+      },
+      {
+        "all": [
+          "can",
+          "tomato"
+        ],
+        "strict": [
+          "can",
+          "tomato"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro",
+          "leaf",
+          "serve"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro",
+          "leaf",
+          "serve"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/slow-cooker-buffalo-chicken",
+    "title": "Slow cooker buffalo chicken",
+    "ingredients": [
+      "200ml hot sauce",
+      "1 tsp garlic granules",
+      "1 tsp onion granules",
+      "1 kg  boneless, skinless  chicken thighs",
+      "2 bay leaves",
+      "25g butter",
+      "burger buns salad and/or slaw, to serve"
+    ],
+    "cuisine": null,
+    "mealType": "Dinner",
+    "totalTime": "4h 15m",
+    "totalTimeMinutes": 255,
+    "servings": "4",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/04/Slow-Cooker-Buffalo-Chicken-b05e0c8.jpg?resize=768,698",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "hot",
+          "sauce"
+        ],
+        "strict": [
+          "hot",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "granul"
+        ],
+        "strict": [
+          "garlic",
+          "granul"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "granul"
+        ],
+        "strict": [
+          "onion",
+          "granul"
+        ]
+      },
+      {
+        "all": [
+          "boneles",
+          "skinles",
+          "chicken",
+          "thigh"
+        ],
+        "strict": [
+          "boneles",
+          "skinles",
+          "chicken",
+          "thigh"
+        ]
+      },
+      {
+        "all": [
+          "bay",
+          "leaf"
+        ],
+        "strict": [
+          "bay",
+          "leaf"
+        ]
+      },
+      {
+        "all": [
+          "butter"
+        ],
+        "strict": [
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "burger",
+          "bun",
+          "salad",
+          "slaw",
+          "serve"
+        ],
+        "strict": [
+          "burger",
+          "bun",
+          "salad",
+          "slaw",
+          "serve"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/how-to-cook-asparagus",
+    "title": "How to cook asparagus",
+    "ingredients": [
+      "400g asparagus",
+      "olive oil"
+    ],
+    "cuisine": null,
+    "mealType": null,
+    "totalTime": "17 mins",
+    "totalTimeMinutes": 17,
+    "servings": "0",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/04/GettyImages-1064449252-dfa0d1c.jpg?resize=768,614",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "asparagu"
+        ],
+        "strict": [
+          "asparagu"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      }
+    ]
+  }
+]

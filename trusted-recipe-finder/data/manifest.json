@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-07-18T07:29:57.141Z",
+  "sources": [
+    {
+      "id": "recipetineats",
+      "name": "RecipeTin Eats",
+      "url": "https://www.recipetineats.com",
+      "emoji": "🍜",
+      "count": 0,
+      "file": "recipetineats.json",
+      "updated_at": "2026-07-18T07:29:33.900Z"
+    },
+    {
+      "id": "bbcgoodfood",
+      "name": "BBC Good Food",
+      "url": "https://www.bbcgoodfood.com",
+      "emoji": "🥘",
+      "count": 54,
+      "file": "bbcgoodfood.json",
+      "updated_at": "2026-07-18T07:29:57.141Z"
+    }
+  ]
+}
