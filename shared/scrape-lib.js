@@ -184,8 +184,12 @@ function filterRecipeUrls(urls, baseUrl) {
   ];
 
   const baseHost = new URL(baseUrl).hostname.replace(/^www\./, "");
-  // E5: computed once up front, not per-URL inside the filter callback (was O(n^2)).
-  const hasRecipePaths = urls.some((u) => recipePatterns.some((p) => p.test(u)));
+  // Only trust recipe-specific paths when they form a real cluster. Sites like
+  // RecipeTin Eats keep recipes at root level (/<slug>/) with a single
+  // /recipes/ hub page — treating that one match as "the recipe section"
+  // used to swallow the entire site down to that hub URL.
+  const recipeMatchCount = urls.filter((u) => recipePatterns.some((p) => p.test(u))).length;
+  const hasRecipePaths = recipeMatchCount >= Math.max(10, urls.length * 0.01);
 
   return urls.filter((url) => {
     try {
