@@ -1,8 +1,7 @@
 // Cloudflare Worker: hosts /api/scrape and /api/fetch-recipe for the
 // GitHub-Pages-hosted frontend, over the same shared/scrape-lib.js the
-// Vercel functions and build script use. CORS is restricted to the deployed
-// Pages origin (env.ALLOWED_ORIGIN) plus localhost, instead of "*" — the
-// Vercel functions could afford "*" because they only ever ran same-origin.
+// build script uses. CORS is restricted to the deployed Pages origin
+// (env.ALLOWED_ORIGIN) plus localhost, instead of "*".
 
 import { indexSite, fetchPage, extractRecipeFromHtml } from "../shared/scrape-lib.js";
 

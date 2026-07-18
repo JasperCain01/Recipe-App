@@ -22,12 +22,12 @@
   ],
 
   // ── Port forwarding ────────────────────────────────────────────────────────
-  // 5173 – Vite dev server  (npm run dev)
-  // 3000 – Vercel dev server (npm run dev:all, which runs `vercel dev`)
-  "forwardPorts": [5173, 3000],
+  // 5173 – Vite dev server     (npm run dev)
+  // 8787 – wrangler dev server (npm run dev:worker)
+  "forwardPorts": [5173, 8787],
   "portsAttributes": {
     "5173": { "label": "Vite dev server" },
-    "3000": { "label": "Vercel dev server" }
+    "8787": { "label": "Cloudflare Worker dev server" }
   },
 
   // ── Lifecycle hooks ────────────────────────────────────────────────────────

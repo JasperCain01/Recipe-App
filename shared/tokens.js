@@ -1,6 +1,6 @@
-// Ingredient-text normalisation, shared between the browser app, the Vercel/
-// Worker scrape handlers, and the build script (Session 4). Plain ESM so it
-// can be imported directly by Node without a TypeScript toolchain.
+// Ingredient-text normalisation, shared between the browser app, the Worker
+// scrape handlers, and the build script. Plain ESM so it can be imported
+// directly by Node without a TypeScript toolchain.
 
 export const STOPWORDS = new Set([
   "fresh", "dried", "large", "small", "medium", "whole", "chopped", "sliced",

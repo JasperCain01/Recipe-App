@@ -1,6 +1,6 @@
 // Shared recipe-site scraping/extraction logic — plain ESM so it can be
-// imported by the Vercel/Worker API handlers *and* the build script (Session 4)
-// without a TypeScript toolchain. `fetch` is injected so callers can swap in
+// imported by the Worker API handlers *and* the build script without a
+// TypeScript toolchain. `fetch` is injected so callers can swap in
 // a platform-specific implementation.
 
 const DEFAULT_USER_AGENT =
