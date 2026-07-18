@@ -1,5 +1,9 @@
 // Pure functions used across the app — no React, no side effects.
 
+import type { ThemeTokens } from "./styles";
+
+export { deriveMealType } from "../../shared/recipe-meta.js";
+
 /**
  * Pick a relevant emoji for a recipe-source name based on keywords.
  * Falls back to 🍽 for unknown sites.
@@ -42,37 +46,8 @@ export function makeId(name: string): string {
 /**
  * Map a 0-100 match score to a colour for visual feedback.
  */
-export function scoreColor(score: number): string {
-  if (score >= 80) return "#2E7D32"; // Green 800
-  if (score >= 60) return "#E65100"; // Deep Orange 900
-  return "#C62828"; // Red 800
-}
-
-const MEAL_TYPE_PATTERNS: [RegExp, string][] = [
-  [/\bbreakfast\b|\bbrunch\b/i, "Breakfast"],
-  [/\bdessert\b|\bsweet treat|\bcake\b|\bcookies?\b|\bbiscuit\b|\bpudding\b|\bpie\b|\btart\b|\bpastry\b|\bmuffin\b|\bbrownie\b|\bfudge\b|\bice cream\b/i, "Dessert"],
-  [/\blunch\b|\bsandwich\b|\bwrap\b|\bpacked lunch\b/i, "Lunch"],
-  [/\bdinner\b|\bsupper\b|\bmain course\b|\bmain dish\b|\bevening meal\b/i, "Dinner"],
-  [/\bstarter\b|\bappetiz|\bcanap/i, "Starter"],
-  [/\bside dish\b|\bside\b/i, "Side"],
-  [/\bsnack\b/i, "Snack"],
-  [/\bsoup\b|\bstew\b|\bbroth\b|\bchowder\b/i, "Soup"],
-  [/\bsalad\b/i, "Salad"],
-  [/\bdrink\b|\bcocktail\b|\bsmoothie\b|\bjuice\b|\bbeverage\b/i, "Drink"],
-];
-
-/**
- * Derive a meal type label from a recipe's category and keywords fields.
- * Returns null if no recognisable meal type is found.
- */
-export function deriveMealType(
-  category: string | null,
-  keywords: string | null
-): string | null {
-  const text = [category, keywords].filter(Boolean).join(" ");
-  if (!text) return null;
-  for (const [pattern, label] of MEAL_TYPE_PATTERNS) {
-    if (pattern.test(text)) return label;
-  }
-  return null;
+export function scoreColor(score: number, t: ThemeTokens): string {
+  if (score >= 80) return t.success;
+  if (score >= 60) return t.scoreMid;
+  return t.scoreLow;
 }

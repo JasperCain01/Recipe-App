@@ -1,5 +1,6 @@
-import { styles, smBtn } from "../lib/styles";
-import type { Source } from "../lib/types";
+import { getStyles, smBtn } from "../lib/styles";
+import { useTheme } from "../lib/ThemeContext";
+import type { SourceMeta } from "../lib/types";
 
 interface EnrichProgress {
   done: number;
@@ -7,7 +8,7 @@ interface EnrichProgress {
 }
 
 interface SourcesTabProps {
-  sources: Source[];
+  sources: SourceMeta[];
   selectedSources: string[];
   newSourceName: string;
   newSourceUrl: string;
@@ -23,6 +24,8 @@ interface SourcesTabProps {
   onRemove: (id: string) => void;
   onReindex: (id: string) => void;
   onEnrich: (id: string) => void;
+  onCancelEnrich: () => void;
+  onHide: (id: string) => void;
 }
 
 export default function SourcesTab({
@@ -42,11 +45,16 @@ export default function SourcesTab({
   onRemove,
   onReindex,
   onEnrich,
+  onCancelEnrich,
+  onHide,
 }: SourcesTabProps) {
+  const { tokens: t } = useTheme();
+  const styles = getStyles(t);
+
   return (
     <div>
       <h2 style={{ ...styles.label, marginBottom: "0.3rem" }}>Recipe Sources</h2>
-      <p style={{ color: "#757575", fontSize: "0.8rem", marginBottom: "1.5rem" }}>
+      <p style={{ color: t.textMuted, fontSize: "0.8rem", marginBottom: "1.5rem" }}>
         Add any recipe website. Indexing builds a URL list; enriching fetches ingredients so you can search by what you have.
       </p>
 
@@ -75,21 +83,21 @@ export default function SourcesTab({
             placeholder="https://example.com"
             style={styles.input}
           />
-          <button onClick={onAdd} style={{ ...smBtn("primary"), padding: "0.65rem 1rem" }}>
+          <button onClick={onAdd} style={{ ...smBtn(t, "primary"), padding: "0.65rem 1rem" }}>
             Add
           </button>
         </div>
         {sourceError && (
-          <p style={{ color: "#B00020", fontSize: "0.75rem", marginTop: "0.6rem", marginBottom: 0 }}>
+          <p style={{ color: t.danger, fontSize: "0.75rem", marginTop: "0.6rem", marginBottom: 0 }}>
             ⚠ {sourceError}
           </p>
         )}
         {sourceSuccess && (
-          <p style={{ color: "#2E7D32", fontSize: "0.75rem", marginTop: "0.6rem", marginBottom: 0 }}>
+          <p style={{ color: t.success, fontSize: "0.75rem", marginTop: "0.6rem", marginBottom: 0 }}>
             {sourceSuccess}
           </p>
         )}
-        <p style={{ color: "#9E9E9E", fontSize: "0.7rem", marginTop: "0.75rem", marginBottom: 0 }}>
+        <p style={{ color: t.textFaint, fontSize: "0.7rem", marginTop: "0.75rem", marginBottom: 0 }}>
           An emoji is auto-assigned based on the site name. URLs are normalised to root domain.
         </p>
       </div>
@@ -102,13 +110,17 @@ export default function SourcesTab({
           const hasIndex = src.indexCount > 0;
           const hasEnriched = src.enrichedCount > 0;
           const isActive = selectedSources.includes(src.id);
+          const isBuiltin = !!src.builtin;
+          // U7: a brand-new source chains index -> enrich automatically (App.tsx addSource);
+          // show one combined progress line for that first pass instead of two separate ones.
+          const isFirstPass = !isBuiltin && !src.enrichedAt && (isIndexing || isEnriching);
 
           return (
             <div
               key={src.id}
               style={{
-                background: "#FFFFFF",
-                border: "1px solid #E0E0E0",
+                background: t.surface,
+                border: `1px solid ${t.border}`,
                 borderRadius: "8px",
                 padding: "0.75rem 1rem",
               }}
@@ -118,13 +130,32 @@ export default function SourcesTab({
                 <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", flex: 1, minWidth: 0 }}>
                   <span style={{ fontSize: "1.25rem", flexShrink: 0 }}>{src.emoji}</span>
                   <div style={{ minWidth: 0 }}>
-                    <div style={{ color: "#212121", fontSize: "0.88rem", marginBottom: "0.1rem" }}>{src.name}</div>
+                    <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", marginBottom: "0.1rem" }}>
+                      <span style={{ color: t.text, fontSize: "0.88rem" }}>{src.name}</span>
+                      {isBuiltin && (
+                        <span
+                          title="Ships with the app, kept up to date automatically — no indexing or enriching needed"
+                          style={{
+                            fontSize: "0.7rem",
+                            color: t.accent,
+                            background: t.accentTint,
+                            border: `1px solid ${t.accentBorder}`,
+                            borderRadius: "4px",
+                            padding: "0.05rem 0.4rem",
+                            textTransform: "uppercase",
+                            letterSpacing: "0.03em",
+                          }}
+                        >
+                          Built-in{src.enrichedAt && ` · updated ${new Date(src.enrichedAt).toLocaleDateString()}`}
+                        </span>
+                      )}
+                    </div>
                     <a
                       href={src.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{
-                        color: "#9E9E9E",
+                        color: t.textFaint,
                         fontSize: "0.72rem",
                         textDecoration: "none",
                         overflow: "hidden",
@@ -140,26 +171,46 @@ export default function SourcesTab({
                 <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexShrink: 0 }}>
                   <button
                     onClick={() => onToggle(src.id)}
-                    style={{ ...smBtn(isActive ? "primary" : "default"), minWidth: "72px", textAlign: "center" }}
+                    style={{ ...smBtn(t, isActive ? "primary" : "default"), minWidth: "72px", textAlign: "center" }}
                   >
                     {isActive ? "✓ Active" : "Enable"}
                   </button>
-                  <button
-                    onClick={() => onRemove(src.id)}
-                    title="Remove source"
-                    style={{
-                      background: "none",
-                      border: "1px solid #E0E0E0",
-                      color: "#757575",
-                      borderRadius: "6px",
-                      cursor: "pointer",
-                      padding: "0.35rem 0.6rem",
-                      fontSize: "0.9rem",
-                      lineHeight: 1,
-                    }}
-                  >
-                    ×
-                  </button>
+                  {isBuiltin ? (
+                    <button
+                      onClick={() => onHide(src.id)}
+                      title="Hide this built-in source — its data stays on your device and it can come back on the next update"
+                      style={{
+                        background: "none",
+                        border: `1px solid ${t.border}`,
+                        color: t.textMuted,
+                        borderRadius: "6px",
+                        cursor: "pointer",
+                        padding: "0.35rem 0.6rem",
+                        fontSize: "0.7rem",
+                        lineHeight: 1,
+                      }}
+                    >
+                      Hide
+                    </button>
+                  ) : (
+                    <button
+                      onClick={() => onRemove(src.id)}
+                      title="Remove source"
+                      aria-label={`Remove ${src.name}`}
+                      style={{
+                        background: "none",
+                        border: `1px solid ${t.border}`,
+                        color: t.textMuted,
+                        borderRadius: "6px",
+                        cursor: "pointer",
+                        padding: "0.35rem 0.6rem",
+                        fontSize: "0.9rem",
+                        lineHeight: 1,
+                      }}
+                    >
+                      ×
+                    </button>
+                  )}
                 </div>
               </div>
 
@@ -168,93 +219,153 @@ export default function SourcesTab({
                 style={{
                   marginTop: "0.6rem",
                   paddingTop: "0.6rem",
-                  borderTop: "1px solid #E0E0E0",
+                  borderTop: `1px solid ${t.border}`,
                   display: "flex",
                   flexDirection: "column",
                   gap: "0.45rem",
                 }}
               >
-                {/* Index status */}
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                  <span style={{ fontSize: "0.7rem" }}>
-                    {isIndexing && <span style={{ color: "#FF8F00" }}>⏳ Indexing recipes…</span>}
-                    {!isIndexing && hasIndex && (
-                      <span style={{ color: "#2E7D32" }}>
-                        ✓ {src.indexCount} recipes indexed
-                        {src.indexedAt && ` · ${new Date(src.indexedAt).toLocaleDateString()}`}
-                      </span>
-                    )}
-                    {!isIndexing && !hasIndex && (
-                      <span style={{ color: "#9E9E9E" }}>No index yet</span>
-                    )}
+                {isBuiltin ? (
+                  <span style={{ fontSize: "0.7rem", color: t.success }}>
+                    ✓ {src.enrichedCount} recipes ready to search — no indexing or enriching needed
                   </span>
-                  {!isIndexing && (
-                    <button
-                      onClick={() => onReindex(src.id)}
-                      style={{ ...smBtn("default"), fontSize: "0.68rem", padding: "0.3rem 0.6rem" }}
-                    >
-                      {hasIndex ? "Re-index" : "Index now"}
-                    </button>
-                  )}
-                </div>
-
-                {/* Enrichment status */}
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                  <span style={{ fontSize: "0.7rem" }}>
-                    {isEnriching && (
-                      <span style={{ color: "#FF8F00" }}>
-                        ⏳ Enriching {enrichProgress.done}/{enrichProgress.total} recipes…
+                ) : isFirstPass ? (
+                  <>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                      <span style={{ fontSize: "0.7rem", color: t.secondaryAccent }}>
+                        ⏳ Adding {src.name}…{" "}
+                        {isIndexing
+                          ? "finding recipes…"
+                          : `${enrichProgress.done}/${enrichProgress.total} recipes ready — searchable now`}
                       </span>
+                      {isEnriching && (
+                        <button
+                          onClick={onCancelEnrich}
+                          style={{
+                            ...smBtn(t, "default"),
+                            fontSize: "0.7rem",
+                            padding: "0.3rem 0.6rem",
+                            borderColor: t.danger,
+                            color: t.danger,
+                          }}
+                        >
+                          Cancel
+                        </button>
+                      )}
+                    </div>
+                    {isEnriching && enrichProgress.total > 0 && (
+                      <div style={{ height: "3px", background: t.border, borderRadius: "2px", overflow: "hidden" }}>
+                        <div
+                          style={{
+                            height: "100%",
+                            width: `${(enrichProgress.done / enrichProgress.total) * 100}%`,
+                            background: t.accentSolid,
+                            borderRadius: "2px",
+                            transition: "width 0.3s ease",
+                          }}
+                        />
+                      </div>
                     )}
-                    {!isEnriching && hasEnriched && (
-                      <span style={{ color: "#2E7D32" }}>
-                        ✓ {src.enrichedCount}/{src.indexCount} recipes enriched
-                        {src.enrichedAt && ` · ${new Date(src.enrichedAt).toLocaleDateString()}`}
+                  </>
+                ) : (
+                  <>
+                    {/* Index status */}
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                      <span style={{ fontSize: "0.7rem" }}>
+                        {isIndexing && <span style={{ color: t.secondaryAccent }}>⏳ Indexing recipes…</span>}
+                        {!isIndexing && hasIndex && (
+                          <span style={{ color: t.success }}>
+                            ✓ {src.indexCount} recipes indexed
+                            {src.indexedAt && ` · ${new Date(src.indexedAt).toLocaleDateString()}`}
+                          </span>
+                        )}
+                        {!isIndexing && !hasIndex && (
+                          <span style={{ color: t.textFaint }}>No index yet</span>
+                        )}
                       </span>
-                    )}
-                    {!isEnriching && !hasEnriched && hasIndex && (
-                      <span style={{ color: "#757575" }}>Not enriched — ingredient search unavailable</span>
-                    )}
-                    {!isEnriching && !hasIndex && (
-                      <span style={{ color: "#9E9E9E" }}>Index first to enable enrichment</span>
-                    )}
-                  </span>
-                  {!isEnriching && hasIndex && (
-                    <button
-                      onClick={() => onEnrich(src.id)}
-                      style={{
-                        ...smBtn("default"),
-                        fontSize: "0.68rem",
-                        padding: "0.3rem 0.6rem",
-                        borderColor: hasEnriched ? "#E0E0E0" : "#00796B",
-                        color: hasEnriched ? "#757575" : "#00796B",
-                      }}
-                    >
-                      {hasEnriched ? "Re-enrich" : "Enrich now"}
-                    </button>
-                  )}
-                </div>
+                      {!isIndexing && (
+                        <button
+                          onClick={() => onReindex(src.id)}
+                          style={{ ...smBtn(t, "default"), fontSize: "0.7rem", padding: "0.3rem 0.6rem" }}
+                        >
+                          {hasIndex ? "Re-index" : "Index now"}
+                        </button>
+                      )}
+                    </div>
 
-                {/* Enrichment progress bar */}
-                {isEnriching && enrichProgress.total > 0 && (
-                  <div
-                    style={{
-                      height: "3px",
-                      background: "#E0E0E0",
-                      borderRadius: "2px",
-                      overflow: "hidden",
-                    }}
-                  >
-                    <div
-                      style={{
-                        height: "100%",
-                        width: `${(enrichProgress.done / enrichProgress.total) * 100}%`,
-                        background: "#00796B",
-                        borderRadius: "2px",
-                        transition: "width 0.3s ease",
-                      }}
-                    />
-                  </div>
+                    {/* Enrichment status */}
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                      <span style={{ fontSize: "0.7rem" }}>
+                        {isEnriching && (
+                          <span style={{ color: t.secondaryAccent }}>
+                            ⏳ Enriching {enrichProgress.done}/{enrichProgress.total} recipes…
+                          </span>
+                        )}
+                        {!isEnriching && hasEnriched && (
+                          <span style={{ color: t.success }}>
+                            ✓ {src.enrichedCount}/{src.indexCount} recipes enriched
+                            {src.enrichedAt && ` · ${new Date(src.enrichedAt).toLocaleDateString()}`}
+                          </span>
+                        )}
+                        {!isEnriching && !hasEnriched && hasIndex && (
+                          <span style={{ color: t.textMuted }}>Not enriched — ingredient search unavailable</span>
+                        )}
+                        {!isEnriching && !hasIndex && (
+                          <span style={{ color: t.textFaint }}>Index first to enable enrichment</span>
+                        )}
+                      </span>
+                      {!isEnriching && hasIndex && (
+                        <button
+                          onClick={() => onEnrich(src.id)}
+                          style={{
+                            ...smBtn(t, "default"),
+                            fontSize: "0.7rem",
+                            padding: "0.3rem 0.6rem",
+                            borderColor: hasEnriched ? t.border : t.accentSolid,
+                            color: hasEnriched ? t.textMuted : t.accent,
+                          }}
+                        >
+                          {hasEnriched ? "Re-enrich" : "Enrich now"}
+                        </button>
+                      )}
+                      {isEnriching && (
+                        <button
+                          onClick={onCancelEnrich}
+                          style={{
+                            ...smBtn(t, "default"),
+                            fontSize: "0.7rem",
+                            padding: "0.3rem 0.6rem",
+                            borderColor: t.danger,
+                            color: t.danger,
+                          }}
+                        >
+                          Cancel
+                        </button>
+                      )}
+                    </div>
+
+                    {/* Enrichment progress bar */}
+                    {isEnriching && enrichProgress.total > 0 && (
+                      <div
+                        style={{
+                          height: "3px",
+                          background: t.border,
+                          borderRadius: "2px",
+                          overflow: "hidden",
+                        }}
+                      >
+                        <div
+                          style={{
+                            height: "100%",
+                            width: `${(enrichProgress.done / enrichProgress.total) * 100}%`,
+                            background: t.accentSolid,
+                            borderRadius: "2px",
+                            transition: "width 0.3s ease",
+                          }}
+                        />
+                      </div>
+                    )}
+                  </>
                 )}
               </div>
             </div>
@@ -266,13 +377,13 @@ export default function SourcesTab({
             style={{
               textAlign: "center",
               padding: "2.5rem 1rem",
-              border: "1px dashed #E0E0E0",
+              border: `1px dashed ${t.border}`,
               borderRadius: "8px",
             }}
           >
-            <p style={{ color: "#757575", fontSize: "0.85rem", margin: "0 0 0.4rem" }}>No sources added yet.</p>
-            <p style={{ color: "#9E9E9E", fontSize: "0.75rem", margin: 0 }}>
-              Add a website above to get started — try RecipeTin Eats or BBC Good Food.
+            <p style={{ color: t.textMuted, fontSize: "0.85rem", margin: "0 0 0.4rem" }}>No sources yet.</p>
+            <p style={{ color: t.textFaint, fontSize: "0.75rem", margin: 0 }}>
+              Built-in defaults couldn't be loaded (offline?) — add a website above to get started.
             </p>
           </div>
         )}

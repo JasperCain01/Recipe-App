@@ -1,37 +1,48 @@
 import { useState, useEffect, useRef } from "react";
-import { styles } from "./lib/styles";
+import { getStyles, globalCss } from "./lib/styles";
+import { useTheme } from "./lib/ThemeContext";
 import { DEFAULT_CUPBOARD } from "./lib/constants";
 import { pickEmoji, normaliseUrl, makeId, deriveMealType } from "./lib/utils";
 import { storage } from "./lib/storage";
-import { indexSource, fetchRecipe } from "./lib/api";
+import { indexSource, fetchRecipe, fetchManifest, fetchBuiltinSource } from "./lib/api";
 import { searchRecipes } from "./lib/search";
+import { tokensForIngredientLine, tokenise } from "../shared/tokens.js";
+import { parseTimeToMinutes } from "../shared/recipe-meta.js";
 import Header from "./components/Header";
 import SearchTab from "./components/SearchTab";
 import SourcesTab from "./components/SourcesTab";
 import CupboardTab from "./components/CupboardTab";
-import type { EnrichedEntry, IngredientEntry, SearchResult, Source, Tab } from "./lib/types";
+import type { IndexEntry, IngredientEntry, RecipeRecord, SearchResult, SourceMeta, Tab } from "./lib/types";
 
 // How many recipe pages to fetch simultaneously during enrichment
 const ENRICH_CONCURRENCY = 5;
 // Polite delay (ms) between enrichment batches
 const ENRICH_DELAY_MS = 300;
-
-/** Parse the human-readable time string produced by fetch-recipe into minutes. */
-function parseTimeToMinutes(timeStr: string | null): number | null {
-  if (!timeStr) return null;
-  const h = timeStr.match(/(\d+)\s*h/);
-  const m = timeStr.match(/(\d+)\s*m/);
-  const total = (h ? parseInt(h[1]) * 60 : 0) + (m ? parseInt(m[1]) : 0);
-  return total > 0 ? total : null;
-}
+// Debounce for live search as the user types/toggles ingredients
+const SEARCH_DEBOUNCE_MS = 150;
+const DEFAULT_MATCH_THRESHOLD = 25;
+// Top-N ingredient words (by frequency) kept for the autocomplete vocabulary
+const VOCABULARY_SIZE = 500;
 
 export default function App() {
+  const { theme, tokens, toggleTheme } = useTheme();
+  const styles = getStyles(tokens);
+
   // ── Search state ──────────────────────────────────────────────────────────
   const [results, setResults] = useState<SearchResult[]>([]);
   const [error, setError] = useState<string>("");
+  const nextEntryId = useRef(1);
+  const [entries, setEntries] = useState<IngredientEntry[]>([]);
+  const [matchThreshold, setMatchThreshold] = useState<number>(DEFAULT_MATCH_THRESHOLD);
+  const searchDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // U4 autocomplete: ranked ingredient vocabulary built once per session from enriched recipe data.
+  const [vocabulary, setVocabulary] = useState<string[]>([]);
+  // U9: favourites, keyed by recipe URL.
+  const [favourites, setFavourites] = useState<Set<string>>(new Set());
+  const [showFavouritesOnly, setShowFavouritesOnly] = useState<boolean>(false);
 
   // ── Source state ──────────────────────────────────────────────────────────
-  const [sources, setSources] = useState<Source[]>([]);
+  const [sources, setSources] = useState<SourceMeta[]>([]);
   const [selectedSources, setSelectedSources] = useState<string[]>([]);
   const [newSourceName, setNewSourceName] = useState<string>("");
   const [newSourceUrl, setNewSourceUrl] = useState<string>("");
@@ -45,6 +56,9 @@ export default function App() {
   });
   const [sourcesLoaded, setSourcesLoaded] = useState<boolean>(false);
   const clearMessagesTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const enrichCancelRef = useRef<boolean>(false);
+  // Recipe records loaded from IndexedDB, cached per source until enrich/remove invalidates them.
+  const recipeCacheRef = useRef<Map<string, RecipeRecord[]>>(new Map());
 
   // ── Cupboard state ────────────────────────────────────────────────────────
   const [cupboard, setCupboard] = useState<string[]>(DEFAULT_CUPBOARD);
@@ -57,12 +71,20 @@ export default function App() {
     const cup = storage.loadCupboard();
     if (cup) setCupboard(cup);
 
-    storage.loadSources().then((src) => {
+    const threshold = storage.loadMatchThreshold();
+    if (threshold !== null) setMatchThreshold(threshold);
+
+    const favs = storage.loadFavourites();
+    if (favs) setFavourites(new Set(favs));
+
+    storage.loadSourceMetas().then(async (src) => {
       if (src && src.length > 0) {
         setSources(src);
         setSelectedSources(src.filter((s) => s.active).map((s) => s.id));
       }
       setSourcesLoaded(true);
+      const merged = await importBuiltinSources(src ?? []);
+      buildVocabulary(merged);
     });
   }, []);
 
@@ -86,14 +108,173 @@ export default function App() {
     }, 5000);
   };
 
-  const persistSources = (next: Source[]): Promise<boolean> => storage.saveSources(next);
+  const invalidateRecipeCache = (id: string): void => {
+    recipeCacheRef.current.delete(id);
+  };
+
+  const getRecipesCached = async (id: string): Promise<RecipeRecord[]> => {
+    const cached = recipeCacheRef.current.get(id);
+    if (cached) return cached;
+    const recs = await storage.getRecipesBySource(id);
+
+    // Lazily migrate any pre-Session-2 records that lack precomputed tokens.
+    const toPersist: RecipeRecord[] = [];
+    const upgraded = recs.map((r) => {
+      if (r.tokens) return r;
+      const withTokens: RecipeRecord = { ...r, tokens: r.ingredients.map(tokensForIngredientLine) };
+      toPersist.push(withTokens);
+      return withTokens;
+    });
+    if (toPersist.length > 0) await storage.putRecipes(toPersist);
+
+    recipeCacheRef.current.set(id, upgraded);
+    return upgraded;
+  };
 
   const saveCupboard = (items: string[]): void => {
     setCupboard(items);
     storage.saveCupboard(items);
   };
 
+  const setThreshold = (value: number): void => {
+    setMatchThreshold(value);
+    storage.saveMatchThreshold(value);
+  };
+
+  const toggleFavourite = (url: string): void => {
+    setFavourites((prev) => {
+      const next = new Set(prev);
+      if (next.has(url)) next.delete(url);
+      else next.add(url);
+      storage.saveFavourites([...next]);
+      return next;
+    });
+  };
+
+  // ── Ingredient entries (U1: lifted out of SearchTab so they survive tab switches) ──
+  // U4: chip model — entries only ever hold committed (non-blank) ingredients;
+  // the in-progress text being typed lives as local state inside SearchTab.
+  const addIngredient = (text: string): void => {
+    const trimmed = text.trim();
+    if (!trimmed) return;
+    if (entries.some((e) => e.text.toLowerCase() === trimmed.toLowerCase())) return;
+    setEntries((prev) => [...prev, { id: String(nextEntryId.current++), text: trimmed, required: true }]);
+  };
+
+  const toggleRequired = (index: number): void => {
+    setEntries((prev) => prev.map((e, i) => (i === index ? { ...e, required: !e.required } : e)));
+  };
+
+  const removeEntry = (index: number): void => {
+    setEntries((prev) => prev.filter((_, i) => i !== index));
+  };
+
   // ── Sources ───────────────────────────────────────────────────────────────
+  /** Patch one source's metadata in state and persist just that record to IndexedDB. */
+  const updateSource = (id: string, patch: Partial<SourceMeta>): void => {
+    setSources((prev) => {
+      const next = prev.map((s) => (s.id === id ? { ...s, ...patch } : s));
+      const updated = next.find((s) => s.id === id);
+      if (updated) storage.putSource(updated);
+      return next;
+    });
+  };
+
+  /**
+   * Import/refresh built-in (prebuilt) sources from the static data pipeline
+   * (data/manifest.json + data/<id>.json, built weekly by an Action). Silently
+   * does nothing if the manifest is unreachable (offline, 404, first deploy
+   * before any data has been built). Only re-fetches a source's recipe file
+   * when the manifest's timestamp has advanced past what's already stored.
+   */
+  const importBuiltinSources = async (existing: SourceMeta[]): Promise<SourceMeta[]> => {
+    const manifest = await fetchManifest();
+    if (!manifest) return existing;
+
+    const existingById = new Map(existing.map((s) => [s.id, s]));
+    const imported: SourceMeta[] = [];
+
+    for (const entry of manifest.sources) {
+      const current = existingById.get(entry.id);
+      if (current?.enrichedAt && current.enrichedAt >= entry.updated_at) continue;
+
+      try {
+        const records = await fetchBuiltinSource(entry.file);
+        await storage.putRecipes(records);
+        const meta: SourceMeta = {
+          id: entry.id,
+          name: entry.name,
+          url: entry.url,
+          emoji: entry.emoji,
+          // Active by default only on first import — respect the user's choice on refresh.
+          active: current ? current.active : true,
+          hidden: current?.hidden ?? false,
+          index: null,
+          indexedAt: entry.updated_at,
+          indexCount: entry.count,
+          enrichedCount: records.length,
+          enrichedAt: entry.updated_at,
+          builtin: true,
+        };
+        await storage.putSource(meta);
+        imported.push(meta);
+      } catch {
+        // Skip this source on fetch failure — keep whatever was already stored.
+      }
+    }
+
+    const merged = [...existingById.values()];
+    for (const m of imported) {
+      const i = merged.findIndex((s) => s.id === m.id);
+      if (i === -1) merged.push(m);
+      else merged[i] = m;
+    }
+
+    if (imported.length === 0) return merged;
+    for (const m of imported) invalidateRecipeCache(m.id);
+    setSources(merged);
+    setSelectedSources((prev) => {
+      const set = new Set(prev);
+      for (const m of imported) {
+        if (m.active) set.add(m.id);
+        else set.delete(m.id);
+      }
+      return [...set];
+    });
+    return merged;
+  };
+
+  /** Hide a built-in source from the Sources list without deleting its data (it can reappear on the next manifest refresh if re-imported). */
+  const hideSource = (id: string): void => {
+    updateSource(id, { hidden: true, active: false });
+    setSelectedSources((prev) => prev.filter((s) => s !== id));
+  };
+
+  /**
+   * U4 autocomplete: build a ranked ingredient-word vocabulary from every
+   * enriched source's recipe tokens, once per session (not rebuilt as
+   * sources change later — see the mount effect below).
+   */
+  const buildVocabulary = async (sourcesToScan: SourceMeta[]): Promise<void> => {
+    const freq = new Map<string, number>();
+    for (const meta of sourcesToScan) {
+      if (meta.enrichedCount === 0) continue;
+      const recipes = await getRecipesCached(meta.id);
+      for (const recipe of recipes) {
+        for (const line of recipe.ingredients) {
+          for (const word of tokenise(line)) {
+            freq.set(word, (freq.get(word) ?? 0) + 1);
+          }
+        }
+      }
+    }
+    const ranked = [...freq.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, VOCABULARY_SIZE)
+      .map(([word]) => word);
+    setVocabulary(ranked);
+  };
+
   const addSource = async (): Promise<void> => {
     setSourceError("");
     setSourceSuccess("");
@@ -125,14 +306,13 @@ export default function App() {
       return;
     }
 
-    const newSrc: Source = {
+    const newSrc: SourceMeta = {
       id: makeId(newSourceName),
       name: newSourceName.trim(),
       url,
       emoji: pickEmoji(newSourceName),
       active: true,
       index: null,
-      enrichedIndex: null,
       indexedAt: null,
       indexCount: 0,
       enrichedCount: 0,
@@ -141,32 +321,25 @@ export default function App() {
     setNewSourceName("");
     setNewSourceUrl("");
 
-    setSources((prev) => {
-      const next = [...prev, newSrc];
-      persistSources(next);
-      return next;
-    });
+    setSources((prev) => [...prev, newSrc]);
+    storage.putSource(newSrc);
     setSelectedSources((prev) => [...prev, newSrc.id]);
     setIndexing(newSrc.id);
 
     try {
       const data = await indexSource(url);
-      setSources((prev) => {
-        const next = prev.map((s) =>
-          s.id === newSrc.id
-            ? { ...s, index: data.recipes, indexedAt: data.indexed_at, indexCount: data.count }
-            : s,
-        );
-        persistSources(next);
-        return next;
-      });
-      setSourceSuccess(`✓ "${newSrc.name}" added — ${data.count} recipes indexed. Click "Enrich now" to enable ingredient search.`);
+      updateSource(newSrc.id, { index: data.recipes, indexedAt: data.indexed_at, indexCount: data.count });
+      setIndexing(null);
+      // U7: chain straight into enrichment — no separate manual step for a new source.
+      // Session 1's incremental writes mean it's searchable before this finishes.
+      await enrichSource(newSrc.id, data.recipes);
+      setSourceSuccess(`✓ "${newSrc.name}" ready — ${data.count} recipes searchable.`);
     } catch (err) {
       setSourceError(
         `"${newSrc.name}" added but indexing failed: ${errorMessage(err)}. You can re-index from the source list.`,
       );
-    } finally {
       setIndexing(null);
+    } finally {
       scheduleClearMessages();
     }
   };
@@ -179,15 +352,7 @@ export default function App() {
     setSourceSuccess("");
     try {
       const data = await indexSource(src.url);
-      setSources((prev) => {
-        const next = prev.map((s) =>
-          s.id === id
-            ? { ...s, index: data.recipes, indexedAt: data.indexed_at, indexCount: data.count }
-            : s,
-        );
-        persistSources(next);
-        return next;
-      });
+      updateSource(id, { index: data.recipes, indexedAt: data.indexed_at, indexCount: data.count });
       setSourceSuccess(`✓ "${src.name}" re-indexed — ${data.count} recipes found.`);
     } catch (err) {
       setSourceError(`Re-indexing failed: ${errorMessage(err)}`);
@@ -197,24 +362,40 @@ export default function App() {
     }
   };
 
-  const enrichSource = async (id: string): Promise<void> => {
-    const src = sources.find((s) => s.id === id);
-    if (!src || !src.index || src.index.length === 0) return;
+  const cancelEnrich = (): void => {
+    enrichCancelRef.current = true;
+  };
 
+  /**
+   * `indexOverride` lets addSource chain straight into enrichment (U7) with
+   * the just-fetched index, instead of reading `sources` state — which
+   * hasn't re-rendered yet and would still be missing it at that point.
+   */
+  const enrichSource = async (id: string, indexOverride?: IndexEntry[]): Promise<void> => {
+    const urls = indexOverride ?? sources.find((s) => s.id === id)?.index;
+    if (!urls || urls.length === 0) return;
+
+    enrichCancelRef.current = false;
     setEnriching(id);
-    setEnrichProgress({ done: 0, total: src.index.length });
 
-    const enriched: EnrichedEntry[] = [];
-    const urls = src.index;
+    const alreadyDone = await storage.getRecipeUrlsBySource(id);
+    const remaining = urls.filter((u) => !alreadyDone.has(u.url));
+    let enrichedCount = alreadyDone.size;
+    let attempted = alreadyDone.size;
+    setEnrichProgress({ done: attempted, total: urls.length });
 
-    for (let i = 0; i < urls.length; i += ENRICH_CONCURRENCY) {
-      const batch = urls.slice(i, i + ENRICH_CONCURRENCY);
+    for (let i = 0; i < remaining.length; i += ENRICH_CONCURRENCY) {
+      if (enrichCancelRef.current) break;
+
+      const batch = remaining.slice(i, i + ENRICH_CONCURRENCY);
       const settled = await Promise.allSettled(batch.map((entry) => fetchRecipe(entry.url)));
 
+      const batchRecords: RecipeRecord[] = [];
       settled.forEach((result, j) => {
         if (result.status === "fulfilled" && result.value.ingredients.length > 0) {
           const data = result.value;
-          enriched.push({
+          batchRecords.push({
+            sourceId: id,
             title: batch[j].title,
             url: batch[j].url,
             ingredients: data.ingredients,
@@ -225,104 +406,129 @@ export default function App() {
             servings: data.servings,
             image: data.image,
             instructionCount: data.instructions.length,
+            tokens: data.ingredients.map(tokensForIngredientLine),
           });
         }
       });
 
-      const done = Math.min(i + ENRICH_CONCURRENCY, urls.length);
-      setEnrichProgress({ done, total: urls.length });
-
-      // Save progress every 10 batches (50 recipes) so data isn't lost on close
-      if (enriched.length > 0 && (i / ENRICH_CONCURRENCY) % 10 === 9) {
-        setSources((prev) => {
-          const next = prev.map((s) =>
-            s.id === id ? { ...s, enrichedIndex: [...enriched], enrichedCount: enriched.length } : s,
-          );
-          persistSources(next);
-          return next;
-        });
+      // Write each batch immediately so progress survives a closed tab or a cancel.
+      if (batchRecords.length > 0) {
+        await storage.putRecipes(batchRecords);
+        invalidateRecipeCache(id);
+        enrichedCount += batchRecords.length;
+        updateSource(id, { enrichedCount });
       }
 
-      if (i + ENRICH_CONCURRENCY < urls.length) {
+      attempted += batch.length;
+      setEnrichProgress({ done: Math.min(attempted, urls.length), total: urls.length });
+
+      if (i + ENRICH_CONCURRENCY < remaining.length && !enrichCancelRef.current) {
         await new Promise((r) => setTimeout(r, ENRICH_DELAY_MS));
       }
     }
 
-    const enrichedAt = new Date().toISOString();
-    setSources((prev) => {
-      const next = prev.map((s) =>
-        s.id === id
-          ? { ...s, enrichedIndex: enriched, enrichedCount: enriched.length, enrichedAt }
-          : s,
-      );
-      persistSources(next);
-      return next;
-    });
+    if (!enrichCancelRef.current) {
+      updateSource(id, { enrichedAt: new Date().toISOString() });
+    }
     setEnriching(null);
+    enrichCancelRef.current = false;
   };
 
   const removeSource = (id: string): void => {
-    setSources((prev) => {
-      const next = prev.filter((s) => s.id !== id);
-      persistSources(next);
-      return next;
-    });
+    setSources((prev) => prev.filter((s) => s.id !== id));
     setSelectedSources((prev) => prev.filter((s) => s !== id));
+    invalidateRecipeCache(id);
+    storage.deleteSource(id);
   };
 
   const toggleSource = (id: string): void => {
     const nowActive = !selectedSources.includes(id);
-    setSources((prev) => {
-      const next = prev.map((s) => (s.id === id ? { ...s, active: nowActive } : s));
-      persistSources(next);
-      return next;
-    });
+    updateSource(id, { active: nowActive });
     setSelectedSources((p) => (nowActive ? [...p, id] : p.filter((s) => s !== id)));
   };
 
   // ── Search ────────────────────────────────────────────────────────────────
-  const handleSearch = (entries: IngredientEntry[]): void => {
+  const handleSearch = async (): Promise<void> => {
     setError("");
-    if (entries.length === 0) {
-      setError("Please enter at least one ingredient.");
+    // U9: the favourites view lists every favourited recipe regardless of
+    // ingredients entered, so it's exempt from the "no ingredients" guard.
+    if (entries.length === 0 && !showFavouritesOnly) {
+      setResults([]);
       return;
     }
     const activeEnrichedSources = sources.filter(
       (s) => selectedSources.includes(s.id) && s.enrichedCount > 0,
     );
     if (activeEnrichedSources.length === 0) {
+      setResults([]);
       setError(
-        'No enriched sources selected. Go to Sources tab and click "Enrich now" to enable ingredient search.',
+        "No sources selected. Enable one above, or add and enrich a custom source in the Sources tab.",
       );
       return;
     }
-    const found = searchRecipes(entries, cupboard, sources, selectedSources);
-    setResults(found);
-    if (found.length === 0) {
-      setError("No matches found above 25%. Try fewer or more general ingredients.");
+    const sourcesWithRecipes = await Promise.all(
+      activeEnrichedSources.map(async (meta) => ({ meta, recipes: await getRecipesCached(meta.id) })),
+    );
+    // Favourites view ignores the match threshold — a favourite should show
+    // up even at 0% match — and is filtered down to favourited URLs after.
+    const found = searchRecipes(entries, cupboard, sourcesWithRecipes, showFavouritesOnly ? 0 : matchThreshold);
+    const finalResults = showFavouritesOnly ? found.filter((r) => favourites.has(r.sourceUrl)) : found;
+    setResults(finalResults);
+    if (finalResults.length === 0) {
+      setError(
+        showFavouritesOnly
+          ? "No favourites yet — star a recipe to save it here."
+          : `No matches found above ${matchThreshold}%. Try fewer ingredients, more general terms, or lowering the threshold.`,
+      );
     }
   };
 
+  // U5: live search — re-run automatically (debounced) as ingredients, the
+  // cupboard, selected sources, the match threshold, or the favourites view change.
+  useEffect(() => {
+    if (searchDebounceRef.current) clearTimeout(searchDebounceRef.current);
+    searchDebounceRef.current = setTimeout(() => {
+      handleSearch();
+    }, SEARCH_DEBOUNCE_MS);
+    return () => {
+      if (searchDebounceRef.current) clearTimeout(searchDebounceRef.current);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [entries, cupboard, selectedSources, matchThreshold, showFavouritesOnly, favourites]);
+
   // ── Render ────────────────────────────────────────────────────────────────
+  const visibleSources = sources.filter((s) => !s.hidden);
+
   return (
     <div style={styles.app}>
-      <Header activeTab={activeTab} onTabChange={setActiveTab} />
+      <style>{globalCss(tokens)}</style>
+      <Header activeTab={activeTab} onTabChange={setActiveTab} theme={theme} onToggleTheme={toggleTheme} />
       <main style={styles.main}>
         {activeTab === "search" && (
           <SearchTab
-            sources={sources}
+            sources={visibleSources}
             selectedSources={selectedSources}
             onToggleSource={toggleSource}
+            entries={entries}
+            onAddIngredient={addIngredient}
+            onToggleRequired={toggleRequired}
+            onRemoveEntry={removeEntry}
+            vocabulary={vocabulary}
             error={error}
-            onSearch={handleSearch}
             results={results}
+            matchThreshold={matchThreshold}
+            onThresholdChange={setThreshold}
+            favourites={favourites}
+            onToggleFavourite={toggleFavourite}
+            showFavouritesOnly={showFavouritesOnly}
+            onToggleFavouritesOnly={() => setShowFavouritesOnly((v) => !v)}
             onGoToSourcesTab={() => setActiveTab("sources")}
           />
         )}
 
         {activeTab === "sources" && (
           <SourcesTab
-            sources={sources}
+            sources={visibleSources}
             selectedSources={selectedSources}
             newSourceName={newSourceName}
             newSourceUrl={newSourceUrl}
@@ -338,6 +544,8 @@ export default function App() {
             onRemove={removeSource}
             onReindex={reindexSource}
             onEnrich={enrichSource}
+            onCancelEnrich={cancelEnrich}
+            onHide={hideSource}
           />
         )}
 
