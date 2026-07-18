@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   refresh:
@@ -22,6 +23,7 @@ jobs:
         run: node scripts/build-index.mjs
 
       - name: Commit data if changed
+        id: commit
         run: |
           if [ -n "$(git status --porcelain data)" ]; then
             git config user.name "github-actions[bot]"
@@ -29,6 +31,16 @@ jobs:
             git add data
             git commit -m "chore(data): refresh recipe index"
             git push
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
           else
             echo "No changes to data/ — skipping commit."
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
           fi
+
+      # A push made with GITHUB_TOKEN never triggers other workflows, so the
+      # Pages deploy must be dispatched explicitly for refreshed data to ship.
+      - name: Deploy refreshed data to Pages
+        if: steps.commit.outputs.pushed == 'true' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy-pages.yml --ref main --repo "$GITHUB_REPOSITORY"
