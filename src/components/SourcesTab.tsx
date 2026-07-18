@@ -226,9 +226,15 @@ export default function SourcesTab({
                 }}
               >
                 {isBuiltin ? (
-                  <span style={{ fontSize: "0.7rem", color: t.success }}>
-                    ✓ {src.enrichedCount} recipes ready to search — no indexing or enriching needed
-                  </span>
+                  hasEnriched ? (
+                    <span style={{ fontSize: "0.7rem", color: t.success }}>
+                      ✓ {src.enrichedCount} recipes ready to search — no indexing or enriching needed
+                    </span>
+                  ) : (
+                    <span style={{ fontSize: "0.7rem", color: t.danger }}>
+                      ⚠ No recipes in the latest update for this source — it will be retried on the next weekly refresh
+                    </span>
+                  )
                 ) : isFirstPass ? (
                   <>
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
