@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T08:28:52.870Z",
+  "generated_at": "2026-07-20T06:33:32.350Z",
   "sources": [
     {
       "id": "recipetineats",
@@ -8,7 +8,7 @@
       "emoji": "🍜",
       "count": 1495,
       "file": "recipetineats.json",
-      "updated_at": "2026-07-18T08:20:27.113Z"
+      "updated_at": "2026-07-20T06:24:10.339Z"
     },
     {
       "id": "bbcgoodfood",
@@ -17,7 +17,7 @@
       "emoji": "🥘",
       "count": 1996,
       "file": "bbcgoodfood.json",
-      "updated_at": "2026-07-18T08:28:52.869Z"
+      "updated_at": "2026-07-20T06:33:32.349Z"
     }
   ]
 }

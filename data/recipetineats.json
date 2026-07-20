@@ -274330,6 +274330,125 @@
   },
   {
     "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/french-chicken-au-poivre-sauce/",
+    "title": "JB's Chicken au Poivre (Creamy Peppercorn Sauce)",
+    "ingredients": [
+      "2  large chicken breasts (, skinless &amp; boneless (250–300g / 8–10oz each) (Note 1))",
+      "3/4 tsp cooking salt / kosher salt",
+      "2 tbsp vegetable oil (, or any other neutral flavoured oil)",
+      "2 tsp whole black peppercorns (, coarsely crushed (Note 2))",
+      "1/3 cup brandy or cognac  (, or marsala (Note 3))",
+      "1 1/2 cups beef stock / broth (, low sodium (Note 4))",
+      "3/4 cup thickened / heavy cream (, or any other full fat cream)"
+    ],
+    "cuisine": "French",
+    "mealType": null,
+    "totalTime": "28 mins",
+    "totalTimeMinutes": 28,
+    "servings": "4, 4 people",
+    "image": "https://www.recipetineats.com/tachyon/2026/02/Chicken-Au-Poivre_4-copy.jpg",
+    "instructionCount": 4,
+    "tokens": [
+      {
+        "all": [
+          "chicken",
+          "breast",
+          "skinles",
+          "amp",
+          "boneles",
+          "each",
+          "note"
+        ],
+        "strict": [
+          "chicken",
+          "breast"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "vegetable",
+          "oil",
+          "any",
+          "other",
+          "neutral",
+          "flavoured"
+        ],
+        "strict": [
+          "vegetable",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "peppercorn",
+          "coarsely",
+          "crushed",
+          "note"
+        ],
+        "strict": [
+          "black",
+          "peppercorn"
+        ]
+      },
+      {
+        "all": [
+          "brandy",
+          "cognac",
+          "marsala",
+          "note"
+        ],
+        "strict": [
+          "brandy"
+        ]
+      },
+      {
+        "all": [
+          "beef",
+          "stock",
+          "broth",
+          "low",
+          "sodium",
+          "note"
+        ],
+        "strict": [
+          "beef",
+          "stock",
+          "broth"
+        ]
+      },
+      {
+        "all": [
+          "thickened",
+          "heavy",
+          "cream",
+          "any",
+          "other",
+          "full",
+          "fat"
+        ],
+        "strict": [
+          "thickened",
+          "heavy",
+          "cream"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/tres-leches-cake/",
     "title": "Tres Leches Cake",
     "ingredients": [
@@ -274554,125 +274673,6 @@
         "strict": [
           "cinnamon",
           "powder"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/french-chicken-au-poivre-sauce/",
-    "title": "JB's Chicken au Poivre (Creamy Peppercorn Sauce)",
-    "ingredients": [
-      "2  large chicken breasts (, skinless &amp; boneless (250–300g / 8–10oz each) (Note 1))",
-      "3/4 tsp cooking salt / kosher salt",
-      "2 tbsp vegetable oil (, or any other neutral flavoured oil)",
-      "2 tsp whole black peppercorns (, coarsely crushed (Note 2))",
-      "1/3 cup brandy or cognac  (, or marsala (Note 3))",
-      "1 1/2 cups beef stock / broth (, low sodium (Note 4))",
-      "3/4 cup thickened / heavy cream (, or any other full fat cream)"
-    ],
-    "cuisine": "French",
-    "mealType": null,
-    "totalTime": "28 mins",
-    "totalTimeMinutes": 28,
-    "servings": "4, 4 people",
-    "image": "https://www.recipetineats.com/tachyon/2026/02/Chicken-Au-Poivre_4-copy.jpg",
-    "instructionCount": 4,
-    "tokens": [
-      {
-        "all": [
-          "chicken",
-          "breast",
-          "skinles",
-          "amp",
-          "boneles",
-          "each",
-          "note"
-        ],
-        "strict": [
-          "chicken",
-          "breast"
-        ]
-      },
-      {
-        "all": [
-          "cooking",
-          "salt",
-          "kosher"
-        ],
-        "strict": [
-          "cooking",
-          "salt",
-          "kosher"
-        ]
-      },
-      {
-        "all": [
-          "vegetable",
-          "oil",
-          "any",
-          "other",
-          "neutral",
-          "flavoured"
-        ],
-        "strict": [
-          "vegetable",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "black",
-          "peppercorn",
-          "coarsely",
-          "crushed",
-          "note"
-        ],
-        "strict": [
-          "black",
-          "peppercorn"
-        ]
-      },
-      {
-        "all": [
-          "brandy",
-          "cognac",
-          "marsala",
-          "note"
-        ],
-        "strict": [
-          "brandy"
-        ]
-      },
-      {
-        "all": [
-          "beef",
-          "stock",
-          "broth",
-          "low",
-          "sodium",
-          "note"
-        ],
-        "strict": [
-          "beef",
-          "stock",
-          "broth"
-        ]
-      },
-      {
-        "all": [
-          "thickened",
-          "heavy",
-          "cream",
-          "any",
-          "other",
-          "full",
-          "fat"
-        ],
-        "strict": [
-          "thickened",
-          "heavy",
-          "cream"
         ]
       }
     ]
