@@ -32080,121 +32080,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/trio-bruschetta-celery-lime-bruschetta/",
-    "title": "Trio of Bruschetta: Celery and Lime Bruschetta",
-    "ingredients": [
-      "4 slices of good quality crusty bread like sourdough or ciabatta (, sliced 1cm/0.5\" thick, preferably slightly stale)",
-      "1  garlic clove (, halved (unpeeled))",
-      "6  large sticks of celery",
-      "1  garlic clove (, peeled)",
-      "4 tbsp extra virgin olive oil",
-      "1 tbsp lime juice",
-      "1/4 tsp salt (, plus more to taste)",
-      "Black pepper"
-    ],
-    "cuisine": null,
-    "mealType": null,
-    "totalTime": "10 mins",
-    "totalTimeMinutes": 10,
-    "servings": "4",
-    "image": "https://www.recipetineats.com/tachyon/2014/07/Celery-and-Lime-Bruschetta-1.jpg",
-    "instructionCount": 3,
-    "tokens": [
-      {
-        "all": [
-          "crusty",
-          "bread",
-          "like",
-          "sourdough",
-          "ciabatta",
-          "thick",
-          "preferably",
-          "slightly",
-          "stale"
-        ],
-        "strict": [
-          "crusty",
-          "bread",
-          "like",
-          "sourdough"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "clove",
-          "halved",
-          "unpeeled"
-        ],
-        "strict": [
-          "garlic",
-          "clove"
-        ]
-      },
-      {
-        "all": [
-          "stick",
-          "celery"
-        ],
-        "strict": [
-          "stick",
-          "celery"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "clove",
-          "peeled"
-        ],
-        "strict": [
-          "garlic",
-          "clove"
-        ]
-      },
-      {
-        "all": [
-          "olive",
-          "oil"
-        ],
-        "strict": [
-          "olive",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "lime",
-          "juice"
-        ],
-        "strict": [
-          "lime",
-          "juice"
-        ]
-      },
-      {
-        "all": [
-          "salt",
-          "more"
-        ],
-        "strict": [
-          "salt"
-        ]
-      },
-      {
-        "all": [
-          "black",
-          "pepper"
-        ],
-        "strict": [
-          "black",
-          "pepper"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/lemon-cannellini-bean-bruschetta/",
     "title": "Trio of Bruschetta: Lemon Cannellini Bean",
     "ingredients": [
@@ -32306,6 +32191,121 @@
         ],
         "strict": [
           "salt",
+          "pepper"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/trio-bruschetta-celery-lime-bruschetta/",
+    "title": "Trio of Bruschetta: Celery and Lime Bruschetta",
+    "ingredients": [
+      "4 slices of good quality crusty bread like sourdough or ciabatta (, sliced 1cm/0.5\" thick, preferably slightly stale)",
+      "1  garlic clove (, halved (unpeeled))",
+      "6  large sticks of celery",
+      "1  garlic clove (, peeled)",
+      "4 tbsp extra virgin olive oil",
+      "1 tbsp lime juice",
+      "1/4 tsp salt (, plus more to taste)",
+      "Black pepper"
+    ],
+    "cuisine": null,
+    "mealType": null,
+    "totalTime": "10 mins",
+    "totalTimeMinutes": 10,
+    "servings": "4",
+    "image": "https://www.recipetineats.com/tachyon/2014/07/Celery-and-Lime-Bruschetta-1.jpg",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "crusty",
+          "bread",
+          "like",
+          "sourdough",
+          "ciabatta",
+          "thick",
+          "preferably",
+          "slightly",
+          "stale"
+        ],
+        "strict": [
+          "crusty",
+          "bread",
+          "like",
+          "sourdough"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clove",
+          "halved",
+          "unpeeled"
+        ],
+        "strict": [
+          "garlic",
+          "clove"
+        ]
+      },
+      {
+        "all": [
+          "stick",
+          "celery"
+        ],
+        "strict": [
+          "stick",
+          "celery"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clove",
+          "peeled"
+        ],
+        "strict": [
+          "garlic",
+          "clove"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "lime",
+          "juice"
+        ],
+        "strict": [
+          "lime",
+          "juice"
+        ]
+      },
+      {
+        "all": [
+          "salt",
+          "more"
+        ],
+        "strict": [
+          "salt"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
           "pepper"
         ]
       }
@@ -32755,72 +32755,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/japanese-salmon-mirin-soy-sauce/",
-    "title": "Japanese Salmon with Mirin and Soy Sauce",
-    "ingredients": [
-      "2  salmon fillets ((5 oz / 150 g each))",
-      "1 tbsp soy sauce",
-      "3 tbsp mirin",
-      "1 tbsp sake",
-      "1/2 tbsp oil"
-    ],
-    "cuisine": "Asian, Japanese",
-    "mealType": null,
-    "totalTime": "7 mins",
-    "totalTimeMinutes": 7,
-    "servings": "2",
-    "image": "https://www.recipetineats.com/tachyon/2014/07/Salmon-Soy-Mirin.jpg",
-    "instructionCount": 5,
-    "tokens": [
-      {
-        "all": [
-          "salmon",
-          "fillet",
-          "each"
-        ],
-        "strict": [
-          "salmon",
-          "fillet"
-        ]
-      },
-      {
-        "all": [
-          "soy",
-          "sauce"
-        ],
-        "strict": [
-          "soy",
-          "sauce"
-        ]
-      },
-      {
-        "all": [
-          "mirin"
-        ],
-        "strict": [
-          "mirin"
-        ]
-      },
-      {
-        "all": [
-          "sake"
-        ],
-        "strict": [
-          "sake"
-        ]
-      },
-      {
-        "all": [
-          "oil"
-        ],
-        "strict": [
-          "oil"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/smoked-salmon-potato-rosti-stack/",
     "title": "Smoked Salmon Potato Rosti Stack",
     "ingredients": [
@@ -32916,6 +32850,72 @@
         "strict": [
           "dill",
           "garnish"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/japanese-salmon-mirin-soy-sauce/",
+    "title": "Japanese Salmon with Mirin and Soy Sauce",
+    "ingredients": [
+      "2  salmon fillets ((5 oz / 150 g each))",
+      "1 tbsp soy sauce",
+      "3 tbsp mirin",
+      "1 tbsp sake",
+      "1/2 tbsp oil"
+    ],
+    "cuisine": "Asian, Japanese",
+    "mealType": null,
+    "totalTime": "7 mins",
+    "totalTimeMinutes": 7,
+    "servings": "2",
+    "image": "https://www.recipetineats.com/tachyon/2014/07/Salmon-Soy-Mirin.jpg",
+    "instructionCount": 5,
+    "tokens": [
+      {
+        "all": [
+          "salmon",
+          "fillet",
+          "each"
+        ],
+        "strict": [
+          "salmon",
+          "fillet"
+        ]
+      },
+      {
+        "all": [
+          "soy",
+          "sauce"
+        ],
+        "strict": [
+          "soy",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "mirin"
+        ],
+        "strict": [
+          "mirin"
+        ]
+      },
+      {
+        "all": [
+          "sake"
+        ],
+        "strict": [
+          "sake"
+        ]
+      },
+      {
+        "all": [
+          "oil"
+        ],
+        "strict": [
+          "oil"
         ]
       }
     ]
@@ -39543,237 +39543,6 @@
         "strict": [
           "garlic",
           "bulb"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/slow-cooked-shredded-beef-ragu-pasta/",
-    "title": "Slow Cooked Shredded Beef Ragu Pasta",
-    "ingredients": [
-      "1.2kg  / 2.5 lb  chuck beef  (or other slow cooking beef cut, cut into equal 4 pieces (Note 1))",
-      "1 tbsp salt",
-      "Black pepper",
-      "3 tbsp olive oil (, separated)",
-      "3 cloves garlic (, minced)",
-      "1  onion (, diced)",
-      "1 cup carrots (, diced (Note 2))",
-      "1 cup celery (, diced (Note 2))",
-      "800g / 28oz  crushed canned tomatoes",
-      "3 tbsp tomato paste",
-      "2  beef bouillon cubes (, crumbled (Note 3))",
-      "1 cup / 250ml  red wine (, full bodied  (like merlot, cabernet sauvignon), or sub with beef broth/stock)",
-      "1 1/2 cups / 375 ml  water ((Note 3))",
-      "3/4 tsp dried thyme ( or 3 sprigs fresh thyme)",
-      "3  dried bay leaves",
-      "1 lb /500g   dried pappardelle (, or other pasta of choice (Note 4))",
-      "Freshly grated parmesan cheese or parmigiano reggiano",
-      "Fresh parsley (, finely chopped (optional))"
-    ],
-    "cuisine": "Italian",
-    "mealType": null,
-    "totalTime": "170 mins",
-    "totalTimeMinutes": 170,
-    "servings": "5, 5 - 6 people",
-    "image": "https://www.recipetineats.com/tachyon/2017/07/Beef-Ragu-11a.jpg",
-    "instructionCount": 9,
-    "tokens": [
-      {
-        "all": [
-          "chuck",
-          "beef",
-          "other",
-          "slow",
-          "cooking",
-          "cut",
-          "equal",
-          "note"
-        ],
-        "strict": [
-          "chuck",
-          "beef"
-        ]
-      },
-      {
-        "all": [
-          "salt"
-        ],
-        "strict": [
-          "salt"
-        ]
-      },
-      {
-        "all": [
-          "black",
-          "pepper"
-        ],
-        "strict": [
-          "black",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "olive",
-          "oil",
-          "separated"
-        ],
-        "strict": [
-          "olive",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "garlic"
-        ],
-        "strict": [
-          "garlic"
-        ]
-      },
-      {
-        "all": [
-          "onion"
-        ],
-        "strict": [
-          "onion"
-        ]
-      },
-      {
-        "all": [
-          "carrot",
-          "note"
-        ],
-        "strict": [
-          "carrot"
-        ]
-      },
-      {
-        "all": [
-          "celery",
-          "note"
-        ],
-        "strict": [
-          "celery"
-        ]
-      },
-      {
-        "all": [
-          "crushed",
-          "canned",
-          "tomato"
-        ],
-        "strict": [
-          "crushed",
-          "canned",
-          "tomato"
-        ]
-      },
-      {
-        "all": [
-          "tomato",
-          "paste"
-        ],
-        "strict": [
-          "tomato",
-          "paste"
-        ]
-      },
-      {
-        "all": [
-          "beef",
-          "bouillon",
-          "cub",
-          "crumbled",
-          "note"
-        ],
-        "strict": [
-          "beef",
-          "bouillon",
-          "cub"
-        ]
-      },
-      {
-        "all": [
-          "red",
-          "wine",
-          "full",
-          "bodied",
-          "like",
-          "merlot",
-          "cabernet",
-          "sauvignon",
-          "sub",
-          "beef",
-          "broth",
-          "stock"
-        ],
-        "strict": [
-          "red",
-          "wine"
-        ]
-      },
-      {
-        "all": [
-          "water",
-          "note"
-        ],
-        "strict": [
-          "water"
-        ]
-      },
-      {
-        "all": [
-          "thyme"
-        ],
-        "strict": [
-          "thyme"
-        ]
-      },
-      {
-        "all": [
-          "bay",
-          "leaf"
-        ],
-        "strict": [
-          "bay",
-          "leaf"
-        ]
-      },
-      {
-        "all": [
-          "pappardelle",
-          "other",
-          "pasta",
-          "choice",
-          "note"
-        ],
-        "strict": [
-          "pappardelle"
-        ]
-      },
-      {
-        "all": [
-          "freshly",
-          "parmesan",
-          "cheese",
-          "parmigiano",
-          "reggiano"
-        ],
-        "strict": [
-          "freshly",
-          "parmesan",
-          "cheese"
-        ]
-      },
-      {
-        "all": [
-          "parsley",
-          "finely"
-        ],
-        "strict": [
-          "parsley"
         ]
       }
     ]
@@ -72217,163 +71986,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/chocolate-self-saucing-pudding/",
-    "title": "Chocolate Self Saucing Pudding",
-    "ingredients": [
-      "1 cup (175g)  brown sugar (, loosely packed (Note 1))",
-      "1/4 cup (30g)  cocoa powder (, unsweetened (Note 2))",
-      "1 1/4 cups (315ml)  boiling water",
-      "1 cup (150g)  plain flour ((all purpose flour))",
-      "2 1/2 tsp baking powder",
-      "1/3 cup (70g)  white sugar (, preferably caster/super fine but ordinary ok)",
-      "1/4 cup (30g)  cocoa powder (, unsweetened (Note 2))",
-      "Pinch of salt",
-      "1/2 cup (125ml)  milk",
-      "50 g / 4 1/2 tbsp   butter (, melted)",
-      "1  egg",
-      "1 tsp vanilla extract"
-    ],
-    "cuisine": null,
-    "mealType": "Dessert",
-    "totalTime": "40 mins",
-    "totalTimeMinutes": 40,
-    "servings": "5, 5 -6",
-    "image": "https://www.recipetineats.com/tachyon/2016/11/Chocolate-Self-Saucing-Pudding-4-SQ.jpg",
-    "instructionCount": 10,
-    "tokens": [
-      {
-        "all": [
-          "brown",
-          "sugar",
-          "loosely",
-          "packed",
-          "note"
-        ],
-        "strict": [
-          "brown",
-          "sugar"
-        ]
-      },
-      {
-        "all": [
-          "cocoa",
-          "powder",
-          "unsweetened",
-          "note"
-        ],
-        "strict": [
-          "cocoa",
-          "powder"
-        ]
-      },
-      {
-        "all": [
-          "boiling",
-          "water"
-        ],
-        "strict": [
-          "boiling",
-          "water"
-        ]
-      },
-      {
-        "all": [
-          "plain",
-          "flour",
-          "all",
-          "purpose"
-        ],
-        "strict": [
-          "plain",
-          "flour"
-        ]
-      },
-      {
-        "all": [
-          "baking",
-          "powder"
-        ],
-        "strict": [
-          "baking",
-          "powder"
-        ]
-      },
-      {
-        "all": [
-          "white",
-          "sugar",
-          "preferably",
-          "caster",
-          "super",
-          "but",
-          "ordinary"
-        ],
-        "strict": [
-          "white",
-          "sugar"
-        ]
-      },
-      {
-        "all": [
-          "cocoa",
-          "powder",
-          "unsweetened",
-          "note"
-        ],
-        "strict": [
-          "cocoa",
-          "powder"
-        ]
-      },
-      {
-        "all": [
-          "pinch",
-          "salt"
-        ],
-        "strict": [
-          "pinch",
-          "salt"
-        ]
-      },
-      {
-        "all": [
-          "milk"
-        ],
-        "strict": [
-          "milk"
-        ]
-      },
-      {
-        "all": [
-          "butter",
-          "melted"
-        ],
-        "strict": [
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "egg"
-        ],
-        "strict": [
-          "egg"
-        ]
-      },
-      {
-        "all": [
-          "vanilla",
-          "extract"
-        ],
-        "strict": [
-          "vanilla",
-          "extract"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/singapore-noodles/",
     "title": "Singapore Noodles",
     "ingredients": [
@@ -76786,103 +76398,6 @@
         ],
         "strict": [
           "salt"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/vietnamese-pickled-carrots-daikon/",
-    "title": "Vietnamese pickled carrots and daikon (radish)",
-    "ingredients": [
-      "2  medium carrots (, peeled cut into 3mm / 1/10&quot; batons (Note 1))",
-      "1/2  large daikon (white radish) (, peeled, cut the same as carrots (Note 1))",
-      "1 1/2 cups boiling water",
-      "1/2 cup white sugar",
-      "4 tsp cooking / kosher salt",
-      "3/4 cup rice wine vinegar ((sub apple cider vinegar))"
-    ],
-    "cuisine": "Vietnamese",
-    "mealType": null,
-    "totalTime": null,
-    "totalTimeMinutes": null,
-    "servings": "4, 4 cups",
-    "image": "https://www.recipetineats.com/tachyon/2024/03/Vietnamese-pickled-carrot-and-daikon_9.jpg",
-    "instructionCount": 4,
-    "tokens": [
-      {
-        "all": [
-          "carrot",
-          "peeled",
-          "cut",
-          "quot",
-          "baton",
-          "note"
-        ],
-        "strict": [
-          "carrot"
-        ]
-      },
-      {
-        "all": [
-          "daikon",
-          "white",
-          "radish",
-          "peeled",
-          "cut",
-          "same",
-          "carrot",
-          "note"
-        ],
-        "strict": [
-          "daikon"
-        ]
-      },
-      {
-        "all": [
-          "boiling",
-          "water"
-        ],
-        "strict": [
-          "boiling",
-          "water"
-        ]
-      },
-      {
-        "all": [
-          "white",
-          "sugar"
-        ],
-        "strict": [
-          "white",
-          "sugar"
-        ]
-      },
-      {
-        "all": [
-          "cooking",
-          "kosher",
-          "salt"
-        ],
-        "strict": [
-          "cooking",
-          "kosher",
-          "salt"
-        ]
-      },
-      {
-        "all": [
-          "rice",
-          "wine",
-          "vinegar",
-          "sub",
-          "apple",
-          "cider"
-        ],
-        "strict": [
-          "rice",
-          "wine",
-          "vinegar"
         ]
       }
     ]
@@ -269330,226 +268845,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/crispy-shredded-halloumi-salad-with-kale/",
-    "title": "Crispy Shredded Halloumi Salad (with kale)",
-    "ingredients": [
-      "225g/ 7.9oz   halloumi (, shredded using a box grater (Note 1))",
-      "1 1/2 tbsp olive oil",
-      "1/4 cup pine nuts ((or slivered almonds))",
-      "5 tightly packed cups kale leaves (, chopped into ~1 - 1.5cm/ 0.4 - 0.6\" pieces (Note 2))",
-      "1/4  red onion (, very finely sliced then roughly chopped (~1/4 cup), or green onion finely sliced)",
-      "1/4 cup roughly chopped dill ((or parsley))",
-      "3 cups cooked white rice ((1 cup uncooked rice grains), or brown rice or quinoa, warm or cooled)",
-      "3 tbsp apple cider vinegar",
-      "1/3 cup extra virgin oil olive oil",
-      "1 tsp honey",
-      "1/2 tsp Dijon mustard",
-      "1  garlic clove (, finely grated or crushed using garlic crusher)",
-      "1/4 tsp heaped cooking salt / kosher salt ((halve for table salt, +50% for flakes))",
-      "1/8 tsp black pepper",
-      "Soft boiled egg (, halved (Note 3))"
-    ],
-    "cuisine": "Mediterranean vibes, Western",
-    "mealType": "Side",
-    "totalTime": null,
-    "totalTimeMinutes": null,
-    "servings": "4",
-    "image": "https://www.recipetineats.com/tachyon/2026/07/Crispy-shredded-halloumi-salad-with-kale-7.jpg",
-    "instructionCount": 4,
-    "tokens": [
-      {
-        "all": [
-          "halloumi",
-          "shredded",
-          "using",
-          "box",
-          "grater",
-          "note"
-        ],
-        "strict": [
-          "halloumi"
-        ]
-      },
-      {
-        "all": [
-          "olive",
-          "oil"
-        ],
-        "strict": [
-          "olive",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "pine",
-          "nut",
-          "slivered",
-          "almond"
-        ],
-        "strict": [
-          "pine",
-          "nut"
-        ]
-      },
-      {
-        "all": [
-          "tightly",
-          "packed",
-          "cup",
-          "kale",
-          "leaf",
-          "note"
-        ],
-        "strict": [
-          "tightly",
-          "packed",
-          "cup",
-          "kale",
-          "leaf"
-        ]
-      },
-      {
-        "all": [
-          "red",
-          "onion",
-          "very",
-          "finely",
-          "then",
-          "roughly",
-          "green"
-        ],
-        "strict": [
-          "red",
-          "onion"
-        ]
-      },
-      {
-        "all": [
-          "roughly",
-          "dill",
-          "parsley"
-        ],
-        "strict": [
-          "roughly",
-          "dill"
-        ]
-      },
-      {
-        "all": [
-          "white",
-          "rice",
-          "uncooked",
-          "grain",
-          "brown",
-          "quinoa",
-          "warm",
-          "cooled"
-        ],
-        "strict": [
-          "white",
-          "rice"
-        ]
-      },
-      {
-        "all": [
-          "apple",
-          "cider",
-          "vinegar"
-        ],
-        "strict": [
-          "apple",
-          "cider",
-          "vinegar"
-        ]
-      },
-      {
-        "all": [
-          "oil",
-          "olive"
-        ],
-        "strict": [
-          "oil",
-          "olive"
-        ]
-      },
-      {
-        "all": [
-          "honey"
-        ],
-        "strict": [
-          "honey"
-        ]
-      },
-      {
-        "all": [
-          "dijon",
-          "mustard"
-        ],
-        "strict": [
-          "dijon",
-          "mustard"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "clove",
-          "finely",
-          "crushed",
-          "using",
-          "crusher"
-        ],
-        "strict": [
-          "garlic",
-          "clove"
-        ]
-      },
-      {
-        "all": [
-          "heaped",
-          "cooking",
-          "salt",
-          "kosher",
-          "halve",
-          "table",
-          "flak"
-        ],
-        "strict": [
-          "heaped",
-          "cooking",
-          "salt",
-          "kosher"
-        ]
-      },
-      {
-        "all": [
-          "black",
-          "pepper"
-        ],
-        "strict": [
-          "black",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "soft",
-          "boiled",
-          "egg",
-          "halved",
-          "note"
-        ],
-        "strict": [
-          "soft",
-          "boiled",
-          "egg"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/mapo-tofu/",
     "title": "Mapo Tofu",
     "ingredients": [
@@ -274261,169 +273556,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/self-saucing-butterscotch-pudding/",
-    "title": "Self Saucing Butterscotch Pudding",
-    "ingredients": [
-      "1/4 cup dark brown sugar (, packed (Note 1))",
-      "1 1/4  cups plain flour ((all purpose flour))",
-      "2 1/2 tsp baking powder (, NOT baking soda (bi-carbonate))",
-      "100g / 7 tbsp  unsalted butter (, melted)",
-      "1  large egg ((~50-55g/2 oz in shell))",
-      "1/2 cup milk ((full or low fat))",
-      "4 tbsp (90 g)  golden syrup ((Note 2))",
-      "3/4 cup dark brown sugar (, packed (Note 2))",
-      "2 tbsp cornflour / corn starch ((I use 15 ml tbsp, if yours is 20 ml, use 6 tsp instead) (Note 3))",
-      "2 cups boiling water",
-      "Vanilla ice cream"
-    ],
-    "cuisine": "Western",
-    "mealType": "Dessert",
-    "totalTime": "40 mins",
-    "totalTimeMinutes": 40,
-    "servings": "6",
-    "image": "https://www.recipetineats.com/tachyon/2019/09/Self-Saucing-Butterscotch-Pudding_4.jpg",
-    "instructionCount": 11,
-    "tokens": [
-      {
-        "all": [
-          "dark",
-          "brown",
-          "sugar",
-          "packed",
-          "note"
-        ],
-        "strict": [
-          "dark",
-          "brown",
-          "sugar"
-        ]
-      },
-      {
-        "all": [
-          "plain",
-          "flour",
-          "all",
-          "purpose"
-        ],
-        "strict": [
-          "plain",
-          "flour"
-        ]
-      },
-      {
-        "all": [
-          "baking",
-          "powder",
-          "not",
-          "soda",
-          "carbonate"
-        ],
-        "strict": [
-          "baking",
-          "powder"
-        ]
-      },
-      {
-        "all": [
-          "unsalted",
-          "butter",
-          "melted"
-        ],
-        "strict": [
-          "unsalted",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "egg",
-          "shell"
-        ],
-        "strict": [
-          "egg"
-        ]
-      },
-      {
-        "all": [
-          "milk",
-          "full",
-          "low",
-          "fat"
-        ],
-        "strict": [
-          "milk"
-        ]
-      },
-      {
-        "all": [
-          "golden",
-          "syrup",
-          "note"
-        ],
-        "strict": [
-          "golden",
-          "syrup"
-        ]
-      },
-      {
-        "all": [
-          "dark",
-          "brown",
-          "sugar",
-          "packed",
-          "note"
-        ],
-        "strict": [
-          "dark",
-          "brown",
-          "sugar"
-        ]
-      },
-      {
-        "all": [
-          "cornflour",
-          "cornstarch",
-          "corn",
-          "starch",
-          "use",
-          "tbsp",
-          "your",
-          "instead",
-          "note"
-        ],
-        "strict": [
-          "cornflour",
-          "cornstarch",
-          "corn",
-          "starch"
-        ]
-      },
-      {
-        "all": [
-          "boiling",
-          "water"
-        ],
-        "strict": [
-          "boiling",
-          "water"
-        ]
-      },
-      {
-        "all": [
-          "vanilla",
-          "ice",
-          "cream"
-        ],
-        "strict": [
-          "vanilla",
-          "ice",
-          "cream"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/country-pork-meatballs-with-onion-gravy/",
     "title": "Country Pork Meatballs with Onion Gravy",
     "ingredients": [
@@ -274867,6 +273999,148 @@
   },
   {
     "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/easy-chocolate-brownies/",
+    "title": "Easy Chocolate Brownies",
+    "ingredients": [
+      "200g / 14 tbsp  unsalted butter ((1 3/4 US sticks))",
+      "1 1/4 cups dark chocolate chips or melts/discs ((US: semi-sweet chocolate) (Note 1))",
+      "1 cup loosely packed brown sugar",
+      "3  large eggs (, lightly beaten (fridge cold or room temp is fine))",
+      "1 tsp vanilla extract",
+      "1/2 cup plain flour (all-purpose flour)",
+      "1/4 cup cocoa powder (, sifted)",
+      "Pinch of  salt",
+      "180g / 6oz (1 cup)  dark chocolate chips, or block/bar chopped into chunks (OPTIONAL!) ((US: semi-sweet chocolate) (Note 2))"
+    ],
+    "cuisine": "South Western",
+    "mealType": null,
+    "totalTime": "35 mins",
+    "totalTimeMinutes": 35,
+    "servings": "9, 9 - 16",
+    "image": "https://www.recipetineats.com/tachyon/2020/03/Brownies_0-SQ.jpg",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "unsalted",
+          "butter",
+          "stick"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "dark",
+          "chocolate",
+          "chip",
+          "melt",
+          "disc",
+          "semi",
+          "sweet",
+          "note"
+        ],
+        "strict": [
+          "dark",
+          "chocolate",
+          "chip"
+        ]
+      },
+      {
+        "all": [
+          "loosely",
+          "packed",
+          "brown",
+          "sugar"
+        ],
+        "strict": [
+          "loosely",
+          "packed",
+          "brown",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "egg",
+          "lightly",
+          "beaten",
+          "fridge",
+          "cold",
+          "room",
+          "temp"
+        ],
+        "strict": [
+          "egg"
+        ]
+      },
+      {
+        "all": [
+          "vanilla",
+          "extract"
+        ],
+        "strict": [
+          "vanilla",
+          "extract"
+        ]
+      },
+      {
+        "all": [
+          "plain",
+          "flour",
+          "all",
+          "purpose"
+        ],
+        "strict": [
+          "plain",
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "cocoa",
+          "powder",
+          "sifted"
+        ],
+        "strict": [
+          "cocoa",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "pinch",
+          "salt"
+        ],
+        "strict": [
+          "pinch",
+          "salt"
+        ]
+      },
+      {
+        "all": [
+          "dark",
+          "chocolate",
+          "chip",
+          "block",
+          "bar",
+          "chunk",
+          "semi",
+          "sweet",
+          "note"
+        ],
+        "strict": [
+          "dark",
+          "chocolate",
+          "chip"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/country-terrine-recipe/",
     "title": "Country Terrine - pork and pistachio",
     "ingredients": [
@@ -275097,91 +274371,380 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/easy-chocolate-brownies/",
-    "title": "Easy Chocolate Brownies",
+    "url": "https://www.recipetineats.com/crispy-shredded-halloumi-salad-with-kale/",
+    "title": "Crispy Shredded Halloumi Salad (with kale)",
     "ingredients": [
-      "200g / 14 tbsp  unsalted butter ((1 3/4 US sticks))",
-      "1 1/4 cups dark chocolate chips or melts/discs ((US: semi-sweet chocolate) (Note 1))",
-      "1 cup loosely packed brown sugar",
-      "3  large eggs (, lightly beaten (fridge cold or room temp is fine))",
-      "1 tsp vanilla extract",
-      "1/2 cup plain flour (all-purpose flour)",
-      "1/4 cup cocoa powder (, sifted)",
-      "Pinch of  salt",
-      "180g / 6oz (1 cup)  dark chocolate chips, or block/bar chopped into chunks (OPTIONAL!) ((US: semi-sweet chocolate) (Note 2))"
+      "225g/ 7.9oz   halloumi (, shredded using a box grater (Note 1))",
+      "1 1/2 tbsp olive oil",
+      "1/4 cup pine nuts ((or slivered almonds))",
+      "5 tightly packed cups kale leaves (, chopped into ~1 - 1.5cm/ 0.4 - 0.6\" pieces (Note 2))",
+      "1/4  red onion (, very finely sliced then roughly chopped (~1/4 cup), or green onion finely sliced)",
+      "1/4 cup roughly chopped dill ((or parsley))",
+      "3 cups cooked white rice ((1 cup uncooked rice grains), or brown rice or quinoa, warm or cooled)",
+      "3 tbsp apple cider vinegar",
+      "1/3 cup extra virgin oil olive oil",
+      "1 tsp honey",
+      "1/2 tsp Dijon mustard",
+      "1  garlic clove (, finely grated or crushed using garlic crusher)",
+      "1/4 tsp heaped cooking salt / kosher salt ((halve for table salt, +50% for flakes))",
+      "1/8 tsp black pepper",
+      "Soft boiled egg (, halved (Note 3))"
     ],
-    "cuisine": "South Western",
-    "mealType": null,
-    "totalTime": "35 mins",
-    "totalTimeMinutes": 35,
-    "servings": "9, 9 - 16",
-    "image": "https://www.recipetineats.com/tachyon/2020/03/Brownies_0-SQ.jpg",
-    "instructionCount": 2,
+    "cuisine": "Mediterranean vibes, Western",
+    "mealType": "Side",
+    "totalTime": null,
+    "totalTimeMinutes": null,
+    "servings": "4",
+    "image": "https://www.recipetineats.com/tachyon/2026/07/Crispy-shredded-halloumi-salad-with-kale-7.jpg",
+    "instructionCount": 4,
     "tokens": [
       {
         "all": [
-          "unsalted",
-          "butter",
-          "stick"
-        ],
-        "strict": [
-          "unsalted",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "dark",
-          "chocolate",
-          "chip",
-          "melt",
-          "disc",
-          "semi",
-          "sweet",
+          "halloumi",
+          "shredded",
+          "using",
+          "box",
+          "grater",
           "note"
         ],
         "strict": [
-          "dark",
-          "chocolate",
-          "chip"
+          "halloumi"
         ]
       },
       {
         "all": [
-          "loosely",
-          "packed",
-          "brown",
-          "sugar"
+          "olive",
+          "oil"
         ],
         "strict": [
-          "loosely",
-          "packed",
-          "brown",
-          "sugar"
+          "olive",
+          "oil"
         ]
       },
       {
         "all": [
+          "pine",
+          "nut",
+          "slivered",
+          "almond"
+        ],
+        "strict": [
+          "pine",
+          "nut"
+        ]
+      },
+      {
+        "all": [
+          "tightly",
+          "packed",
+          "cup",
+          "kale",
+          "leaf",
+          "note"
+        ],
+        "strict": [
+          "tightly",
+          "packed",
+          "cup",
+          "kale",
+          "leaf"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "onion",
+          "very",
+          "finely",
+          "then",
+          "roughly",
+          "green"
+        ],
+        "strict": [
+          "red",
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "roughly",
+          "dill",
+          "parsley"
+        ],
+        "strict": [
+          "roughly",
+          "dill"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "rice",
+          "uncooked",
+          "grain",
+          "brown",
+          "quinoa",
+          "warm",
+          "cooled"
+        ],
+        "strict": [
+          "white",
+          "rice"
+        ]
+      },
+      {
+        "all": [
+          "apple",
+          "cider",
+          "vinegar"
+        ],
+        "strict": [
+          "apple",
+          "cider",
+          "vinegar"
+        ]
+      },
+      {
+        "all": [
+          "oil",
+          "olive"
+        ],
+        "strict": [
+          "oil",
+          "olive"
+        ]
+      },
+      {
+        "all": [
+          "honey"
+        ],
+        "strict": [
+          "honey"
+        ]
+      },
+      {
+        "all": [
+          "dijon",
+          "mustard"
+        ],
+        "strict": [
+          "dijon",
+          "mustard"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clove",
+          "finely",
+          "crushed",
+          "using",
+          "crusher"
+        ],
+        "strict": [
+          "garlic",
+          "clove"
+        ]
+      },
+      {
+        "all": [
+          "heaped",
+          "cooking",
+          "salt",
+          "kosher",
+          "halve",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "heaped",
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "soft",
+          "boiled",
           "egg",
-          "lightly",
-          "beaten",
-          "fridge",
-          "cold",
-          "room",
-          "temp"
+          "halved",
+          "note"
         ],
         "strict": [
+          "soft",
+          "boiled",
           "egg"
         ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/vietnamese-pickled-carrots-daikon/",
+    "title": "Vietnamese pickled carrots and daikon (radish)",
+    "ingredients": [
+      "2  medium carrots (, peeled cut into 3mm / 1/10&quot; batons (Note 1))",
+      "1/2  large daikon (white radish) (, peeled, cut the same as carrots (Note 1))",
+      "1 1/2 cups boiling water",
+      "1/2 cup white sugar",
+      "4 tsp cooking / kosher salt",
+      "3/4 cup rice wine vinegar ((sub apple cider vinegar))"
+    ],
+    "cuisine": "Vietnamese",
+    "mealType": null,
+    "totalTime": null,
+    "totalTimeMinutes": null,
+    "servings": "4, 4 cups",
+    "image": "https://www.recipetineats.com/tachyon/2024/03/Vietnamese-pickled-carrot-and-daikon_9.jpg",
+    "instructionCount": 4,
+    "tokens": [
+      {
+        "all": [
+          "carrot",
+          "peeled",
+          "cut",
+          "quot",
+          "baton",
+          "note"
+        ],
+        "strict": [
+          "carrot"
+        ]
       },
       {
         "all": [
-          "vanilla",
-          "extract"
+          "daikon",
+          "white",
+          "radish",
+          "peeled",
+          "cut",
+          "same",
+          "carrot",
+          "note"
         ],
         "strict": [
-          "vanilla",
-          "extract"
+          "daikon"
+        ]
+      },
+      {
+        "all": [
+          "boiling",
+          "water"
+        ],
+        "strict": [
+          "boiling",
+          "water"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "sugar"
+        ],
+        "strict": [
+          "white",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "kosher",
+          "salt"
+        ],
+        "strict": [
+          "cooking",
+          "kosher",
+          "salt"
+        ]
+      },
+      {
+        "all": [
+          "rice",
+          "wine",
+          "vinegar",
+          "sub",
+          "apple",
+          "cider"
+        ],
+        "strict": [
+          "rice",
+          "wine",
+          "vinegar"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/chocolate-self-saucing-pudding/",
+    "title": "Chocolate Self Saucing Pudding",
+    "ingredients": [
+      "1 cup (175g)  brown sugar (, loosely packed (Note 1))",
+      "1/4 cup (30g)  cocoa powder (, unsweetened (Note 2))",
+      "1 1/4 cups (315ml)  boiling water",
+      "1 cup (150g)  plain flour ((all purpose flour))",
+      "2 1/2 tsp baking powder",
+      "1/3 cup (70g)  white sugar (, preferably caster/super fine but ordinary ok)",
+      "1/4 cup (30g)  cocoa powder (, unsweetened (Note 2))",
+      "Pinch of salt",
+      "1/2 cup (125ml)  milk",
+      "50 g / 4 1/2 tbsp   butter (, melted)",
+      "1  egg",
+      "1 tsp vanilla extract"
+    ],
+    "cuisine": null,
+    "mealType": "Dessert",
+    "totalTime": "40 mins",
+    "totalTimeMinutes": 40,
+    "servings": "5, 5 -6",
+    "image": "https://www.recipetineats.com/tachyon/2016/11/Chocolate-Self-Saucing-Pudding-4-SQ.jpg",
+    "instructionCount": 10,
+    "tokens": [
+      {
+        "all": [
+          "brown",
+          "sugar",
+          "loosely",
+          "packed",
+          "note"
+        ],
+        "strict": [
+          "brown",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "cocoa",
+          "powder",
+          "unsweetened",
+          "note"
+        ],
+        "strict": [
+          "cocoa",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "boiling",
+          "water"
+        ],
+        "strict": [
+          "boiling",
+          "water"
         ]
       },
       {
@@ -275198,9 +274761,35 @@
       },
       {
         "all": [
+          "baking",
+          "powder"
+        ],
+        "strict": [
+          "baking",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "sugar",
+          "preferably",
+          "caster",
+          "super",
+          "but",
+          "ordinary"
+        ],
+        "strict": [
+          "white",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
           "cocoa",
           "powder",
-          "sifted"
+          "unsweetened",
+          "note"
         ],
         "strict": [
           "cocoa",
@@ -275219,20 +274808,791 @@
       },
       {
         "all": [
+          "milk"
+        ],
+        "strict": [
+          "milk"
+        ]
+      },
+      {
+        "all": [
+          "butter",
+          "melted"
+        ],
+        "strict": [
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "egg"
+        ],
+        "strict": [
+          "egg"
+        ]
+      },
+      {
+        "all": [
+          "vanilla",
+          "extract"
+        ],
+        "strict": [
+          "vanilla",
+          "extract"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/self-saucing-butterscotch-pudding/",
+    "title": "Self Saucing Butterscotch Pudding",
+    "ingredients": [
+      "1/4 cup dark brown sugar (, packed (Note 1))",
+      "1 1/4  cups plain flour ((all purpose flour))",
+      "2 1/2 tsp baking powder (, NOT baking soda (bi-carbonate))",
+      "100g / 7 tbsp  unsalted butter (, melted)",
+      "1  large egg ((~50-55g/2 oz in shell))",
+      "1/2 cup milk ((full or low fat))",
+      "4 tbsp (90 g)  golden syrup ((Note 2))",
+      "3/4 cup dark brown sugar (, packed (Note 2))",
+      "2 tbsp cornflour / corn starch ((I use 15 ml tbsp, if yours is 20 ml, use 6 tsp instead) (Note 3))",
+      "2 cups boiling water",
+      "Vanilla ice cream"
+    ],
+    "cuisine": "Western",
+    "mealType": "Dessert",
+    "totalTime": "40 mins",
+    "totalTimeMinutes": 40,
+    "servings": "6",
+    "image": "https://www.recipetineats.com/tachyon/2019/09/Self-Saucing-Butterscotch-Pudding_4.jpg",
+    "instructionCount": 11,
+    "tokens": [
+      {
+        "all": [
           "dark",
-          "chocolate",
-          "chip",
-          "block",
-          "bar",
-          "chunk",
-          "semi",
-          "sweet",
+          "brown",
+          "sugar",
+          "packed",
           "note"
         ],
         "strict": [
           "dark",
-          "chocolate",
-          "chip"
+          "brown",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "plain",
+          "flour",
+          "all",
+          "purpose"
+        ],
+        "strict": [
+          "plain",
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "baking",
+          "powder",
+          "not",
+          "soda",
+          "carbonate"
+        ],
+        "strict": [
+          "baking",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "unsalted",
+          "butter",
+          "melted"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "egg",
+          "shell"
+        ],
+        "strict": [
+          "egg"
+        ]
+      },
+      {
+        "all": [
+          "milk",
+          "full",
+          "low",
+          "fat"
+        ],
+        "strict": [
+          "milk"
+        ]
+      },
+      {
+        "all": [
+          "golden",
+          "syrup",
+          "note"
+        ],
+        "strict": [
+          "golden",
+          "syrup"
+        ]
+      },
+      {
+        "all": [
+          "dark",
+          "brown",
+          "sugar",
+          "packed",
+          "note"
+        ],
+        "strict": [
+          "dark",
+          "brown",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "cornflour",
+          "cornstarch",
+          "corn",
+          "starch",
+          "use",
+          "tbsp",
+          "your",
+          "instead",
+          "note"
+        ],
+        "strict": [
+          "cornflour",
+          "cornstarch",
+          "corn",
+          "starch"
+        ]
+      },
+      {
+        "all": [
+          "boiling",
+          "water"
+        ],
+        "strict": [
+          "boiling",
+          "water"
+        ]
+      },
+      {
+        "all": [
+          "vanilla",
+          "ice",
+          "cream"
+        ],
+        "strict": [
+          "vanilla",
+          "ice",
+          "cream"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/50-clove-garlic-soup-recipe/",
+    "title": "50 Clove Garlic Soup",
+    "ingredients": [
+      "3 tbsp / 50g  unsalted butter",
+      "1 2/3 cups / 250g (50 - 60 cloves)  peeled garlic cloves, roughly chopped",
+      "1  small brown or yellow onion ((or 1/2 large), diced small)",
+      "1.5 kg / 3.3 lbs  starchy potato (, peeled and cut into 2.5cm / 1&quot; cubes (Note 3))",
+      "3 cups vegetable stock / broth (, salt-reduced (Note 4))",
+      "3 cups water",
+      "2 tsp cooking / kosher salt (, halve for table salt)",
+      "1/8 tsp white pepper powder",
+      "1/2 cup thickened cream (heavy cream)",
+      "2/3 cup panko breadcrumbs ((Note 5))",
+      "3 tbsp extra virgin olive oil",
+      "1/8 tsp cooking / kosher salt (, halve for table salt)",
+      "2 tsp finely chopped parsley"
+    ],
+    "cuisine": "French",
+    "mealType": "Soup",
+    "totalTime": "45 mins",
+    "totalTimeMinutes": 45,
+    "servings": "5",
+    "image": "https://www.recipetineats.com/tachyon/2026/07/Garlic-Soup_8.jpg",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "unsalted",
+          "butter"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "peeled",
+          "garlic",
+          "clof",
+          "roughly"
+        ],
+        "strict": [
+          "peeled",
+          "garlic",
+          "clof",
+          "roughly"
+        ]
+      },
+      {
+        "all": [
+          "brown",
+          "yellow",
+          "onion"
+        ],
+        "strict": [
+          "brown"
+        ]
+      },
+      {
+        "all": [
+          "starchy",
+          "potato",
+          "peeled",
+          "cut",
+          "quot",
+          "cub",
+          "note"
+        ],
+        "strict": [
+          "starchy",
+          "potato"
+        ]
+      },
+      {
+        "all": [
+          "vegetable",
+          "stock",
+          "broth",
+          "salt",
+          "reduced",
+          "note"
+        ],
+        "strict": [
+          "vegetable",
+          "stock",
+          "broth"
+        ]
+      },
+      {
+        "all": [
+          "water"
+        ],
+        "strict": [
+          "water"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "kosher",
+          "salt",
+          "halve",
+          "table"
+        ],
+        "strict": [
+          "cooking",
+          "kosher",
+          "salt"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "pepper",
+          "powder"
+        ],
+        "strict": [
+          "white",
+          "pepper",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "thickened",
+          "cream",
+          "heavy"
+        ],
+        "strict": [
+          "thickened",
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "panko",
+          "breadcrumb",
+          "note"
+        ],
+        "strict": [
+          "panko",
+          "breadcrumb"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "kosher",
+          "salt",
+          "halve",
+          "table"
+        ],
+        "strict": [
+          "cooking",
+          "kosher",
+          "salt"
+        ]
+      },
+      {
+        "all": [
+          "finely",
+          "parsley"
+        ],
+        "strict": [
+          "finely",
+          "parsley"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/slow-cooked-shredded-beef-ragu-pasta/",
+    "title": "Slow Cooked Shredded Beef Ragu Pasta",
+    "ingredients": [
+      "1.25kg  / 2.5 lb  chuck beef  (or other slow cooking beef cut, cut into equal 4 pieces (Note 1))",
+      "2 tsp cooking salt / kosher salt ((1 1/2 tsp table salt, 3 tsp flakes))",
+      "1/2 tsp black pepper",
+      "3 tbsp olive oil (, separated)",
+      "3 cloves garlic (, minced)",
+      "1  onion (, diced)",
+      "1 cup carrots (, diced (Note 2))",
+      "1 cup celery (, diced (Note 2))",
+      "800g / 28oz  crushed canned tomatoes",
+      "3 tbsp tomato paste",
+      "2  beef bouillon cubes (, crumbled (Note 3))",
+      "1 cup red wine (, full bodied  (like merlot, cabernet sauvignon), or sub with beef broth/stock)",
+      "1 1/2 cups water ((Note 3))",
+      "3/4 tsp dried thyme ( or 2 sprigs fresh thyme)",
+      "3  bay leaves (, dried or fresh)",
+      "1 lb /500g   dried pappardelle (, or other pasta of choice (Note 4))",
+      "Freshly grated parmesan cheese or parmigiano reggiano",
+      "Fresh parsley (, finely chopped (optional))"
+    ],
+    "cuisine": "Italian",
+    "mealType": null,
+    "totalTime": "230 mins",
+    "totalTimeMinutes": 230,
+    "servings": "5, 5 - 6 people",
+    "image": "https://www.recipetineats.com/tachyon/2017/07/Beef-Ragu-11a.jpg",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "chuck",
+          "beef",
+          "other",
+          "slow",
+          "cooking",
+          "cut",
+          "equal",
+          "note"
+        ],
+        "strict": [
+          "chuck",
+          "beef"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil",
+          "separated"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "garlic"
+        ],
+        "strict": [
+          "garlic"
+        ]
+      },
+      {
+        "all": [
+          "onion"
+        ],
+        "strict": [
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "carrot",
+          "note"
+        ],
+        "strict": [
+          "carrot"
+        ]
+      },
+      {
+        "all": [
+          "celery",
+          "note"
+        ],
+        "strict": [
+          "celery"
+        ]
+      },
+      {
+        "all": [
+          "crushed",
+          "canned",
+          "tomato"
+        ],
+        "strict": [
+          "crushed",
+          "canned",
+          "tomato"
+        ]
+      },
+      {
+        "all": [
+          "tomato",
+          "paste"
+        ],
+        "strict": [
+          "tomato",
+          "paste"
+        ]
+      },
+      {
+        "all": [
+          "beef",
+          "bouillon",
+          "cub",
+          "crumbled",
+          "note"
+        ],
+        "strict": [
+          "beef",
+          "bouillon",
+          "cub"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "wine",
+          "full",
+          "bodied",
+          "like",
+          "merlot",
+          "cabernet",
+          "sauvignon",
+          "sub",
+          "beef",
+          "broth",
+          "stock"
+        ],
+        "strict": [
+          "red",
+          "wine"
+        ]
+      },
+      {
+        "all": [
+          "water",
+          "note"
+        ],
+        "strict": [
+          "water"
+        ]
+      },
+      {
+        "all": [
+          "thyme"
+        ],
+        "strict": [
+          "thyme"
+        ]
+      },
+      {
+        "all": [
+          "bay",
+          "leaf"
+        ],
+        "strict": [
+          "bay",
+          "leaf"
+        ]
+      },
+      {
+        "all": [
+          "pappardelle",
+          "other",
+          "pasta",
+          "choice",
+          "note"
+        ],
+        "strict": [
+          "pappardelle"
+        ]
+      },
+      {
+        "all": [
+          "freshly",
+          "parmesan",
+          "cheese",
+          "parmigiano",
+          "reggiano"
+        ],
+        "strict": [
+          "freshly",
+          "parmesan",
+          "cheese"
+        ]
+      },
+      {
+        "all": [
+          "parsley",
+          "finely"
+        ],
+        "strict": [
+          "parsley"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/lemon-delicious-pudding/",
+    "title": "Lemon Delicious Pudding - extra saucy!",
+    "ingredients": [
+      "60g / 4 tbsp  unsalted butter (, cut into ~1cm / 0.4&quot; cubes)",
+      "1 cup caster sugar / superfine sugar (, or regular / granulated sugar)",
+      "1 tbsp lemon zest",
+      "1/2 cup lemon juice ((2 large lemons))",
+      "1/2 tsp vanilla extract (, optional)",
+      "Pinch of salt",
+      "3  large eggs (, separated (fridge cold is fine))",
+      "1 1/2 cups milk (, full fat is best but low fat ok (fridge cold is fine))",
+      "1/3 cup plain flour / all-purpose flour ((or gluten-free flour))",
+      "Whipped cream ((use 3/4 cup cream) or creme fraiche)",
+      "Decorate - icing sugar (recommended), small lemon slices, raspberries, mint sprigs"
+    ],
+    "cuisine": "British, English, Western",
+    "mealType": "Dessert",
+    "totalTime": null,
+    "totalTimeMinutes": null,
+    "servings": "5",
+    "image": "https://www.recipetineats.com/tachyon/2026/07/Lemon-Delicious-Pudding-1.jpg",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "unsalted",
+          "butter",
+          "cut",
+          "quot",
+          "cub"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "caster",
+          "sugar",
+          "superfine",
+          "regular",
+          "granulated"
+        ],
+        "strict": [
+          "caster",
+          "sugar",
+          "superfine"
+        ]
+      },
+      {
+        "all": [
+          "lemon",
+          "zest"
+        ],
+        "strict": [
+          "lemon",
+          "zest"
+        ]
+      },
+      {
+        "all": [
+          "lemon",
+          "juice"
+        ],
+        "strict": [
+          "lemon",
+          "juice"
+        ]
+      },
+      {
+        "all": [
+          "vanilla",
+          "extract"
+        ],
+        "strict": [
+          "vanilla",
+          "extract"
+        ]
+      },
+      {
+        "all": [
+          "pinch",
+          "salt"
+        ],
+        "strict": [
+          "pinch",
+          "salt"
+        ]
+      },
+      {
+        "all": [
+          "egg",
+          "separated",
+          "fridge",
+          "cold"
+        ],
+        "strict": [
+          "egg"
+        ]
+      },
+      {
+        "all": [
+          "milk",
+          "full",
+          "fat",
+          "but",
+          "low",
+          "fridge",
+          "cold"
+        ],
+        "strict": [
+          "milk"
+        ]
+      },
+      {
+        "all": [
+          "plain",
+          "flour",
+          "all",
+          "purpose",
+          "gluten",
+          "free"
+        ],
+        "strict": [
+          "plain",
+          "flour",
+          "all",
+          "purpose"
+        ]
+      },
+      {
+        "all": [
+          "whipped",
+          "cream",
+          "use",
+          "creme",
+          "fraiche"
+        ],
+        "strict": [
+          "whipped",
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "decorate",
+          "icing",
+          "sugar",
+          "recommended",
+          "lemon",
+          "slic",
+          "raspberry",
+          "mint",
+          "sprig"
+        ],
+        "strict": [
+          "decorate",
+          "icing",
+          "sugar",
+          "lemon",
+          "slic",
+          "raspberry",
+          "mint",
+          "sprig"
         ]
       }
     ]

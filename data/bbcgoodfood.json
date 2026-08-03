@@ -67700,7 +67700,7 @@
     "url": "https://www.bbcgoodfood.com/recipes/rib-eye-with-cacio-e-pepe-butter",
     "title": "Rib-eye with cacio e pepe butter",
     "ingredients": [
-      "227g Sainsbury's Taste the Difference 30 Day Matured Thick Cut Ribeye Steak",
+      "227g rib-eye steak",
       "½ heaped tbsp black peppercorns",
       "100g salted butter softened",
       "50g parmesan or pecorino, finely grated",
@@ -67717,23 +67717,13 @@
     "tokens": [
       {
         "all": [
-          "sainsbury",
-          "difference",
-          "day",
-          "matured",
-          "thick",
-          "cut",
-          "ribeye",
+          "rib",
+          "eye",
           "steak"
         ],
         "strict": [
-          "sainsbury",
-          "difference",
-          "day",
-          "matured",
-          "thick",
-          "cut",
-          "ribeye",
+          "rib",
+          "eye",
           "steak"
         ]
       },
@@ -212304,7 +212294,7 @@
     "mealType": "Dinner",
     "totalTime": "30 mins",
     "totalTimeMinutes": 30,
-    "servings": "8",
+    "servings": "4",
     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2023/09/Air-fryer-fish-tacos-fbe0fb4.jpg?resize=768,713",
     "instructionCount": 4,
     "tokens": [
