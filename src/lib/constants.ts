@@ -22,6 +22,13 @@ export const DEFAULT_CUPBOARD: string[] = [
 
 export const TABS: Tab[] = ["search", "sources", "cupboard"];
 
+/** Cook-friendly display labels for the (unchanged) internal tab ids — 4.5. */
+export const TAB_LABELS: Record<Tab, string> = {
+  search: "Find recipes",
+  sources: "My sites",
+  cupboard: "My staples",
+};
+
 /** Always-visible quick-add buttons in the ingredient entry, alongside the ranked autocomplete vocabulary. */
 export const QUICK_ADD_INGREDIENTS: string[] = [
   "chicken", "onion", "garlic", "egg", "rice",

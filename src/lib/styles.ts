@@ -140,15 +140,15 @@ export const getStyles = (t: ThemeTokens) =>
       fontSize: "1.375rem",
       color: t.onHeader,
     },
-    sub: {
-      margin: "0.2rem 0 0",
-      fontSize: "0.75rem",
-      color: t.onHeaderMuted,
-    },
     main: {
-      maxWidth: "820px",
+      // 4.8: widened from 820px so the results grid/table can breathe on
+      // desktop instead of fighting for space in a form-width column.
+      maxWidth: "1100px",
       margin: "0 auto",
       padding: "1.5rem",
+      // Phones get a bottom tab bar (see Header.tsx) — keep the last bit of
+      // content clear of it.
+      paddingBottom: "calc(1.5rem + var(--trf-bottom-nav-space, 0px))",
     },
     label: {
       fontSize: "0.84rem",
@@ -157,17 +157,6 @@ export const getStyles = (t: ThemeTokens) =>
       color: t.textMuted,
       display: "block",
       marginBottom: "0.6rem",
-    },
-    // Single remaining uppercase micro-label tier, reserved for the desktop
-    // results table's column headers (see SearchTab.tsx).
-    columnLabel: {
-      fontSize: "0.75rem",
-      fontWeight: 600,
-      textTransform: "uppercase",
-      letterSpacing: "0.05em",
-      color: t.textMuted,
-      display: "block",
-      marginBottom: 0,
     },
     section: { marginBottom: "1.25rem" },
     card: {
@@ -255,14 +244,42 @@ export const smBtn = (t: ThemeTokens, variant: ButtonVariant): CSSProperties => 
   transition: "all 0.15s",
 });
 
+/** A 40px-target, icon-only button (theme toggle, star, remove, overflow menu…). */
+export const iconBtn = (t: ThemeTokens, active = false, activeColor?: string): CSSProperties => ({
+  background: "none",
+  border: "none",
+  minWidth: "40px",
+  minHeight: "40px",
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  color: active ? (activeColor ?? t.accent) : t.textMuted,
+  cursor: "pointer",
+  borderRadius: "8px",
+  transition: "background 0.15s ease, color 0.15s ease",
+});
+
+/** A compact select-style control (sort dropdown, quantised threshold…). */
+export const selectStyle = (t: ThemeTokens): CSSProperties => ({
+  background: t.surface,
+  border: `1px solid ${t.border}`,
+  color: t.text,
+  borderRadius: "8px",
+  padding: "0.4rem 0.6rem",
+  fontFamily: "inherit",
+  fontSize: "0.84rem",
+  cursor: "pointer",
+  minHeight: "40px",
+});
+
 // U10: a11y — visible keyboard-focus outline. Rendered once via a <style> tag
 // (see App.tsx) since inline `style` props can't express the :focus-visible
 // pseudo-class; the `input`/`textarea` styles above no longer set
 // `outline: "none"` so this isn't overridden by a competing inline style.
 //
-// The same limitation applies to the soft-depth hover treatment (A.3): rows
-// and cards use the `trf-hoverable` class to pick up a background/shadow
-// lift on hover, since that can't be expressed as a plain inline style either.
+// The same limitation applies to the soft-depth hover treatment (A.3) and the
+// motion system (4.7) below — :hover, :active and @keyframes can't be
+// expressed as plain inline style props, so they live in this one <style> tag.
 export const globalCss = (t: ThemeTokens): string => `
   :focus-visible {
     outline: 2px solid ${t.accent};
@@ -274,5 +291,55 @@ export const globalCss = (t: ThemeTokens): string => `
   .trf-hoverable:hover {
     background: ${t.surfaceElevated};
     box-shadow: 0 4px 14px ${t.shadow};
+  }
+
+  /* 4.7 motion — consistent press-down + transition on every button/link */
+  .trf-app button, .trf-app a {
+    transition: background 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  }
+  .trf-app button:not(:disabled):active {
+    transform: translateY(1px);
+  }
+
+  /* Star favourite toggle "pop" */
+  @keyframes trf-pop {
+    0% { transform: scale(1); }
+    45% { transform: scale(1.35); }
+    100% { transform: scale(1); }
+  }
+  .trf-pop { animation: trf-pop 0.2s ease; }
+
+  /* Result card/row entrance — staggered via an inline animation-delay */
+  @keyframes trf-fade-in {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .trf-fade-in { animation: trf-fade-in 0.25s ease both; }
+
+  /* Row expand/collapse height animation (grid-rows trick — no JS measuring) */
+  .trf-collapse {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.2s ease-out;
+  }
+  .trf-collapse.trf-collapse-open { grid-template-rows: 1fr; }
+  .trf-collapse > div { overflow: hidden; min-height: 0; }
+
+  /* Loading spinner (used with lucide's Loader2) */
+  @keyframes trf-spin { to { transform: rotate(360deg); } }
+  .trf-spin { animation: trf-spin 1s linear infinite; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* 4.6/4.8: bottom tab bar reserves space on phones so content can't hide behind it */
+  @media (max-width: 640px) {
+    :root { --trf-bottom-nav-space: 64px; }
   }
 `;
