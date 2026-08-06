@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { X } from "lucide-react";
 import { getStyles } from "../lib/styles";
 import { useTheme } from "../lib/ThemeContext";
 import { DEFAULT_CUPBOARD } from "../lib/constants";
@@ -26,7 +27,7 @@ export default function CupboardTab({ cupboard, onSave }: CupboardTabProps) {
 
   return (
     <div>
-      <h2 style={{ ...styles.label, marginBottom: "0.3rem" }}>Store Cupboard</h2>
+      <h2 style={{ ...styles.label, marginBottom: "0.3rem" }}>My Staples</h2>
       <p style={{ color: tokens.textMuted, fontSize: "0.84rem", marginBottom: "1.25rem" }}>
         Always assumed present, even when not listed in your search.
       </p>
@@ -83,12 +84,14 @@ export default function CupboardTab({ cupboard, onSave }: CupboardTabProps) {
                 cursor: "pointer",
                 minWidth: "40px",
                 minHeight: "40px",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
                 padding: "0",
-                fontSize: "0.94rem",
                 lineHeight: 1,
               }}
             >
-              ×
+              <X size={14} />
             </button>
           </div>
         ))}

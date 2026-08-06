@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { ChevronDown, Check } from "lucide-react";
 import { useTheme } from "../lib/ThemeContext";
 import type { ThemeTokens } from "../lib/styles";
 
@@ -144,7 +145,7 @@ export default function FilterDropdown({ options, selected, onChange, alignRight
         <span style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", flex: 1 }}>
           {summary}
         </span>
-        <span aria-hidden="true" style={{ opacity: 0.4, flexShrink: 0, fontSize: "0.75rem" }}>▾</span>
+        <ChevronDown aria-hidden="true" size={13} style={{ opacity: 0.5, flexShrink: 0 }} />
       </button>
 
       {open && (
@@ -198,8 +199,8 @@ export default function FilterDropdown({ options, selected, onChange, alignRight
                   textAlign: "left",
                 }}
               >
-                <span aria-hidden="true" style={{ width: "0.7rem", flexShrink: 0, color: t.accent }}>
-                  {selected.has(o.value) ? "✓" : ""}
+                <span aria-hidden="true" style={{ width: "0.9rem", flexShrink: 0, color: t.accent, display: "inline-flex" }}>
+                  {selected.has(o.value) && <Check size={13} />}
                 </span>
                 {o.label}
               </button>

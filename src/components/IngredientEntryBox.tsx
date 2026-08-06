@@ -1,4 +1,5 @@
 import { useMemo, useRef, useState } from "react";
+import { X } from "lucide-react";
 import { getStyles } from "../lib/styles";
 import { useTheme } from "../lib/ThemeContext";
 import { QUICK_ADD_INGREDIENTS } from "../lib/constants";
@@ -128,14 +129,16 @@ export default function IngredientEntryBox({ entries, onAdd, onToggleRequired, o
                   borderLeft: `1px solid ${t.border}`,
                   minWidth: "40px",
                   minHeight: "40px",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                   color: t.textFaint,
                   fontFamily: "inherit",
-                  fontSize: "0.94rem",
                   cursor: "pointer",
                   lineHeight: 1,
                 }}
               >
-                ×
+                <X size={14} />
               </button>
             </div>
           ))}

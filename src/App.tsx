@@ -12,7 +12,7 @@ import Header from "./components/Header";
 import SearchTab from "./components/SearchTab";
 import SourcesTab from "./components/SourcesTab";
 import CupboardTab from "./components/CupboardTab";
-import type { IndexEntry, IngredientEntry, RecipeRecord, SearchResult, SourceMeta, Tab } from "./lib/types";
+import type { IndexEntry, IngredientEntry, RecipeRecord, SearchNotice, SearchResult, SourceMeta, Tab } from "./lib/types";
 
 // How many recipe pages to fetch simultaneously during enrichment
 const ENRICH_CONCURRENCY = 5;
@@ -30,7 +30,7 @@ export default function App() {
 
   // ── Search state ──────────────────────────────────────────────────────────
   const [results, setResults] = useState<SearchResult[]>([]);
-  const [error, setError] = useState<string>("");
+  const [notice, setNotice] = useState<SearchNotice>(null);
   const nextEntryId = useRef(1);
   const [entries, setEntries] = useState<IngredientEntry[]>([]);
   const [matchThreshold, setMatchThreshold] = useState<number>(DEFAULT_MATCH_THRESHOLD);
@@ -333,7 +333,7 @@ export default function App() {
       // U7: chain straight into enrichment — no separate manual step for a new source.
       // Session 1's incremental writes mean it's searchable before this finishes.
       await enrichSource(newSrc.id, data.recipes);
-      setSourceSuccess(`✓ "${newSrc.name}" ready — ${data.count} recipes searchable.`);
+      setSourceSuccess(`"${newSrc.name}" ready — ${data.count} recipes searchable.`);
     } catch (err) {
       setSourceError(
         `"${newSrc.name}" added but indexing failed: ${errorMessage(err)}. You can re-index from the source list.`,
@@ -353,7 +353,7 @@ export default function App() {
     try {
       const data = await indexSource(src.url);
       updateSource(id, { index: data.recipes, indexedAt: data.indexed_at, indexCount: data.count });
-      setSourceSuccess(`✓ "${src.name}" re-indexed — ${data.count} recipes found.`);
+      setSourceSuccess(`"${src.name}" re-indexed — ${data.count} recipes found.`);
     } catch (err) {
       setSourceError(`Re-indexing failed: ${errorMessage(err)}`);
     } finally {
@@ -449,7 +449,7 @@ export default function App() {
 
   // ── Search ────────────────────────────────────────────────────────────────
   const handleSearch = async (): Promise<void> => {
-    setError("");
+    setNotice(null);
     // U9: the favourites view lists every favourited recipe regardless of
     // ingredients entered, so it's exempt from the "no ingredients" guard.
     if (entries.length === 0 && !showFavouritesOnly) {
@@ -461,9 +461,7 @@ export default function App() {
     );
     if (activeEnrichedSources.length === 0) {
       setResults([]);
-      setError(
-        "No sources selected. Enable one above, or add and enrich a custom source in the Sources tab.",
-      );
+      setNotice({ kind: "no-sources" });
       return;
     }
     const sourcesWithRecipes = await Promise.all(
@@ -475,11 +473,7 @@ export default function App() {
     const finalResults = showFavouritesOnly ? found.filter((r) => favourites.has(r.sourceUrl)) : found;
     setResults(finalResults);
     if (finalResults.length === 0) {
-      setError(
-        showFavouritesOnly
-          ? "No favourites yet — star a recipe to save it here."
-          : `No matches found above ${matchThreshold}%. Try fewer ingredients, more general terms, or lowering the threshold.`,
-      );
+      setNotice(showFavouritesOnly ? { kind: "no-favourites" } : { kind: "no-matches", threshold: matchThreshold });
     }
   };
 
@@ -500,7 +494,7 @@ export default function App() {
   const visibleSources = sources.filter((s) => !s.hidden);
 
   return (
-    <div style={styles.app}>
+    <div style={styles.app} className="trf-app">
       <style>{globalCss(tokens)}</style>
       <Header activeTab={activeTab} onTabChange={setActiveTab} theme={theme} onToggleTheme={toggleTheme} />
       <main style={styles.main}>
@@ -514,7 +508,7 @@ export default function App() {
             onToggleRequired={toggleRequired}
             onRemoveEntry={removeEntry}
             vocabulary={vocabulary}
-            error={error}
+            notice={notice}
             results={results}
             matchThreshold={matchThreshold}
             onThresholdChange={setThreshold}
