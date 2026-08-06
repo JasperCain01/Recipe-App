@@ -28,6 +28,20 @@ interface SourcesTabProps {
   onHide: (id: string) => void;
 }
 
+function progressBarStyle(t: { border: string }): React.CSSProperties {
+  return { height: "6px", background: t.border, borderRadius: "999px", overflow: "hidden" };
+}
+
+function progressFillStyle(t: { accentSolid: string }, pct: number): React.CSSProperties {
+  return {
+    height: "100%",
+    width: `${pct}%`,
+    background: t.accentSolid,
+    borderRadius: "999px",
+    transition: "width 0.3s ease",
+  };
+}
+
 export default function SourcesTab({
   sources,
   selectedSources,
@@ -54,7 +68,7 @@ export default function SourcesTab({
   return (
     <div>
       <h2 style={{ ...styles.label, marginBottom: "0.3rem" }}>Recipe Sources</h2>
-      <p style={{ color: t.textMuted, fontSize: "0.8rem", marginBottom: "1.5rem" }}>
+      <p style={{ color: t.textMuted, fontSize: "0.84rem", marginBottom: "1.5rem" }}>
         Add any recipe website. Indexing builds a URL list; enriching fetches ingredients so you can search by what you have.
       </p>
 
@@ -97,7 +111,7 @@ export default function SourcesTab({
             {sourceSuccess}
           </p>
         )}
-        <p style={{ color: t.textFaint, fontSize: "0.7rem", marginTop: "0.75rem", marginBottom: 0 }}>
+        <p style={{ color: t.textFaint, fontSize: "0.75rem", marginTop: "0.75rem", marginBottom: 0 }}>
           An emoji is auto-assigned based on the site name. URLs are normalised to root domain.
         </p>
       </div>
@@ -118,32 +132,31 @@ export default function SourcesTab({
           return (
             <div
               key={src.id}
+              className="trf-hoverable"
               style={{
                 background: t.surface,
-                border: `1px solid ${t.border}`,
-                borderRadius: "8px",
+                boxShadow: t.shadowSoft,
+                borderRadius: "12px",
                 padding: "0.75rem 1rem",
               }}
             >
               {/* Title row */}
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "1rem" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", flex: 1, minWidth: 0 }}>
-                  <span style={{ fontSize: "1.25rem", flexShrink: 0 }}>{src.emoji}</span>
+                  <span style={{ fontSize: "1.375rem", flexShrink: 0 }}>{src.emoji}</span>
                   <div style={{ minWidth: 0 }}>
                     <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", marginBottom: "0.1rem" }}>
-                      <span style={{ color: t.text, fontSize: "0.88rem" }}>{src.name}</span>
+                      <span style={{ color: t.text, fontSize: "0.84rem" }}>{src.name}</span>
                       {isBuiltin && (
                         <span
                           title="Ships with the app, kept up to date automatically — no indexing or enriching needed"
                           style={{
-                            fontSize: "0.7rem",
+                            fontSize: "0.75rem",
                             color: t.accent,
                             background: t.accentTint,
                             border: `1px solid ${t.accentBorder}`,
-                            borderRadius: "4px",
+                            borderRadius: "8px",
                             padding: "0.05rem 0.4rem",
-                            textTransform: "uppercase",
-                            letterSpacing: "0.03em",
                           }}
                         >
                           Built-in{src.enrichedAt && ` · updated ${new Date(src.enrichedAt).toLocaleDateString()}`}
@@ -156,7 +169,7 @@ export default function SourcesTab({
                       rel="noopener noreferrer"
                       style={{
                         color: t.textFaint,
-                        fontSize: "0.72rem",
+                        fontSize: "0.75rem",
                         textDecoration: "none",
                         overflow: "hidden",
                         textOverflow: "ellipsis",
@@ -183,10 +196,10 @@ export default function SourcesTab({
                         background: "none",
                         border: `1px solid ${t.border}`,
                         color: t.textMuted,
-                        borderRadius: "6px",
+                        borderRadius: "8px",
                         cursor: "pointer",
                         padding: "0.35rem 0.6rem",
-                        fontSize: "0.7rem",
+                        fontSize: "0.75rem",
                         lineHeight: 1,
                       }}
                     >
@@ -201,10 +214,10 @@ export default function SourcesTab({
                         background: "none",
                         border: `1px solid ${t.border}`,
                         color: t.textMuted,
-                        borderRadius: "6px",
+                        borderRadius: "8px",
                         cursor: "pointer",
                         padding: "0.35rem 0.6rem",
-                        fontSize: "0.9rem",
+                        fontSize: "0.94rem",
                         lineHeight: 1,
                       }}
                     >
@@ -227,18 +240,18 @@ export default function SourcesTab({
               >
                 {isBuiltin ? (
                   hasEnriched ? (
-                    <span style={{ fontSize: "0.7rem", color: t.success }}>
+                    <span style={{ fontSize: "0.75rem", color: t.success }}>
                       ✓ {src.enrichedCount} recipes ready to search — no indexing or enriching needed
                     </span>
                   ) : (
-                    <span style={{ fontSize: "0.7rem", color: t.danger }}>
+                    <span style={{ fontSize: "0.75rem", color: t.danger }}>
                       ⚠ No recipes in the latest update for this source — it will be retried on the next weekly refresh
                     </span>
                   )
                 ) : isFirstPass ? (
                   <>
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                      <span style={{ fontSize: "0.7rem", color: t.secondaryAccent }}>
+                      <span style={{ fontSize: "0.75rem", color: t.secondaryAccent }}>
                         ⏳ Adding {src.name}…{" "}
                         {isIndexing
                           ? "finding recipes…"
@@ -249,7 +262,7 @@ export default function SourcesTab({
                           onClick={onCancelEnrich}
                           style={{
                             ...smBtn(t, "default"),
-                            fontSize: "0.7rem",
+                            fontSize: "0.75rem",
                             padding: "0.3rem 0.6rem",
                             borderColor: t.danger,
                             color: t.danger,
@@ -260,16 +273,8 @@ export default function SourcesTab({
                       )}
                     </div>
                     {isEnriching && enrichProgress.total > 0 && (
-                      <div style={{ height: "3px", background: t.border, borderRadius: "2px", overflow: "hidden" }}>
-                        <div
-                          style={{
-                            height: "100%",
-                            width: `${(enrichProgress.done / enrichProgress.total) * 100}%`,
-                            background: t.accentSolid,
-                            borderRadius: "2px",
-                            transition: "width 0.3s ease",
-                          }}
-                        />
+                      <div style={progressBarStyle(t)}>
+                        <div style={progressFillStyle(t, (enrichProgress.done / enrichProgress.total) * 100)} />
                       </div>
                     )}
                   </>
@@ -277,7 +282,7 @@ export default function SourcesTab({
                   <>
                     {/* Index status */}
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                      <span style={{ fontSize: "0.7rem" }}>
+                      <span style={{ fontSize: "0.75rem" }}>
                         {isIndexing && <span style={{ color: t.secondaryAccent }}>⏳ Indexing recipes…</span>}
                         {!isIndexing && hasIndex && (
                           <span style={{ color: t.success }}>
@@ -292,7 +297,7 @@ export default function SourcesTab({
                       {!isIndexing && (
                         <button
                           onClick={() => onReindex(src.id)}
-                          style={{ ...smBtn(t, "default"), fontSize: "0.7rem", padding: "0.3rem 0.6rem" }}
+                          style={{ ...smBtn(t, "default"), fontSize: "0.75rem", padding: "0.3rem 0.6rem" }}
                         >
                           {hasIndex ? "Re-index" : "Index now"}
                         </button>
@@ -301,7 +306,7 @@ export default function SourcesTab({
 
                     {/* Enrichment status */}
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                      <span style={{ fontSize: "0.7rem" }}>
+                      <span style={{ fontSize: "0.75rem" }}>
                         {isEnriching && (
                           <span style={{ color: t.secondaryAccent }}>
                             ⏳ Enriching {enrichProgress.done}/{enrichProgress.total} recipes…
@@ -325,7 +330,7 @@ export default function SourcesTab({
                           onClick={() => onEnrich(src.id)}
                           style={{
                             ...smBtn(t, "default"),
-                            fontSize: "0.7rem",
+                            fontSize: "0.75rem",
                             padding: "0.3rem 0.6rem",
                             borderColor: hasEnriched ? t.border : t.accentSolid,
                             color: hasEnriched ? t.textMuted : t.accent,
@@ -339,7 +344,7 @@ export default function SourcesTab({
                           onClick={onCancelEnrich}
                           style={{
                             ...smBtn(t, "default"),
-                            fontSize: "0.7rem",
+                            fontSize: "0.75rem",
                             padding: "0.3rem 0.6rem",
                             borderColor: t.danger,
                             color: t.danger,
@@ -352,23 +357,8 @@ export default function SourcesTab({
 
                     {/* Enrichment progress bar */}
                     {isEnriching && enrichProgress.total > 0 && (
-                      <div
-                        style={{
-                          height: "3px",
-                          background: t.border,
-                          borderRadius: "2px",
-                          overflow: "hidden",
-                        }}
-                      >
-                        <div
-                          style={{
-                            height: "100%",
-                            width: `${(enrichProgress.done / enrichProgress.total) * 100}%`,
-                            background: t.accentSolid,
-                            borderRadius: "2px",
-                            transition: "width 0.3s ease",
-                          }}
-                        />
+                      <div style={progressBarStyle(t)}>
+                        <div style={progressFillStyle(t, (enrichProgress.done / enrichProgress.total) * 100)} />
                       </div>
                     )}
                   </>
@@ -384,11 +374,11 @@ export default function SourcesTab({
               textAlign: "center",
               padding: "2.5rem 1rem",
               border: `1px dashed ${t.border}`,
-              borderRadius: "8px",
+              borderRadius: "12px",
             }}
           >
-            <p style={{ color: t.textMuted, fontSize: "0.85rem", margin: "0 0 0.4rem" }}>No sources yet.</p>
-            <p style={{ color: t.textFaint, fontSize: "0.75rem", margin: 0 }}>
+            <p style={{ color: t.textMuted, fontSize: "0.94rem", margin: "0 0 0.4rem" }}>No sources yet.</p>
+            <p style={{ color: t.textFaint, fontSize: "0.84rem", margin: 0 }}>
               Built-in defaults couldn't be loaded (offline?) — add a website above to get started.
             </p>
           </div>

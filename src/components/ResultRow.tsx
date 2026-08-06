@@ -1,7 +1,7 @@
 import { memo } from "react";
 import { scoreColor } from "../lib/utils";
 import { useTheme } from "../lib/ThemeContext";
-import type { ThemeTokens } from "../lib/styles";
+import { displayFontFamily, type ThemeTokens } from "../lib/styles";
 import RecipeCard from "./RecipeCard";
 import type { SearchResult } from "../lib/types";
 
@@ -23,7 +23,7 @@ function Thumbnail({ image, emoji, size = 40, t }: { image: string | null; emoji
   const shared: React.CSSProperties = {
     width: size,
     height: size,
-    borderRadius: "6px",
+    borderRadius: "8px",
     flexShrink: 0,
   };
   if (image) {
@@ -65,7 +65,7 @@ function StarButton({ isFavourite, onToggle, title, t }: { isFavourite: boolean;
         minWidth: "40px",
         minHeight: "40px",
         color: isFavourite ? t.secondaryAccent : t.textFaint,
-        fontSize: "1.1rem",
+        fontSize: "1.125rem",
         cursor: "pointer",
         lineHeight: 1,
         flexShrink: 0,
@@ -80,10 +80,10 @@ function MetaChip({ children, t }: { children: React.ReactNode; t: ThemeTokens }
   return (
     <span
       style={{
-        fontSize: "0.7rem",
+        fontSize: "0.75rem",
         color: t.textMuted,
         background: t.surfaceAlt,
-        borderRadius: "10px",
+        borderRadius: "999px",
         padding: "0.15rem 0.55rem",
         whiteSpace: "nowrap",
       }}
@@ -113,6 +113,7 @@ function ResultRow({ result: r, expanded, onToggleExpand, narrow, isFavourite, o
           onClick={onToggleExpand}
           onKeyDown={(e) => handleActivateKey(e, onToggleExpand)}
           aria-expanded={expanded}
+          className={expanded ? undefined : "trf-hoverable"}
           style={{
             width: "100%",
             display: "flex",
@@ -121,9 +122,9 @@ function ResultRow({ result: r, expanded, onToggleExpand, narrow, isFavourite, o
             padding: "0.75rem",
             minHeight: "40px",
             background: expanded ? t.highlightBg : t.surface,
-            border: "1px solid",
-            borderColor: expanded ? t.borderStrong : t.border,
-            borderRadius: expanded ? "8px 8px 0 0" : "8px",
+            border: expanded ? `1px solid ${t.borderStrong}` : "none",
+            boxShadow: expanded ? "none" : t.shadowSoft,
+            borderRadius: expanded ? "12px 12px 0 0" : "12px",
             cursor: "pointer",
             fontFamily: "inherit",
             textAlign: "left",
@@ -135,7 +136,8 @@ function ResultRow({ result: r, expanded, onToggleExpand, narrow, isFavourite, o
               <div
                 style={{
                   color: t.text,
-                  fontSize: "0.9rem",
+                  fontFamily: displayFontFamily,
+                  fontSize: "0.94rem",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
                   whiteSpace: "nowrap",
@@ -144,7 +146,7 @@ function ResultRow({ result: r, expanded, onToggleExpand, narrow, isFavourite, o
               >
                 {r.title}
               </div>
-              <div style={{ color: t.textFaint, fontSize: "0.7rem", marginTop: "0.15rem" }}>
+              <div style={{ color: t.textFaint, fontSize: "0.75rem", marginTop: "0.15rem" }}>
                 {r.sourceEmoji} {r.source}
               </div>
             </div>
@@ -154,9 +156,9 @@ function ResultRow({ result: r, expanded, onToggleExpand, narrow, isFavourite, o
                 {r.matchScore}%
               </div>
               {r.missingIngredients.length > 0 ? (
-                <div style={{ fontSize: "0.7rem", color: t.danger }}>{r.missingIngredients.length} missing</div>
+                <div style={{ fontSize: "0.75rem", color: t.danger }}>{r.missingIngredients.length} missing</div>
               ) : (
-                <div style={{ fontSize: "0.7rem", color: t.success }}>✓ have all</div>
+                <div style={{ fontSize: "0.75rem", color: t.success }}>✓ have all</div>
               )}
             </div>
           </div>
@@ -174,6 +176,7 @@ function ResultRow({ result: r, expanded, onToggleExpand, narrow, isFavourite, o
           onClick={onToggleExpand}
           onKeyDown={(e) => handleActivateKey(e, onToggleExpand)}
           aria-expanded={expanded}
+          className={expanded ? undefined : "trf-hoverable"}
           style={{
             width: "100%",
             display: "flex",
@@ -182,9 +185,9 @@ function ResultRow({ result: r, expanded, onToggleExpand, narrow, isFavourite, o
             padding: "0.65rem 1rem",
             minHeight: "40px",
             background: expanded ? t.highlightBg : t.surface,
-            border: "1px solid",
-            borderColor: expanded ? t.borderStrong : t.border,
-            borderRadius: expanded ? "6px 6px 0 0" : "6px",
+            border: expanded ? `1px solid ${t.borderStrong}` : "none",
+            boxShadow: expanded ? "none" : t.shadowSoft,
+            borderRadius: expanded ? "12px 12px 0 0" : "12px",
             cursor: "pointer",
             fontFamily: "inherit",
             textAlign: "left",
@@ -197,7 +200,8 @@ function ResultRow({ result: r, expanded, onToggleExpand, narrow, isFavourite, o
             <div
               style={{
                 color: t.text,
-                fontSize: "0.85rem",
+                fontFamily: displayFontFamily,
+                fontSize: "0.84rem",
                 overflow: "hidden",
                 textOverflow: "ellipsis",
                 whiteSpace: "nowrap",
@@ -206,7 +210,7 @@ function ResultRow({ result: r, expanded, onToggleExpand, narrow, isFavourite, o
             >
               {r.title}
             </div>
-            <div style={{ color: t.textFaint, fontSize: "0.7rem", marginTop: "0.1rem" }}>
+            <div style={{ color: t.textFaint, fontSize: "0.75rem", marginTop: "0.1rem" }}>
               {r.sourceEmoji} {r.source}
             </div>
           </div>
@@ -215,7 +219,7 @@ function ResultRow({ result: r, expanded, onToggleExpand, narrow, isFavourite, o
 
           {/* Match % */}
           <div style={{ ...colStyle(52), textAlign: "right", flexShrink: 0 }}>
-            <span style={{ fontSize: "0.92rem", fontWeight: "bold", color: scoreColor(r.matchScore, t) }}>
+            <span style={{ fontSize: "0.94rem", fontWeight: "bold", color: scoreColor(r.matchScore, t) }}>
               {r.matchScore}%
             </span>
           </div>
@@ -264,7 +268,7 @@ function ResultRow({ result: r, expanded, onToggleExpand, narrow, isFavourite, o
           style={{
             border: `1px solid ${t.borderStrong}`,
             borderTop: "none",
-            borderRadius: "0 0 6px 6px",
+            borderRadius: "0 0 12px 12px",
           }}
         >
           <RecipeCard result={r} isFavourite={isFavourite} onToggleFavourite={onToggleFavourite} />

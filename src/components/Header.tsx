@@ -35,9 +35,9 @@ export default function Header({ activeTab, onTabChange, theme, onToggleTheme }:
                 borderColor: active ? tokens.navActiveBorder : tokens.navInactiveBorder,
                 background: active ? tokens.navActiveBg : "transparent",
                 color: active ? tokens.onHeader : tokens.onHeaderMuted,
-                borderRadius: "4px",
+                borderRadius: "8px",
                 cursor: "pointer",
-                fontSize: "0.72rem",
+                fontSize: "0.75rem",
                 textTransform: "capitalize",
                 fontFamily: "inherit",
                 transition: "all 0.15s",
@@ -59,9 +59,9 @@ export default function Header({ activeTab, onTabChange, theme, onToggleTheme }:
             borderColor: tokens.navInactiveBorder,
             background: "transparent",
             color: tokens.onHeader,
-            borderRadius: "4px",
+            borderRadius: "8px",
             cursor: "pointer",
-            fontSize: "0.85rem",
+            fontSize: "0.84rem",
           }}
         >
           {theme === "dark" ? "☀️" : "🌙"}

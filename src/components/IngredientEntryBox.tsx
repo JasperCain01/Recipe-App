@@ -94,7 +94,7 @@ export default function IngredientEntryBox({ entries, onAdd, onToggleRequired, o
                 border: "1px solid",
                 borderColor: entry.required ? t.accent : t.border,
                 background: entry.required ? t.accentTint : t.surfaceAlt,
-                borderRadius: "20px",
+                borderRadius: "999px",
                 overflow: "hidden",
               }}
             >
@@ -108,13 +108,13 @@ export default function IngredientEntryBox({ entries, onAdd, onToggleRequired, o
                   minHeight: "40px",
                   color: entry.required ? t.accent : t.textMuted,
                   fontFamily: "inherit",
-                  fontSize: "0.8rem",
+                  fontSize: "0.84rem",
                   cursor: "pointer",
                   whiteSpace: "nowrap",
                 }}
               >
                 {entry.text}
-                <span style={{ marginLeft: "0.4rem", fontSize: "0.7rem", opacity: 0.75 }}>
+                <span style={{ marginLeft: "0.4rem", fontSize: "0.75rem", opacity: 0.75 }}>
                   {entry.required ? "REQUIRED" : "optional"}
                 </span>
               </button>
@@ -130,7 +130,7 @@ export default function IngredientEntryBox({ entries, onAdd, onToggleRequired, o
                   minHeight: "40px",
                   color: t.textFaint,
                   fontFamily: "inherit",
-                  fontSize: "0.9rem",
+                  fontSize: "0.94rem",
                   cursor: "pointer",
                   lineHeight: 1,
                 }}
@@ -169,7 +169,7 @@ export default function IngredientEntryBox({ entries, onAdd, onToggleRequired, o
               zIndex: 200,
               background: t.surface,
               border: `1px solid ${t.border}`,
-              borderRadius: "6px",
+              borderRadius: "8px",
               boxShadow: `0 4px 12px ${t.shadow}`,
               overflow: "hidden",
             }}
@@ -190,7 +190,7 @@ export default function IngredientEntryBox({ entries, onAdd, onToggleRequired, o
                   background: i === highlightIndex ? t.accentTint : "none",
                   color: t.text,
                   fontFamily: "inherit",
-                  fontSize: "0.85rem",
+                  fontSize: "0.84rem",
                   textAlign: "left",
                   cursor: "pointer",
                 }}
@@ -215,9 +215,9 @@ export default function IngredientEntryBox({ entries, onAdd, onToggleRequired, o
                 border: `1px solid ${t.border}`,
                 background: t.surface,
                 color: t.textMuted,
-                borderRadius: "20px",
+                borderRadius: "999px",
                 fontFamily: "inherit",
-                fontSize: "0.72rem",
+                fontSize: "0.75rem",
                 cursor: "pointer",
               }}
             >

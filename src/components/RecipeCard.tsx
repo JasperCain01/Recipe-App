@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { getStyles, type ThemeTokens } from "../lib/styles";
+import { getStyles, displayFontFamily, type ThemeTokens } from "../lib/styles";
 import { useTheme } from "../lib/ThemeContext";
 import { scoreColor } from "../lib/utils";
 import type { SearchResult } from "../lib/types";
@@ -48,7 +48,7 @@ function shoppingListBtnStyle(t: ThemeTokens): React.CSSProperties {
     border: `1px solid ${t.dangerBorder}`,
     background: t.surface,
     color: t.danger,
-    borderRadius: "6px",
+    borderRadius: "8px",
     fontFamily: "inherit",
     fontSize: "0.75rem",
     cursor: "pointer",
@@ -88,7 +88,7 @@ export default function RecipeCard({ result: r, isFavourite, onToggleFavourite }
         }}
       >
         <div style={{ flex: 1 }}>
-          <h3 style={{ margin: "0 0 0.3rem", fontSize: "1.1rem", color: t.text }}>
+          <h3 style={{ margin: "0 0 0.3rem", fontFamily: displayFontFamily, fontSize: "1.125rem", color: t.text }}>
             <a
               href={r.sourceUrl}
               target="_blank"
@@ -118,7 +118,7 @@ export default function RecipeCard({ result: r, isFavourite, onToggleFavourite }
             minWidth: "40px",
             minHeight: "40px",
             color: isFavourite ? t.secondaryAccent : t.textFaint,
-            fontSize: "1.3rem",
+            fontSize: "1.375rem",
             cursor: "pointer",
             lineHeight: 1,
             flexShrink: 0,
@@ -127,15 +127,13 @@ export default function RecipeCard({ result: r, isFavourite, onToggleFavourite }
           {isFavourite ? "★" : "☆"}
         </button>
         <div style={{ textAlign: "right", flexShrink: 0 }}>
-          <div style={{ fontSize: "1.4rem", fontWeight: "bold", color: scoreColor(r.matchScore, t) }}>
+          <div style={{ fontSize: "1.375rem", fontWeight: "bold", color: scoreColor(r.matchScore, t) }}>
             {r.matchScore}%
           </div>
           <div
             style={{
-              fontSize: "0.7rem",
+              fontSize: "0.75rem",
               color: t.textMuted,
-              textTransform: "uppercase",
-              letterSpacing: "0.08em",
             }}
           >
             match
@@ -152,7 +150,7 @@ export default function RecipeCard({ result: r, isFavourite, onToggleFavourite }
             width: "100%",
             height: "180px",
             objectFit: "cover",
-            borderRadius: "5px",
+            borderRadius: "8px",
             marginBottom: "1rem",
           }}
         />
@@ -164,7 +162,7 @@ export default function RecipeCard({ result: r, isFavourite, onToggleFavourite }
           style={{
             background: t.dangerBg,
             border: `1px solid ${t.dangerBorder}`,
-            borderRadius: "5px",
+            borderRadius: "8px",
             padding: "0.6rem 0.875rem",
             marginBottom: "1.25rem",
           }}
@@ -172,15 +170,13 @@ export default function RecipeCard({ result: r, isFavourite, onToggleFavourite }
           <div style={{ marginBottom: "0.5rem" }}>
             <span
               style={{
-                fontSize: "0.7rem",
+                fontSize: "0.75rem",
                 color: t.danger,
-                letterSpacing: "0.08em",
-                textTransform: "uppercase",
               }}
             >
               You'll need:{" "}
             </span>
-            <span style={{ fontSize: "0.8rem", color: t.text }}>
+            <span style={{ fontSize: "0.84rem", color: t.text }}>
               {r.missingIngredients.join(" · ")}
             </span>
           </div>
@@ -208,7 +204,7 @@ export default function RecipeCard({ result: r, isFavourite, onToggleFavourite }
               style={{
                 padding: "0.3rem 0",
                 borderBottom: `1px solid ${t.border}`,
-                fontSize: "0.8rem",
+                fontSize: "0.84rem",
                 color: isMissing ? t.danger : t.text,
                 lineHeight: "1.5",
               }}
@@ -229,8 +225,8 @@ export default function RecipeCard({ result: r, isFavourite, onToggleFavourite }
           padding: "0.55rem 1.1rem",
           background: t.accentSolid,
           color: t.onAccent,
-          borderRadius: "6px",
-          fontSize: "0.8rem",
+          borderRadius: "8px",
+          fontSize: "0.84rem",
           fontWeight: "600",
           textDecoration: "none",
           fontFamily: "inherit",
