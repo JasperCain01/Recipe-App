@@ -189,6 +189,75 @@ Already strong: `:focus-visible` outlines, 40px targets, `aria-pressed`/`aria-ex
 
 ## Suggested phasing
 
-1. **Warmth pass (a day-ish):** token values (light + dark), typography scale + font swap, radius/shadow/spacing system, positive score colours, header lightening. Transforms the feel with near-zero structural risk.
+1. **Warmth pass (a day-ish):** token values (light + dark), typography scale + font swap, radius/shadow/spacing system, positive score colours, header lightening. Transforms the feel with near-zero structural risk. **Exact values specified in Appendix A below — implement it verbatim.**
 2. **Results & language pass:** meta-chips-under-title everywhere, filter bar, match pill, "have X of Y" framing, cook-friendly copy, friendly empty/no-match states, icons.
 3. **Structure & motion pass:** desktop card grid + view toggle, tablet breakpoint, bottom nav on phones, expand/collapse + micro-animations, first-run hero.
+
+---
+
+## Appendix A — Phase 1 implementation spec (exact values)
+
+Every colour below has been contrast-checked: all text-role tokens meet WCAG AA (≥4.5:1) against both `surface` and `background` in their theme, and white-on-`accentSolid` is 5.06:1. Do not tweak the hues — implement verbatim.
+
+### A.1 Token values
+
+Two **new tokens** join the `ThemeTokens` interface: `surfaceElevated` (hover/expanded surfaces) and `shadowSoft` (a complete `box-shadow` value string, unlike `shadow` which stays a colour).
+
+| Token | Light | Dark |
+|---|---|---|
+| `background` | `#FAF5EE` | `#191512` |
+| `surface` | `#FFFDF9` | `#221D18` |
+| `surfaceAlt` | `#F3ECE2` | `#2C2620` |
+| `surfaceElevated` *(new)* | `#FFFFFF` | `#322B24` |
+| `border` | `#E7DDD0` | `#3A322A` |
+| `borderStrong` | `#CFC2B0` | `#52463A` |
+| `text` | `#2E2620` | `#EFE7DC` |
+| `textMuted` | `#6B5D4F` | `#B5A897` |
+| `textFaint` | `#79695A` | `#978A7A` |
+| `accent` | `#B4512A` | `#E08B60` |
+| `accentSolid` | `#B4512A` | `#B4512A` |
+| `accentTint` | `rgba(180,81,42,0.10)` | `rgba(224,139,96,0.14)` |
+| `accentBorder` | `rgba(180,81,42,0.35)` | `rgba(224,139,96,0.35)` |
+| `onAccent` | `#FFFFFF` | `#FFFFFF` |
+| `secondaryAccent` | `#A16207` | `#E8A33D` |
+| `danger` | `#B3341F` | `#E57357` |
+| `dangerBg` | `rgba(179,52,31,0.07)` | `rgba(229,115,87,0.12)` |
+| `dangerBorder` | `rgba(179,52,31,0.25)` | `rgba(229,115,87,0.30)` |
+| `success` | `#4E6B44` | `#9CB287` |
+| `scoreMid` | `#A16207` | `#E8A33D` |
+| `scoreLow` | `#6B5D4F` | `#B5A897` |
+| `shadow` | `rgba(62,48,35,0.16)` | `rgba(0,0,0,0.40)` |
+| `shadowSoft` *(new)* | `0 2px 8px rgba(62,48,35,0.08)` | `0 2px 8px rgba(0,0,0,0.35)` |
+| `headerBg` | `#FFFDF9` | `#221D18` |
+| `onHeader` | `#2E2620` | `#EFE7DC` |
+| `onHeaderMuted` | `#6B5D4F` | `#B5A897` |
+| `navActiveBorder` | `#B4512A` | `#E08B60` |
+| `navInactiveBorder` | `#E7DDD0` | `#3A322A` |
+| `navActiveBg` | `rgba(180,81,42,0.10)` | `rgba(224,139,96,0.14)` |
+| `highlightBg` | `rgba(180,81,42,0.05)` | `rgba(224,139,96,0.07)` |
+
+**Header note:** `headerBg` is now a *surface*, not a coloured band — the teal bar is gone. The header keeps its structure but swaps its `boxShadow` for `borderBottom: 1px solid ${t.border}`, and the white-on-teal assumptions disappear automatically because `onHeader`/`onHeaderMuted`/nav tokens now carry surface-appropriate values. The theme-toggle and tab buttons need no per-component changes beyond what the tokens deliver.
+
+**Score colour rule (replaces the current `scoreColor`):** ≥80% → `success`, 40–79% → `scoreMid`, <40% → `scoreLow`. Red never appears in scores. (`scoreLow` is now a warm neutral, so the mapping change is partly automatic — but shift the mid boundary from 60 to 40 in `utils.ts`.)
+
+### A.2 Typography
+
+- Install `@fontsource-variable/nunito-sans` and `@fontsource-variable/fraunces` (self-hosted; no CDN — the app deploys to GitHub Pages). Import both once in `main.tsx`.
+- Body/UI font (the `app` style's `fontFamily`): `'Nunito Sans Variable', system-ui, -apple-system, 'Segoe UI', sans-serif`, base `fontSize: "16px"`.
+- Display font — **only** for the header `h1` and recipe titles (`RecipeCard` h3, result-row title lines): `'Fraunces Variable', Georgia, serif`.
+- Replace the ~14 ad-hoc rem sizes with this scale (map each existing size to the nearest step): **12 / 13.5 / 15 / 16 / 18 / 22 / 28 px** (`0.75 / 0.84 / 0.94 / 1 / 1.125 / 1.375 / 1.75 rem`). Nothing below 12px anywhere.
+- The `label` style becomes 13.5px, `fontWeight: 600`, sentence case, `letterSpacing: "0.01em"` — **no** `textTransform: uppercase`. Remove the uppercase+tracking treatment everywhere it appears (`sub`, match caption, built-in badge, "You'll need:") except at most the desktop results column headers, which may keep a 12px/600 uppercase style as the single remaining micro-label tier.
+- Inputs must be ≥16px font-size (prevents iOS Safari focus zoom).
+
+### A.3 Radius, spacing, depth
+
+- Radius scale, applied everywhere: **12px** cards and result rows, **8px** inputs/buttons/dropdown panels, **999px** chips and pills. Delete the 4/5/6/20px one-offs.
+- Result rows and source cards: drop the 1px border in resting state; use `background: t.surface` + `boxShadow: t.shadowSoft` for separation, with `border: 1px solid ${t.borderStrong}` reserved for the expanded state. Row gap becomes **8px** (currently 2px). Keep borders on inputs and the filter/quick-add chips.
+- Hover state on rows and cards: `background: t.surfaceElevated` and a slightly deeper shadow, `transition: "background 0.15s ease, box-shadow 0.15s ease"`.
+- Enrichment progress bars: **6px** tall (currently 3px), `borderRadius: 999px`.
+
+### A.4 Phase 1 boundaries
+
+In scope: `styles.ts` (tokens + shared styles), `utils.ts` (`scoreColor`), font installs/imports, and mechanical sweeps through components to apply the scale/radius/shadow rules and remove uppercase treatments. The virtualisation row-height constants in `SearchTab.tsx` (`DESKTOP_ROW_HEIGHT`, `NARROW_ROW_HEIGHT`) must be re-measured after the size changes.
+
+Out of scope (phases 2–3): any layout restructuring, column changes, filter-bar moves, copy rewrites, icons, navigation changes, motion beyond the hover transitions above.
