@@ -29,8 +29,16 @@ interface SearchTabProps {
 
 const NARROW_BREAKPOINT = 640;
 // Nominal collapsed-row heights used for windowing math (see useWindowedRange).
-const DESKTOP_ROW_HEIGHT = 64;
-const NARROW_ROW_HEIGHT = 118;
+// Re-measured against the Appendix A row styles — rows are borderless at rest
+// (boxShadow: shadowSoft instead of a 1px border) with an 8px row gap (was 2px):
+//   desktop: 0.65rem vertical padding (20.8px) + the 40px thumbnail (still the
+//     tallest child) + the 8px row gap ≈ 69px
+//   narrow: 0.75rem vertical padding (24px) + the 40px top-info row + the
+//     0.5rem inter-row gap (8px) + a two-line wrap of meta chips (~44px,
+//     unchanged from the pre-restyle assumption that 4 chips wrap on phone
+//     widths) + the 8px row gap ≈ 124px
+const DESKTOP_ROW_HEIGHT = 69;
+const NARROW_ROW_HEIGHT = 124;
 const VIRTUALIZE_THRESHOLD = 200;
 
 const colStyle = (width: number | string): React.CSSProperties => ({
@@ -227,19 +235,19 @@ export default function SearchTab({
       <section style={styles.section}>
         <label style={styles.label}>
           Recipe Sources
-          <span style={{ color: t.textFaint, marginLeft: "0.5rem", fontSize: "0.7rem", textTransform: "none", letterSpacing: 0 }}>
+          <span style={{ color: t.textFaint, marginLeft: "0.5rem", fontSize: "0.75rem" }}>
             — manage in Sources tab
           </span>
         </label>
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {sources.length === 0 && (
-            <span style={{ color: t.textMuted, fontSize: "0.8rem" }}>
+            <span style={{ color: t.textMuted, fontSize: "0.84rem" }}>
               Built-in default recipes couldn't be loaded (offline?) —{" "}
               <button
                 onClick={onGoToSourcesTab}
                 style={{
                   background: "none", border: "none", color: t.accent,
-                  cursor: "pointer", padding: 0, fontSize: "0.8rem",
+                  cursor: "pointer", padding: 0, fontSize: "0.84rem",
                   fontFamily: "inherit", textDecoration: "underline",
                 }}
               >
@@ -258,13 +266,13 @@ export default function SearchTab({
                 style={{ ...chipStyle(t, active), opacity: enriched ? 1 : 0.45, minHeight: "40px" }}
               >
                 {src.emoji} {src.name}
-                {!enriched && <span style={{ marginLeft: "0.3rem", fontSize: "0.7rem" }}>⚠</span>}
+                {!enriched && <span style={{ marginLeft: "0.3rem", fontSize: "0.75rem" }}>⚠</span>}
               </button>
             );
           })}
         </div>
         {sources.length > 0 && activeEnrichedCount === 0 && (
-          <p style={{ color: t.textMuted, fontSize: "0.72rem", marginTop: "0.5rem" }}>
+          <p style={{ color: t.textMuted, fontSize: "0.75rem", marginTop: "0.5rem" }}>
             No sources selected. Enable one above, or enrich a custom source in the Sources tab first.
           </p>
         )}
@@ -274,7 +282,7 @@ export default function SearchTab({
       <section style={styles.section}>
         <label style={styles.label}>
           Your Ingredients
-          <span style={{ color: t.textFaint, marginLeft: "0.5rem", fontSize: "0.7rem", textTransform: "none", letterSpacing: 0 }}>
+          <span style={{ color: t.textFaint, marginLeft: "0.5rem", fontSize: "0.75rem" }}>
             — store cupboard always included
           </span>
         </label>
@@ -338,10 +346,10 @@ export default function SearchTab({
                   padding: "0.5rem 0.75rem",
                   background: t.surface,
                   border: `1px solid ${t.border}`,
-                  borderRadius: "6px",
+                  borderRadius: "8px",
                   color: t.textMuted,
                   fontFamily: "inherit",
-                  fontSize: "0.78rem",
+                  fontSize: "0.84rem",
                   cursor: "pointer",
                 }}
               >
@@ -357,7 +365,7 @@ export default function SearchTab({
                     padding: "0.75rem",
                     border: `1px solid ${t.border}`,
                     borderTop: "none",
-                    borderRadius: "0 0 6px 6px",
+                    borderRadius: "0 0 8px 8px",
                   }}
                 >
                   <FilterField label="Meal" t={t}>
@@ -390,7 +398,8 @@ export default function SearchTab({
             </div>
           ) : (
             <>
-              {/* Column header row */}
+              {/* Column header row — the desktop table's column headers keep the
+                  single remaining uppercase micro-label tier (Appendix A.2). */}
               <div
                 style={{
                   display: "flex",
@@ -410,7 +419,7 @@ export default function SearchTab({
                 </div>
 
                 <div style={colStyle(96)}>
-                  <span style={{ ...styles.label, marginBottom: 0 }}>Meal</span>
+                  <span style={styles.columnLabel}>Meal</span>
                   <FilterDropdown
                     options={mealTypeOptions}
                     selected={mealTypeFilters}
@@ -419,7 +428,7 @@ export default function SearchTab({
                 </div>
 
                 <div style={colStyle(104)}>
-                  <span style={{ ...styles.label, marginBottom: 0 }}>Cuisine</span>
+                  <span style={styles.columnLabel}>Cuisine</span>
                   <FilterDropdown
                     options={cuisineOptions}
                     selected={cuisineFilters}
@@ -447,14 +456,14 @@ export default function SearchTab({
                 </div>
 
                 <div style={colStyle(60)}>
-                  <span style={{ ...styles.label, marginBottom: 0 }}>Missing</span>
+                  <span style={styles.columnLabel}>Missing</span>
                 </div>
               </div>
             </>
           )}
 
           {/* Result count + clear filters */}
-          <div style={{ padding: "0.35rem 1rem 0.5rem", fontSize: "0.7rem", color: t.textMuted, display: "flex", alignItems: "center", gap: "0.75rem" }}>
+          <div style={{ padding: "0.35rem 1rem 0.5rem", fontSize: "0.75rem", color: t.textMuted, display: "flex", alignItems: "center", gap: "0.75rem" }}>
             <span>
               {hasActiveFilter
                 ? `${filteredResults.length} of ${results.length} recipes`
@@ -473,7 +482,7 @@ export default function SearchTab({
             style={{
               display: "flex",
               flexDirection: "column",
-              gap: "2px",
+              gap: "8px",
               position: "relative",
               ...(shouldVirtualize ? { height: sortedResults.length * rowHeight } : {}),
             }}
@@ -498,7 +507,7 @@ export default function SearchTab({
             })}
 
             {filteredResults.length === 0 && (
-              <p style={{ color: t.textMuted, fontSize: "0.8rem", padding: "1rem 1rem 0" }}>
+              <p style={{ color: t.textMuted, fontSize: "0.84rem", padding: "1rem 1rem 0" }}>
                 No results match the current filters.
               </p>
             )}
@@ -514,9 +523,9 @@ function clearFiltersBtnStyle(t: ThemeTokens): React.CSSProperties {
     background: "none",
     border: `1px solid ${t.border}`,
     color: t.textMuted,
-    borderRadius: "4px",
+    borderRadius: "8px",
     padding: "0.1rem 0.45rem",
-    fontSize: "0.7rem",
+    fontSize: "0.75rem",
     fontFamily: "inherit",
     cursor: "pointer",
   };
@@ -539,9 +548,9 @@ function sortChipStyle(t: ThemeTokens, active: boolean): React.CSSProperties {
     borderColor: active ? t.accent : t.border,
     background: active ? t.accentTint : t.surface,
     color: active ? t.accent : t.textMuted,
-    borderRadius: "20px",
+    borderRadius: "999px",
     fontFamily: "inherit",
-    fontSize: "0.72rem",
+    fontSize: "0.75rem",
     cursor: "pointer",
   };
 }
@@ -564,8 +573,7 @@ function SortHeaderButton({
     <button
       onClick={() => onClick(column)}
       style={{
-        ...getStyles(t).label,
-        marginBottom: 0,
+        ...getStyles(t).columnLabel,
         background: "none",
         border: "none",
         padding: 0,
