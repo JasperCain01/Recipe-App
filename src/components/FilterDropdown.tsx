@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { ChevronDown, Check } from "lucide-react";
 import { useTheme } from "../lib/ThemeContext";
 import type { ThemeTokens } from "../lib/styles";
 
@@ -21,7 +22,7 @@ const panelStyle = (t: ThemeTokens, alignRight: boolean): React.CSSProperties =>
   zIndex: 200,
   background: t.surface,
   border: `1px solid ${t.border}`,
-  borderRadius: "4px",
+  borderRadius: "8px",
   minWidth: "160px",
   maxHeight: "220px",
   overflow: "hidden",
@@ -118,9 +119,9 @@ export default function FilterDropdown({ options, selected, onChange, alignRight
     background: t.background,
     border: `1px solid ${active ? t.accent : t.border}`,
     color: active ? t.accent : t.textFaint,
-    borderRadius: "4px",
+    borderRadius: "8px",
     padding: "0.2rem 0.3rem",
-    fontSize: "0.7rem",
+    fontSize: "0.75rem",
     fontFamily: "inherit",
     cursor: "pointer",
     width: "100%",
@@ -144,7 +145,7 @@ export default function FilterDropdown({ options, selected, onChange, alignRight
         <span style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", flex: 1 }}>
           {summary}
         </span>
-        <span aria-hidden="true" style={{ opacity: 0.4, flexShrink: 0, fontSize: "0.7rem" }}>▾</span>
+        <ChevronDown aria-hidden="true" size={13} style={{ opacity: 0.5, flexShrink: 0 }} />
       </button>
 
       {open && (
@@ -162,7 +163,7 @@ export default function FilterDropdown({ options, selected, onChange, alignRight
               borderBottom: `1px solid ${t.border}`,
               color: t.textMuted,
               padding: "0.3rem 0.5rem",
-              fontSize: "0.7rem",
+              fontSize: "16px",
               fontFamily: "inherit",
               flexShrink: 0,
               width: "100%",
@@ -171,7 +172,7 @@ export default function FilterDropdown({ options, selected, onChange, alignRight
           />
           <div role="listbox" style={{ overflowY: "auto", flex: 1 }}>
             {filtered.length === 0 && (
-              <div style={{ padding: "0.4rem 0.5rem", color: t.textFaint, fontSize: "0.7rem" }}>
+              <div style={{ padding: "0.4rem 0.5rem", color: t.textFaint, fontSize: "0.75rem" }}>
                 No matches
               </div>
             )}
@@ -193,13 +194,13 @@ export default function FilterDropdown({ options, selected, onChange, alignRight
                   border: "none",
                   cursor: "pointer",
                   fontFamily: "inherit",
-                  fontSize: "0.72rem",
+                  fontSize: "0.75rem",
                   color: selected.has(o.value) ? t.accent : t.textMuted,
                   textAlign: "left",
                 }}
               >
-                <span aria-hidden="true" style={{ width: "0.7rem", flexShrink: 0, color: t.accent }}>
-                  {selected.has(o.value) ? "✓" : ""}
+                <span aria-hidden="true" style={{ width: "0.9rem", flexShrink: 0, color: t.accent, display: "inline-flex" }}>
+                  {selected.has(o.value) && <Check size={13} />}
                 </span>
                 {o.label}
               </button>

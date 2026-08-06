@@ -1,7 +1,9 @@
 import { memo } from "react";
-import { scoreColor } from "../lib/utils";
+import { Check } from "lucide-react";
 import { useTheme } from "../lib/ThemeContext";
-import type { ThemeTokens } from "../lib/styles";
+import { displayFontFamily, type ThemeTokens } from "../lib/styles";
+import FavouriteStar from "./FavouriteStar";
+import MatchPill from "./MatchPill";
 import RecipeCard from "./RecipeCard";
 import type { SearchResult } from "../lib/types";
 
@@ -9,87 +11,19 @@ interface ResultRowProps {
   result: SearchResult;
   expanded: boolean;
   onToggleExpand: () => void;
-  narrow: boolean;
   isFavourite: boolean;
   onToggleFavourite: () => void;
 }
 
-const colStyle = (width: number | string): React.CSSProperties => ({
-  width: typeof width === "number" ? `${width}px` : width,
-  flexShrink: 0,
-});
-
-function Thumbnail({ image, emoji, size = 40, t }: { image: string | null; emoji: string; size?: number; t: ThemeTokens }) {
-  const shared: React.CSSProperties = {
-    width: size,
-    height: size,
-    borderRadius: "6px",
-    flexShrink: 0,
-  };
+function Thumbnail({ image, emoji, t }: { image: string | null; emoji: string; t: ThemeTokens }) {
+  const shared: React.CSSProperties = { width: 40, height: 40, borderRadius: "8px", flexShrink: 0 };
   if (image) {
-    return (
-      <img
-        src={image}
-        alt=""
-        loading="lazy"
-        style={{ ...shared, objectFit: "cover", background: t.surfaceAlt }}
-      />
-    );
+    return <img src={image} alt="" loading="lazy" style={{ ...shared, objectFit: "cover", background: t.surfaceAlt }} />;
   }
   return (
-    <div
-      style={{
-        ...shared,
-        background: t.surfaceAlt,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        fontSize: `${Math.round(size * 0.55)}px`,
-      }}
-    >
+    <div style={{ ...shared, background: t.surfaceAlt, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.375rem" }}>
       {emoji}
     </div>
-  );
-}
-
-function StarButton({ isFavourite, onToggle, title, t }: { isFavourite: boolean; onToggle: () => void; title: string; t: ThemeTokens }) {
-  return (
-    <button
-      onClick={(e) => { e.stopPropagation(); onToggle(); }}
-      aria-pressed={isFavourite}
-      aria-label={title}
-      title={title}
-      style={{
-        background: "none",
-        border: "none",
-        minWidth: "40px",
-        minHeight: "40px",
-        color: isFavourite ? t.secondaryAccent : t.textFaint,
-        fontSize: "1.1rem",
-        cursor: "pointer",
-        lineHeight: 1,
-        flexShrink: 0,
-      }}
-    >
-      {isFavourite ? "★" : "☆"}
-    </button>
-  );
-}
-
-function MetaChip({ children, t }: { children: React.ReactNode; t: ThemeTokens }) {
-  return (
-    <span
-      style={{
-        fontSize: "0.7rem",
-        color: t.textMuted,
-        background: t.surfaceAlt,
-        borderRadius: "10px",
-        padding: "0.15rem 0.55rem",
-        whiteSpace: "nowrap",
-      }}
-    >
-      {children}
-    </span>
   );
 }
 
@@ -100,176 +34,85 @@ function handleActivateKey(e: React.KeyboardEvent, onActivate: () => void) {
   }
 }
 
-function ResultRow({ result: r, expanded, onToggleExpand, narrow, isFavourite, onToggleFavourite }: ResultRowProps) {
+/** Dense single-column list row — the desktop "power user" alternate to the
+ *  ResultCard grid (4.4/4.8). No more Meal/Cuisine/Time/Steps/Missing
+ *  columns: everything collapses into one quiet meta line under the title. */
+function ResultRow({ result: r, expanded, onToggleExpand, isFavourite, onToggleFavourite }: ResultRowProps) {
   const { tokens: t } = useTheme();
-  const favouriteTitle = isFavourite ? `Remove ${r.title} from favourites` : `Add ${r.title} to favourites`;
+  const total = r.ingredientsRaw.length;
+  const have = total - r.missingIngredients.length;
+  const metaLine = [r.mealType, r.cuisine, r.totalTime, r.instructionCount > 0 ? `${r.instructionCount} steps` : null]
+    .filter(Boolean)
+    .join(" · ");
 
   return (
     <div>
-      {narrow ? (
-        <div
-          role="button"
-          tabIndex={0}
-          onClick={onToggleExpand}
-          onKeyDown={(e) => handleActivateKey(e, onToggleExpand)}
-          aria-expanded={expanded}
-          style={{
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            gap: "0.5rem",
-            padding: "0.75rem",
-            minHeight: "40px",
-            background: expanded ? t.highlightBg : t.surface,
-            border: "1px solid",
-            borderColor: expanded ? t.borderStrong : t.border,
-            borderRadius: expanded ? "8px 8px 0 0" : "8px",
-            cursor: "pointer",
-            fontFamily: "inherit",
-            textAlign: "left",
-          }}
-        >
-          <div style={{ display: "flex", alignItems: "center", gap: "0.65rem" }}>
-            <Thumbnail image={r.image} emoji={r.sourceEmoji} t={t} />
-            <div style={{ flex: 1, minWidth: 0 }}>
-              <div
-                style={{
-                  color: t.text,
-                  fontSize: "0.9rem",
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
-                  whiteSpace: "nowrap",
-                  lineHeight: "1.3",
-                }}
-              >
-                {r.title}
-              </div>
-              <div style={{ color: t.textFaint, fontSize: "0.7rem", marginTop: "0.15rem" }}>
-                {r.sourceEmoji} {r.source}
-              </div>
-            </div>
-            <StarButton isFavourite={isFavourite} onToggle={onToggleFavourite} title={favouriteTitle} t={t} />
-            <div style={{ textAlign: "right", flexShrink: 0 }}>
-              <div style={{ fontSize: "1rem", fontWeight: "bold", color: scoreColor(r.matchScore, t) }}>
-                {r.matchScore}%
-              </div>
-              {r.missingIngredients.length > 0 ? (
-                <div style={{ fontSize: "0.7rem", color: t.danger }}>{r.missingIngredients.length} missing</div>
-              ) : (
-                <div style={{ fontSize: "0.7rem", color: t.success }}>✓ have all</div>
-              )}
-            </div>
+      <div
+        role="button"
+        tabIndex={0}
+        onClick={onToggleExpand}
+        onKeyDown={(e) => handleActivateKey(e, onToggleExpand)}
+        aria-expanded={expanded}
+        className={`trf-fade-in${expanded ? "" : " trf-hoverable"}`}
+        style={{
+          width: "100%",
+          display: "flex",
+          alignItems: "center",
+          gap: "0.75rem",
+          padding: "0.65rem 1rem",
+          minHeight: "40px",
+          background: expanded ? t.highlightBg : t.surface,
+          border: expanded ? `1px solid ${t.borderStrong}` : "none",
+          boxShadow: expanded ? "none" : t.shadowSoft,
+          borderRadius: expanded ? "12px 12px 0 0" : "12px",
+          cursor: "pointer",
+          fontFamily: "inherit",
+          textAlign: "left",
+        }}
+      >
+        <Thumbnail image={r.image} emoji={r.sourceEmoji} t={t} />
+
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <div
+            style={{
+              color: t.text,
+              fontFamily: displayFontFamily,
+              fontSize: "0.84rem",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              whiteSpace: "nowrap",
+              lineHeight: "1.3",
+            }}
+          >
+            {r.title}
           </div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "0.35rem" }}>
-            <MetaChip t={t}>{r.mealType ?? "Unknown meal"}</MetaChip>
-            <MetaChip t={t}>{r.cuisine ?? "Unknown cuisine"}</MetaChip>
-            <MetaChip t={t}>{r.totalTime ?? "Unknown time"}</MetaChip>
-            <MetaChip t={t}>{r.instructionCount > 0 ? `${r.instructionCount} steps` : "Unknown steps"}</MetaChip>
+          <div style={{ color: t.textFaint, fontSize: "0.75rem", marginTop: "0.1rem", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+            {r.source}{metaLine && ` · ${metaLine}`}
           </div>
         </div>
-      ) : (
-        <div
-          role="button"
-          tabIndex={0}
-          onClick={onToggleExpand}
-          onKeyDown={(e) => handleActivateKey(e, onToggleExpand)}
-          aria-expanded={expanded}
-          style={{
-            width: "100%",
-            display: "flex",
-            alignItems: "center",
-            gap: "0.75rem",
-            padding: "0.65rem 1rem",
-            minHeight: "40px",
-            background: expanded ? t.highlightBg : t.surface,
-            border: "1px solid",
-            borderColor: expanded ? t.borderStrong : t.border,
-            borderRadius: expanded ? "6px 6px 0 0" : "6px",
-            cursor: "pointer",
-            fontFamily: "inherit",
-            textAlign: "left",
-          }}
-        >
-          <Thumbnail image={r.image} emoji={r.sourceEmoji} t={t} />
 
-          {/* Recipe + source */}
-          <div style={{ flex: 1, minWidth: 0 }}>
-            <div
-              style={{
-                color: t.text,
-                fontSize: "0.85rem",
-                overflow: "hidden",
-                textOverflow: "ellipsis",
-                whiteSpace: "nowrap",
-                lineHeight: "1.3",
-              }}
-            >
-              {r.title}
+        <span style={{ display: "inline-flex", alignItems: "center", gap: "0.25rem", fontSize: "0.75rem", color: r.missingIngredients.length === 0 ? t.success : t.textMuted, flexShrink: 0, whiteSpace: "nowrap" }}>
+          {r.missingIngredients.length === 0 ? (<><Check size={13} /> have all</>) : `${have} of ${total}`}
+        </span>
+
+        <MatchPill score={r.matchScore} size="sm" />
+
+        <FavouriteStar
+          isFavourite={isFavourite}
+          onToggle={onToggleFavourite}
+          title={isFavourite ? `Remove ${r.title} from favourites` : `Add ${r.title} to favourites`}
+        />
+      </div>
+
+      <div className={`trf-collapse${expanded ? " trf-collapse-open" : ""}`}>
+        <div>
+          {expanded && (
+            <div style={{ border: `1px solid ${t.borderStrong}`, borderTop: "none", borderRadius: "0 0 12px 12px" }}>
+              <RecipeCard result={r} isFavourite={isFavourite} onToggleFavourite={onToggleFavourite} />
             </div>
-            <div style={{ color: t.textFaint, fontSize: "0.7rem", marginTop: "0.1rem" }}>
-              {r.sourceEmoji} {r.source}
-            </div>
-          </div>
-
-          <StarButton isFavourite={isFavourite} onToggle={onToggleFavourite} title={favouriteTitle} t={t} />
-
-          {/* Match % */}
-          <div style={{ ...colStyle(52), textAlign: "right", flexShrink: 0 }}>
-            <span style={{ fontSize: "0.92rem", fontWeight: "bold", color: scoreColor(r.matchScore, t) }}>
-              {r.matchScore}%
-            </span>
-          </div>
-
-          {/* Meal type */}
-          <div style={{ ...colStyle(96), flexShrink: 0 }}>
-            <span style={{ fontSize: "0.75rem", color: r.mealType ? t.textMuted : t.textFaint }}>
-              {r.mealType ?? "Unknown"}
-            </span>
-          </div>
-
-          {/* Cuisine */}
-          <div style={{ ...colStyle(104), flexShrink: 0 }}>
-            <span style={{ fontSize: "0.75rem", color: r.cuisine ? t.textMuted : t.textFaint }}>
-              {r.cuisine ?? "Unknown"}
-            </span>
-          </div>
-
-          {/* Time */}
-          <div style={{ ...colStyle(88), flexShrink: 0 }}>
-            <span style={{ fontSize: "0.75rem", color: r.totalTime ? t.textMuted : t.textFaint }}>
-              {r.totalTime ?? "Unknown"}
-            </span>
-          </div>
-
-          {/* Steps */}
-          <div style={{ ...colStyle(96), flexShrink: 0 }}>
-            <span style={{ fontSize: "0.75rem", color: r.instructionCount > 0 ? t.textMuted : t.textFaint }}>
-              {r.instructionCount > 0 ? `${r.instructionCount} steps` : "Unknown"}
-            </span>
-          </div>
-
-          {/* Missing count */}
-          <div style={{ ...colStyle(60), flexShrink: 0, textAlign: "right" }}>
-            {r.missingIngredients.length > 0 ? (
-              <span style={{ fontSize: "0.75rem", color: t.danger }}>{r.missingIngredients.length}</span>
-            ) : (
-              <span style={{ fontSize: "0.75rem", color: t.success }}>✓</span>
-            )}
-          </div>
+          )}
         </div>
-      )}
-
-      {expanded && (
-        <div
-          style={{
-            border: `1px solid ${t.borderStrong}`,
-            borderTop: "none",
-            borderRadius: "0 0 6px 6px",
-          }}
-        >
-          <RecipeCard result={r} isFavourite={isFavourite} onToggleFavourite={onToggleFavourite} />
-        </div>
-      )}
+      </div>
     </div>
   );
 }

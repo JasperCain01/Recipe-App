@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { X } from "lucide-react";
 import { getStyles } from "../lib/styles";
 import { useTheme } from "../lib/ThemeContext";
 import { DEFAULT_CUPBOARD } from "../lib/constants";
@@ -26,8 +27,8 @@ export default function CupboardTab({ cupboard, onSave }: CupboardTabProps) {
 
   return (
     <div>
-      <h2 style={{ ...styles.label, marginBottom: "0.3rem" }}>Store Cupboard</h2>
-      <p style={{ color: tokens.textMuted, fontSize: "0.8rem", marginBottom: "1.25rem" }}>
+      <h2 style={{ ...styles.label, marginBottom: "0.3rem" }}>My Staples</h2>
+      <p style={{ color: tokens.textMuted, fontSize: "0.84rem", marginBottom: "1.25rem" }}>
         Always assumed present, even when not listed in your search.
       </p>
 
@@ -47,10 +48,10 @@ export default function CupboardTab({ cupboard, onSave }: CupboardTabProps) {
             background: tokens.accentSolid,
             color: tokens.onAccent,
             border: "none",
-            borderRadius: "6px",
+            borderRadius: "8px",
             cursor: "pointer",
             fontFamily: "inherit",
-            fontSize: "0.8rem",
+            fontSize: "0.84rem",
           }}
         >
           Add
@@ -67,9 +68,9 @@ export default function CupboardTab({ cupboard, onSave }: CupboardTabProps) {
               gap: "0.4rem",
               background: tokens.surface,
               border: `1px solid ${tokens.border}`,
-              borderRadius: "20px",
+              borderRadius: "999px",
               padding: "0.3rem 0.6rem 0.3rem 0.875rem",
-              fontSize: "0.8rem",
+              fontSize: "0.84rem",
             }}
           >
             <span style={{ color: tokens.text }}>{item}</span>
@@ -83,12 +84,14 @@ export default function CupboardTab({ cupboard, onSave }: CupboardTabProps) {
                 cursor: "pointer",
                 minWidth: "40px",
                 minHeight: "40px",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
                 padding: "0",
-                fontSize: "0.9rem",
                 lineHeight: 1,
               }}
             >
-              ×
+              <X size={14} />
             </button>
           </div>
         ))}
@@ -103,7 +106,7 @@ export default function CupboardTab({ cupboard, onSave }: CupboardTabProps) {
           background: "transparent",
           border: `1px solid ${tokens.border}`,
           color: tokens.textMuted,
-          borderRadius: "6px",
+          borderRadius: "8px",
           cursor: "pointer",
           fontSize: "0.75rem",
           fontFamily: "inherit",

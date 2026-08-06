@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { getStyles, type ThemeTokens } from "../lib/styles";
+import { Check, X, ExternalLink, Clipboard, Share2 } from "lucide-react";
+import { getStyles, displayFontFamily, type ThemeTokens } from "../lib/styles";
 import { useTheme } from "../lib/ThemeContext";
-import { scoreColor } from "../lib/utils";
+import { scoreColor, hexToRgba } from "../lib/utils";
+import FavouriteStar from "./FavouriteStar";
 import type { SearchResult } from "../lib/types";
 
 interface RecipeCardProps {
@@ -43,14 +45,18 @@ async function copyToClipboard(text: string): Promise<boolean> {
 
 function shoppingListBtnStyle(t: ThemeTokens): React.CSSProperties {
   return {
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "0.35rem",
     minHeight: "40px",
     padding: "0.4rem 0.75rem",
-    border: `1px solid ${t.dangerBorder}`,
+    border: `1px solid ${hexToRgba(t.secondaryAccent, 0.35)}`,
     background: t.surface,
-    color: t.danger,
-    borderRadius: "6px",
+    color: t.secondaryAccent,
+    borderRadius: "8px",
     fontFamily: "inherit",
     fontSize: "0.75rem",
+    fontWeight: 600,
     cursor: "pointer",
   };
 }
@@ -59,6 +65,9 @@ export default function RecipeCard({ result: r, isFavourite, onToggleFavourite }
   const { tokens: t } = useTheme();
   const styles = getStyles(t);
   const [copyStatus, setCopyStatus] = useState<"idle" | "copied" | "failed">("idle");
+
+  const total = r.ingredientsRaw.length;
+  const have = total - r.missingIngredients.length;
 
   const handleCopy = async () => {
     const ok = await copyToClipboard(shoppingListText(r));
@@ -88,14 +97,14 @@ export default function RecipeCard({ result: r, isFavourite, onToggleFavourite }
         }}
       >
         <div style={{ flex: 1 }}>
-          <h3 style={{ margin: "0 0 0.3rem", fontSize: "1.1rem", color: t.text }}>
+          <h3 style={{ margin: "0 0 0.3rem", fontFamily: displayFontFamily, fontSize: "1.125rem", color: t.text }}>
             <a
               href={r.sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: t.accent, textDecoration: "none" }}
+              style={{ color: t.accent, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.35rem" }}
             >
-              {r.title} ↗
+              {r.title} <ExternalLink size={14} />
             </a>
           </h3>
           <div style={{ display: "flex", gap: "0.875rem", flexWrap: "wrap" }}>
@@ -107,38 +116,18 @@ export default function RecipeCard({ result: r, isFavourite, onToggleFavourite }
             {r.cuisine && <Meta t={t}>🌍 {r.cuisine}</Meta>}
           </div>
         </div>
-        <button
-          onClick={onToggleFavourite}
-          aria-pressed={isFavourite}
-          aria-label={isFavourite ? `Remove ${r.title} from favourites` : `Add ${r.title} to favourites`}
-          title={isFavourite ? "Remove from favourites" : "Add to favourites"}
-          style={{
-            background: "none",
-            border: "none",
-            minWidth: "40px",
-            minHeight: "40px",
-            color: isFavourite ? t.secondaryAccent : t.textFaint,
-            fontSize: "1.3rem",
-            cursor: "pointer",
-            lineHeight: 1,
-            flexShrink: 0,
-          }}
-        >
-          {isFavourite ? "★" : "☆"}
-        </button>
+        <FavouriteStar
+          isFavourite={isFavourite}
+          onToggle={onToggleFavourite}
+          title={isFavourite ? `Remove ${r.title} from favourites` : `Add ${r.title} to favourites`}
+          size={22}
+        />
         <div style={{ textAlign: "right", flexShrink: 0 }}>
-          <div style={{ fontSize: "1.4rem", fontWeight: "bold", color: scoreColor(r.matchScore, t) }}>
+          <div style={{ fontSize: "1.375rem", fontWeight: "bold", color: scoreColor(r.matchScore, t) }}>
             {r.matchScore}%
           </div>
-          <div
-            style={{
-              fontSize: "0.7rem",
-              color: t.textMuted,
-              textTransform: "uppercase",
-              letterSpacing: "0.08em",
-            }}
-          >
-            match
+          <div style={{ display: "inline-flex", alignItems: "center", gap: "0.25rem", fontSize: "0.75rem", color: t.textMuted }}>
+            {r.missingIngredients.length === 0 ? (<><Check size={13} /> have everything</>) : `${have} of ${total} ingredients`}
           </div>
         </div>
       </div>
@@ -152,45 +141,39 @@ export default function RecipeCard({ result: r, isFavourite, onToggleFavourite }
             width: "100%",
             height: "180px",
             objectFit: "cover",
-            borderRadius: "5px",
+            borderRadius: "8px",
             marginBottom: "1rem",
           }}
         />
       )}
 
-      {/* Missing ingredients banner */}
+      {/* Shopping list — friendly saffron framing, not a danger banner (4.4) */}
       {r.missingIngredients.length > 0 && (
         <div
           style={{
-            background: t.dangerBg,
-            border: `1px solid ${t.dangerBorder}`,
-            borderRadius: "5px",
+            background: hexToRgba(t.secondaryAccent, 0.1),
+            border: `1px solid ${hexToRgba(t.secondaryAccent, 0.3)}`,
+            borderRadius: "8px",
             padding: "0.6rem 0.875rem",
             marginBottom: "1.25rem",
           }}
         >
           <div style={{ marginBottom: "0.5rem" }}>
-            <span
-              style={{
-                fontSize: "0.7rem",
-                color: t.danger,
-                letterSpacing: "0.08em",
-                textTransform: "uppercase",
-              }}
-            >
-              You'll need:{" "}
+            <span style={{ fontSize: "0.75rem", color: t.secondaryAccent, fontWeight: 600 }}>
+              Just need:{" "}
             </span>
-            <span style={{ fontSize: "0.8rem", color: t.text }}>
+            <span style={{ fontSize: "0.84rem", color: t.text }}>
               {r.missingIngredients.join(" · ")}
             </span>
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
             <button onClick={handleCopy} style={shoppingListBtnStyle(t)}>
-              {copyStatus === "copied" ? "✓ Copied" : copyStatus === "failed" ? "Copy failed" : "📋 Copy missing ingredients"}
+              {copyStatus === "copied" ? <Check size={14} /> : <Clipboard size={14} />}
+              {copyStatus === "copied" ? "Copied" : copyStatus === "failed" ? "Copy failed" : "Copy list"}
             </button>
             {typeof navigator !== "undefined" && "share" in navigator && (
               <button onClick={handleShare} style={shoppingListBtnStyle(t)}>
-                📤 Share
+                <Share2 size={14} /> Share
               </button>
             )}
           </div>
@@ -206,14 +189,17 @@ export default function RecipeCard({ result: r, isFavourite, onToggleFavourite }
             <li
               key={i}
               style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.5rem",
                 padding: "0.3rem 0",
                 borderBottom: `1px solid ${t.border}`,
-                fontSize: "0.8rem",
-                color: isMissing ? t.danger : t.text,
+                fontSize: "0.84rem",
+                color: isMissing ? t.secondaryAccent : t.text,
                 lineHeight: "1.5",
               }}
             >
-              {isMissing ? "✗ " : "✓ "}
+              {isMissing ? <X size={14} style={{ flexShrink: 0 }} /> : <Check size={14} style={{ flexShrink: 0, color: t.success }} />}
               {line}
             </li>
           );
@@ -225,18 +211,20 @@ export default function RecipeCard({ result: r, isFavourite, onToggleFavourite }
         target="_blank"
         rel="noopener noreferrer"
         style={{
-          display: "inline-block",
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "0.4rem",
           padding: "0.55rem 1.1rem",
           background: t.accentSolid,
           color: t.onAccent,
-          borderRadius: "6px",
-          fontSize: "0.8rem",
+          borderRadius: "8px",
+          fontSize: "0.84rem",
           fontWeight: "600",
           textDecoration: "none",
           fontFamily: "inherit",
         }}
       >
-        View full recipe on {r.source} ↗
+        View full recipe on {r.source} <ExternalLink size={14} />
       </a>
     </div>
   );

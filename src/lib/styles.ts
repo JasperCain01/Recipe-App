@@ -11,6 +11,7 @@ export interface ThemeTokens {
   background: string;
   surface: string;
   surfaceAlt: string;
+  surfaceElevated: string;
   border: string;
   borderStrong: string;
   text: string;
@@ -29,6 +30,7 @@ export interface ThemeTokens {
   scoreMid: string;
   scoreLow: string;
   shadow: string;
+  shadowSoft: string;
   headerBg: string;
   onHeader: string;
   onHeaderMuted: string;
@@ -39,66 +41,77 @@ export interface ThemeTokens {
 }
 
 export const lightTokens: ThemeTokens = {
-  background: "#FAFAFA",
-  surface: "#FFFFFF",
-  surfaceAlt: "#F5F5F5",
-  border: "#E0E0E0",
-  borderStrong: "#BDBDBD",
-  text: "#212121",
-  textMuted: "#757575",
-  textFaint: "#616161",
-  accent: "#00796B",
-  accentSolid: "#00796B",
-  accentTint: "rgba(0,121,107,0.1)",
-  accentBorder: "rgba(0,121,107,0.3)",
+  background: "#FAF5EE",
+  surface: "#FFFDF9",
+  surfaceAlt: "#F3ECE2",
+  surfaceElevated: "#FFFFFF",
+  border: "#E7DDD0",
+  borderStrong: "#CFC2B0",
+  text: "#2E2620",
+  textMuted: "#6B5D4F",
+  textFaint: "#79695A",
+  accent: "#B4512A",
+  accentSolid: "#B4512A",
+  accentTint: "rgba(180,81,42,0.10)",
+  accentBorder: "rgba(180,81,42,0.35)",
   onAccent: "#FFFFFF",
-  secondaryAccent: "#FF8F00",
-  danger: "#B00020",
-  dangerBg: "rgba(176,0,32,0.06)",
-  dangerBorder: "rgba(176,0,32,0.2)",
-  success: "#2E7D32",
-  scoreMid: "#E65100",
-  scoreLow: "#C62828",
-  shadow: "rgba(0,0,0,0.15)",
-  headerBg: "#00796B",
-  onHeader: "#FFFFFF",
-  onHeaderMuted: "rgba(255,255,255,0.9)",
-  navActiveBorder: "#FFFFFF",
-  navInactiveBorder: "rgba(255,255,255,0.35)",
-  navActiveBg: "rgba(255,255,255,0.18)",
-  highlightBg: "rgba(93,64,55,0.04)",
+  secondaryAccent: "#A16207",
+  danger: "#B3341F",
+  dangerBg: "rgba(179,52,31,0.07)",
+  dangerBorder: "rgba(179,52,31,0.25)",
+  success: "#4E6B44",
+  scoreMid: "#A16207",
+  scoreLow: "#6B5D4F",
+  shadow: "rgba(62,48,35,0.16)",
+  shadowSoft: "0 2px 8px rgba(62,48,35,0.08)",
+  headerBg: "#FFFDF9",
+  onHeader: "#2E2620",
+  onHeaderMuted: "#6B5D4F",
+  navActiveBorder: "#B4512A",
+  navInactiveBorder: "#E7DDD0",
+  navActiveBg: "rgba(180,81,42,0.10)",
+  highlightBg: "rgba(180,81,42,0.05)",
 };
 
 export const darkTokens: ThemeTokens = {
-  background: "#121212",
-  surface: "#1E1E1E",
-  surfaceAlt: "#2A2A2A",
-  border: "#383838",
-  borderStrong: "#4A4A4A",
-  text: "#E8E8E8",
-  textMuted: "#AAAAAA",
-  textFaint: "#8A8A8A",
-  accent: "#4DB6AC",
-  accentSolid: "#00796B",
-  accentTint: "rgba(77,182,172,0.15)",
-  accentBorder: "rgba(77,182,172,0.35)",
+  background: "#191512",
+  surface: "#221D18",
+  surfaceAlt: "#2C2620",
+  surfaceElevated: "#322B24",
+  border: "#3A322A",
+  borderStrong: "#52463A",
+  text: "#EFE7DC",
+  textMuted: "#B5A897",
+  textFaint: "#978A7A",
+  accent: "#E08B60",
+  accentSolid: "#B4512A",
+  accentTint: "rgba(224,139,96,0.14)",
+  accentBorder: "rgba(224,139,96,0.35)",
   onAccent: "#FFFFFF",
-  secondaryAccent: "#FFB74D",
-  danger: "#EF5350",
-  dangerBg: "rgba(239,83,80,0.12)",
-  dangerBorder: "rgba(239,83,80,0.3)",
-  success: "#66BB6A",
-  scoreMid: "#FFA726",
-  scoreLow: "#EF5350",
-  shadow: "rgba(0,0,0,0.5)",
-  headerBg: "#00695C",
-  onHeader: "#FFFFFF",
-  onHeaderMuted: "rgba(255,255,255,0.9)",
-  navActiveBorder: "#FFFFFF",
-  navInactiveBorder: "rgba(255,255,255,0.35)",
-  navActiveBg: "rgba(255,255,255,0.18)",
-  highlightBg: "rgba(255,255,255,0.06)",
+  secondaryAccent: "#E8A33D",
+  danger: "#E57357",
+  dangerBg: "rgba(229,115,87,0.12)",
+  dangerBorder: "rgba(229,115,87,0.30)",
+  success: "#9CB287",
+  scoreMid: "#E8A33D",
+  scoreLow: "#B5A897",
+  shadow: "rgba(0,0,0,0.40)",
+  shadowSoft: "0 2px 8px rgba(0,0,0,0.35)",
+  headerBg: "#221D18",
+  onHeader: "#EFE7DC",
+  onHeaderMuted: "#B5A897",
+  navActiveBorder: "#E08B60",
+  navInactiveBorder: "#3A322A",
+  navActiveBg: "rgba(224,139,96,0.14)",
+  highlightBg: "rgba(224,139,96,0.07)",
 };
+
+// ─── Typography ──────────────────────────────────────────────────────────
+// Body/UI: humanist sans, self-hosted via @fontsource-variable (imported once
+// in main.tsx). Display serif (Fraunces) is reserved for the header h1 and
+// recipe titles only — see RecipeCard.tsx / ResultRow.tsx.
+export const bodyFontFamily = "'Nunito Sans Variable', system-ui, -apple-system, 'Segoe UI', sans-serif";
+export const displayFontFamily = "'Fraunces Variable', Georgia, serif";
 
 // ─── Shared style objects, built from the active theme's tokens ────────────
 
@@ -108,12 +121,12 @@ export const getStyles = (t: ThemeTokens) =>
       minHeight: "100vh",
       background: t.background,
       color: t.text,
-      fontFamily: "Georgia, serif",
-      fontSize: "14px",
+      fontFamily: bodyFontFamily,
+      fontSize: "16px",
     },
     header: {
       background: t.headerBg,
-      boxShadow: `0 2px 4px ${t.shadow}`,
+      borderBottom: `1px solid ${t.border}`,
       padding: "1.25rem 1.5rem",
       display: "flex",
       alignItems: "center",
@@ -123,26 +136,24 @@ export const getStyles = (t: ThemeTokens) =>
     },
     h1: {
       margin: 0,
-      fontSize: "1.35rem",
+      fontFamily: displayFontFamily,
+      fontSize: "1.375rem",
       color: t.onHeader,
-      letterSpacing: "0.04em",
-    },
-    sub: {
-      margin: "0.2rem 0 0",
-      fontSize: "0.7rem",
-      color: t.onHeaderMuted,
-      letterSpacing: "0.12em",
-      textTransform: "uppercase",
     },
     main: {
-      maxWidth: "820px",
+      // 4.8: widened from 820px so the results grid/table can breathe on
+      // desktop instead of fighting for space in a form-width column.
+      maxWidth: "1100px",
       margin: "0 auto",
       padding: "1.5rem",
+      // Phones get a bottom tab bar (see Header.tsx) — keep the last bit of
+      // content clear of it.
+      paddingBottom: "calc(1.5rem + var(--trf-bottom-nav-space, 0px))",
     },
     label: {
-      fontSize: "0.7rem",
-      letterSpacing: "0.15em",
-      textTransform: "uppercase",
+      fontSize: "0.84rem",
+      fontWeight: 600,
+      letterSpacing: "0.01em",
       color: t.textMuted,
       display: "block",
       marginBottom: "0.6rem",
@@ -150,8 +161,8 @@ export const getStyles = (t: ThemeTokens) =>
     section: { marginBottom: "1.25rem" },
     card: {
       background: t.surface,
-      border: `1px solid ${t.border}`,
-      borderRadius: "8px",
+      border: `1px solid ${t.borderStrong}`,
+      borderRadius: "12px",
       padding: "1.5rem",
     },
     textarea: {
@@ -160,9 +171,9 @@ export const getStyles = (t: ThemeTokens) =>
       border: `1px solid ${t.border}`,
       color: t.text,
       padding: "0.875rem",
-      borderRadius: "6px",
+      borderRadius: "8px",
       fontFamily: "inherit",
-      fontSize: "0.88rem",
+      fontSize: "16px",
       resize: "vertical",
       boxSizing: "border-box",
       lineHeight: "1.6",
@@ -173,17 +184,17 @@ export const getStyles = (t: ThemeTokens) =>
       border: `1px solid ${t.border}`,
       color: t.text,
       padding: "0.65rem 0.875rem",
-      borderRadius: "6px",
+      borderRadius: "8px",
       fontFamily: "inherit",
-      fontSize: "0.85rem",
+      fontSize: "16px",
     },
     errorBanner: {
       background: t.dangerBg,
       border: `1px solid ${t.dangerBorder}`,
-      borderRadius: "6px",
+      borderRadius: "8px",
       padding: "0.65rem 0.875rem",
       marginBottom: "0.875rem",
-      fontSize: "0.8rem",
+      fontSize: "0.84rem",
       color: t.danger,
     },
   }) satisfies Record<string, CSSProperties>;
@@ -192,12 +203,12 @@ export const getStyles = (t: ThemeTokens) =>
 export const chipStyle = (t: ThemeTokens, active: boolean, accent?: string): CSSProperties => ({
   padding: "0.35rem 0.85rem",
   border: "1px solid",
-  borderRadius: "20px",
+  borderRadius: "999px",
   borderColor: active ? (accent || t.accent) : t.border,
   background: active ? t.accentTint : t.surface,
   color: active ? (accent || t.accent) : t.textFaint,
   cursor: "pointer",
-  fontSize: "0.78rem",
+  fontSize: "0.75rem",
   fontFamily: "inherit",
   transition: "all 0.15s",
 });
@@ -208,8 +219,8 @@ export const primaryBtn = (t: ThemeTokens, disabled: boolean): CSSProperties => 
   background: disabled ? t.border : t.accentSolid,
   color: disabled ? t.textFaint : t.onAccent,
   border: "none",
-  borderRadius: "6px",
-  fontSize: "0.9rem",
+  borderRadius: "8px",
+  fontSize: "0.94rem",
   fontFamily: "inherit",
   cursor: disabled ? "not-allowed" : "pointer",
   fontWeight: "600",
@@ -225,7 +236,7 @@ export const smBtn = (t: ThemeTokens, variant: ButtonVariant): CSSProperties => 
   borderColor: variant === "primary" ? t.accentSolid : t.border,
   background: variant === "primary" ? t.accentSolid : "transparent",
   color: variant === "primary" ? t.onAccent : t.textMuted,
-  borderRadius: "6px",
+  borderRadius: "8px",
   cursor: "pointer",
   fontFamily: "inherit",
   fontSize: "0.75rem",
@@ -233,13 +244,102 @@ export const smBtn = (t: ThemeTokens, variant: ButtonVariant): CSSProperties => 
   transition: "all 0.15s",
 });
 
+/** A 40px-target, icon-only button (theme toggle, star, remove, overflow menu…). */
+export const iconBtn = (t: ThemeTokens, active = false, activeColor?: string): CSSProperties => ({
+  background: "none",
+  border: "none",
+  minWidth: "40px",
+  minHeight: "40px",
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  color: active ? (activeColor ?? t.accent) : t.textMuted,
+  cursor: "pointer",
+  borderRadius: "8px",
+  transition: "background 0.15s ease, color 0.15s ease",
+});
+
+/** A compact select-style control (sort dropdown, quantised threshold…). */
+export const selectStyle = (t: ThemeTokens): CSSProperties => ({
+  background: t.surface,
+  border: `1px solid ${t.border}`,
+  color: t.text,
+  borderRadius: "8px",
+  padding: "0.4rem 0.6rem",
+  fontFamily: "inherit",
+  fontSize: "0.84rem",
+  cursor: "pointer",
+  minHeight: "40px",
+});
+
 // U10: a11y — visible keyboard-focus outline. Rendered once via a <style> tag
 // (see App.tsx) since inline `style` props can't express the :focus-visible
 // pseudo-class; the `input`/`textarea` styles above no longer set
 // `outline: "none"` so this isn't overridden by a competing inline style.
+//
+// The same limitation applies to the soft-depth hover treatment (A.3) and the
+// motion system (4.7) below — :hover, :active and @keyframes can't be
+// expressed as plain inline style props, so they live in this one <style> tag.
 export const globalCss = (t: ThemeTokens): string => `
   :focus-visible {
     outline: 2px solid ${t.accent};
     outline-offset: 2px;
+  }
+  .trf-hoverable {
+    transition: background 0.15s ease, box-shadow 0.15s ease;
+  }
+  .trf-hoverable:hover {
+    background: ${t.surfaceElevated};
+    box-shadow: 0 4px 14px ${t.shadow};
+  }
+
+  /* 4.7 motion — consistent press-down + transition on every button/link */
+  .trf-app button, .trf-app a {
+    transition: background 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  }
+  .trf-app button:not(:disabled):active {
+    transform: translateY(1px);
+  }
+
+  /* Star favourite toggle "pop" */
+  @keyframes trf-pop {
+    0% { transform: scale(1); }
+    45% { transform: scale(1.35); }
+    100% { transform: scale(1); }
+  }
+  .trf-pop { animation: trf-pop 0.2s ease; }
+
+  /* Result card/row entrance — staggered via an inline animation-delay */
+  @keyframes trf-fade-in {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .trf-fade-in { animation: trf-fade-in 0.25s ease both; }
+
+  /* Row expand/collapse height animation (grid-rows trick — no JS measuring) */
+  .trf-collapse {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.2s ease-out;
+  }
+  .trf-collapse.trf-collapse-open { grid-template-rows: 1fr; }
+  .trf-collapse > div { overflow: hidden; min-height: 0; }
+
+  /* Loading spinner (used with lucide's Loader2) */
+  @keyframes trf-spin { to { transform: rotate(360deg); } }
+  .trf-spin { animation: trf-spin 1s linear infinite; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* 4.6/4.8: bottom tab bar reserves space on phones so content can't hide behind it */
+  @media (max-width: 640px) {
+    :root { --trf-bottom-nav-space: 64px; }
   }
 `;

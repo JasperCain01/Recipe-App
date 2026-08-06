@@ -45,9 +45,41 @@ export function makeId(name: string): string {
 
 /**
  * Map a 0-100 match score to a colour for visual feedback.
+ * Red never appears in scores — scoreLow is a warm neutral, not a danger tone.
  */
 export function scoreColor(score: number, t: ThemeTokens): string {
   if (score >= 80) return t.success;
-  if (score >= 60) return t.scoreMid;
+  if (score >= 40) return t.scoreMid;
   return t.scoreLow;
+}
+
+/**
+ * Derive a soft rgba() tint from one of the palette's solid hex tokens, at
+ * the same alpha convention as the palette's own hand-picked tints (e.g.
+ * `accentTint`, `dangerBg`). Used for positive-framing surfaces (the
+ * shopping-list banner, sort/filter emphasis) that need a tint of a token
+ * that doesn't already ship one, without inventing a new hue.
+ */
+export function hexToRgba(hex: string, alpha: number): string {
+  const clean = hex.replace("#", "");
+  const r = parseInt(clean.slice(0, 2), 16);
+  const g = parseInt(clean.slice(2, 4), 16);
+  const b = parseInt(clean.slice(4, 6), 16);
+  return `rgba(${r},${g},${b},${alpha})`;
+}
+
+/** Bare hostname for friendly progress copy ("Finding recipes on jamieoliver.com…"). */
+export function friendlyDomain(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
+}
+
+/** Plain-language descriptor for the match-threshold slider (U11 -> 4.5). */
+export function thresholdDescriptor(threshold: number): string {
+  if (threshold <= 30) return "Strict";
+  if (threshold <= 60) return "Balanced";
+  return "Flexible";
 }
