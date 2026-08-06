@@ -45,9 +45,10 @@ export function makeId(name: string): string {
 
 /**
  * Map a 0-100 match score to a colour for visual feedback.
+ * Red never appears in scores — scoreLow is a warm neutral, not a danger tone.
  */
 export function scoreColor(score: number, t: ThemeTokens): string {
   if (score >= 80) return t.success;
-  if (score >= 60) return t.scoreMid;
+  if (score >= 40) return t.scoreMid;
   return t.scoreLow;
 }
