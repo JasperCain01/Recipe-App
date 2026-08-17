@@ -32442,6 +32442,131 @@
   },
   {
     "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/smoked-salmon-and-egg-breakfast-mille-feuille/",
+    "title": "Smoked Salmon and Egg Breakfast Mille-feuille",
+    "ingredients": [
+      "1  sheet store bought frozen puff pastry (, thawed (25 cm x 25cm / 10\" x 10\"))",
+      "8  eggs",
+      "1/4 cup cream or full cream milk ((double this for creamier eggs - Note 1))",
+      "1/2 to 3/4 tsp salt",
+      "Black pepper",
+      "2 tbsp butter",
+      "6 oz / 200g   smoked salmon",
+      "2/3 cup crème fraîche ((Note 2), plus more for serving (optional))",
+      "2 tbsp chives (, finely chopped, plus more for garnish)"
+    ],
+    "cuisine": null,
+    "mealType": "Breakfast",
+    "totalTime": "30 mins",
+    "totalTimeMinutes": 30,
+    "servings": "8",
+    "image": "https://www.recipetineats.com/tachyon/2015/07/Breakfast-Mille-feuille_680px_5-Main.jpg",
+    "instructionCount": 9,
+    "tokens": [
+      {
+        "all": [
+          "sheet",
+          "frozen",
+          "puff",
+          "pastry",
+          "thawed"
+        ],
+        "strict": [
+          "sheet",
+          "frozen",
+          "puff",
+          "pastry"
+        ]
+      },
+      {
+        "all": [
+          "egg"
+        ],
+        "strict": [
+          "egg"
+        ]
+      },
+      {
+        "all": [
+          "cream",
+          "full",
+          "milk",
+          "double",
+          "thi",
+          "creamier",
+          "egg",
+          "note"
+        ],
+        "strict": [
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "salt"
+        ],
+        "strict": [
+          "salt"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "butter"
+        ],
+        "strict": [
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "smoked",
+          "salmon"
+        ],
+        "strict": [
+          "smoked",
+          "salmon"
+        ]
+      },
+      {
+        "all": [
+          "fra",
+          "che",
+          "note",
+          "more",
+          "serving"
+        ],
+        "strict": [
+          "fra",
+          "che",
+          "more",
+          "serving"
+        ]
+      },
+      {
+        "all": [
+          "chif",
+          "finely",
+          "more",
+          "garnish"
+        ],
+        "strict": [
+          "chif"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/oven-baked-honey-chili-lime-salmon-with-potatoes-and-beans-one-tray-meal/",
     "title": "One Tray Oven Baked Honey Chili Lime Salmon with Potatoes and Beans",
     "ingredients": [
@@ -32624,131 +32749,6 @@
         ],
         "strict": [
           "lime"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/smoked-salmon-and-egg-breakfast-mille-feuille/",
-    "title": "Smoked Salmon and Egg Breakfast Mille-feuille",
-    "ingredients": [
-      "1  sheet store bought frozen puff pastry (, thawed (25 cm x 25cm / 10\" x 10\"))",
-      "8  eggs",
-      "1/4 cup cream or full cream milk ((double this for creamier eggs - Note 1))",
-      "1/2 to 3/4 tsp salt",
-      "Black pepper",
-      "2 tbsp butter",
-      "6 oz / 200g   smoked salmon",
-      "2/3 cup crème fraîche ((Note 2), plus more for serving (optional))",
-      "2 tbsp chives (, finely chopped, plus more for garnish)"
-    ],
-    "cuisine": null,
-    "mealType": "Breakfast",
-    "totalTime": "30 mins",
-    "totalTimeMinutes": 30,
-    "servings": "8",
-    "image": "https://www.recipetineats.com/tachyon/2015/07/Breakfast-Mille-feuille_680px_5-Main.jpg",
-    "instructionCount": 9,
-    "tokens": [
-      {
-        "all": [
-          "sheet",
-          "frozen",
-          "puff",
-          "pastry",
-          "thawed"
-        ],
-        "strict": [
-          "sheet",
-          "frozen",
-          "puff",
-          "pastry"
-        ]
-      },
-      {
-        "all": [
-          "egg"
-        ],
-        "strict": [
-          "egg"
-        ]
-      },
-      {
-        "all": [
-          "cream",
-          "full",
-          "milk",
-          "double",
-          "thi",
-          "creamier",
-          "egg",
-          "note"
-        ],
-        "strict": [
-          "cream"
-        ]
-      },
-      {
-        "all": [
-          "salt"
-        ],
-        "strict": [
-          "salt"
-        ]
-      },
-      {
-        "all": [
-          "black",
-          "pepper"
-        ],
-        "strict": [
-          "black",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "butter"
-        ],
-        "strict": [
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "smoked",
-          "salmon"
-        ],
-        "strict": [
-          "smoked",
-          "salmon"
-        ]
-      },
-      {
-        "all": [
-          "fra",
-          "che",
-          "note",
-          "more",
-          "serving"
-        ],
-        "strict": [
-          "fra",
-          "che",
-          "more",
-          "serving"
-        ]
-      },
-      {
-        "all": [
-          "chif",
-          "finely",
-          "more",
-          "garnish"
-        ],
-        "strict": [
-          "chif"
         ]
       }
     ]
@@ -52155,183 +52155,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/slow-cooker-beef-pot-roast/",
-    "title": "Pot Roast",
-    "ingredients": [
-      "2 kg / 4 lb   beef chuck roast , rolled ((Note 1))",
-      "1 tsp each salt and pepper",
-      "2 tbsp olive oil",
-      "1  onion ((large), cut into large dice)",
-      "5  garlic cloves (, peeled and smashed (Note 2a))",
-      "5  carrots (, peeled and cut into 2.5cm/1\" pieces)",
-      "3  celery stalks (, cut into 4 cm / 1.5\" pieces)",
-      "1 cup (250ml)  dry red wine  ((sub with beef broth))",
-      "3 cups (750ml)  beef broth (, salt reduced)",
-      "1/3 cup (50g)  flour ((plain / all purpose) (GF - Note 2b))",
-      "1 tsp dried rosemary",
-      "1 1/2 tsp dried thyme",
-      "750g / 1.5 lb   potatoes (, peeled and cut into 2.5 cm / 1\" pieces)"
-    ],
-    "cuisine": "Western",
-    "mealType": null,
-    "totalTime": "515 mins",
-    "totalTimeMinutes": 515,
-    "servings": "8",
-    "image": "https://www.recipetineats.com/tachyon/2018/09/Slow-Cooker-Beef-Pot-Roast-4.jpg",
-    "instructionCount": 12,
-    "tokens": [
-      {
-        "all": [
-          "beef",
-          "chuck",
-          "roast",
-          "rolled",
-          "note"
-        ],
-        "strict": [
-          "beef",
-          "chuck",
-          "roast",
-          "rolled"
-        ]
-      },
-      {
-        "all": [
-          "each",
-          "salt",
-          "pepper"
-        ],
-        "strict": [
-          "each",
-          "salt",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "olive",
-          "oil"
-        ],
-        "strict": [
-          "olive",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "onion",
-          "cut",
-          "dice"
-        ],
-        "strict": [
-          "onion",
-          "cut",
-          "dice"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "clof",
-          "peeled",
-          "smashed",
-          "note"
-        ],
-        "strict": [
-          "garlic",
-          "clof"
-        ]
-      },
-      {
-        "all": [
-          "carrot",
-          "peeled",
-          "cut"
-        ],
-        "strict": [
-          "carrot"
-        ]
-      },
-      {
-        "all": [
-          "celery",
-          "stalk",
-          "cut"
-        ],
-        "strict": [
-          "celery",
-          "stalk"
-        ]
-      },
-      {
-        "all": [
-          "dry",
-          "red",
-          "wine",
-          "sub",
-          "beef",
-          "broth"
-        ],
-        "strict": [
-          "dry",
-          "red",
-          "wine"
-        ]
-      },
-      {
-        "all": [
-          "beef",
-          "broth",
-          "salt",
-          "reduced"
-        ],
-        "strict": [
-          "beef",
-          "broth"
-        ]
-      },
-      {
-        "all": [
-          "flour",
-          "plain",
-          "all",
-          "purpose",
-          "note"
-        ],
-        "strict": [
-          "flour"
-        ]
-      },
-      {
-        "all": [
-          "rosemary"
-        ],
-        "strict": [
-          "rosemary"
-        ]
-      },
-      {
-        "all": [
-          "thyme"
-        ],
-        "strict": [
-          "thyme"
-        ]
-      },
-      {
-        "all": [
-          "potato",
-          "peeled",
-          "cut"
-        ],
-        "strict": [
-          "potato"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/chicken-curry/",
     "title": "Easy Chicken Curry",
     "ingredients": [
@@ -53695,217 +53518,6 @@
           "baking",
           "soda",
           "carbonate"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/beef-stew/",
-    "title": "Beef Stew",
-    "ingredients": [
-      "1.2 kg / 2.4lb    chuck beef (, cut into 3.5 cm / 1.5\" cubes (Note 1))",
-      "1 tsp each salt and pepper",
-      "3 tbsp olive oil (, divided)",
-      "1  large onion (, halved then cut into 1 cm / 2/5\" slices)",
-      "4  garlic cloves (, minced)",
-      "3  carrots (, cut into 2.5cm / 1\" pieces on the diagonal)",
-      "2  celery stalks (, cut into 2.5 cm / 1\" pieces)",
-      "1/3 cup / 50g  flour",
-      "3 cups / 750ml   beef broth / stock (, salt reduced)",
-      "2 cups / 500 ml   red wine (, bold and dry (Cab Sauv, Burgundy, Merlot) (Note 2))",
-      "2 tsp Worcestershire Sauce",
-      "2 tbsp tomato paste",
-      "2  bay leaves (, fresh or dried)",
-      "4  sprigs thyme",
-      "400 g / 14 oz   baby potatoes (, halved)",
-      "More salt and pepper (, to taste.)"
-    ],
-    "cuisine": null,
-    "mealType": "Soup",
-    "totalTime": "165 mins",
-    "totalTimeMinutes": 165,
-    "servings": "6",
-    "image": "https://www.recipetineats.com/tachyon/2019/01/Beef-Stew_0-SQ1.jpg",
-    "instructionCount": 13,
-    "tokens": [
-      {
-        "all": [
-          "chuck",
-          "beef",
-          "cut",
-          "cub",
-          "note"
-        ],
-        "strict": [
-          "chuck",
-          "beef"
-        ]
-      },
-      {
-        "all": [
-          "each",
-          "salt",
-          "pepper"
-        ],
-        "strict": [
-          "each",
-          "salt",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "olive",
-          "oil",
-          "divided"
-        ],
-        "strict": [
-          "olive",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "onion",
-          "halved",
-          "then",
-          "cut",
-          "slic"
-        ],
-        "strict": [
-          "onion"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "clof"
-        ],
-        "strict": [
-          "garlic",
-          "clof"
-        ]
-      },
-      {
-        "all": [
-          "carrot",
-          "cut",
-          "diagonal"
-        ],
-        "strict": [
-          "carrot"
-        ]
-      },
-      {
-        "all": [
-          "celery",
-          "stalk",
-          "cut"
-        ],
-        "strict": [
-          "celery",
-          "stalk"
-        ]
-      },
-      {
-        "all": [
-          "flour"
-        ],
-        "strict": [
-          "flour"
-        ]
-      },
-      {
-        "all": [
-          "beef",
-          "broth",
-          "stock",
-          "salt",
-          "reduced"
-        ],
-        "strict": [
-          "beef",
-          "broth",
-          "stock"
-        ]
-      },
-      {
-        "all": [
-          "red",
-          "wine",
-          "bold",
-          "dry",
-          "cab",
-          "sauv",
-          "burgundy",
-          "merlot",
-          "note"
-        ],
-        "strict": [
-          "red",
-          "wine"
-        ]
-      },
-      {
-        "all": [
-          "worcestershire",
-          "sauce"
-        ],
-        "strict": [
-          "worcestershire",
-          "sauce"
-        ]
-      },
-      {
-        "all": [
-          "tomato",
-          "paste"
-        ],
-        "strict": [
-          "tomato",
-          "paste"
-        ]
-      },
-      {
-        "all": [
-          "bay",
-          "leaf"
-        ],
-        "strict": [
-          "bay",
-          "leaf"
-        ]
-      },
-      {
-        "all": [
-          "thyme"
-        ],
-        "strict": [
-          "thyme"
-        ]
-      },
-      {
-        "all": [
-          "baby",
-          "potato",
-          "halved"
-        ],
-        "strict": [
-          "baby",
-          "potato"
-        ]
-      },
-      {
-        "all": [
-          "more",
-          "salt",
-          "pepper"
-        ],
-        "strict": [
-          "more",
-          "salt",
-          "pepper"
         ]
       }
     ]
@@ -72227,173 +71839,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/healthy-chicken-and-broccoli-pasta-bake/",
-    "title": "Ultra Lazy Creamy Chicken and Broccoli Pasta Bake",
-    "ingredients": [
-      "400g / 14 oz  chicken tenderloin (raw) (, breast or thigh, cut into 1.5cm / 3/5\" pieces)",
-      "Salt and pepper",
-      "1 tsp dried thyme ((or other herbs and/or spices of choice))",
-      "250g / 8 oz   spiral pasta, uncooked ((See Note 1 for other shapes))",
-      "1/4 cup flour ((all purpose / plain))",
-      "1 1/2 cups chicken broth/stock (, warmed)",
-      "2 cups milk (, warmed (any fat %))",
-      "1  large garlic clove (, minced)",
-      "2 tbsp / 30g  unsalted butter (, recommended but optional)",
-      "1  large broccoli ( or 2 medium broccoli or cauliflower, broken into small to medium florets (Note 2 for subs))",
-      "1 1/2 cups (tightly packed) shredded cheddar or colby cheese ((or tasty cheese, pizza mix etc, Note 3))"
-    ],
-    "cuisine": null,
-    "mealType": null,
-    "totalTime": "45 mins",
-    "totalTimeMinutes": 45,
-    "servings": "5",
-    "image": "https://www.recipetineats.com/tachyon/2017/07/Ultra-Lazy-Creamy-Chicken-Pasta-Bake-2.jpg",
-    "instructionCount": 8,
-    "tokens": [
-      {
-        "all": [
-          "chicken",
-          "tenderloin",
-          "breast",
-          "thigh",
-          "cut"
-        ],
-        "strict": [
-          "chicken",
-          "tenderloin"
-        ]
-      },
-      {
-        "all": [
-          "salt",
-          "pepper"
-        ],
-        "strict": [
-          "salt",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "thyme",
-          "other",
-          "herb",
-          "spic",
-          "choice"
-        ],
-        "strict": [
-          "thyme"
-        ]
-      },
-      {
-        "all": [
-          "spiral",
-          "pasta",
-          "uncooked",
-          "see",
-          "note",
-          "other",
-          "shap"
-        ],
-        "strict": [
-          "spiral",
-          "pasta",
-          "uncooked"
-        ]
-      },
-      {
-        "all": [
-          "flour",
-          "all",
-          "purpose",
-          "plain"
-        ],
-        "strict": [
-          "flour"
-        ]
-      },
-      {
-        "all": [
-          "chicken",
-          "broth",
-          "stock",
-          "warmed"
-        ],
-        "strict": [
-          "chicken",
-          "broth",
-          "stock"
-        ]
-      },
-      {
-        "all": [
-          "milk",
-          "warmed",
-          "any",
-          "fat"
-        ],
-        "strict": [
-          "milk"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "clove"
-        ],
-        "strict": [
-          "garlic",
-          "clove"
-        ]
-      },
-      {
-        "all": [
-          "unsalted",
-          "butter",
-          "recommended",
-          "but"
-        ],
-        "strict": [
-          "unsalted",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "broccoli",
-          "cauliflower",
-          "broken",
-          "floret",
-          "note",
-          "sub"
-        ],
-        "strict": [
-          "broccoli"
-        ]
-      },
-      {
-        "all": [
-          "tightly",
-          "packed",
-          "shredded",
-          "cheddar",
-          "colby",
-          "cheese",
-          "tasty",
-          "pizza",
-          "mix",
-          "etc",
-          "note"
-        ],
-        "strict": [
-          "shredded",
-          "cheddar"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/one-pot-chicken-risoni-with-crispy-salami/",
     "title": "One pot chicken risoni with crispy salami (orzo)",
     "ingredients": [
@@ -78841,142 +78286,6 @@
           "steamed",
           "basmati",
           "rice"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/mexican-red-rice/",
-    "title": "Mexican Red Rice",
-    "ingredients": [
-      "1 1/2 tbsp olive oil",
-      "2  garlic cloves (, minced)",
-      "1/2  small white onion (, finely chopped)",
-      "1 cup long grain white rice (, uncooked (Note 1))",
-      "1 3/4 cups (435 ml)  chicken or vegetable broth ((Note 2))",
-      "2 1/2 tbsp tomato paste",
-      "1/4 tsp salt",
-      "1  serrano or jalapeno pepper (, whole (optional))",
-      "1  sprig coriander / cilantro",
-      "Finely chopped coriander / cilantro leaves"
-    ],
-    "cuisine": null,
-    "mealType": null,
-    "totalTime": "18 mins",
-    "totalTimeMinutes": 18,
-    "servings": "4",
-    "image": "https://www.recipetineats.com/tachyon/2017/10/Mexican-Red-Rice_-2.jpg",
-    "instructionCount": 6,
-    "tokens": [
-      {
-        "all": [
-          "olive",
-          "oil"
-        ],
-        "strict": [
-          "olive",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "clof"
-        ],
-        "strict": [
-          "garlic",
-          "clof"
-        ]
-      },
-      {
-        "all": [
-          "white",
-          "onion",
-          "finely"
-        ],
-        "strict": [
-          "white",
-          "onion"
-        ]
-      },
-      {
-        "all": [
-          "long",
-          "grain",
-          "white",
-          "rice",
-          "uncooked",
-          "note"
-        ],
-        "strict": [
-          "long",
-          "grain",
-          "white",
-          "rice"
-        ]
-      },
-      {
-        "all": [
-          "chicken",
-          "vegetable",
-          "broth",
-          "note"
-        ],
-        "strict": [
-          "chicken"
-        ]
-      },
-      {
-        "all": [
-          "tomato",
-          "paste"
-        ],
-        "strict": [
-          "tomato",
-          "paste"
-        ]
-      },
-      {
-        "all": [
-          "salt"
-        ],
-        "strict": [
-          "salt"
-        ]
-      },
-      {
-        "all": [
-          "serrano",
-          "jalapeno",
-          "pepper"
-        ],
-        "strict": [
-          "serrano"
-        ]
-      },
-      {
-        "all": [
-          "coriander",
-          "cilantro"
-        ],
-        "strict": [
-          "coriander",
-          "cilantro"
-        ]
-      },
-      {
-        "all": [
-          "finely",
-          "coriander",
-          "cilantro",
-          "leaf"
-        ],
-        "strict": [
-          "finely",
-          "coriander",
-          "cilantro",
-          "leaf"
         ]
       }
     ]
@@ -91901,153 +91210,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/creamy-dill-sauce-for-salmon-or-trout/",
-    "title": "Creamy Dill Sauce with Salmon or Trout",
-    "ingredients": [
-      "3/4 cup sour cream ((1))",
-      "2 tsp Dijon or hot English mustard ((2))",
-      "1/2 tsp garlic powder or 1 small garlic clove (, minced)",
-      "2 1/2 tbsp fresh dill (, finely chopped)",
-      "1 tsp lemon zest",
-      "1 - 2 tbsp lemon juice",
-      "2 tbsp milk ((or olive oil, for richness))",
-      "1/4 - 1/2 tsp salt",
-      "1/2 tsp white sugar",
-      "1/2 - 1 tbsp oil",
-      "4  salmon or trout fillets ((125g / 4oz each))",
-      "Salt and pepper"
-    ],
-    "cuisine": null,
-    "mealType": "Dinner",
-    "totalTime": "15 mins",
-    "totalTimeMinutes": 15,
-    "servings": "4",
-    "image": "https://www.recipetineats.com/tachyon/2016/09/Creamy-Dill-Sauce-with-Salmon_5.jpg",
-    "instructionCount": 4,
-    "tokens": [
-      {
-        "all": [
-          "sour",
-          "cream"
-        ],
-        "strict": [
-          "sour",
-          "cream"
-        ]
-      },
-      {
-        "all": [
-          "dijon",
-          "hot",
-          "english",
-          "mustard"
-        ],
-        "strict": [
-          "dijon"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "powder",
-          "clove"
-        ],
-        "strict": [
-          "garlic",
-          "powder"
-        ]
-      },
-      {
-        "all": [
-          "dill",
-          "finely"
-        ],
-        "strict": [
-          "dill"
-        ]
-      },
-      {
-        "all": [
-          "lemon",
-          "zest"
-        ],
-        "strict": [
-          "lemon",
-          "zest"
-        ]
-      },
-      {
-        "all": [
-          "lemon",
-          "juice"
-        ],
-        "strict": [
-          "lemon",
-          "juice"
-        ]
-      },
-      {
-        "all": [
-          "milk",
-          "olive",
-          "oil",
-          "richnes"
-        ],
-        "strict": [
-          "milk"
-        ]
-      },
-      {
-        "all": [
-          "salt"
-        ],
-        "strict": [
-          "salt"
-        ]
-      },
-      {
-        "all": [
-          "white",
-          "sugar"
-        ],
-        "strict": [
-          "white",
-          "sugar"
-        ]
-      },
-      {
-        "all": [
-          "oil"
-        ],
-        "strict": [
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "salmon",
-          "trout",
-          "fillet",
-          "each"
-        ],
-        "strict": [
-          "salmon"
-        ]
-      },
-      {
-        "all": [
-          "salt",
-          "pepper"
-        ],
-        "strict": [
-          "salt",
-          "pepper"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/qeema-indian-curried-beef/",
     "title": "Qeema Indian Curried Beef",
     "ingredients": [
@@ -99673,261 +98835,6 @@
         ],
         "strict": [
           "water"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/chicken-stir-fry-with-rice-noodles/",
-    "title": "Chicken Stir Fry with Rice Noodles",
-    "ingredients": [
-      "150 - 180 g/ 5 - 6 oz   chicken breast (, cut into thin strips)",
-      "1 tsp cornflour / cornstarch ((optional))",
-      "1 tsp oil ((peanut, vegetable, canola) (optional))",
-      "2 tbsp oyster sauce ((or sub with Hoisin))",
-      "1 tbsp dark soy sauce ((Note 2))",
-      "1/2 tsp each sesame oil, sugar  ((optional))",
-      "1 1/2 tbsp Chinese cooking wine ((Shoaxing wine) OR Mirin (Note 3))",
-      "1/4 tsp white pepper ((or black pepper))",
-      "3 tbsp water",
-      "100 g / 3.5 oz   dried rice noodles ((Note 4))",
-      "1 tbsp oil",
-      "1  garlic clove (, finely chopped (Note 5))",
-      "1  small onion (, sliced (white, brown, yellow))",
-      "1/2  bunch choy sum or other Asian greens (, stems separated from leaves (Note 6))",
-      "1/2  red capsicum / bell pepper (, sliced)",
-      "1  carrot (, peeled, cut in half lengthwise and sliced on the diagonal)",
-      "5 - 7  mushrooms (, sliced)",
-      "Sesame seeds and finely sliced green onions/scallions (, optional)"
-    ],
-    "cuisine": null,
-    "mealType": null,
-    "totalTime": "15 mins",
-    "totalTimeMinutes": 15,
-    "servings": "2",
-    "image": "https://www.recipetineats.com/tachyon/2017/06/Chicken-Stir-Fry-with-Rice-Noodles-4.jpg",
-    "instructionCount": 10,
-    "tokens": [
-      {
-        "all": [
-          "chicken",
-          "breast",
-          "cut",
-          "thin",
-          "strip"
-        ],
-        "strict": [
-          "chicken",
-          "breast"
-        ]
-      },
-      {
-        "all": [
-          "cornflour",
-          "cornstarch"
-        ],
-        "strict": [
-          "cornflour",
-          "cornstarch"
-        ]
-      },
-      {
-        "all": [
-          "oil",
-          "peanut",
-          "vegetable",
-          "canola"
-        ],
-        "strict": [
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "oyster",
-          "sauce",
-          "sub",
-          "hoisin"
-        ],
-        "strict": [
-          "oyster",
-          "sauce"
-        ]
-      },
-      {
-        "all": [
-          "dark",
-          "soy",
-          "sauce",
-          "note"
-        ],
-        "strict": [
-          "dark",
-          "soy",
-          "sauce"
-        ]
-      },
-      {
-        "all": [
-          "each",
-          "sesame",
-          "oil",
-          "sugar"
-        ],
-        "strict": [
-          "each",
-          "sesame",
-          "oil",
-          "sugar"
-        ]
-      },
-      {
-        "all": [
-          "chinese",
-          "cooking",
-          "wine",
-          "shoaxing",
-          "mirin",
-          "note"
-        ],
-        "strict": [
-          "chinese",
-          "cooking",
-          "wine"
-        ]
-      },
-      {
-        "all": [
-          "white",
-          "pepper",
-          "black"
-        ],
-        "strict": [
-          "white",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "water"
-        ],
-        "strict": [
-          "water"
-        ]
-      },
-      {
-        "all": [
-          "rice",
-          "noodl",
-          "note"
-        ],
-        "strict": [
-          "rice",
-          "noodl"
-        ]
-      },
-      {
-        "all": [
-          "oil"
-        ],
-        "strict": [
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "clove",
-          "finely",
-          "note"
-        ],
-        "strict": [
-          "garlic",
-          "clove"
-        ]
-      },
-      {
-        "all": [
-          "onion",
-          "white",
-          "brown",
-          "yellow"
-        ],
-        "strict": [
-          "onion"
-        ]
-      },
-      {
-        "all": [
-          "bunch",
-          "choy",
-          "sum",
-          "other",
-          "asian",
-          "green",
-          "stem",
-          "separated",
-          "leaf",
-          "note"
-        ],
-        "strict": [
-          "bunch",
-          "choy",
-          "sum"
-        ]
-      },
-      {
-        "all": [
-          "red",
-          "capsicum",
-          "pepper",
-          "bell"
-        ],
-        "strict": [
-          "red",
-          "capsicum",
-          "pepper",
-          "bell"
-        ]
-      },
-      {
-        "all": [
-          "carrot",
-          "peeled",
-          "cut",
-          "half",
-          "lengthwise",
-          "diagonal"
-        ],
-        "strict": [
-          "carrot"
-        ]
-      },
-      {
-        "all": [
-          "mushroom"
-        ],
-        "strict": [
-          "mushroom"
-        ]
-      },
-      {
-        "all": [
-          "sesame",
-          "seed",
-          "finely",
-          "green",
-          "onion",
-          "scallion"
-        ],
-        "strict": [
-          "sesame",
-          "seed",
-          "finely",
-          "green",
-          "onion",
-          "scallion"
         ]
       }
     ]
@@ -111231,125 +110138,6 @@
         "strict": [
           "basmati",
           "rice"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/crispy-pan-fried-fish/",
-    "title": "Crispy Pan Fried Fish",
-    "ingredients": [
-      "2  thin fish fillets, around 150g/5 oz each, 1 cm / 2/5\" thick, skin on or off ((Note 1))",
-      "Salt and pepper",
-      "1/4 cup / 35g   flour ((plain/all purpose, wholemeal))",
-      "1 tsp paprika (, optional (Note 2))",
-      "2 - 3 tbsp oil, enough to mostly thinly cover base ((I use vegetable or canola))",
-      "Lemon wedges",
-      "Finely chopped parsley or dill (, for garnish, optional)"
-    ],
-    "cuisine": "Western",
-    "mealType": null,
-    "totalTime": "8 mins",
-    "totalTimeMinutes": 8,
-    "servings": "2, 2 servings",
-    "image": "https://www.recipetineats.com/tachyon/2017/06/Crispy-Pan-Fried-Fish-3-1.jpg",
-    "instructionCount": 8,
-    "tokens": [
-      {
-        "all": [
-          "thin",
-          "fish",
-          "fillet",
-          "around",
-          "each",
-          "thick",
-          "skin",
-          "off",
-          "note"
-        ],
-        "strict": [
-          "thin",
-          "fish",
-          "fillet",
-          "around",
-          "each",
-          "thick",
-          "skin"
-        ]
-      },
-      {
-        "all": [
-          "salt",
-          "pepper"
-        ],
-        "strict": [
-          "salt",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "flour",
-          "plain",
-          "all",
-          "purpose",
-          "wholemeal"
-        ],
-        "strict": [
-          "flour"
-        ]
-      },
-      {
-        "all": [
-          "paprika",
-          "note"
-        ],
-        "strict": [
-          "paprika"
-        ]
-      },
-      {
-        "all": [
-          "oil",
-          "enough",
-          "mostly",
-          "thinly",
-          "cover",
-          "base",
-          "use",
-          "vegetable",
-          "canola"
-        ],
-        "strict": [
-          "oil",
-          "enough",
-          "mostly",
-          "thinly",
-          "cover",
-          "base"
-        ]
-      },
-      {
-        "all": [
-          "lemon",
-          "wedg"
-        ],
-        "strict": [
-          "lemon",
-          "wedg"
-        ]
-      },
-      {
-        "all": [
-          "finely",
-          "parsley",
-          "dill",
-          "garnish"
-        ],
-        "strict": [
-          "finely",
-          "parsley"
         ]
       }
     ]
@@ -166349,180 +165137,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/lemon-honey-glazed-salmon/",
-    "title": "LEMON HONEY GLAZED SALMON",
-    "ingredients": [
-      "4  salmon fillets (, 180g/6oz each, skinless and boneless)",
-      "1 tsp olive oil",
-      "50 g / 3.5 tbsp   butter (, salted)",
-      "1  large garlic clove (, finely chopped)",
-      "2 ½ tbsp honey",
-      "2 tbsp lemon juice (, fresh)",
-      "3 tbsp flour",
-      "1 tsp paprika",
-      "½ tsp garlic powder",
-      "½ tsp mustard powder ((not critical))",
-      "1/2 tsp salt",
-      "½ tsp black pepper",
-      "Finely chopped parsley or chives",
-      "Lemon slices"
-    ],
-    "cuisine": null,
-    "mealType": null,
-    "totalTime": "13 mins",
-    "totalTimeMinutes": 13,
-    "servings": "4",
-    "image": "https://www.recipetineats.com/tachyon/2017/10/Lemon-Honey-Glazed-Salmon-4.jpg",
-    "instructionCount": 7,
-    "tokens": [
-      {
-        "all": [
-          "salmon",
-          "fillet",
-          "each",
-          "skinles",
-          "boneles"
-        ],
-        "strict": [
-          "salmon",
-          "fillet"
-        ]
-      },
-      {
-        "all": [
-          "olive",
-          "oil"
-        ],
-        "strict": [
-          "olive",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "butter",
-          "salted"
-        ],
-        "strict": [
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "clove",
-          "finely"
-        ],
-        "strict": [
-          "garlic",
-          "clove"
-        ]
-      },
-      {
-        "all": [
-          "honey"
-        ],
-        "strict": [
-          "honey"
-        ]
-      },
-      {
-        "all": [
-          "lemon",
-          "juice"
-        ],
-        "strict": [
-          "lemon",
-          "juice"
-        ]
-      },
-      {
-        "all": [
-          "flour"
-        ],
-        "strict": [
-          "flour"
-        ]
-      },
-      {
-        "all": [
-          "paprika"
-        ],
-        "strict": [
-          "paprika"
-        ]
-      },
-      {
-        "all": [
-          "tsp",
-          "garlic",
-          "powder"
-        ],
-        "strict": [
-          "tsp",
-          "garlic",
-          "powder"
-        ]
-      },
-      {
-        "all": [
-          "tsp",
-          "mustard",
-          "powder",
-          "not",
-          "critical"
-        ],
-        "strict": [
-          "tsp",
-          "mustard",
-          "powder"
-        ]
-      },
-      {
-        "all": [
-          "salt"
-        ],
-        "strict": [
-          "salt"
-        ]
-      },
-      {
-        "all": [
-          "tsp",
-          "black",
-          "pepper"
-        ],
-        "strict": [
-          "tsp",
-          "black",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "finely",
-          "parsley",
-          "chif"
-        ],
-        "strict": [
-          "finely",
-          "parsley"
-        ]
-      },
-      {
-        "all": [
-          "lemon",
-          "slic"
-        ],
-        "strict": [
-          "lemon",
-          "slic"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/easy-thai-coconut-soup-with-shrimp-prawns/",
     "title": "Thai Coconut Soup",
     "ingredients": [
@@ -188194,150 +186808,6 @@
         ],
         "strict": [
           "shaved"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/salted-caramel-tart/",
-    "title": "Salted Caramel Tart",
-    "ingredients": [
-      "225g / 8 oz   plain sweet biscuits, about 2 cups (packed) crushed ((Arnott’s Marie Crackers, Graham Crackers, Note 1 for Digestives))",
-      "150g / 10 tbsp  unsalted butter (, melted (Note 1 for Digestives))",
-      "100g / 7 tbsp  unsalted butter",
-      "1 cup brown sugar ((tightly packed cup))",
-      "2  cans sweetened condensed milk  ((395g / 14oz each can))",
-      "1 3/4 tsp salt ((2 ½ - 3 tsp salt flakes))",
-      "1/3 cup thickened cream ((heavy cream), or any cream 30%+ fat)",
-      "150g / 5 oz  dark chocolate melts / chips",
-      "Sea salt flakes (, for topping (recommended))"
-    ],
-    "cuisine": "Western",
-    "mealType": "Dessert",
-    "totalTime": "40 mins",
-    "totalTimeMinutes": 40,
-    "servings": "12",
-    "image": "https://www.recipetineats.com/tachyon/2017/08/Salted-Caramel-Tart-3.jpg",
-    "instructionCount": 6,
-    "tokens": [
-      {
-        "all": [
-          "plain",
-          "sweet",
-          "biscuit",
-          "packed",
-          "crushed",
-          "arnott",
-          "marie",
-          "cracker",
-          "graham",
-          "note",
-          "digestif"
-        ],
-        "strict": [
-          "plain",
-          "sweet",
-          "biscuit",
-          "crushed"
-        ]
-      },
-      {
-        "all": [
-          "unsalted",
-          "butter",
-          "melted",
-          "note",
-          "digestif"
-        ],
-        "strict": [
-          "unsalted",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "unsalted",
-          "butter"
-        ],
-        "strict": [
-          "unsalted",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "brown",
-          "sugar",
-          "tightly",
-          "packed",
-          "cup"
-        ],
-        "strict": [
-          "brown",
-          "sugar"
-        ]
-      },
-      {
-        "all": [
-          "sweetened",
-          "condensed",
-          "milk",
-          "each",
-          "can"
-        ],
-        "strict": [
-          "sweetened",
-          "condensed",
-          "milk"
-        ]
-      },
-      {
-        "all": [
-          "salt",
-          "flak"
-        ],
-        "strict": [
-          "salt"
-        ]
-      },
-      {
-        "all": [
-          "thickened",
-          "cream",
-          "heavy",
-          "any",
-          "fat"
-        ],
-        "strict": [
-          "thickened",
-          "cream"
-        ]
-      },
-      {
-        "all": [
-          "dark",
-          "chocolate",
-          "melt",
-          "chip"
-        ],
-        "strict": [
-          "dark",
-          "chocolate",
-          "melt",
-          "chip"
-        ]
-      },
-      {
-        "all": [
-          "salt",
-          "flak",
-          "topping",
-          "recommended"
-        ],
-        "strict": [
-          "salt",
-          "flak"
         ]
       }
     ]
@@ -211325,179 +209795,6 @@
         "strict": [
           "bacon",
           "pancetta"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/prawn-mango-and-avocado-salad-with-noodles-and-lime-dressing/",
-    "title": "Prawn Mango and Avocado Salad with Noodles",
-    "ingredients": [
-      "90 g / 3 oz   dried vermicelli noodles",
-      "12 - 16  large cooked prawns ((shrimp), peeled (enough for 2 people))",
-      "8 - 10  soft lettuce leaves (, about 15 cm /6\" rounds (Note 1))",
-      "1  medium mango (, ripe, cut into 1.5 cm / 3/5\" pieces (Note 2))",
-      "1  medium avocado (, cut into 1.5 cm / 3/5\" pieces (Note 2))",
-      "1/4  red onion (, finely diced)",
-      "2 1/2 tbsp Sweet Chilli Sauce ((store bought))",
-      "4 tbsp lime juice ((or 2 1/2 tsp rice vinegar or cider vinegar))",
-      "2 1/2 tbsp olive oil",
-      "1  small garlic clove (, minced)",
-      "1 1/2 tsp sugar",
-      "Salt and pepper",
-      "1 1/2 tbsp finely chopped coriander / cilantro"
-    ],
-    "cuisine": null,
-    "mealType": null,
-    "totalTime": "15 mins",
-    "totalTimeMinutes": 15,
-    "servings": "2",
-    "image": "https://www.recipetineats.com/tachyon/2017/11/Prawn-Avocado-Mango-Salad-6.jpg",
-    "instructionCount": 6,
-    "tokens": [
-      {
-        "all": [
-          "vermicelli",
-          "noodl"
-        ],
-        "strict": [
-          "vermicelli",
-          "noodl"
-        ]
-      },
-      {
-        "all": [
-          "prawn",
-          "shrimp",
-          "peeled",
-          "enough",
-          "people"
-        ],
-        "strict": [
-          "prawn",
-          "peeled"
-        ]
-      },
-      {
-        "all": [
-          "soft",
-          "lettuce",
-          "leaf",
-          "round",
-          "note"
-        ],
-        "strict": [
-          "soft",
-          "lettuce",
-          "leaf"
-        ]
-      },
-      {
-        "all": [
-          "mango",
-          "ripe",
-          "cut",
-          "note"
-        ],
-        "strict": [
-          "mango"
-        ]
-      },
-      {
-        "all": [
-          "avocado",
-          "cut",
-          "note"
-        ],
-        "strict": [
-          "avocado"
-        ]
-      },
-      {
-        "all": [
-          "red",
-          "onion",
-          "finely"
-        ],
-        "strict": [
-          "red",
-          "onion"
-        ]
-      },
-      {
-        "all": [
-          "sweet",
-          "chilli",
-          "sauce"
-        ],
-        "strict": [
-          "sweet",
-          "chilli",
-          "sauce"
-        ]
-      },
-      {
-        "all": [
-          "lime",
-          "juice",
-          "rice",
-          "vinegar",
-          "cider"
-        ],
-        "strict": [
-          "lime",
-          "juice"
-        ]
-      },
-      {
-        "all": [
-          "olive",
-          "oil"
-        ],
-        "strict": [
-          "olive",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "clove"
-        ],
-        "strict": [
-          "garlic",
-          "clove"
-        ]
-      },
-      {
-        "all": [
-          "sugar"
-        ],
-        "strict": [
-          "sugar"
-        ]
-      },
-      {
-        "all": [
-          "salt",
-          "pepper"
-        ],
-        "strict": [
-          "salt",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "finely",
-          "coriander",
-          "cilantro"
-        ],
-        "strict": [
-          "finely",
-          "coriander",
-          "cilantro"
         ]
       }
     ]
@@ -257005,190 +255302,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/coquillettes-au-jambon-french-macaroni-and-cheese-with-ham/",
-    "title": "Coquillettes au Jambon - French Macaroni and Cheese with Ham",
-    "ingredients": [
-      "500g / 1 lb  elbow pasta / macaroni  (, but any similar size pasta would work  )",
-      "1  tsp cooking salt / kosher salt (, for pasta water, half for table salt)",
-      "200g / 7 oz  ham slices ((I use ham off-the-bone), diced 1cm / 0.4&quot; (Note 1))",
-      "75g / 5tbsp tbsp unsalted butter",
-      "1/2 cup plain flour / all-purpose flour",
-      "3 cups milk (, HOT, full fat preferred, but work with lite milk too)",
-      "1 tsp cooking salt / kosher salt (, halve for table salt, +50% for flakes)",
-      "3/4 tsp black pepper",
-      "1/4 tsp ground nutmeg (, (Note 2))",
-      "1 1/2 cups Gruyère cheese, grated (, shredded using a standard box grater (tightly packed if using cups) (Note 3))",
-      "1/2 cup pasta cooking water"
-    ],
-    "cuisine": "French, Western",
-    "mealType": "Dinner",
-    "totalTime": "25 mins",
-    "totalTimeMinutes": 25,
-    "servings": "5",
-    "image": "https://www.recipetineats.com/tachyon/2026/04/Coquilettes-au-jambon_0.jpg",
-    "instructionCount": 3,
-    "tokens": [
-      {
-        "all": [
-          "elbow",
-          "pasta",
-          "macaroni",
-          "but",
-          "any",
-          "similar",
-          "size",
-          "would",
-          "work"
-        ],
-        "strict": [
-          "elbow",
-          "pasta",
-          "macaroni"
-        ]
-      },
-      {
-        "all": [
-          "cooking",
-          "salt",
-          "kosher",
-          "pasta",
-          "water",
-          "half",
-          "table"
-        ],
-        "strict": [
-          "cooking",
-          "salt",
-          "kosher"
-        ]
-      },
-      {
-        "all": [
-          "ham",
-          "slic",
-          "use",
-          "off",
-          "bone",
-          "quot",
-          "note"
-        ],
-        "strict": [
-          "ham",
-          "slic",
-          "quot"
-        ]
-      },
-      {
-        "all": [
-          "tbsp",
-          "unsalted",
-          "butter"
-        ],
-        "strict": [
-          "tbsp",
-          "unsalted",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "plain",
-          "flour",
-          "all",
-          "purpose"
-        ],
-        "strict": [
-          "plain",
-          "flour",
-          "all",
-          "purpose"
-        ]
-      },
-      {
-        "all": [
-          "milk",
-          "hot",
-          "full",
-          "fat",
-          "preferred",
-          "but",
-          "work",
-          "lite",
-          "too"
-        ],
-        "strict": [
-          "milk"
-        ]
-      },
-      {
-        "all": [
-          "cooking",
-          "salt",
-          "kosher",
-          "halve",
-          "table",
-          "flak"
-        ],
-        "strict": [
-          "cooking",
-          "salt",
-          "kosher"
-        ]
-      },
-      {
-        "all": [
-          "black",
-          "pepper"
-        ],
-        "strict": [
-          "black",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "nutmeg",
-          "note"
-        ],
-        "strict": [
-          "nutmeg"
-        ]
-      },
-      {
-        "all": [
-          "gruy",
-          "cheese",
-          "shredded",
-          "using",
-          "standard",
-          "box",
-          "grater",
-          "tightly",
-          "packed",
-          "cup",
-          "note"
-        ],
-        "strict": [
-          "gruy",
-          "cheese"
-        ]
-      },
-      {
-        "all": [
-          "pasta",
-          "cooking",
-          "water"
-        ],
-        "strict": [
-          "pasta",
-          "cooking",
-          "water"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/pommes-anna/",
     "title": "JB's Pommes Anna",
     "ingredients": [
@@ -276110,6 +274223,2431 @@
         "strict": [
           "finely",
           "parsley"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/beef-stew/",
+    "title": "Beef Stew",
+    "ingredients": [
+      "1.2 kg / 2.4lb    chuck beef (, cut into 3.5 cm / 1.5\" cubes (Note 1))",
+      "1 tsp cooking salt / kosher salt ((halve for table salt, +50% for flakes))",
+      "1/2 tsp black pepper",
+      "3 tbsp olive oil (, divided)",
+      "1  large onion (, halved then cut into 1 cm / 2/5\" slices)",
+      "4  garlic cloves (, minced)",
+      "3  carrots (, cut into 2.5cm / 1\" pieces on the diagonal)",
+      "2  celery stalks (, cut into 2.5 cm / 1\" pieces)",
+      "1/3 cup plain flour / all-purpose flour",
+      "3 cups beef broth / stock (, salt reduced)",
+      "2 cups red wine (, bold and dry (Cab Sauv, Burgundy, Merlot) (Note 2))",
+      "2 tsp Worcestershire Sauce",
+      "2 tbsp tomato paste",
+      "2  bay leaves (, fresh or dried)",
+      "4  sprigs thyme",
+      "400 g / 14 oz   baby potatoes (, halved)",
+      "More salt and pepper (, if required)",
+      "Mashed potato",
+      "1 tsp finely chopped parsley (, optional garnish)",
+      "Crusty bread (, for bowl mopping and dunking)"
+    ],
+    "cuisine": "Western",
+    "mealType": "Soup",
+    "totalTime": "165 mins",
+    "totalTimeMinutes": 165,
+    "servings": "6",
+    "image": "https://www.recipetineats.com/tachyon/2019/01/Beef-Stew_0-SQ1.jpg",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "chuck",
+          "beef",
+          "cut",
+          "cub",
+          "note"
+        ],
+        "strict": [
+          "chuck",
+          "beef"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "halve",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil",
+          "divided"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "halved",
+          "then",
+          "cut",
+          "slic"
+        ],
+        "strict": [
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "carrot",
+          "cut",
+          "diagonal"
+        ],
+        "strict": [
+          "carrot"
+        ]
+      },
+      {
+        "all": [
+          "celery",
+          "stalk",
+          "cut"
+        ],
+        "strict": [
+          "celery",
+          "stalk"
+        ]
+      },
+      {
+        "all": [
+          "plain",
+          "flour",
+          "all",
+          "purpose"
+        ],
+        "strict": [
+          "plain",
+          "flour",
+          "all",
+          "purpose"
+        ]
+      },
+      {
+        "all": [
+          "beef",
+          "broth",
+          "stock",
+          "salt",
+          "reduced"
+        ],
+        "strict": [
+          "beef",
+          "broth",
+          "stock"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "wine",
+          "bold",
+          "dry",
+          "cab",
+          "sauv",
+          "burgundy",
+          "merlot",
+          "note"
+        ],
+        "strict": [
+          "red",
+          "wine"
+        ]
+      },
+      {
+        "all": [
+          "worcestershire",
+          "sauce"
+        ],
+        "strict": [
+          "worcestershire",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "tomato",
+          "paste"
+        ],
+        "strict": [
+          "tomato",
+          "paste"
+        ]
+      },
+      {
+        "all": [
+          "bay",
+          "leaf"
+        ],
+        "strict": [
+          "bay",
+          "leaf"
+        ]
+      },
+      {
+        "all": [
+          "thyme"
+        ],
+        "strict": [
+          "thyme"
+        ]
+      },
+      {
+        "all": [
+          "baby",
+          "potato",
+          "halved"
+        ],
+        "strict": [
+          "baby",
+          "potato"
+        ]
+      },
+      {
+        "all": [
+          "more",
+          "salt",
+          "pepper"
+        ],
+        "strict": [
+          "more",
+          "salt",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "mashed",
+          "potato"
+        ],
+        "strict": [
+          "mashed",
+          "potato"
+        ]
+      },
+      {
+        "all": [
+          "finely",
+          "parsley",
+          "garnish"
+        ],
+        "strict": [
+          "finely",
+          "parsley"
+        ]
+      },
+      {
+        "all": [
+          "crusty",
+          "bread",
+          "bowl",
+          "mopping",
+          "dunking"
+        ],
+        "strict": [
+          "crusty",
+          "bread"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/chicken-stir-fry-with-rice-noodles/",
+    "title": "Chicken Stir Fry with Rice Noodles",
+    "ingredients": [
+      "150 - 180 g/ 5 - 6 oz   chicken breast (, cut into thin strips)",
+      "1 tsp cornflour / cornstarch ((optional))",
+      "1 tsp oil ((peanut, vegetable, canola) (optional))",
+      "2 tbsp oyster sauce ((or sub with Hoisin))",
+      "1 tbsp dark soy sauce ((Note 2))",
+      "1/2 tsp each sesame oil, sugar  ((optional))",
+      "1 1/2 tbsp Chinese cooking wine ((Shoaxing wine) OR Mirin (Note 3))",
+      "1/4 tsp white pepper ((or black pepper))",
+      "3 tbsp water",
+      "100 g / 3.5 oz   dried rice noodles ((Note 4))",
+      "1 tbsp oil",
+      "1  garlic clove (, finely chopped (Note 5))",
+      "1  small onion (, sliced (white, brown, yellow))",
+      "1/2  bunch choy sum or other Asian greens (, stems separated from leaves (Note 6))",
+      "1/2  red capsicum / bell pepper (, sliced)",
+      "1  carrot (, peeled, cut in half lengthwise and sliced on the diagonal)",
+      "5 - 7  mushrooms (, sliced)",
+      "Sesame seeds and finely sliced green onions/scallions (, optional)"
+    ],
+    "cuisine": null,
+    "mealType": null,
+    "totalTime": "15 mins",
+    "totalTimeMinutes": 15,
+    "servings": "2",
+    "image": "https://www.recipetineats.com/tachyon/2017/06/Chicken-Stir-Fry-with-Rice-Noodles-4.jpg",
+    "instructionCount": 10,
+    "tokens": [
+      {
+        "all": [
+          "chicken",
+          "breast",
+          "cut",
+          "thin",
+          "strip"
+        ],
+        "strict": [
+          "chicken",
+          "breast"
+        ]
+      },
+      {
+        "all": [
+          "cornflour",
+          "cornstarch"
+        ],
+        "strict": [
+          "cornflour",
+          "cornstarch"
+        ]
+      },
+      {
+        "all": [
+          "oil",
+          "peanut",
+          "vegetable",
+          "canola"
+        ],
+        "strict": [
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "oyster",
+          "sauce",
+          "sub",
+          "hoisin"
+        ],
+        "strict": [
+          "oyster",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "dark",
+          "soy",
+          "sauce",
+          "note"
+        ],
+        "strict": [
+          "dark",
+          "soy",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "each",
+          "sesame",
+          "oil",
+          "sugar"
+        ],
+        "strict": [
+          "each",
+          "sesame",
+          "oil",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "chinese",
+          "cooking",
+          "wine",
+          "shoaxing",
+          "mirin",
+          "note"
+        ],
+        "strict": [
+          "chinese",
+          "cooking",
+          "wine"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "pepper",
+          "black"
+        ],
+        "strict": [
+          "white",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "water"
+        ],
+        "strict": [
+          "water"
+        ]
+      },
+      {
+        "all": [
+          "rice",
+          "noodl",
+          "note"
+        ],
+        "strict": [
+          "rice",
+          "noodl"
+        ]
+      },
+      {
+        "all": [
+          "oil"
+        ],
+        "strict": [
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clove",
+          "finely",
+          "note"
+        ],
+        "strict": [
+          "garlic",
+          "clove"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "white",
+          "brown",
+          "yellow"
+        ],
+        "strict": [
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "bunch",
+          "choy",
+          "sum",
+          "other",
+          "asian",
+          "green",
+          "stem",
+          "separated",
+          "leaf",
+          "note"
+        ],
+        "strict": [
+          "bunch",
+          "choy",
+          "sum"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "capsicum",
+          "pepper",
+          "bell"
+        ],
+        "strict": [
+          "red",
+          "capsicum",
+          "pepper",
+          "bell"
+        ]
+      },
+      {
+        "all": [
+          "carrot",
+          "peeled",
+          "cut",
+          "half",
+          "lengthwise",
+          "diagonal"
+        ],
+        "strict": [
+          "carrot"
+        ]
+      },
+      {
+        "all": [
+          "mushroom"
+        ],
+        "strict": [
+          "mushroom"
+        ]
+      },
+      {
+        "all": [
+          "sesame",
+          "seed",
+          "finely",
+          "green",
+          "onion",
+          "scallion"
+        ],
+        "strict": [
+          "sesame",
+          "seed",
+          "finely",
+          "green",
+          "onion",
+          "scallion"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/creamy-dill-sauce-for-salmon-or-trout/",
+    "title": "Creamy Dill Sauce with Salmon or Trout",
+    "ingredients": [
+      "3/4 cup sour cream ((1))",
+      "2 tsp Dijon or hot English mustard ((2))",
+      "1/2 tsp garlic powder or 1 small garlic clove (, minced)",
+      "2 1/2 tbsp fresh dill (, finely chopped)",
+      "1 tsp lemon zest",
+      "1 - 2 tbsp lemon juice",
+      "2 tbsp milk ((or olive oil, for richness))",
+      "1/4 - 1/2 tsp salt",
+      "1/2 tsp white sugar",
+      "1/2 - 1 tbsp oil",
+      "4  salmon or trout fillets ((125g / 4oz each))",
+      "Salt and pepper"
+    ],
+    "cuisine": null,
+    "mealType": "Dinner",
+    "totalTime": "15 mins",
+    "totalTimeMinutes": 15,
+    "servings": "4",
+    "image": "https://www.recipetineats.com/tachyon/2016/09/Creamy-Dill-Sauce-with-Salmon_5.jpg",
+    "instructionCount": 4,
+    "tokens": [
+      {
+        "all": [
+          "sour",
+          "cream"
+        ],
+        "strict": [
+          "sour",
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "dijon",
+          "hot",
+          "english",
+          "mustard"
+        ],
+        "strict": [
+          "dijon"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "powder",
+          "clove"
+        ],
+        "strict": [
+          "garlic",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "dill",
+          "finely"
+        ],
+        "strict": [
+          "dill"
+        ]
+      },
+      {
+        "all": [
+          "lemon",
+          "zest"
+        ],
+        "strict": [
+          "lemon",
+          "zest"
+        ]
+      },
+      {
+        "all": [
+          "lemon",
+          "juice"
+        ],
+        "strict": [
+          "lemon",
+          "juice"
+        ]
+      },
+      {
+        "all": [
+          "milk",
+          "olive",
+          "oil",
+          "richnes"
+        ],
+        "strict": [
+          "milk"
+        ]
+      },
+      {
+        "all": [
+          "salt"
+        ],
+        "strict": [
+          "salt"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "sugar"
+        ],
+        "strict": [
+          "white",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "oil"
+        ],
+        "strict": [
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "salmon",
+          "trout",
+          "fillet",
+          "each"
+        ],
+        "strict": [
+          "salmon"
+        ]
+      },
+      {
+        "all": [
+          "salt",
+          "pepper"
+        ],
+        "strict": [
+          "salt",
+          "pepper"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/prawn-mango-and-avocado-salad-with-noodles-and-lime-dressing/",
+    "title": "Prawn Mango and Avocado Salad with Noodles",
+    "ingredients": [
+      "90 g / 3 oz   dried vermicelli noodles",
+      "12 - 16  large cooked prawns ((shrimp), peeled (enough for 2 people))",
+      "8 - 10  soft lettuce leaves (, about 15 cm /6\" rounds (Note 1))",
+      "1  medium mango (, ripe, cut into 1.5 cm / 3/5\" pieces (Note 2))",
+      "1  medium avocado (, cut into 1.5 cm / 3/5\" pieces (Note 2))",
+      "1/4  red onion (, finely diced)",
+      "2 1/2 tbsp Sweet Chilli Sauce ((store bought))",
+      "4 tbsp lime juice ((or 2 1/2 tsp rice vinegar or cider vinegar))",
+      "2 1/2 tbsp olive oil",
+      "1  small garlic clove (, minced)",
+      "1 1/2 tsp sugar",
+      "Salt and pepper",
+      "1 1/2 tbsp finely chopped coriander / cilantro"
+    ],
+    "cuisine": null,
+    "mealType": null,
+    "totalTime": "15 mins",
+    "totalTimeMinutes": 15,
+    "servings": "2",
+    "image": "https://www.recipetineats.com/tachyon/2017/11/Prawn-Avocado-Mango-Salad-6.jpg",
+    "instructionCount": 6,
+    "tokens": [
+      {
+        "all": [
+          "vermicelli",
+          "noodl"
+        ],
+        "strict": [
+          "vermicelli",
+          "noodl"
+        ]
+      },
+      {
+        "all": [
+          "prawn",
+          "shrimp",
+          "peeled",
+          "enough",
+          "people"
+        ],
+        "strict": [
+          "prawn",
+          "peeled"
+        ]
+      },
+      {
+        "all": [
+          "soft",
+          "lettuce",
+          "leaf",
+          "round",
+          "note"
+        ],
+        "strict": [
+          "soft",
+          "lettuce",
+          "leaf"
+        ]
+      },
+      {
+        "all": [
+          "mango",
+          "ripe",
+          "cut",
+          "note"
+        ],
+        "strict": [
+          "mango"
+        ]
+      },
+      {
+        "all": [
+          "avocado",
+          "cut",
+          "note"
+        ],
+        "strict": [
+          "avocado"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "onion",
+          "finely"
+        ],
+        "strict": [
+          "red",
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "sweet",
+          "chilli",
+          "sauce"
+        ],
+        "strict": [
+          "sweet",
+          "chilli",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "lime",
+          "juice",
+          "rice",
+          "vinegar",
+          "cider"
+        ],
+        "strict": [
+          "lime",
+          "juice"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clove"
+        ],
+        "strict": [
+          "garlic",
+          "clove"
+        ]
+      },
+      {
+        "all": [
+          "sugar"
+        ],
+        "strict": [
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "salt",
+          "pepper"
+        ],
+        "strict": [
+          "salt",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "finely",
+          "coriander",
+          "cilantro"
+        ],
+        "strict": [
+          "finely",
+          "coriander",
+          "cilantro"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/mexican-red-rice/",
+    "title": "Mexican Red Rice",
+    "ingredients": [
+      "1 1/2 tbsp olive oil",
+      "2  garlic cloves (, minced)",
+      "1/2  small white onion (, finely chopped)",
+      "1 cup long grain white rice (, uncooked (Note 1))",
+      "1 3/4 cups (435 ml)  chicken or vegetable broth ((Note 2))",
+      "2 1/2 tbsp tomato paste",
+      "1/4 tsp salt",
+      "1  serrano or jalapeno pepper (, whole (optional))",
+      "1  sprig coriander / cilantro",
+      "Finely chopped coriander / cilantro leaves"
+    ],
+    "cuisine": null,
+    "mealType": null,
+    "totalTime": "18 mins",
+    "totalTimeMinutes": 18,
+    "servings": "4",
+    "image": "https://www.recipetineats.com/tachyon/2017/10/Mexican-Red-Rice_-2.jpg",
+    "instructionCount": 6,
+    "tokens": [
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "onion",
+          "finely"
+        ],
+        "strict": [
+          "white",
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "long",
+          "grain",
+          "white",
+          "rice",
+          "uncooked",
+          "note"
+        ],
+        "strict": [
+          "long",
+          "grain",
+          "white",
+          "rice"
+        ]
+      },
+      {
+        "all": [
+          "chicken",
+          "vegetable",
+          "broth",
+          "note"
+        ],
+        "strict": [
+          "chicken"
+        ]
+      },
+      {
+        "all": [
+          "tomato",
+          "paste"
+        ],
+        "strict": [
+          "tomato",
+          "paste"
+        ]
+      },
+      {
+        "all": [
+          "salt"
+        ],
+        "strict": [
+          "salt"
+        ]
+      },
+      {
+        "all": [
+          "serrano",
+          "jalapeno",
+          "pepper"
+        ],
+        "strict": [
+          "serrano"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro"
+        ]
+      },
+      {
+        "all": [
+          "finely",
+          "coriander",
+          "cilantro",
+          "leaf"
+        ],
+        "strict": [
+          "finely",
+          "coriander",
+          "cilantro",
+          "leaf"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/healthy-chicken-and-broccoli-pasta-bake/",
+    "title": "Ultra Lazy Creamy Chicken and Broccoli Pasta Bake",
+    "ingredients": [
+      "400g / 14 oz  chicken tenderloin (raw) (, breast or thigh, cut into 1.5cm / 3/5\" pieces)",
+      "Salt and pepper",
+      "1 tsp dried thyme ((or other herbs and/or spices of choice))",
+      "250g / 8 oz   spiral pasta, uncooked ((See Note 1 for other shapes))",
+      "1/4 cup flour ((all purpose / plain))",
+      "1 1/2 cups chicken broth/stock (, warmed)",
+      "2 cups milk (, warmed (any fat %))",
+      "1  large garlic clove (, minced)",
+      "2 tbsp / 30g  unsalted butter (, recommended but optional)",
+      "1  large broccoli ( or 2 medium broccoli or cauliflower, broken into small to medium florets (Note 2 for subs))",
+      "1 1/2 cups (tightly packed) shredded cheddar or colby cheese ((or tasty cheese, pizza mix etc, Note 3))"
+    ],
+    "cuisine": null,
+    "mealType": null,
+    "totalTime": "45 mins",
+    "totalTimeMinutes": 45,
+    "servings": "5",
+    "image": "https://www.recipetineats.com/tachyon/2017/07/Ultra-Lazy-Creamy-Chicken-Pasta-Bake-2.jpg",
+    "instructionCount": 8,
+    "tokens": [
+      {
+        "all": [
+          "chicken",
+          "tenderloin",
+          "breast",
+          "thigh",
+          "cut"
+        ],
+        "strict": [
+          "chicken",
+          "tenderloin"
+        ]
+      },
+      {
+        "all": [
+          "salt",
+          "pepper"
+        ],
+        "strict": [
+          "salt",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "thyme",
+          "other",
+          "herb",
+          "spic",
+          "choice"
+        ],
+        "strict": [
+          "thyme"
+        ]
+      },
+      {
+        "all": [
+          "spiral",
+          "pasta",
+          "uncooked",
+          "see",
+          "note",
+          "other",
+          "shap"
+        ],
+        "strict": [
+          "spiral",
+          "pasta",
+          "uncooked"
+        ]
+      },
+      {
+        "all": [
+          "flour",
+          "all",
+          "purpose",
+          "plain"
+        ],
+        "strict": [
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "chicken",
+          "broth",
+          "stock",
+          "warmed"
+        ],
+        "strict": [
+          "chicken",
+          "broth",
+          "stock"
+        ]
+      },
+      {
+        "all": [
+          "milk",
+          "warmed",
+          "any",
+          "fat"
+        ],
+        "strict": [
+          "milk"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clove"
+        ],
+        "strict": [
+          "garlic",
+          "clove"
+        ]
+      },
+      {
+        "all": [
+          "unsalted",
+          "butter",
+          "recommended",
+          "but"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "broccoli",
+          "cauliflower",
+          "broken",
+          "floret",
+          "note",
+          "sub"
+        ],
+        "strict": [
+          "broccoli"
+        ]
+      },
+      {
+        "all": [
+          "tightly",
+          "packed",
+          "shredded",
+          "cheddar",
+          "colby",
+          "cheese",
+          "tasty",
+          "pizza",
+          "mix",
+          "etc",
+          "note"
+        ],
+        "strict": [
+          "shredded",
+          "cheddar"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/lemon-honey-glazed-salmon/",
+    "title": "LEMON HONEY GLAZED SALMON",
+    "ingredients": [
+      "4  salmon fillets (, 180g/6oz each, skinless and boneless)",
+      "1 tsp olive oil",
+      "50 g / 3.5 tbsp   butter (, salted)",
+      "1  large garlic clove (, finely chopped)",
+      "2 ½ tbsp honey",
+      "2 tbsp lemon juice (, fresh)",
+      "3 tbsp flour",
+      "1 tsp paprika",
+      "½ tsp garlic powder",
+      "½ tsp mustard powder ((not critical))",
+      "1/2 tsp salt",
+      "½ tsp black pepper",
+      "Finely chopped parsley or chives",
+      "Lemon slices"
+    ],
+    "cuisine": null,
+    "mealType": null,
+    "totalTime": "13 mins",
+    "totalTimeMinutes": 13,
+    "servings": "4",
+    "image": "https://www.recipetineats.com/tachyon/2017/10/Lemon-Honey-Glazed-Salmon-4.jpg",
+    "instructionCount": 7,
+    "tokens": [
+      {
+        "all": [
+          "salmon",
+          "fillet",
+          "each",
+          "skinles",
+          "boneles"
+        ],
+        "strict": [
+          "salmon",
+          "fillet"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "butter",
+          "salted"
+        ],
+        "strict": [
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clove",
+          "finely"
+        ],
+        "strict": [
+          "garlic",
+          "clove"
+        ]
+      },
+      {
+        "all": [
+          "honey"
+        ],
+        "strict": [
+          "honey"
+        ]
+      },
+      {
+        "all": [
+          "lemon",
+          "juice"
+        ],
+        "strict": [
+          "lemon",
+          "juice"
+        ]
+      },
+      {
+        "all": [
+          "flour"
+        ],
+        "strict": [
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "paprika"
+        ],
+        "strict": [
+          "paprika"
+        ]
+      },
+      {
+        "all": [
+          "tsp",
+          "garlic",
+          "powder"
+        ],
+        "strict": [
+          "tsp",
+          "garlic",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "tsp",
+          "mustard",
+          "powder",
+          "not",
+          "critical"
+        ],
+        "strict": [
+          "tsp",
+          "mustard",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "salt"
+        ],
+        "strict": [
+          "salt"
+        ]
+      },
+      {
+        "all": [
+          "tsp",
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "tsp",
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "finely",
+          "parsley",
+          "chif"
+        ],
+        "strict": [
+          "finely",
+          "parsley"
+        ]
+      },
+      {
+        "all": [
+          "lemon",
+          "slic"
+        ],
+        "strict": [
+          "lemon",
+          "slic"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/crispy-pan-fried-fish/",
+    "title": "Crispy Pan Fried Fish",
+    "ingredients": [
+      "2  thin fish fillets, around 150g/5 oz each, 1 cm / 2/5\" thick, skin on or off ((Note 1))",
+      "Salt and pepper",
+      "1/4 cup / 35g   flour ((plain/all purpose, wholemeal))",
+      "1 tsp paprika (, optional (Note 2))",
+      "2 - 3 tbsp oil, enough to mostly thinly cover base ((I use vegetable or canola))",
+      "Lemon wedges",
+      "Finely chopped parsley or dill (, for garnish, optional)"
+    ],
+    "cuisine": "Western",
+    "mealType": null,
+    "totalTime": "8 mins",
+    "totalTimeMinutes": 8,
+    "servings": "2, 2 servings",
+    "image": "https://www.recipetineats.com/tachyon/2017/06/Crispy-Pan-Fried-Fish-3-1.jpg",
+    "instructionCount": 8,
+    "tokens": [
+      {
+        "all": [
+          "thin",
+          "fish",
+          "fillet",
+          "around",
+          "each",
+          "thick",
+          "skin",
+          "off",
+          "note"
+        ],
+        "strict": [
+          "thin",
+          "fish",
+          "fillet",
+          "around",
+          "each",
+          "thick",
+          "skin"
+        ]
+      },
+      {
+        "all": [
+          "salt",
+          "pepper"
+        ],
+        "strict": [
+          "salt",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "flour",
+          "plain",
+          "all",
+          "purpose",
+          "wholemeal"
+        ],
+        "strict": [
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "paprika",
+          "note"
+        ],
+        "strict": [
+          "paprika"
+        ]
+      },
+      {
+        "all": [
+          "oil",
+          "enough",
+          "mostly",
+          "thinly",
+          "cover",
+          "base",
+          "use",
+          "vegetable",
+          "canola"
+        ],
+        "strict": [
+          "oil",
+          "enough",
+          "mostly",
+          "thinly",
+          "cover",
+          "base"
+        ]
+      },
+      {
+        "all": [
+          "lemon",
+          "wedg"
+        ],
+        "strict": [
+          "lemon",
+          "wedg"
+        ]
+      },
+      {
+        "all": [
+          "finely",
+          "parsley",
+          "dill",
+          "garnish"
+        ],
+        "strict": [
+          "finely",
+          "parsley"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/slow-cooker-beef-pot-roast/",
+    "title": "Pot Roast",
+    "ingredients": [
+      "2 kg / 4 lb   beef chuck roast , rolled ((Note 1))",
+      "1 tsp each salt and pepper",
+      "2 tbsp olive oil",
+      "1  onion ((large), cut into large dice)",
+      "5  garlic cloves (, peeled and smashed (Note 2a))",
+      "5  carrots (, peeled and cut into 2.5cm/1\" pieces)",
+      "3  celery stalks (, cut into 4 cm / 1.5\" pieces)",
+      "1 cup (250ml)  dry red wine  ((sub with beef broth))",
+      "3 cups (750ml)  beef broth (, salt reduced)",
+      "1/3 cup (50g)  flour ((plain / all purpose) (GF - Note 2b))",
+      "1 tsp dried rosemary",
+      "1 1/2 tsp dried thyme",
+      "750g / 1.5 lb   potatoes (, peeled and cut into 2.5 cm / 1\" pieces)"
+    ],
+    "cuisine": "Western",
+    "mealType": null,
+    "totalTime": "515 mins",
+    "totalTimeMinutes": 515,
+    "servings": "8",
+    "image": "https://www.recipetineats.com/tachyon/2018/09/Slow-Cooker-Beef-Pot-Roast-4.jpg",
+    "instructionCount": 12,
+    "tokens": [
+      {
+        "all": [
+          "beef",
+          "chuck",
+          "roast",
+          "rolled",
+          "note"
+        ],
+        "strict": [
+          "beef",
+          "chuck",
+          "roast",
+          "rolled"
+        ]
+      },
+      {
+        "all": [
+          "each",
+          "salt",
+          "pepper"
+        ],
+        "strict": [
+          "each",
+          "salt",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "cut",
+          "dice"
+        ],
+        "strict": [
+          "onion",
+          "cut",
+          "dice"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "peeled",
+          "smashed",
+          "note"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "carrot",
+          "peeled",
+          "cut"
+        ],
+        "strict": [
+          "carrot"
+        ]
+      },
+      {
+        "all": [
+          "celery",
+          "stalk",
+          "cut"
+        ],
+        "strict": [
+          "celery",
+          "stalk"
+        ]
+      },
+      {
+        "all": [
+          "dry",
+          "red",
+          "wine",
+          "sub",
+          "beef",
+          "broth"
+        ],
+        "strict": [
+          "dry",
+          "red",
+          "wine"
+        ]
+      },
+      {
+        "all": [
+          "beef",
+          "broth",
+          "salt",
+          "reduced"
+        ],
+        "strict": [
+          "beef",
+          "broth"
+        ]
+      },
+      {
+        "all": [
+          "flour",
+          "plain",
+          "all",
+          "purpose",
+          "note"
+        ],
+        "strict": [
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "rosemary"
+        ],
+        "strict": [
+          "rosemary"
+        ]
+      },
+      {
+        "all": [
+          "thyme"
+        ],
+        "strict": [
+          "thyme"
+        ]
+      },
+      {
+        "all": [
+          "potato",
+          "peeled",
+          "cut"
+        ],
+        "strict": [
+          "potato"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/salted-caramel-tart/",
+    "title": "Salted Caramel Tart",
+    "ingredients": [
+      "225g / 8 oz   plain sweet biscuits, about 2 cups (packed) crushed ((Arnott’s Marie Crackers, Graham Crackers, Note 1 for Digestives))",
+      "150g / 10 tbsp  unsalted butter (, melted (Note 1 for Digestives))",
+      "100g / 7 tbsp  unsalted butter",
+      "1 cup brown sugar ((tightly packed cup))",
+      "2  cans sweetened condensed milk  ((395g / 14oz each can))",
+      "1 3/4 tsp salt ((2 ½ - 3 tsp salt flakes))",
+      "1/3 cup thickened cream ((heavy cream), or any cream 30%+ fat)",
+      "150g / 5 oz  dark chocolate melts / chips",
+      "Sea salt flakes (, for topping (recommended))"
+    ],
+    "cuisine": "Western",
+    "mealType": "Dessert",
+    "totalTime": "40 mins",
+    "totalTimeMinutes": 40,
+    "servings": "12",
+    "image": "https://www.recipetineats.com/tachyon/2017/08/Salted-Caramel-Tart-3.jpg",
+    "instructionCount": 6,
+    "tokens": [
+      {
+        "all": [
+          "plain",
+          "sweet",
+          "biscuit",
+          "packed",
+          "crushed",
+          "arnott",
+          "marie",
+          "cracker",
+          "graham",
+          "note",
+          "digestif"
+        ],
+        "strict": [
+          "plain",
+          "sweet",
+          "biscuit",
+          "crushed"
+        ]
+      },
+      {
+        "all": [
+          "unsalted",
+          "butter",
+          "melted",
+          "note",
+          "digestif"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "unsalted",
+          "butter"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "brown",
+          "sugar",
+          "tightly",
+          "packed",
+          "cup"
+        ],
+        "strict": [
+          "brown",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "sweetened",
+          "condensed",
+          "milk",
+          "each",
+          "can"
+        ],
+        "strict": [
+          "sweetened",
+          "condensed",
+          "milk"
+        ]
+      },
+      {
+        "all": [
+          "salt",
+          "flak"
+        ],
+        "strict": [
+          "salt"
+        ]
+      },
+      {
+        "all": [
+          "thickened",
+          "cream",
+          "heavy",
+          "any",
+          "fat"
+        ],
+        "strict": [
+          "thickened",
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "dark",
+          "chocolate",
+          "melt",
+          "chip"
+        ],
+        "strict": [
+          "dark",
+          "chocolate",
+          "melt",
+          "chip"
+        ]
+      },
+      {
+        "all": [
+          "salt",
+          "flak",
+          "topping",
+          "recommended"
+        ],
+        "strict": [
+          "salt",
+          "flak"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/slow-cooker-beef-stew/",
+    "title": "A really good Slow Cooker Beef Stew",
+    "ingredients": [
+      "3 cups beef stock/broth (, low sodium)",
+      "2 tbsp tomato paste",
+      "1/2 cup plain flour / all-purpose flour ((Note 1 for gluten-free option))",
+      "1 1/2 tbsp olive oil",
+      "1.25kg/ 2.5lb   chuck beef (, cut into large 4cm/ 1.6&quot; cubes, excess fat trimmed - start with around 1.4kg/2.8lb (Note 2))",
+      "3/4 tsp cooking salt / kosher salt ((halve for table salt, +50% for flakes))",
+      "1/2 tsp black pepper",
+      "1  large onion (, halved then sliced into 1cm / 0.4\" slices)",
+      "2  garlic cloves (, finely minced)",
+      "2 cups red wine ((I use pinot noir), substitute 0% alcohol wine or more beef stock (Note 3))",
+      "1  beef stock cube ((bouillon cube), crumbled (Note 4))",
+      "2 tsp Worcestershire sauce",
+      "2  bay leaves (, preferably fresh else dry)",
+      "3  sprigs fresh thyme ( or 1/2 tsp dried thyme)",
+      "1/2 tsp cooking salt / kosher salt ((halve for table salt, +50% for flakes))",
+      "1/4 tsp black pepper",
+      "3  carrots (, peeled, cut into equal size chunks ~ 1 x 3cm (0.4 x 1.2\"))",
+      "2  celery sticks (, cut into 4cm / 1.6&quot; pieces (cut thicker end in half horizontally so they&#39;re all about the same width))",
+      "400g / 14oz   small cocktail potatoes ((or halve or quarter larger ones) (Note 5))",
+      "1 cup frozen peas ((still frozen fine))",
+      "Mashed potato",
+      "Finely chopped parsley (, for optional garnish)"
+    ],
+    "cuisine": "Western",
+    "mealType": "Soup",
+    "totalTime": "620 mins",
+    "totalTimeMinutes": 620,
+    "servings": "6, 6 people",
+    "image": "https://www.recipetineats.com/tachyon/2026/08/Slow-Cooker-Beef-Stew-9.jpg",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "beef",
+          "stock",
+          "broth",
+          "low",
+          "sodium"
+        ],
+        "strict": [
+          "beef",
+          "stock",
+          "broth"
+        ]
+      },
+      {
+        "all": [
+          "tomato",
+          "paste"
+        ],
+        "strict": [
+          "tomato",
+          "paste"
+        ]
+      },
+      {
+        "all": [
+          "plain",
+          "flour",
+          "all",
+          "purpose",
+          "note",
+          "gluten",
+          "free",
+          "option"
+        ],
+        "strict": [
+          "plain",
+          "flour",
+          "all",
+          "purpose"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "chuck",
+          "beef",
+          "cut",
+          "quot",
+          "cub",
+          "exces",
+          "fat",
+          "trimmed",
+          "start",
+          "around",
+          "note"
+        ],
+        "strict": [
+          "chuck",
+          "beef"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "halve",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "halved",
+          "then",
+          "slic"
+        ],
+        "strict": [
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "finely"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "wine",
+          "use",
+          "pinot",
+          "noir",
+          "substitute",
+          "alcohol",
+          "more",
+          "beef",
+          "stock",
+          "note"
+        ],
+        "strict": [
+          "red",
+          "wine",
+          "substitute",
+          "alcohol"
+        ]
+      },
+      {
+        "all": [
+          "beef",
+          "stock",
+          "cube",
+          "bouillon",
+          "crumbled",
+          "note"
+        ],
+        "strict": [
+          "beef",
+          "stock",
+          "cube",
+          "crumbled"
+        ]
+      },
+      {
+        "all": [
+          "worcestershire",
+          "sauce"
+        ],
+        "strict": [
+          "worcestershire",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "bay",
+          "leaf",
+          "preferably",
+          "else",
+          "dry"
+        ],
+        "strict": [
+          "bay",
+          "leaf"
+        ]
+      },
+      {
+        "all": [
+          "thyme"
+        ],
+        "strict": [
+          "thyme"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "halve",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "carrot",
+          "peeled",
+          "cut",
+          "equal",
+          "size",
+          "chunk"
+        ],
+        "strict": [
+          "carrot"
+        ]
+      },
+      {
+        "all": [
+          "celery",
+          "stick",
+          "cut",
+          "quot",
+          "thicker",
+          "end",
+          "half",
+          "horizontally",
+          "they",
+          "all",
+          "same",
+          "width"
+        ],
+        "strict": [
+          "celery",
+          "stick"
+        ]
+      },
+      {
+        "all": [
+          "cocktail",
+          "potato",
+          "halve",
+          "quarter",
+          "larger",
+          "one",
+          "note"
+        ],
+        "strict": [
+          "cocktail",
+          "potato"
+        ]
+      },
+      {
+        "all": [
+          "frozen",
+          "pea",
+          "still"
+        ],
+        "strict": [
+          "frozen",
+          "pea"
+        ]
+      },
+      {
+        "all": [
+          "mashed",
+          "potato"
+        ],
+        "strict": [
+          "mashed",
+          "potato"
+        ]
+      },
+      {
+        "all": [
+          "finely",
+          "parsley",
+          "garnish"
+        ],
+        "strict": [
+          "finely",
+          "parsley"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/coquillettes-au-jambon-french-macaroni-and-cheese-with-ham/",
+    "title": "Coquillettes au Jambon - French Macaroni and Cheese with Ham",
+    "ingredients": [
+      "500g / 1 lb  elbow pasta / macaroni  (, but any similar size pasta would work  )",
+      "1  tsp cooking salt / kosher salt (, for pasta water, half for table salt)",
+      "200g / 7 oz  ham slices ((I use ham off-the-bone), diced 1cm / 0.4&quot; (Note 1))",
+      "75g / 5tbsp tbsp unsalted butter",
+      "1/2 cup plain flour / all-purpose flour",
+      "3 cups milk (, HOT, full fat preferred, but work with lite milk too)",
+      "1 tsp cooking salt / kosher salt (, halve for table salt, +50% for flakes)",
+      "3/4 tsp black pepper",
+      "1/4 tsp ground nutmeg (, (Note 2))",
+      "1 1/2 cups Gruyère cheese, grated (, shredded using a standard box grater (tightly packed if using cups) (Note 3))",
+      "1/2 cup pasta cooking water"
+    ],
+    "cuisine": "French, Western",
+    "mealType": "Dinner",
+    "totalTime": "25 mins",
+    "totalTimeMinutes": 25,
+    "servings": "5",
+    "image": "https://www.recipetineats.com/tachyon/2026/04/Coquilettes-au-jambon_0.jpg",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "elbow",
+          "pasta",
+          "macaroni",
+          "but",
+          "any",
+          "similar",
+          "size",
+          "would",
+          "work"
+        ],
+        "strict": [
+          "elbow",
+          "pasta",
+          "macaroni"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "pasta",
+          "water",
+          "half",
+          "table"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "ham",
+          "slic",
+          "use",
+          "off",
+          "bone",
+          "quot",
+          "note"
+        ],
+        "strict": [
+          "ham",
+          "slic",
+          "quot"
+        ]
+      },
+      {
+        "all": [
+          "tbsp",
+          "unsalted",
+          "butter"
+        ],
+        "strict": [
+          "tbsp",
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "plain",
+          "flour",
+          "all",
+          "purpose"
+        ],
+        "strict": [
+          "plain",
+          "flour",
+          "all",
+          "purpose"
+        ]
+      },
+      {
+        "all": [
+          "milk",
+          "hot",
+          "full",
+          "fat",
+          "preferred",
+          "but",
+          "work",
+          "lite",
+          "too"
+        ],
+        "strict": [
+          "milk"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "halve",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "nutmeg",
+          "note"
+        ],
+        "strict": [
+          "nutmeg"
+        ]
+      },
+      {
+        "all": [
+          "gruy",
+          "cheese",
+          "shredded",
+          "using",
+          "standard",
+          "box",
+          "grater",
+          "tightly",
+          "packed",
+          "cup",
+          "note"
+        ],
+        "strict": [
+          "gruy",
+          "cheese"
+        ]
+      },
+      {
+        "all": [
+          "pasta",
+          "cooking",
+          "water"
+        ],
+        "strict": [
+          "pasta",
+          "cooking",
+          "water"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/tartiflette-recipe/",
+    "title": "Tartiflette",
+    "ingredients": [
+      "500g / 1 lb  reblochon cheese or washed rind cheese ((Note 1))",
+      "1.5kg / 3.3lbs  starchy potato (, peeled then cut into 2.5cm / 1&quot; cubes (Note 2))",
+      "1 tbsp cooking salt / kosher salt (, for the potato cooking water, halve for table salt)",
+      "60g / 4 tbsp  unsalted butter",
+      "2  brown onion (, halved then sliced 3mm / 0.1&quot; thick)",
+      "350g / 12oz  bacon block (or speck)",
+      "3/4 cup white wine  ( - Jacquère or Roussette from Savoie if you can else any dry white wine, I use Chardonnay (Note 4))",
+      "3/4 tsp cooking salt / kosher salt (, halve for table salt)",
+      "3/4 tsp black pepper"
+    ],
+    "cuisine": "French",
+    "mealType": "Dinner",
+    "totalTime": "90 mins",
+    "totalTimeMinutes": 90,
+    "servings": "6",
+    "image": "https://www.recipetineats.com/tachyon/2026/08/Tartiflette_3.jpg",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "reblochon",
+          "cheese",
+          "washed",
+          "rind",
+          "note"
+        ],
+        "strict": [
+          "reblochon",
+          "cheese"
+        ]
+      },
+      {
+        "all": [
+          "starchy",
+          "potato",
+          "peeled",
+          "then",
+          "cut",
+          "quot",
+          "cub",
+          "note"
+        ],
+        "strict": [
+          "starchy",
+          "potato"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "potato",
+          "water",
+          "halve",
+          "table"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "unsalted",
+          "butter"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "brown",
+          "onion",
+          "halved",
+          "then",
+          "quot",
+          "thick"
+        ],
+        "strict": [
+          "brown",
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "bacon",
+          "pancetta",
+          "block",
+          "speck"
+        ],
+        "strict": [
+          "bacon",
+          "pancetta",
+          "block"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "wine",
+          "jacqu",
+          "roussette",
+          "savoie",
+          "you",
+          "can",
+          "else",
+          "any",
+          "dry",
+          "use",
+          "chardonnay",
+          "note"
+        ],
+        "strict": [
+          "white",
+          "wine"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "halve",
+          "table"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
         ]
       }
     ]
