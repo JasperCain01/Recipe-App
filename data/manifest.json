@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-17T04:12:44.697Z",
+  "generated_at": "2026-08-24T04:13:12.363Z",
   "sources": [
     {
       "id": "recipetineats",
       "name": "RecipeTin Eats",
       "url": "https://www.recipetineats.com",
       "emoji": "🍜",
-      "count": 1504,
+      "count": 1508,
       "file": "recipetineats.json",
-      "updated_at": "2026-08-17T03:56:34.022Z"
+      "updated_at": "2026-08-24T04:01:26.338Z"
     },
     {
       "id": "bbcgoodfood",
@@ -17,7 +17,7 @@
       "emoji": "🥘",
       "count": 1995,
       "file": "bbcgoodfood.json",
-      "updated_at": "2026-08-17T04:12:44.697Z"
+      "updated_at": "2026-08-24T04:13:12.362Z"
     }
   ]
 }

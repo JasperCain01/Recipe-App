@@ -95692,289 +95692,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/gozleme/",
-    "title": "Gozleme!!",
-    "ingredients": [
-      "2.5 cups (375g)   flour (, plain/all purpose (GF Note 4))",
-      "1/3 cup (85ml)   extra virgin olive oil",
-      "3/4 cup (185ml)   water",
-      "1/2 tsp salt",
-      "300g / 10oz   baby spinach",
-      "2  garlic cloves (, minced)",
-      "2  eggs",
-      "1 tsp black pepper",
-      "300g / 10 oz   Danish feta ((soft feta, Note 2))",
-      "2 cups (200g)   shredded mozzarella cheese ((Note 3))",
-      "1 tbsp olive oil",
-      "2  garlic cloves (, minced)",
-      "1  onion (, finely chopped)",
-      "500g / 1 lb   beef or lamb mince ((ground))",
-      "1  capsicum / bell pepper (, chopped)",
-      "90g / 3 oz   baby spinach",
-      "1.5 tsp cumin powder",
-      "1 tsp paprika",
-      "1/2 tsp cayenne ((adjust spiciness to taste))",
-      "3/4 tsp each salt and pepper",
-      "1 tbsp water",
-      "120g / 4 oz   Danish feta ((Note 2))",
-      "1 - 1.5 tbsp olive oil  (, per gozleme)",
-      "Lemon wedges ((optional))"
-    ],
-    "cuisine": "Turkish",
-    "mealType": "Starter",
-    "totalTime": "50 mins",
-    "totalTimeMinutes": 50,
-    "servings": "4",
-    "image": "https://www.recipetineats.com/tachyon/2019/03/Gozleme_5.jpg",
-    "instructionCount": 7,
-    "tokens": [
-      {
-        "all": [
-          "flour",
-          "plain",
-          "all",
-          "purpose",
-          "note"
-        ],
-        "strict": [
-          "flour"
-        ]
-      },
-      {
-        "all": [
-          "olive",
-          "oil"
-        ],
-        "strict": [
-          "olive",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "water"
-        ],
-        "strict": [
-          "water"
-        ]
-      },
-      {
-        "all": [
-          "salt"
-        ],
-        "strict": [
-          "salt"
-        ]
-      },
-      {
-        "all": [
-          "baby",
-          "spinach"
-        ],
-        "strict": [
-          "baby",
-          "spinach"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "clof"
-        ],
-        "strict": [
-          "garlic",
-          "clof"
-        ]
-      },
-      {
-        "all": [
-          "egg"
-        ],
-        "strict": [
-          "egg"
-        ]
-      },
-      {
-        "all": [
-          "black",
-          "pepper"
-        ],
-        "strict": [
-          "black",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "danish",
-          "feta",
-          "soft",
-          "note"
-        ],
-        "strict": [
-          "danish",
-          "feta"
-        ]
-      },
-      {
-        "all": [
-          "shredded",
-          "mozzarella",
-          "cheese",
-          "note"
-        ],
-        "strict": [
-          "shredded",
-          "mozzarella",
-          "cheese"
-        ]
-      },
-      {
-        "all": [
-          "olive",
-          "oil"
-        ],
-        "strict": [
-          "olive",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "clof"
-        ],
-        "strict": [
-          "garlic",
-          "clof"
-        ]
-      },
-      {
-        "all": [
-          "onion",
-          "finely"
-        ],
-        "strict": [
-          "onion"
-        ]
-      },
-      {
-        "all": [
-          "beef",
-          "lamb",
-          "mince"
-        ],
-        "strict": [
-          "beef"
-        ]
-      },
-      {
-        "all": [
-          "capsicum",
-          "pepper",
-          "bell"
-        ],
-        "strict": [
-          "capsicum",
-          "pepper",
-          "bell"
-        ]
-      },
-      {
-        "all": [
-          "baby",
-          "spinach"
-        ],
-        "strict": [
-          "baby",
-          "spinach"
-        ]
-      },
-      {
-        "all": [
-          "cumin",
-          "powder"
-        ],
-        "strict": [
-          "cumin",
-          "powder"
-        ]
-      },
-      {
-        "all": [
-          "paprika"
-        ],
-        "strict": [
-          "paprika"
-        ]
-      },
-      {
-        "all": [
-          "cayenne",
-          "adjust",
-          "spicines"
-        ],
-        "strict": [
-          "cayenne"
-        ]
-      },
-      {
-        "all": [
-          "each",
-          "salt",
-          "pepper"
-        ],
-        "strict": [
-          "each",
-          "salt",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "water"
-        ],
-        "strict": [
-          "water"
-        ]
-      },
-      {
-        "all": [
-          "danish",
-          "feta",
-          "note"
-        ],
-        "strict": [
-          "danish",
-          "feta"
-        ]
-      },
-      {
-        "all": [
-          "olive",
-          "oil",
-          "per",
-          "gozleme"
-        ],
-        "strict": [
-          "olive",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "lemon",
-          "wedg"
-        ],
-        "strict": [
-          "lemon",
-          "wedg"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/lamb-chops-with-rosemary-gravy/",
     "title": "Lamb Chops with Rosemary Gravy (Loin chops, forequarter, cutlets)",
     "ingredients": [
@@ -154851,280 +154568,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/beef-satay-with-thai-peanut-sauce/",
-    "title": "Beef Satay with Thai Peanut Sauce",
-    "ingredients": [
-      "13-16  bamboo skewers (, 16cm / 6.5&quot; long (Note 1))",
-      "600g / 1.2lb   beef rump steak (top sirloin in the US) (, 2.5 cm/1&quot; pieces (Note 2))",
-      "1/4 cup coconut mik (, full fat (I use Ayam, Note 3))",
-      "1 tbsp curry powder ((Note 4))",
-      "1 tsp white sugar",
-      "2 tsp red curry paste ((Note 5))",
-      "1/2 tsp baking soda / bi-carb ((tenderiser, Note 6))",
-      "1 tsp salt",
-      "1 tbsp red curry paste ((Note 5))",
-      "2/3 cup coconut milk (, full fat (I use Ayam, Note 3))",
-      "1/3 cup natural peanut butter (, smooth (Note 7))",
-      "1 1/2 tbsp white sugar",
-      "1 tsp dark soy sauce ((Note 8))",
-      "1/2 tsp salt",
-      "1 tbsp cider vinegar ((Note 9))",
-      "1/3 cup water",
-      "1 1/2 tbsp vegetable oil (, for cooking)",
-      "2 tbsp peanuts (, finely chopped)",
-      "Lime wedges ((optional))",
-      "Coriander / cilantro leaves and sliced red chilli ((optional))"
-    ],
-    "cuisine": "Thai",
-    "mealType": "Starter",
-    "totalTime": "1470 mins",
-    "totalTimeMinutes": 1470,
-    "servings": "12, 12 - 14 skewers",
-    "image": "https://www.recipetineats.com/tachyon/2021/07/Thai-Beef-Satay-with-Peanut-Sauce-SQ.jpg",
-    "instructionCount": 4,
-    "tokens": [
-      {
-        "all": [
-          "bamboo",
-          "skewer",
-          "quot",
-          "long",
-          "note"
-        ],
-        "strict": [
-          "bamboo",
-          "skewer"
-        ]
-      },
-      {
-        "all": [
-          "beef",
-          "rump",
-          "steak",
-          "top",
-          "sirloin",
-          "quot",
-          "note"
-        ],
-        "strict": [
-          "beef",
-          "rump",
-          "steak"
-        ]
-      },
-      {
-        "all": [
-          "coconut",
-          "mik",
-          "full",
-          "fat",
-          "use",
-          "ayam",
-          "note"
-        ],
-        "strict": [
-          "coconut",
-          "mik"
-        ]
-      },
-      {
-        "all": [
-          "curry",
-          "powder",
-          "note"
-        ],
-        "strict": [
-          "curry",
-          "powder"
-        ]
-      },
-      {
-        "all": [
-          "white",
-          "sugar"
-        ],
-        "strict": [
-          "white",
-          "sugar"
-        ]
-      },
-      {
-        "all": [
-          "red",
-          "curry",
-          "paste",
-          "note"
-        ],
-        "strict": [
-          "red",
-          "curry",
-          "paste"
-        ]
-      },
-      {
-        "all": [
-          "baking",
-          "soda",
-          "carb",
-          "tenderiser",
-          "note"
-        ],
-        "strict": [
-          "baking",
-          "soda",
-          "carb"
-        ]
-      },
-      {
-        "all": [
-          "salt"
-        ],
-        "strict": [
-          "salt"
-        ]
-      },
-      {
-        "all": [
-          "red",
-          "curry",
-          "paste",
-          "note"
-        ],
-        "strict": [
-          "red",
-          "curry",
-          "paste"
-        ]
-      },
-      {
-        "all": [
-          "coconut",
-          "milk",
-          "full",
-          "fat",
-          "use",
-          "ayam",
-          "note"
-        ],
-        "strict": [
-          "coconut",
-          "milk"
-        ]
-      },
-      {
-        "all": [
-          "natural",
-          "peanut",
-          "butter",
-          "smooth",
-          "note"
-        ],
-        "strict": [
-          "natural",
-          "peanut",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "white",
-          "sugar"
-        ],
-        "strict": [
-          "white",
-          "sugar"
-        ]
-      },
-      {
-        "all": [
-          "dark",
-          "soy",
-          "sauce",
-          "note"
-        ],
-        "strict": [
-          "dark",
-          "soy",
-          "sauce"
-        ]
-      },
-      {
-        "all": [
-          "salt"
-        ],
-        "strict": [
-          "salt"
-        ]
-      },
-      {
-        "all": [
-          "cider",
-          "vinegar",
-          "note"
-        ],
-        "strict": [
-          "cider",
-          "vinegar"
-        ]
-      },
-      {
-        "all": [
-          "water"
-        ],
-        "strict": [
-          "water"
-        ]
-      },
-      {
-        "all": [
-          "vegetable",
-          "oil",
-          "cooking"
-        ],
-        "strict": [
-          "vegetable",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "peanut",
-          "finely"
-        ],
-        "strict": [
-          "peanut"
-        ]
-      },
-      {
-        "all": [
-          "lime",
-          "wedg"
-        ],
-        "strict": [
-          "lime",
-          "wedg"
-        ]
-      },
-      {
-        "all": [
-          "coriander",
-          "cilantro",
-          "leaf",
-          "red",
-          "chilli"
-        ],
-        "strict": [
-          "coriander",
-          "cilantro",
-          "leaf",
-          "red",
-          "chilli"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/christmas-appetiser-italian-cheese-log/",
     "title": "Christmas Appetiser: Italian Cheese Loaf",
     "ingredients": [
@@ -170235,114 +169678,6 @@
         "strict": [
           "rice",
           "serving"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/5-ingredient-peanut-butter-chocolate-bars-no-bake/",
-    "title": "5 Ingredient Chocolate Peanut Butter Bars (NO BAKE!)",
-    "ingredients": [
-      "115g / 1/2 cup / 1 US stick  melted salted butter ((or unsalted butter + 1/4 tsp salt))",
-      "1 cup crushed Arnott's Marie crackers (11 crackers) or graham cracker crumbs (8 crackers) (Note 1)",
-      "1 cup icing sugar / powdered sugar",
-      "3/4 cup peanut butter ((smooth))",
-      "1 cup dark chocolate chips - the melting kind ((US: semi sweet) (Note 2))",
-      "2 tbsp peanut butter ((smooth))"
-    ],
-    "cuisine": null,
-    "mealType": null,
-    "totalTime": "15 mins",
-    "totalTimeMinutes": 15,
-    "servings": "16",
-    "image": "https://www.recipetineats.com/tachyon/2015/06/Chocolate-Peanut-Butter-Bars_5.jpg",
-    "instructionCount": 4,
-    "tokens": [
-      {
-        "all": [
-          "stick",
-          "melted",
-          "salted",
-          "butter",
-          "unsalted",
-          "salt"
-        ],
-        "strict": [
-          "stick",
-          "melted",
-          "salted",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "crushed",
-          "arnott",
-          "marie",
-          "cracker",
-          "graham",
-          "crumb",
-          "note"
-        ],
-        "strict": [
-          "crushed",
-          "arnott",
-          "marie",
-          "cracker"
-        ]
-      },
-      {
-        "all": [
-          "icing",
-          "sugar",
-          "powdered"
-        ],
-        "strict": [
-          "icing",
-          "sugar",
-          "powdered"
-        ]
-      },
-      {
-        "all": [
-          "peanut",
-          "butter",
-          "smooth"
-        ],
-        "strict": [
-          "peanut",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "dark",
-          "chocolate",
-          "chip",
-          "melting",
-          "kind",
-          "semi",
-          "sweet",
-          "note"
-        ],
-        "strict": [
-          "dark",
-          "chocolate",
-          "chip",
-          "melting",
-          "kind"
-        ]
-      },
-      {
-        "all": [
-          "peanut",
-          "butter",
-          "smooth"
-        ],
-        "strict": [
-          "peanut",
-          "butter"
         ]
       }
     ]
@@ -188802,65 +188137,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/best-easy-peanut-butter-cookies/",
-    "title": "World's Best Easy Peanut Butter Cookies",
-    "ingredients": [
-      "1 cup / 265 g   peanut butter (, smooth or crunchy - commercial spread, NOT pure peanut butter (I use Bega) (Note 1))",
-      "200 g/ 1 cup  , packed, brown sugar ((Note 2))",
-      "1  egg"
-    ],
-    "cuisine": null,
-    "mealType": null,
-    "totalTime": "20 mins",
-    "totalTimeMinutes": 20,
-    "servings": "14, 14 cookies",
-    "image": "https://www.recipetineats.com/tachyon/2017/09/Peanut-Butter-Cookies-3-Ingredients-5.jpg",
-    "instructionCount": 7,
-    "tokens": [
-      {
-        "all": [
-          "peanut",
-          "butter",
-          "smooth",
-          "crunchy",
-          "commercial",
-          "spread",
-          "not",
-          "pure",
-          "use",
-          "bega",
-          "note"
-        ],
-        "strict": [
-          "peanut",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "packed",
-          "brown",
-          "sugar",
-          "note"
-        ],
-        "strict": [
-          "packed",
-          "brown",
-          "sugar"
-        ]
-      },
-      {
-        "all": [
-          "egg"
-        ],
-        "strict": [
-          "egg"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/seafood-platter/",
     "title": "Seafood Platter",
     "ingredients": [
@@ -205811,173 +205087,6 @@
         "strict": [
           "shredded",
           "mozzarella"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/peanut-butter-caramel-pie/",
-    "title": "Peanut Butter Caramel Pie",
-    "ingredients": [
-      "274g / 9.5 oz   Oreo cookies ((2 standard packs/rows - Note 1))",
-      "60g / 4 tbsp  butter (, melted)",
-      "Pinch of salt",
-      "100g (7 tbsp)  unsalted butter",
-      "1/2 cup (110g)  (packed) brown sugar",
-      "1  can sweetened condensed milk (395g/14oz)",
-      "1/4 cup (65ml)  cream (, any type, full fat  (not low fat))",
-      "1 tsp salt",
-      "1 cup (280g)   peanut butter, smooth ((Note 2))",
-      "1/3 cup (85ml)   heavy/thickened cream ((Note 3a))",
-      "150g / 5 oz   milk chocolate chips ((or other of choice, Note 3b))",
-      "1/4 cup  roughly chopped peanuts"
-    ],
-    "cuisine": null,
-    "mealType": "Dessert",
-    "totalTime": "35 mins",
-    "totalTimeMinutes": 35,
-    "servings": "12",
-    "image": "https://www.recipetineats.com/tachyon/2019/02/Peanut-Butter-Caramel-Pie_4a.jpg",
-    "instructionCount": 5,
-    "tokens": [
-      {
-        "all": [
-          "oreo",
-          "cooky",
-          "standard",
-          "pack",
-          "row",
-          "note"
-        ],
-        "strict": [
-          "oreo",
-          "cooky"
-        ]
-      },
-      {
-        "all": [
-          "butter",
-          "melted"
-        ],
-        "strict": [
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "pinch",
-          "salt"
-        ],
-        "strict": [
-          "pinch",
-          "salt"
-        ]
-      },
-      {
-        "all": [
-          "unsalted",
-          "butter"
-        ],
-        "strict": [
-          "unsalted",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "packed",
-          "brown",
-          "sugar"
-        ],
-        "strict": [
-          "brown",
-          "sugar"
-        ]
-      },
-      {
-        "all": [
-          "sweetened",
-          "condensed",
-          "milk"
-        ],
-        "strict": [
-          "sweetened",
-          "condensed",
-          "milk"
-        ]
-      },
-      {
-        "all": [
-          "cream",
-          "any",
-          "type",
-          "full",
-          "fat",
-          "not",
-          "low"
-        ],
-        "strict": [
-          "cream"
-        ]
-      },
-      {
-        "all": [
-          "salt"
-        ],
-        "strict": [
-          "salt"
-        ]
-      },
-      {
-        "all": [
-          "peanut",
-          "butter",
-          "smooth",
-          "note"
-        ],
-        "strict": [
-          "peanut",
-          "butter",
-          "smooth"
-        ]
-      },
-      {
-        "all": [
-          "heavy",
-          "thickened",
-          "cream",
-          "note"
-        ],
-        "strict": [
-          "heavy",
-          "thickened",
-          "cream"
-        ]
-      },
-      {
-        "all": [
-          "milk",
-          "chocolate",
-          "chip",
-          "other",
-          "choice",
-          "note"
-        ],
-        "strict": [
-          "milk",
-          "chocolate",
-          "chip"
-        ]
-      },
-      {
-        "all": [
-          "roughly",
-          "peanut"
-        ],
-        "strict": [
-          "roughly",
-          "peanut"
         ]
       }
     ]
@@ -230159,303 +229268,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/easy-classic-chinese-beef-stir-fry/",
-    "title": "Easy Chinese Beef Stir Fry",
-    "ingredients": [
-      "7 oz / 200 g    beef rump steak or flank (, or any other quick cooking steak cut (Note 1))",
-      "1/2 tsp baking soda / bi-carbonate soda (, for velveting (Note 2))",
-      "2 tbsp soy sauce, light or all-purpose (NOT dark soy (Note 4))",
-      "1 tbsp oyster sauce",
-      "2 tbsp Chinese cooking wine ( OR Mirin (Note 5))",
-      "1 tsp white sugar",
-      "1/2 tsp sesame oil (, toasted (brown) not untoasted (yellow))",
-      "Pinch  white pepper (, substitute with black pepper)",
-      "3 tsp cornstarch / corn flour",
-      "1/2 cup water (, separated)",
-      "1 1/2 tbsp peanut oil",
-      "1  garlic clove (, finely minced with a knife)",
-      "1/2  small onion (, sliced (yellow, brown or white))",
-      "1/2  red capsicum / bell pepper (, sliced into 7mm / 1/3&quot; thick slices)",
-      "1  small carrot (, peeled, halved lengthwise and sliced thinly on the diagonal)",
-      "2  bok choy (, cut leaves from stems, cut thick stems lengthways to make them all roughly the same width)",
-      "2  green onion (, cut into 1.5&quot;/3cm pieces, firm white end separated from soft green parts)",
-      "Steamed white rice",
-      "Sesame seeds ((optional))"
-    ],
-    "cuisine": "Chinese",
-    "mealType": "Dinner",
-    "totalTime": "23 mins",
-    "totalTimeMinutes": 23,
-    "servings": "3, 3 - 4",
-    "image": "https://www.recipetineats.com/tachyon/2015/12/Chinese-Beef-Stir-Fry_8.jpg",
-    "instructionCount": 3,
-    "tokens": [
-      {
-        "all": [
-          "beef",
-          "rump",
-          "steak",
-          "flank",
-          "any",
-          "other",
-          "quick",
-          "cooking",
-          "cut",
-          "note"
-        ],
-        "strict": [
-          "beef",
-          "rump",
-          "steak"
-        ]
-      },
-      {
-        "all": [
-          "baking",
-          "soda",
-          "carbonate",
-          "velveting",
-          "note"
-        ],
-        "strict": [
-          "baking",
-          "soda",
-          "carbonate"
-        ]
-      },
-      {
-        "all": [
-          "soy",
-          "sauce",
-          "light",
-          "all",
-          "purpose",
-          "not",
-          "dark",
-          "note"
-        ],
-        "strict": [
-          "soy",
-          "sauce",
-          "light"
-        ]
-      },
-      {
-        "all": [
-          "oyster",
-          "sauce"
-        ],
-        "strict": [
-          "oyster",
-          "sauce"
-        ]
-      },
-      {
-        "all": [
-          "chinese",
-          "cooking",
-          "wine",
-          "mirin",
-          "note"
-        ],
-        "strict": [
-          "chinese",
-          "cooking",
-          "wine"
-        ]
-      },
-      {
-        "all": [
-          "white",
-          "sugar"
-        ],
-        "strict": [
-          "white",
-          "sugar"
-        ]
-      },
-      {
-        "all": [
-          "sesame",
-          "oil",
-          "toasted",
-          "brown",
-          "not",
-          "untoasted",
-          "yellow"
-        ],
-        "strict": [
-          "sesame",
-          "oil",
-          "not",
-          "untoasted"
-        ]
-      },
-      {
-        "all": [
-          "pinch",
-          "white",
-          "pepper",
-          "substitute",
-          "black"
-        ],
-        "strict": [
-          "pinch",
-          "white",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "cornstarch",
-          "cornflour",
-          "corn",
-          "flour"
-        ],
-        "strict": [
-          "cornstarch",
-          "cornflour",
-          "corn",
-          "flour"
-        ]
-      },
-      {
-        "all": [
-          "water",
-          "separated"
-        ],
-        "strict": [
-          "water"
-        ]
-      },
-      {
-        "all": [
-          "peanut",
-          "oil"
-        ],
-        "strict": [
-          "peanut",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "clove",
-          "finely",
-          "knife"
-        ],
-        "strict": [
-          "garlic",
-          "clove"
-        ]
-      },
-      {
-        "all": [
-          "onion",
-          "yellow",
-          "brown",
-          "white"
-        ],
-        "strict": [
-          "onion"
-        ]
-      },
-      {
-        "all": [
-          "red",
-          "capsicum",
-          "pepper",
-          "bell",
-          "quot",
-          "thick",
-          "slic"
-        ],
-        "strict": [
-          "red",
-          "capsicum",
-          "pepper",
-          "bell"
-        ]
-      },
-      {
-        "all": [
-          "carrot",
-          "peeled",
-          "halved",
-          "lengthwise",
-          "thinly",
-          "diagonal"
-        ],
-        "strict": [
-          "carrot"
-        ]
-      },
-      {
-        "all": [
-          "bok",
-          "choy",
-          "cut",
-          "leaf",
-          "stem",
-          "thick",
-          "lengthway",
-          "make",
-          "them",
-          "all",
-          "roughly",
-          "same",
-          "width"
-        ],
-        "strict": [
-          "bok",
-          "choy"
-        ]
-      },
-      {
-        "all": [
-          "green",
-          "onion",
-          "cut",
-          "quot",
-          "firm",
-          "white",
-          "end",
-          "separated",
-          "soft",
-          "part"
-        ],
-        "strict": [
-          "green",
-          "onion"
-        ]
-      },
-      {
-        "all": [
-          "steamed",
-          "white",
-          "rice"
-        ],
-        "strict": [
-          "steamed",
-          "white",
-          "rice"
-        ]
-      },
-      {
-        "all": [
-          "sesame",
-          "seed"
-        ],
-        "strict": [
-          "sesame",
-          "seed"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/brazilian-fish-stew-moqueca-baiana/",
     "title": "Brazilian Fish Stew (Moqueca Baiana)",
     "ingredients": [
@@ -249488,175 +248300,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/cheese-souffle-souffle-au-fromage/",
-    "title": "JB's Cheese Soufflé - Soufflé au Fromage",
-    "ingredients": [
-      "2 cups full fat milk (, but works with lite milk too)",
-      "75 g (5 tbsp)  unsalted butter",
-      "1/2 cup plain flour (all-purpose)",
-      "1/2 tsp cooking salt / kosher salt ((halve for table salt, + 50% for flakes))",
-      "2 pinches ground white pepper ((substitute black pepper))",
-      "150 g (1 1/2 cups)  Gruyère cheese (, shredded using a standard box grater (tightly packed if using cups) (Note 2 for other cheeses))",
-      "3  egg yolks (from large eggs (55g/2oz each in shell), at room temperature (Note 1))",
-      "4  egg whites (from large eggs, at room temperature (total egg whites ~ 120g/4.2oz, Note1))",
-      "1/2 tsp cream of tartar (, sifted if lumpy (Note 3))",
-      "15 g (1 tbsp)  unsalted butter (, melted (to grease the ramekins))"
-    ],
-    "cuisine": "French",
-    "mealType": "Lunch",
-    "totalTime": "45 mins",
-    "totalTimeMinutes": 45,
-    "servings": "4, 4 people",
-    "image": "https://www.recipetineats.com/tachyon/2025/10/Cheese-souffle_6.jpg",
-    "instructionCount": 4,
-    "tokens": [
-      {
-        "all": [
-          "full",
-          "fat",
-          "milk",
-          "but",
-          "work",
-          "lite",
-          "too"
-        ],
-        "strict": [
-          "full",
-          "fat",
-          "milk"
-        ]
-      },
-      {
-        "all": [
-          "unsalted",
-          "butter"
-        ],
-        "strict": [
-          "unsalted",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "plain",
-          "flour",
-          "all",
-          "purpose"
-        ],
-        "strict": [
-          "plain",
-          "flour"
-        ]
-      },
-      {
-        "all": [
-          "cooking",
-          "salt",
-          "kosher",
-          "halve",
-          "table",
-          "flak"
-        ],
-        "strict": [
-          "cooking",
-          "salt",
-          "kosher"
-        ]
-      },
-      {
-        "all": [
-          "white",
-          "pepper",
-          "substitute",
-          "black"
-        ],
-        "strict": [
-          "white",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "gruy",
-          "cheese",
-          "shredded",
-          "using",
-          "standard",
-          "box",
-          "grater",
-          "tightly",
-          "packed",
-          "cup",
-          "note",
-          "other",
-          "chees"
-        ],
-        "strict": [
-          "gruy",
-          "cheese"
-        ]
-      },
-      {
-        "all": [
-          "egg",
-          "yolk",
-          "each",
-          "shell",
-          "room",
-          "temperature",
-          "note"
-        ],
-        "strict": [
-          "egg",
-          "yolk",
-          "room",
-          "temperature"
-        ]
-      },
-      {
-        "all": [
-          "egg",
-          "whit",
-          "room",
-          "temperature",
-          "total",
-          "note"
-        ],
-        "strict": [
-          "egg",
-          "whit"
-        ]
-      },
-      {
-        "all": [
-          "cream",
-          "tartar",
-          "sifted",
-          "lumpy",
-          "note"
-        ],
-        "strict": [
-          "cream",
-          "tartar"
-        ]
-      },
-      {
-        "all": [
-          "unsalted",
-          "butter",
-          "melted",
-          "grease",
-          "ramekin"
-        ],
-        "strict": [
-          "unsalted",
-          "butter"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/chocolate-mousse/",
     "title": "Chocolate Mousse",
     "ingredients": [
@@ -255093,292 +253736,6 @@
           "cooking",
           "kosher",
           "salt"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/tuna-carpaccio-recipe/",
-    "title": "Tuna Carpaccio",
-    "ingredients": [
-      "120g / 4.2oz g tuna (, skinless, boneless, cut into 2 pieces (sashimi-grade preferably) (Note 1))",
-      "1/8 tsp sea salt flakes (, or 1 large pinch cooking salt / kosher salt, or small pinch table salt)",
-      "2 pinches Espelette pepper (, or 1 pinch chilli powder or black pepper (Note 2))",
-      "½ tsp finely chopped chive",
-      "Few edible flowers ((optional))",
-      "¾ tsp lemon juice",
-      "3 tsp extra virgin olive oil",
-      "1/8 tsp caster sugar / superfine sugar",
-      "1/4  white onion layer (, (or brown/yellow onion), finely sliced 2mm / 0.08&quot; (Note 3))",
-      "1 1/2 tbsp white wine vinegar (, or apple cider vinegar )",
-      "12 - 16  small slices pane di casa bread (, or other bread , 3 - 4mm / 1/8&quot; thick (Note 4))",
-      "2 tbsp extra virgin olive oil",
-      "Few pinches  cooking salt / kosher salt"
-    ],
-    "cuisine": "Italian, Mediterranean",
-    "mealType": "Starter",
-    "totalTime": "20 mins",
-    "totalTimeMinutes": 20,
-    "servings": "2",
-    "image": "https://www.recipetineats.com/tachyon/2026/04/Tuna-Carpaccio_3.jpg",
-    "instructionCount": 3,
-    "tokens": [
-      {
-        "all": [
-          "tuna",
-          "skinles",
-          "boneles",
-          "cut",
-          "sashimi",
-          "grade",
-          "preferably",
-          "note"
-        ],
-        "strict": [
-          "tuna"
-        ]
-      },
-      {
-        "all": [
-          "salt",
-          "flak",
-          "pinch",
-          "cooking",
-          "kosher",
-          "table"
-        ],
-        "strict": [
-          "salt",
-          "flak"
-        ]
-      },
-      {
-        "all": [
-          "espelette",
-          "pepper",
-          "chilli",
-          "powder",
-          "black",
-          "note"
-        ],
-        "strict": [
-          "espelette",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "tsp",
-          "finely",
-          "chive"
-        ],
-        "strict": [
-          "tsp",
-          "finely",
-          "chive"
-        ]
-      },
-      {
-        "all": [
-          "edible",
-          "flower"
-        ],
-        "strict": [
-          "edible",
-          "flower"
-        ]
-      },
-      {
-        "all": [
-          "tsp",
-          "lemon",
-          "juice"
-        ],
-        "strict": [
-          "tsp",
-          "lemon",
-          "juice"
-        ]
-      },
-      {
-        "all": [
-          "olive",
-          "oil"
-        ],
-        "strict": [
-          "olive",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "caster",
-          "sugar",
-          "superfine"
-        ],
-        "strict": [
-          "caster",
-          "sugar",
-          "superfine"
-        ]
-      },
-      {
-        "all": [
-          "white",
-          "onion",
-          "layer",
-          "brown",
-          "yellow",
-          "finely",
-          "quot",
-          "note"
-        ],
-        "strict": [
-          "white",
-          "onion",
-          "layer",
-          "finely",
-          "quot"
-        ]
-      },
-      {
-        "all": [
-          "white",
-          "wine",
-          "vinegar",
-          "apple",
-          "cider"
-        ],
-        "strict": [
-          "white",
-          "wine",
-          "vinegar"
-        ]
-      },
-      {
-        "all": [
-          "slic",
-          "pane",
-          "casa",
-          "bread",
-          "other",
-          "quot",
-          "thick",
-          "note"
-        ],
-        "strict": [
-          "slic",
-          "pane",
-          "casa",
-          "bread"
-        ]
-      },
-      {
-        "all": [
-          "olive",
-          "oil"
-        ],
-        "strict": [
-          "olive",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "pinch",
-          "cooking",
-          "salt",
-          "kosher"
-        ],
-        "strict": [
-          "pinch",
-          "cooking",
-          "salt",
-          "kosher"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/pommes-anna/",
-    "title": "JB's Pommes Anna",
-    "ingredients": [
-      "1.6 kg / 3.5 lb  medium starchy potato",
-      "160g / 5.6 oz  unsalted butter ((makes 1/2 cup clarified butter) (Note 2))",
-      "1 tsp cooking salt / kosher salt",
-      "1/4 tsp white pepper powder",
-      "1 sprinkle sea salt flakes (, if you want (I did!))"
-    ],
-    "cuisine": "French",
-    "mealType": "Dinner",
-    "totalTime": "140 mins",
-    "totalTimeMinutes": 140,
-    "servings": "8",
-    "image": "https://www.recipetineats.com/tachyon/2025/11/Pommes-Anna_9.jpg",
-    "instructionCount": 3,
-    "tokens": [
-      {
-        "all": [
-          "starchy",
-          "potato"
-        ],
-        "strict": [
-          "starchy",
-          "potato"
-        ]
-      },
-      {
-        "all": [
-          "unsalted",
-          "butter",
-          "mak",
-          "clarified",
-          "note"
-        ],
-        "strict": [
-          "unsalted",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "cooking",
-          "salt",
-          "kosher"
-        ],
-        "strict": [
-          "cooking",
-          "salt",
-          "kosher"
-        ]
-      },
-      {
-        "all": [
-          "white",
-          "pepper",
-          "powder"
-        ],
-        "strict": [
-          "white",
-          "pepper",
-          "powder"
-        ]
-      },
-      {
-        "all": [
-          "sprinkle",
-          "salt",
-          "flak",
-          "you",
-          "want",
-          "did"
-        ],
-        "strict": [
-          "sprinkle",
-          "salt",
-          "flak"
         ]
       }
     ]
@@ -262359,201 +260716,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/poulet-roti-french-roast-chicken/",
-    "title": "Poulet Rôti - French Roast Chicken",
-    "ingredients": [
-      "1.8kg / 4lb  whole chicken ((Note 1))",
-      "1 1/2 tsp herbes de Provence (, buy or make your own (Note 2))",
-      "3  thyme sprigs (, optional)",
-      "3/4 tsp cooking salt / kosher salt (, halve for table salt, +50% for flakes)",
-      "1 tbsp extra virgin olive oil",
-      "100g / 1 stick  unsalted butter (, softened)",
-      "2  garlic cloves (, finely grated)",
-      "3 tsp herbes de Provence ((Note 2))",
-      "1 tsp cooking salt / kosher salt (, halve for table salt, +50% for flakes)",
-      "750g / 1.65lb  starchy potatoes",
-      "8  garlic cloves (, whole, unpeeled)",
-      "3/4 tsp cooking salt / kosher salt (, halve for table salt, +50% for flakes)",
-      "1/2 tsp black pepper",
-      "3 tbsp extra virgin olive oil"
-    ],
-    "cuisine": "French",
-    "mealType": "Dinner",
-    "totalTime": "110 mins",
-    "totalTimeMinutes": 110,
-    "servings": "4",
-    "image": "https://www.recipetineats.com/tachyon/2026/04/Poulet-Roti_6.jpg",
-    "instructionCount": 4,
-    "tokens": [
-      {
-        "all": [
-          "chicken",
-          "note"
-        ],
-        "strict": [
-          "chicken"
-        ]
-      },
-      {
-        "all": [
-          "herb",
-          "provence",
-          "buy",
-          "make",
-          "your",
-          "own",
-          "note"
-        ],
-        "strict": [
-          "herb",
-          "provence"
-        ]
-      },
-      {
-        "all": [
-          "thyme",
-          "sprig"
-        ],
-        "strict": [
-          "thyme",
-          "sprig"
-        ]
-      },
-      {
-        "all": [
-          "cooking",
-          "salt",
-          "kosher",
-          "halve",
-          "table",
-          "flak"
-        ],
-        "strict": [
-          "cooking",
-          "salt",
-          "kosher"
-        ]
-      },
-      {
-        "all": [
-          "olive",
-          "oil"
-        ],
-        "strict": [
-          "olive",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "stick",
-          "unsalted",
-          "butter",
-          "softened"
-        ],
-        "strict": [
-          "stick",
-          "unsalted",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "clof",
-          "finely"
-        ],
-        "strict": [
-          "garlic",
-          "clof"
-        ]
-      },
-      {
-        "all": [
-          "herb",
-          "provence",
-          "note"
-        ],
-        "strict": [
-          "herb",
-          "provence"
-        ]
-      },
-      {
-        "all": [
-          "cooking",
-          "salt",
-          "kosher",
-          "halve",
-          "table",
-          "flak"
-        ],
-        "strict": [
-          "cooking",
-          "salt",
-          "kosher"
-        ]
-      },
-      {
-        "all": [
-          "starchy",
-          "potato"
-        ],
-        "strict": [
-          "starchy",
-          "potato"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "clof",
-          "unpeeled"
-        ],
-        "strict": [
-          "garlic",
-          "clof"
-        ]
-      },
-      {
-        "all": [
-          "cooking",
-          "salt",
-          "kosher",
-          "halve",
-          "table",
-          "flak"
-        ],
-        "strict": [
-          "cooking",
-          "salt",
-          "kosher"
-        ]
-      },
-      {
-        "all": [
-          "black",
-          "pepper"
-        ],
-        "strict": [
-          "black",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "olive",
-          "oil"
-        ],
-        "strict": [
-          "olive",
-          "oil"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/biscotti/",
     "title": "Biscotti",
     "ingredients": [
@@ -263732,119 +261894,6 @@
         "strict": [
           "chocolate",
           "chip"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/beurre-blanc-sauce-recipe/",
-    "title": "Beurre Blanc Sauce",
-    "ingredients": [
-      "1  small eschalot (, finely diced - aka French onion, US: shallot (Note 1))",
-      "1/4 cup white wine (, dry, not sweet or too woody (chardonnay is good) (Note 2))",
-      "2 tbsp white wine vinegar ((Note 3))",
-      "200g / 2 sticks  unsalted butter (, cold, cut in small dice 1cm / 0.4&quot; (keep in fridge until needed))",
-      "1/2 tsp cooking salt / kosher salt (, (or half for table salt, +50% for flakes))",
-      "2 tbsp thickened cream / heavy cream ((Note 4))"
-    ],
-    "cuisine": "French",
-    "mealType": null,
-    "totalTime": "20 mins",
-    "totalTimeMinutes": 20,
-    "servings": "4, 4 people",
-    "image": "https://www.recipetineats.com/tachyon/2026/05/Beurre-blanc-sauce-9.jpg",
-    "instructionCount": 2,
-    "tokens": [
-      {
-        "all": [
-          "eschalot",
-          "finely",
-          "aka",
-          "french",
-          "onion",
-          "shallot",
-          "note"
-        ],
-        "strict": [
-          "eschalot"
-        ]
-      },
-      {
-        "all": [
-          "white",
-          "wine",
-          "dry",
-          "not",
-          "sweet",
-          "too",
-          "woody",
-          "chardonnay",
-          "note"
-        ],
-        "strict": [
-          "white",
-          "wine"
-        ]
-      },
-      {
-        "all": [
-          "white",
-          "wine",
-          "vinegar",
-          "note"
-        ],
-        "strict": [
-          "white",
-          "wine",
-          "vinegar"
-        ]
-      },
-      {
-        "all": [
-          "stick",
-          "unsalted",
-          "butter",
-          "cold",
-          "cut",
-          "dice",
-          "quot",
-          "keep",
-          "fridge",
-          "until"
-        ],
-        "strict": [
-          "stick",
-          "unsalted",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "cooking",
-          "salt",
-          "kosher",
-          "half",
-          "table",
-          "flak"
-        ],
-        "strict": [
-          "cooking",
-          "salt",
-          "kosher"
-        ]
-      },
-      {
-        "all": [
-          "thickened",
-          "cream",
-          "heavy",
-          "note"
-        ],
-        "strict": [
-          "thickened",
-          "cream",
-          "heavy"
         ]
       }
     ]
@@ -270481,125 +268530,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/french-chicken-au-poivre-sauce/",
-    "title": "JB's Chicken au Poivre (Creamy Peppercorn Sauce)",
-    "ingredients": [
-      "2  large chicken breasts (, skinless &amp; boneless (250–300g / 8–10oz each) (Note 1))",
-      "3/4 tsp cooking salt / kosher salt",
-      "2 tbsp vegetable oil (, or any other neutral flavoured oil)",
-      "2 tsp whole black peppercorns (, coarsely crushed (Note 2))",
-      "1/3 cup brandy or cognac  (, or marsala (Note 3))",
-      "1 1/2 cups beef stock / broth (, low sodium (Note 4))",
-      "3/4 cup thickened / heavy cream (, or any other full fat cream)"
-    ],
-    "cuisine": "French",
-    "mealType": null,
-    "totalTime": "28 mins",
-    "totalTimeMinutes": 28,
-    "servings": "4, 4 people",
-    "image": "https://www.recipetineats.com/tachyon/2026/02/Chicken-Au-Poivre_4-copy.jpg",
-    "instructionCount": 4,
-    "tokens": [
-      {
-        "all": [
-          "chicken",
-          "breast",
-          "skinles",
-          "amp",
-          "boneles",
-          "each",
-          "note"
-        ],
-        "strict": [
-          "chicken",
-          "breast"
-        ]
-      },
-      {
-        "all": [
-          "cooking",
-          "salt",
-          "kosher"
-        ],
-        "strict": [
-          "cooking",
-          "salt",
-          "kosher"
-        ]
-      },
-      {
-        "all": [
-          "vegetable",
-          "oil",
-          "any",
-          "other",
-          "neutral",
-          "flavoured"
-        ],
-        "strict": [
-          "vegetable",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "black",
-          "peppercorn",
-          "coarsely",
-          "crushed",
-          "note"
-        ],
-        "strict": [
-          "black",
-          "peppercorn"
-        ]
-      },
-      {
-        "all": [
-          "brandy",
-          "cognac",
-          "marsala",
-          "note"
-        ],
-        "strict": [
-          "brandy"
-        ]
-      },
-      {
-        "all": [
-          "beef",
-          "stock",
-          "broth",
-          "low",
-          "sodium",
-          "note"
-        ],
-        "strict": [
-          "beef",
-          "stock",
-          "broth"
-        ]
-      },
-      {
-        "all": [
-          "thickened",
-          "heavy",
-          "cream",
-          "any",
-          "other",
-          "full",
-          "fat"
-        ],
-        "strict": [
-          "thickened",
-          "heavy",
-          "cream"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/tres-leches-cake/",
     "title": "Tres Leches Cake",
     "ingredients": [
@@ -273503,419 +271433,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/50-clove-garlic-soup-recipe/",
-    "title": "50 Clove Garlic Soup",
-    "ingredients": [
-      "3 tbsp / 50g  unsalted butter",
-      "1 2/3 cups / 250g (50 - 60 cloves)  peeled garlic cloves, roughly chopped",
-      "1  small brown or yellow onion ((or 1/2 large), diced small)",
-      "1.5 kg / 3.3 lbs  starchy potato (, peeled and cut into 2.5cm / 1&quot; cubes (Note 3))",
-      "3 cups vegetable stock / broth (, salt-reduced (Note 4))",
-      "3 cups water",
-      "2 tsp cooking / kosher salt (, halve for table salt)",
-      "1/8 tsp white pepper powder",
-      "1/2 cup thickened cream (heavy cream)",
-      "2/3 cup panko breadcrumbs ((Note 5))",
-      "3 tbsp extra virgin olive oil",
-      "1/8 tsp cooking / kosher salt (, halve for table salt)",
-      "2 tsp finely chopped parsley"
-    ],
-    "cuisine": "French",
-    "mealType": "Soup",
-    "totalTime": "45 mins",
-    "totalTimeMinutes": 45,
-    "servings": "5",
-    "image": "https://www.recipetineats.com/tachyon/2026/07/Garlic-Soup_8.jpg",
-    "instructionCount": 3,
-    "tokens": [
-      {
-        "all": [
-          "unsalted",
-          "butter"
-        ],
-        "strict": [
-          "unsalted",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "peeled",
-          "garlic",
-          "clof",
-          "roughly"
-        ],
-        "strict": [
-          "peeled",
-          "garlic",
-          "clof",
-          "roughly"
-        ]
-      },
-      {
-        "all": [
-          "brown",
-          "yellow",
-          "onion"
-        ],
-        "strict": [
-          "brown"
-        ]
-      },
-      {
-        "all": [
-          "starchy",
-          "potato",
-          "peeled",
-          "cut",
-          "quot",
-          "cub",
-          "note"
-        ],
-        "strict": [
-          "starchy",
-          "potato"
-        ]
-      },
-      {
-        "all": [
-          "vegetable",
-          "stock",
-          "broth",
-          "salt",
-          "reduced",
-          "note"
-        ],
-        "strict": [
-          "vegetable",
-          "stock",
-          "broth"
-        ]
-      },
-      {
-        "all": [
-          "water"
-        ],
-        "strict": [
-          "water"
-        ]
-      },
-      {
-        "all": [
-          "cooking",
-          "kosher",
-          "salt",
-          "halve",
-          "table"
-        ],
-        "strict": [
-          "cooking",
-          "kosher",
-          "salt"
-        ]
-      },
-      {
-        "all": [
-          "white",
-          "pepper",
-          "powder"
-        ],
-        "strict": [
-          "white",
-          "pepper",
-          "powder"
-        ]
-      },
-      {
-        "all": [
-          "thickened",
-          "cream",
-          "heavy"
-        ],
-        "strict": [
-          "thickened",
-          "cream"
-        ]
-      },
-      {
-        "all": [
-          "panko",
-          "breadcrumb",
-          "note"
-        ],
-        "strict": [
-          "panko",
-          "breadcrumb"
-        ]
-      },
-      {
-        "all": [
-          "olive",
-          "oil"
-        ],
-        "strict": [
-          "olive",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "cooking",
-          "kosher",
-          "salt",
-          "halve",
-          "table"
-        ],
-        "strict": [
-          "cooking",
-          "kosher",
-          "salt"
-        ]
-      },
-      {
-        "all": [
-          "finely",
-          "parsley"
-        ],
-        "strict": [
-          "finely",
-          "parsley"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/country-terrine-recipe/",
-    "title": "Country Terrine - pork and pistachio",
-    "ingredients": [
-      "800g / 28oz  pork belly mince (, ground pork belly (Note 1))",
-      "400g / 14oz  pork mince (, ground pork, regular or lean (Note 1))",
-      "250g / 9oz  chicken livers (, cleaned, diced 1cm/0.4&quot; (Note 2))",
-      "4 tsp cooking / kosher salt",
-      "1 3/4 tsp black pepper",
-      "1/4 cup brandy (, preferably cognac (Note 3))",
-      "1/8 tsp curing salt ((cure #1) - I do not use it (Note 4))",
-      "15g / 1 tbsp  unsalted butter",
-      "1  eschalot (, finely diced (Note 5))",
-      "2  large eggs (, (55g/2oz each in shell) - fridge cold is fine)",
-      "2  egg yolks (, from large eggs (55g/2oz each in shell) - fridge cold is fine)",
-      "1/2 cup thickened cream ((heavy cream))",
-      "1/2 heaped cup unsalted pistachios (, no need to toast it (Note 6))",
-      "Bread slices ((I like baguettes))",
-      "Dijon mustard",
-      "Cornichons or other pickles"
-    ],
-    "cuisine": "French",
-    "mealType": "Starter",
-    "totalTime": "3010 mins",
-    "totalTimeMinutes": 3010,
-    "servings": "15, 15 slices",
-    "image": "https://www.recipetineats.com/tachyon/2026/07/Country-terrine_1.jpg",
-    "instructionCount": 3,
-    "tokens": [
-      {
-        "all": [
-          "pork",
-          "belly",
-          "mince",
-          "note"
-        ],
-        "strict": [
-          "pork",
-          "belly",
-          "mince"
-        ]
-      },
-      {
-        "all": [
-          "pork",
-          "mince",
-          "regular",
-          "lean",
-          "note"
-        ],
-        "strict": [
-          "pork",
-          "mince"
-        ]
-      },
-      {
-        "all": [
-          "chicken",
-          "liver",
-          "cleaned",
-          "quot",
-          "note"
-        ],
-        "strict": [
-          "chicken",
-          "liver"
-        ]
-      },
-      {
-        "all": [
-          "cooking",
-          "kosher",
-          "salt"
-        ],
-        "strict": [
-          "cooking",
-          "kosher",
-          "salt"
-        ]
-      },
-      {
-        "all": [
-          "black",
-          "pepper"
-        ],
-        "strict": [
-          "black",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "brandy",
-          "preferably",
-          "cognac",
-          "note"
-        ],
-        "strict": [
-          "brandy"
-        ]
-      },
-      {
-        "all": [
-          "curing",
-          "salt",
-          "cure",
-          "not",
-          "use",
-          "note"
-        ],
-        "strict": [
-          "curing",
-          "salt",
-          "not",
-          "use"
-        ]
-      },
-      {
-        "all": [
-          "unsalted",
-          "butter"
-        ],
-        "strict": [
-          "unsalted",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "eschalot",
-          "finely",
-          "note"
-        ],
-        "strict": [
-          "eschalot"
-        ]
-      },
-      {
-        "all": [
-          "egg",
-          "each",
-          "shell",
-          "fridge",
-          "cold"
-        ],
-        "strict": [
-          "egg",
-          "fridge",
-          "cold"
-        ]
-      },
-      {
-        "all": [
-          "egg",
-          "yolk",
-          "each",
-          "shell",
-          "fridge",
-          "cold"
-        ],
-        "strict": [
-          "egg",
-          "yolk",
-          "fridge",
-          "cold"
-        ]
-      },
-      {
-        "all": [
-          "thickened",
-          "cream",
-          "heavy"
-        ],
-        "strict": [
-          "thickened",
-          "cream"
-        ]
-      },
-      {
-        "all": [
-          "heaped",
-          "cup",
-          "unsalted",
-          "pistachio",
-          "need",
-          "toast",
-          "note"
-        ],
-        "strict": [
-          "heaped",
-          "cup",
-          "unsalted",
-          "pistachio"
-        ]
-      },
-      {
-        "all": [
-          "bread",
-          "slic",
-          "like",
-          "baguett"
-        ],
-        "strict": [
-          "bread",
-          "slic"
-        ]
-      },
-      {
-        "all": [
-          "dijon",
-          "mustard"
-        ],
-        "strict": [
-          "dijon",
-          "mustard"
-        ]
-      },
-      {
-        "all": [
-          "cornichon",
-          "other",
-          "pickl"
-        ],
-        "strict": [
-          "cornichon"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/country-pork-meatballs-with-onion-gravy/",
     "title": "Country Pork Meatballs with Onion Gravy",
     "ingredients": [
@@ -276502,11 +274019,253 @@
   },
   {
     "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/beef-rice-noodles/",
+    "title": "Beef Rice Noodles",
+    "ingredients": [
+      "200 g / 7oz   rump steak / top sirloin (, cut into 3 - 4mm / 1/8&quot; slices, or other steak - see Note 1)",
+      "1/2 tsp baking soda ((bi-carbonate) - NOT baking powder, won't work)",
+      "2 tsp light soy sauce ((Note 2))",
+      "2 tbsp peanut oil (, canola or other neutral flavoured oil)",
+      "200g / 7 oz   Pad Thai-thickness flat rice noodles (~3-4mm (1/8&quot; wide), or any other - see Note 3 for quantities)",
+      "3  garlic cloves (, finely minced with a knife)",
+      "1/2  onion (, sliced)",
+      "6 - 8  baby bok choy, choi sum stems, Chinese broccoli",
+      "1 tbsp light soy sauce (, or all-purpose soy or tamari for gluten-free (Note 2))",
+      "1 1/2 tbsp dark soy sauce ((Note 2))",
+      "3 tbsp oyster sauce ((can substitute with vegetarian oyster sauce))",
+      "2 tsp white sugar ((or honey, maple))",
+      "1 tbsp water",
+      "Pinch white pepper ((or black pepper, or chilli flakes))"
+    ],
+    "cuisine": "Asian",
+    "mealType": null,
+    "totalTime": "40 mins",
+    "totalTimeMinutes": 40,
+    "servings": "2, 2 - 3 people",
+    "image": "https://www.recipetineats.com/tachyon/2026/08/Beef-flat-rice-noodles-4.jpg",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "rump",
+          "steak",
+          "top",
+          "sirloin",
+          "cut",
+          "quot",
+          "slic",
+          "other",
+          "see",
+          "note"
+        ],
+        "strict": [
+          "rump",
+          "steak",
+          "top",
+          "sirloin"
+        ]
+      },
+      {
+        "all": [
+          "baking",
+          "soda",
+          "carbonate",
+          "not",
+          "powder",
+          "won",
+          "work"
+        ],
+        "strict": [
+          "baking",
+          "soda",
+          "not",
+          "powder",
+          "won",
+          "work"
+        ]
+      },
+      {
+        "all": [
+          "light",
+          "soy",
+          "sauce",
+          "note"
+        ],
+        "strict": [
+          "light",
+          "soy",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "peanut",
+          "oil",
+          "canola",
+          "other",
+          "neutral",
+          "flavoured"
+        ],
+        "strict": [
+          "peanut",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "pad",
+          "thai",
+          "thicknes",
+          "flat",
+          "rice",
+          "noodl",
+          "quot",
+          "wide",
+          "any",
+          "other",
+          "see",
+          "note",
+          "quantity"
+        ],
+        "strict": [
+          "pad",
+          "thai",
+          "thicknes",
+          "flat",
+          "rice",
+          "noodl"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "finely",
+          "knife"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "onion"
+        ],
+        "strict": [
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "baby",
+          "bok",
+          "choy",
+          "choi",
+          "sum",
+          "stem",
+          "chinese",
+          "broccoli"
+        ],
+        "strict": [
+          "baby",
+          "bok",
+          "choy",
+          "choi",
+          "sum",
+          "stem",
+          "chinese",
+          "broccoli"
+        ]
+      },
+      {
+        "all": [
+          "light",
+          "soy",
+          "sauce",
+          "all",
+          "purpose",
+          "tamari",
+          "gluten",
+          "free",
+          "note"
+        ],
+        "strict": [
+          "light",
+          "soy",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "dark",
+          "soy",
+          "sauce",
+          "note"
+        ],
+        "strict": [
+          "dark",
+          "soy",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "oyster",
+          "sauce",
+          "can",
+          "substitute",
+          "vegetarian"
+        ],
+        "strict": [
+          "oyster",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "sugar",
+          "honey",
+          "maple"
+        ],
+        "strict": [
+          "white",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "water"
+        ],
+        "strict": [
+          "water"
+        ]
+      },
+      {
+        "all": [
+          "pinch",
+          "white",
+          "pepper",
+          "black",
+          "chilli",
+          "flak"
+        ],
+        "strict": [
+          "pinch",
+          "white",
+          "pepper"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/tartiflette-recipe/",
     "title": "Tartiflette",
     "ingredients": [
-      "500g / 1 lb  reblochon cheese or washed rind cheese ((Note 1))",
-      "1.5kg / 3.3lbs  starchy potato (, peeled then cut into 2.5cm / 1&quot; cubes (Note 2))",
+      "500g / 1 lb  reblochon cheese or any washed rind cheese ((see Note 1 for brie option))",
+      "1.5kg / 3lbs  potato, starchy (- peeled, cut into 2.5cm / 1&quot; cubes (Note 2))",
       "1 tbsp cooking salt / kosher salt (, for the potato cooking water, halve for table salt)",
       "60g / 4 tbsp  unsalted butter",
       "2  brown onion (, halved then sliced 3mm / 0.1&quot; thick)",
@@ -276527,9 +274286,13 @@
         "all": [
           "reblochon",
           "cheese",
+          "any",
           "washed",
           "rind",
-          "note"
+          "see",
+          "note",
+          "brie",
+          "option"
         ],
         "strict": [
           "reblochon",
@@ -276538,18 +274301,17 @@
       },
       {
         "all": [
-          "starchy",
           "potato",
+          "starchy",
           "peeled",
-          "then",
           "cut",
           "quot",
           "cub",
           "note"
         ],
         "strict": [
-          "starchy",
-          "potato"
+          "potato",
+          "starchy"
         ]
       },
       {
@@ -276648,6 +274410,3035 @@
         "strict": [
           "black",
           "pepper"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/fresh-basil-vinaigrette/",
+    "title": "Fresh Basil Vinaigrette",
+    "ingredients": [
+      "1 tightly packed cup basil leaves ((press down firmly in a cup measure))",
+      "1/4 tsp finely grated garlic ((just a bit else it&#39;s too harsh!))",
+      "1/2 tsp Dijon mustard",
+      "1/2 tsp cooking salt / kosher salt (, halve for table salt, +50% for flakes)",
+      "1 pinch ground white pepper  (or black pepper)",
+      "2 tsp apple cider vinegar ((Note 1))",
+      "1/3 cup extra virgin olive oil",
+      "1  ice cube (~1 tbsp in size) (, or 1 tbsp ice cold water (Note 2))"
+    ],
+    "cuisine": "Western",
+    "mealType": "Side",
+    "totalTime": null,
+    "totalTimeMinutes": null,
+    "servings": "1, 1 cup",
+    "image": "https://www.recipetineats.com/tachyon/2026/08/Basil-vinaigrette-dressing-4.jpg",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "tightly",
+          "packed",
+          "cup",
+          "basil",
+          "leaf",
+          "pres",
+          "down",
+          "firmly",
+          "measure"
+        ],
+        "strict": [
+          "tightly",
+          "packed",
+          "cup",
+          "basil",
+          "leaf"
+        ]
+      },
+      {
+        "all": [
+          "finely",
+          "garlic",
+          "just",
+          "bit",
+          "else",
+          "too",
+          "harsh"
+        ],
+        "strict": [
+          "finely",
+          "garlic"
+        ]
+      },
+      {
+        "all": [
+          "dijon",
+          "mustard"
+        ],
+        "strict": [
+          "dijon",
+          "mustard"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "halve",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "pepper",
+          "black"
+        ],
+        "strict": [
+          "white",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "apple",
+          "cider",
+          "vinegar",
+          "note"
+        ],
+        "strict": [
+          "apple",
+          "cider",
+          "vinegar"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "ice",
+          "cube",
+          "size",
+          "cold",
+          "water",
+          "note"
+        ],
+        "strict": [
+          "ice",
+          "cube"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/cheese-souffle-souffle-au-fromage/",
+    "title": "JB's Cheese Soufflé - Soufflé au Fromage",
+    "ingredients": [
+      "2 cups full fat milk (, but works with lite milk too)",
+      "75 g (5 tbsp)  unsalted butter",
+      "1/2 cup plain flour (all-purpose)",
+      "1/2 tsp cooking salt / kosher salt ((halve for table salt, + 50% for flakes))",
+      "2 pinches ground white pepper ((substitute black pepper))",
+      "150 g (1 1/2 cups)  Gruyère cheese (, shredded using a standard box grater (tightly packed if using cups) (Note 2 for other cheeses))",
+      "3  egg yolks (from large eggs (55g/2oz each in shell), at room temperature (Note 1))",
+      "4  egg whites (from large eggs, at room temperature (total egg whites ~ 120g/4.2oz, Note1))",
+      "1/2 tsp cream of tartar (, sifted if lumpy (Note 3))",
+      "15 g (1 tbsp)  unsalted butter (, melted (to grease the ramekins))"
+    ],
+    "cuisine": "French",
+    "mealType": "Lunch",
+    "totalTime": "45 mins",
+    "totalTimeMinutes": 45,
+    "servings": "4, 4 people",
+    "image": "https://www.recipetineats.com/tachyon/2025/10/Cheese-souffle_6.jpg",
+    "instructionCount": 4,
+    "tokens": [
+      {
+        "all": [
+          "full",
+          "fat",
+          "milk",
+          "but",
+          "work",
+          "lite",
+          "too"
+        ],
+        "strict": [
+          "full",
+          "fat",
+          "milk"
+        ]
+      },
+      {
+        "all": [
+          "unsalted",
+          "butter"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "plain",
+          "flour",
+          "all",
+          "purpose"
+        ],
+        "strict": [
+          "plain",
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "halve",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "pepper",
+          "substitute",
+          "black"
+        ],
+        "strict": [
+          "white",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "gruy",
+          "cheese",
+          "shredded",
+          "using",
+          "standard",
+          "box",
+          "grater",
+          "tightly",
+          "packed",
+          "cup",
+          "note",
+          "other",
+          "chees"
+        ],
+        "strict": [
+          "gruy",
+          "cheese"
+        ]
+      },
+      {
+        "all": [
+          "egg",
+          "yolk",
+          "each",
+          "shell",
+          "room",
+          "temperature",
+          "note"
+        ],
+        "strict": [
+          "egg",
+          "yolk",
+          "room",
+          "temperature"
+        ]
+      },
+      {
+        "all": [
+          "egg",
+          "whit",
+          "room",
+          "temperature",
+          "total",
+          "note"
+        ],
+        "strict": [
+          "egg",
+          "whit"
+        ]
+      },
+      {
+        "all": [
+          "cream",
+          "tartar",
+          "sifted",
+          "lumpy",
+          "note"
+        ],
+        "strict": [
+          "cream",
+          "tartar"
+        ]
+      },
+      {
+        "all": [
+          "unsalted",
+          "butter",
+          "melted",
+          "grease",
+          "ramekin"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/easy-classic-chinese-beef-stir-fry/",
+    "title": "Easy Chinese Beef Stir Fry",
+    "ingredients": [
+      "7 oz / 200 g    beef rump steak or flank (, or any other quick cooking steak cut (Note 1))",
+      "1/2 tsp baking soda / bi-carbonate soda (, for velveting (Note 2))",
+      "2 tbsp soy sauce, light or all-purpose (NOT dark soy (Note 4))",
+      "1 tbsp oyster sauce",
+      "2 tbsp Chinese cooking wine ( OR Mirin (Note 5))",
+      "1 tsp white sugar",
+      "1/2 tsp sesame oil (, toasted (brown) not untoasted (yellow))",
+      "Pinch  white pepper (, substitute with black pepper)",
+      "3 tsp cornstarch / corn flour",
+      "1/2 cup water (, separated)",
+      "1 1/2 tbsp peanut oil",
+      "1  garlic clove (, finely minced with a knife)",
+      "1/2  small onion (, sliced (yellow, brown or white))",
+      "1/2  red capsicum / bell pepper (, sliced into 7mm / 1/3&quot; thick slices)",
+      "1  small carrot (, peeled, halved lengthwise and sliced thinly on the diagonal)",
+      "2  bok choy (, cut leaves from stems, cut thick stems lengthways to make them all roughly the same width)",
+      "2  green onion (, cut into 1.5&quot;/3cm pieces, firm white end separated from soft green parts)",
+      "Steamed white rice",
+      "Sesame seeds ((optional))"
+    ],
+    "cuisine": "Chinese",
+    "mealType": "Dinner",
+    "totalTime": "23 mins",
+    "totalTimeMinutes": 23,
+    "servings": "3, 3 - 4",
+    "image": "https://www.recipetineats.com/tachyon/2015/12/Chinese-Beef-Stir-Fry_8.jpg",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "beef",
+          "rump",
+          "steak",
+          "flank",
+          "any",
+          "other",
+          "quick",
+          "cooking",
+          "cut",
+          "note"
+        ],
+        "strict": [
+          "beef",
+          "rump",
+          "steak"
+        ]
+      },
+      {
+        "all": [
+          "baking",
+          "soda",
+          "carbonate",
+          "velveting",
+          "note"
+        ],
+        "strict": [
+          "baking",
+          "soda",
+          "carbonate"
+        ]
+      },
+      {
+        "all": [
+          "soy",
+          "sauce",
+          "light",
+          "all",
+          "purpose",
+          "not",
+          "dark",
+          "note"
+        ],
+        "strict": [
+          "soy",
+          "sauce",
+          "light"
+        ]
+      },
+      {
+        "all": [
+          "oyster",
+          "sauce"
+        ],
+        "strict": [
+          "oyster",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "chinese",
+          "cooking",
+          "wine",
+          "mirin",
+          "note"
+        ],
+        "strict": [
+          "chinese",
+          "cooking",
+          "wine"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "sugar"
+        ],
+        "strict": [
+          "white",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "sesame",
+          "oil",
+          "toasted",
+          "brown",
+          "not",
+          "untoasted",
+          "yellow"
+        ],
+        "strict": [
+          "sesame",
+          "oil",
+          "not",
+          "untoasted"
+        ]
+      },
+      {
+        "all": [
+          "pinch",
+          "white",
+          "pepper",
+          "substitute",
+          "black"
+        ],
+        "strict": [
+          "pinch",
+          "white",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "cornstarch",
+          "cornflour",
+          "corn",
+          "flour"
+        ],
+        "strict": [
+          "cornstarch",
+          "cornflour",
+          "corn",
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "water",
+          "separated"
+        ],
+        "strict": [
+          "water"
+        ]
+      },
+      {
+        "all": [
+          "peanut",
+          "oil"
+        ],
+        "strict": [
+          "peanut",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clove",
+          "finely",
+          "knife"
+        ],
+        "strict": [
+          "garlic",
+          "clove"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "yellow",
+          "brown",
+          "white"
+        ],
+        "strict": [
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "capsicum",
+          "pepper",
+          "bell",
+          "quot",
+          "thick",
+          "slic"
+        ],
+        "strict": [
+          "red",
+          "capsicum",
+          "pepper",
+          "bell"
+        ]
+      },
+      {
+        "all": [
+          "carrot",
+          "peeled",
+          "halved",
+          "lengthwise",
+          "thinly",
+          "diagonal"
+        ],
+        "strict": [
+          "carrot"
+        ]
+      },
+      {
+        "all": [
+          "bok",
+          "choy",
+          "cut",
+          "leaf",
+          "stem",
+          "thick",
+          "lengthway",
+          "make",
+          "them",
+          "all",
+          "roughly",
+          "same",
+          "width"
+        ],
+        "strict": [
+          "bok",
+          "choy"
+        ]
+      },
+      {
+        "all": [
+          "green",
+          "onion",
+          "cut",
+          "quot",
+          "firm",
+          "white",
+          "end",
+          "separated",
+          "soft",
+          "part"
+        ],
+        "strict": [
+          "green",
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "steamed",
+          "white",
+          "rice"
+        ],
+        "strict": [
+          "steamed",
+          "white",
+          "rice"
+        ]
+      },
+      {
+        "all": [
+          "sesame",
+          "seed"
+        ],
+        "strict": [
+          "sesame",
+          "seed"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/best-easy-peanut-butter-cookies/",
+    "title": "World's Best Easy Peanut Butter Cookies",
+    "ingredients": [
+      "1 cup / 265 g   peanut butter (, smooth or crunchy - commercial spread, NOT pure peanut butter (I use Bega) (Note 1))",
+      "200 g/ 1 cup  , packed, brown sugar ((Note 2))",
+      "1  egg"
+    ],
+    "cuisine": null,
+    "mealType": null,
+    "totalTime": "20 mins",
+    "totalTimeMinutes": 20,
+    "servings": "14, 14 cookies",
+    "image": "https://www.recipetineats.com/tachyon/2017/09/Peanut-Butter-Cookies-3-Ingredients-5.jpg",
+    "instructionCount": 7,
+    "tokens": [
+      {
+        "all": [
+          "peanut",
+          "butter",
+          "smooth",
+          "crunchy",
+          "commercial",
+          "spread",
+          "not",
+          "pure",
+          "use",
+          "bega",
+          "note"
+        ],
+        "strict": [
+          "peanut",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "packed",
+          "brown",
+          "sugar",
+          "note"
+        ],
+        "strict": [
+          "packed",
+          "brown",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "egg"
+        ],
+        "strict": [
+          "egg"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/5-ingredient-peanut-butter-chocolate-bars-no-bake/",
+    "title": "5 Ingredient Chocolate Peanut Butter Bars (NO BAKE!)",
+    "ingredients": [
+      "115g / 1/2 cup / 1 US stick  melted salted butter ((or unsalted butter + 1/4 tsp salt))",
+      "1 cup crushed Arnott's Marie crackers (11 crackers) or graham cracker crumbs (8 crackers) (Note 1)",
+      "1 cup icing sugar / powdered sugar",
+      "3/4 cup peanut butter ((smooth))",
+      "1 cup dark chocolate chips - the melting kind ((US: semi sweet) (Note 2))",
+      "2 tbsp peanut butter ((smooth))"
+    ],
+    "cuisine": null,
+    "mealType": null,
+    "totalTime": "15 mins",
+    "totalTimeMinutes": 15,
+    "servings": "16",
+    "image": "https://www.recipetineats.com/tachyon/2015/06/Chocolate-Peanut-Butter-Bars_5.jpg",
+    "instructionCount": 4,
+    "tokens": [
+      {
+        "all": [
+          "stick",
+          "melted",
+          "salted",
+          "butter",
+          "unsalted",
+          "salt"
+        ],
+        "strict": [
+          "stick",
+          "melted",
+          "salted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "crushed",
+          "arnott",
+          "marie",
+          "cracker",
+          "graham",
+          "crumb",
+          "note"
+        ],
+        "strict": [
+          "crushed",
+          "arnott",
+          "marie",
+          "cracker"
+        ]
+      },
+      {
+        "all": [
+          "icing",
+          "sugar",
+          "powdered"
+        ],
+        "strict": [
+          "icing",
+          "sugar",
+          "powdered"
+        ]
+      },
+      {
+        "all": [
+          "peanut",
+          "butter",
+          "smooth"
+        ],
+        "strict": [
+          "peanut",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "dark",
+          "chocolate",
+          "chip",
+          "melting",
+          "kind",
+          "semi",
+          "sweet",
+          "note"
+        ],
+        "strict": [
+          "dark",
+          "chocolate",
+          "chip",
+          "melting",
+          "kind"
+        ]
+      },
+      {
+        "all": [
+          "peanut",
+          "butter",
+          "smooth"
+        ],
+        "strict": [
+          "peanut",
+          "butter"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/peanut-butter-caramel-pie/",
+    "title": "Peanut Butter Caramel Pie",
+    "ingredients": [
+      "274g / 9.5 oz   Oreo cookies ((2 standard packs/rows - Note 1))",
+      "60g / 4 tbsp  butter (, melted)",
+      "Pinch of salt",
+      "100g (7 tbsp)  unsalted butter",
+      "1/2 cup (110g)  (packed) brown sugar",
+      "1  can sweetened condensed milk (395g/14oz)",
+      "1/4 cup (65ml)  cream (, any type, full fat  (not low fat))",
+      "1 tsp salt",
+      "1 cup (280g)   peanut butter, smooth ((Note 2))",
+      "1/3 cup (85ml)   heavy/thickened cream ((Note 3a))",
+      "150g / 5 oz   milk chocolate chips ((or other of choice, Note 3b))",
+      "1/4 cup  roughly chopped peanuts"
+    ],
+    "cuisine": null,
+    "mealType": "Dessert",
+    "totalTime": "35 mins",
+    "totalTimeMinutes": 35,
+    "servings": "12",
+    "image": "https://www.recipetineats.com/tachyon/2019/02/Peanut-Butter-Caramel-Pie_4a.jpg",
+    "instructionCount": 5,
+    "tokens": [
+      {
+        "all": [
+          "oreo",
+          "cooky",
+          "standard",
+          "pack",
+          "row",
+          "note"
+        ],
+        "strict": [
+          "oreo",
+          "cooky"
+        ]
+      },
+      {
+        "all": [
+          "butter",
+          "melted"
+        ],
+        "strict": [
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "pinch",
+          "salt"
+        ],
+        "strict": [
+          "pinch",
+          "salt"
+        ]
+      },
+      {
+        "all": [
+          "unsalted",
+          "butter"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "packed",
+          "brown",
+          "sugar"
+        ],
+        "strict": [
+          "brown",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "sweetened",
+          "condensed",
+          "milk"
+        ],
+        "strict": [
+          "sweetened",
+          "condensed",
+          "milk"
+        ]
+      },
+      {
+        "all": [
+          "cream",
+          "any",
+          "type",
+          "full",
+          "fat",
+          "not",
+          "low"
+        ],
+        "strict": [
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "salt"
+        ],
+        "strict": [
+          "salt"
+        ]
+      },
+      {
+        "all": [
+          "peanut",
+          "butter",
+          "smooth",
+          "note"
+        ],
+        "strict": [
+          "peanut",
+          "butter",
+          "smooth"
+        ]
+      },
+      {
+        "all": [
+          "heavy",
+          "thickened",
+          "cream",
+          "note"
+        ],
+        "strict": [
+          "heavy",
+          "thickened",
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "milk",
+          "chocolate",
+          "chip",
+          "other",
+          "choice",
+          "note"
+        ],
+        "strict": [
+          "milk",
+          "chocolate",
+          "chip"
+        ]
+      },
+      {
+        "all": [
+          "roughly",
+          "peanut"
+        ],
+        "strict": [
+          "roughly",
+          "peanut"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/choc-chip-peanut-butter-cookies/",
+    "title": "Choc chip Peanut Butter Cookies",
+    "ingredients": [
+      "100g / 7 tbsp  unsalted butter (, cut into ~1cm / 0.2\" cubes)",
+      "1/2 cup (tightly packed) brown sugar",
+      "1/2 cup caster sugar / superfine sugar (, or regular/granulated white sugar)",
+      "1/2 tsp vanilla extract",
+      "1 tsp honey ((Note 1))",
+      "1/4 tsp cooking salt / kosher salt",
+      "1  large egg (, fridge cold is fine)",
+      "1/2 cup smooth peanut butter spread ((ie Aus: Bega, US: Jif, Skippy, UK: Sun-Pat, NOT the runny natural sugar-free type))",
+      "1 1/4 cups plain flour / all-purpose flour ((Note 4 for gluten-free))",
+      "1 tsp baking soda / bi-carbonate soda (, not baking powder (Note 2))",
+      "150g (3/4 cup)  dark choc chips / US semi-sweet chips"
+    ],
+    "cuisine": "Western",
+    "mealType": "Dessert",
+    "totalTime": "97 mins",
+    "totalTimeMinutes": 97,
+    "servings": "16, 16 cookies 8cm/3.2\" wide, 1.5cm / 0.6\" thick",
+    "image": "https://www.recipetineats.com/tachyon/2026/08/Peanut-butter-cookies-with-choc-chips-7.jpg",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "unsalted",
+          "butter",
+          "cut",
+          "cub"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "tightly",
+          "packed",
+          "brown",
+          "sugar"
+        ],
+        "strict": [
+          "brown",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "caster",
+          "sugar",
+          "superfine",
+          "regular",
+          "granulated",
+          "white"
+        ],
+        "strict": [
+          "caster",
+          "sugar",
+          "superfine"
+        ]
+      },
+      {
+        "all": [
+          "vanilla",
+          "extract"
+        ],
+        "strict": [
+          "vanilla",
+          "extract"
+        ]
+      },
+      {
+        "all": [
+          "honey",
+          "note"
+        ],
+        "strict": [
+          "honey"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "egg",
+          "fridge",
+          "cold"
+        ],
+        "strict": [
+          "egg"
+        ]
+      },
+      {
+        "all": [
+          "smooth",
+          "peanut",
+          "butter",
+          "spread",
+          "aus",
+          "bega",
+          "jif",
+          "skippy",
+          "sun",
+          "pat",
+          "not",
+          "runny",
+          "natural",
+          "sugar",
+          "free",
+          "type"
+        ],
+        "strict": [
+          "smooth",
+          "peanut",
+          "butter",
+          "spread"
+        ]
+      },
+      {
+        "all": [
+          "plain",
+          "flour",
+          "all",
+          "purpose",
+          "note",
+          "gluten",
+          "free"
+        ],
+        "strict": [
+          "plain",
+          "flour",
+          "all",
+          "purpose"
+        ]
+      },
+      {
+        "all": [
+          "baking",
+          "soda",
+          "carbonate",
+          "not",
+          "powder",
+          "note"
+        ],
+        "strict": [
+          "baking",
+          "soda",
+          "carbonate"
+        ]
+      },
+      {
+        "all": [
+          "dark",
+          "choc",
+          "chip",
+          "semi",
+          "sweet"
+        ],
+        "strict": [
+          "dark",
+          "choc",
+          "chip",
+          "semi",
+          "sweet"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/gozleme/",
+    "title": "Gozleme!!",
+    "ingredients": [
+      "2 1/2 cups flour (, plain/all purpose (GF Note 4))",
+      "1/3 cup extra virgin olive oil",
+      "3/4 cup water",
+      "1/2 tsp cooking salt / kosher salt ((halve for table salt, +50% for flakes))",
+      "250g / 8 oz   baby spinach",
+      "2  garlic cloves (, minced)",
+      "2  large eggs ((~50g/2oz each, in shell))",
+      "1/4 tsp black pepper",
+      "250g / 8 oz   Danish feta (the soft feta) or Greek feta ((Note 2))",
+      "2 cups (tightly pakced) shredded mozzarella cheese ((Note 3))",
+      "1 tbsp olive oil",
+      "2  garlic cloves (, minced)",
+      "1  onion (, finely chopped)",
+      "400g / 14 oz  beef or lamb mince ((ground meat))",
+      "1  small red capsicum / bell pepper (, diced)",
+      "90g / 3 oz   baby spinach",
+      "1 1/2 tsp cumin powder",
+      "1 tsp paprika",
+      "1/4 tsp cayenne ((mild spiciness, can leave out))",
+      "3/4 tsp cooking salt / kosher salt ((halve for table salt, +50% for flakes))",
+      "1/4 tsp black pepper",
+      "1 tbsp water",
+      "120g / 4 oz   Danish feta (soft) or Greek feta ((Note 2))",
+      "1 - 1 1/2 tbsp olive oil  (, per gozleme)",
+      "Lemon wedges ((optional))"
+    ],
+    "cuisine": "Turkish",
+    "mealType": "Starter",
+    "totalTime": "50 mins",
+    "totalTimeMinutes": 50,
+    "servings": "4",
+    "image": "https://www.recipetineats.com/tachyon/2019/03/Gozleme_5.jpg",
+    "instructionCount": 7,
+    "tokens": [
+      {
+        "all": [
+          "flour",
+          "plain",
+          "all",
+          "purpose",
+          "note"
+        ],
+        "strict": [
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "water"
+        ],
+        "strict": [
+          "water"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "halve",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "baby",
+          "spinach"
+        ],
+        "strict": [
+          "baby",
+          "spinach"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "egg",
+          "each",
+          "shell"
+        ],
+        "strict": [
+          "egg"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "danish",
+          "feta",
+          "soft",
+          "greek",
+          "note"
+        ],
+        "strict": [
+          "danish",
+          "feta"
+        ]
+      },
+      {
+        "all": [
+          "tightly",
+          "pakced",
+          "shredded",
+          "mozzarella",
+          "cheese",
+          "note"
+        ],
+        "strict": [
+          "shredded",
+          "mozzarella",
+          "cheese"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "finely"
+        ],
+        "strict": [
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "beef",
+          "lamb",
+          "mince",
+          "meat"
+        ],
+        "strict": [
+          "beef"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "capsicum",
+          "pepper",
+          "bell"
+        ],
+        "strict": [
+          "red",
+          "capsicum",
+          "pepper",
+          "bell"
+        ]
+      },
+      {
+        "all": [
+          "baby",
+          "spinach"
+        ],
+        "strict": [
+          "baby",
+          "spinach"
+        ]
+      },
+      {
+        "all": [
+          "cumin",
+          "powder"
+        ],
+        "strict": [
+          "cumin",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "paprika"
+        ],
+        "strict": [
+          "paprika"
+        ]
+      },
+      {
+        "all": [
+          "cayenne",
+          "mild",
+          "spicines",
+          "can",
+          "leave",
+          "out"
+        ],
+        "strict": [
+          "cayenne"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "halve",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "water"
+        ],
+        "strict": [
+          "water"
+        ]
+      },
+      {
+        "all": [
+          "danish",
+          "feta",
+          "soft",
+          "greek",
+          "note"
+        ],
+        "strict": [
+          "danish",
+          "feta"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil",
+          "per",
+          "gozleme"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "lemon",
+          "wedg"
+        ],
+        "strict": [
+          "lemon",
+          "wedg"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/broccoli-wedge-salad/",
+    "title": "Broccoli Wedge Salad",
+    "ingredients": [
+      "750g / 1.5 lb  broccoli heads ((1 1/2 large or 2 medium))",
+      "1/2 tsp cooking salt / kosher salt (, half for table salt)",
+      "2 tbsp extra virgin olive oil",
+      "150g / 5oz  streaky bacon (, cut into 5cm x 0.5cm / 1&quot; x 0.2&quot; batons (Note 1))",
+      "3 tbsp parmesan cheese (, finely grated)",
+      "Extra small basil leaves (, optional garnish)",
+      "1 tightly packed cup basil leaves",
+      "1/2 tsp finely grated garlic",
+      "1/2 tsp Dijon mustard",
+      "1/2 tsp cooking salt / kosher salt (, half for table salt)",
+      "1 pinch ground white pepper",
+      "2 tsp apple cider vinegar ((Note 2))",
+      "1/4 cup extra virgin olive oil",
+      "1  ice cube (~1 tbsp in size) (, or 1 tbsp ice cold water (Note 3))"
+    ],
+    "cuisine": "Western",
+    "mealType": "Side",
+    "totalTime": "45 mins",
+    "totalTimeMinutes": 45,
+    "servings": "4, 4 people as a side",
+    "image": "https://www.recipetineats.com/tachyon/2026/08/Broccoli-wedge-salad-7.jpg",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "broccoli",
+          "head"
+        ],
+        "strict": [
+          "broccoli",
+          "head"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "half",
+          "table"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "streaky",
+          "bacon",
+          "pancetta",
+          "cut",
+          "quot",
+          "baton",
+          "note"
+        ],
+        "strict": [
+          "streaky",
+          "bacon",
+          "pancetta"
+        ]
+      },
+      {
+        "all": [
+          "parmesan",
+          "cheese",
+          "finely"
+        ],
+        "strict": [
+          "parmesan",
+          "cheese"
+        ]
+      },
+      {
+        "all": [
+          "basil",
+          "leaf",
+          "garnish"
+        ],
+        "strict": [
+          "basil",
+          "leaf"
+        ]
+      },
+      {
+        "all": [
+          "tightly",
+          "packed",
+          "cup",
+          "basil",
+          "leaf"
+        ],
+        "strict": [
+          "tightly",
+          "packed",
+          "cup",
+          "basil",
+          "leaf"
+        ]
+      },
+      {
+        "all": [
+          "finely",
+          "garlic"
+        ],
+        "strict": [
+          "finely",
+          "garlic"
+        ]
+      },
+      {
+        "all": [
+          "dijon",
+          "mustard"
+        ],
+        "strict": [
+          "dijon",
+          "mustard"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "half",
+          "table"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "pepper"
+        ],
+        "strict": [
+          "white",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "apple",
+          "cider",
+          "vinegar",
+          "note"
+        ],
+        "strict": [
+          "apple",
+          "cider",
+          "vinegar"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "ice",
+          "cube",
+          "size",
+          "cold",
+          "water",
+          "note"
+        ],
+        "strict": [
+          "ice",
+          "cube"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/pommes-anna/",
+    "title": "JB's Pommes Anna",
+    "ingredients": [
+      "1.6 kg / 3.5 lb  medium starchy potato",
+      "160g / 5.6 oz  unsalted butter ((makes 1/2 cup clarified butter) (Note 2))",
+      "1 tsp cooking salt / kosher salt",
+      "1/4 tsp white pepper powder",
+      "1 sprinkle sea salt flakes (, if you want (I did!))"
+    ],
+    "cuisine": "French",
+    "mealType": "Dinner",
+    "totalTime": "140 mins",
+    "totalTimeMinutes": 140,
+    "servings": "8",
+    "image": "https://www.recipetineats.com/tachyon/2025/11/Pommes-Anna_9.jpg",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "starchy",
+          "potato"
+        ],
+        "strict": [
+          "starchy",
+          "potato"
+        ]
+      },
+      {
+        "all": [
+          "unsalted",
+          "butter",
+          "mak",
+          "clarified",
+          "note"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "pepper",
+          "powder"
+        ],
+        "strict": [
+          "white",
+          "pepper",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "sprinkle",
+          "salt",
+          "flak",
+          "you",
+          "want",
+          "did"
+        ],
+        "strict": [
+          "sprinkle",
+          "salt",
+          "flak"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/french-chicken-au-poivre-sauce/",
+    "title": "JB's Chicken au Poivre (Creamy Peppercorn Sauce)",
+    "ingredients": [
+      "2  large chicken breasts (, skinless &amp; boneless (250–300g / 8–10oz each) (Note 1))",
+      "3/4 tsp cooking salt / kosher salt",
+      "2 tbsp vegetable oil (, or any other neutral flavoured oil)",
+      "2 tsp whole black peppercorns (, coarsely crushed (Note 2))",
+      "1/3 cup brandy or cognac  (, or marsala (Note 3))",
+      "1 1/2 cups beef stock / broth (, low sodium (Note 4))",
+      "3/4 cup thickened / heavy cream (, or any other full fat cream)"
+    ],
+    "cuisine": "French",
+    "mealType": null,
+    "totalTime": "28 mins",
+    "totalTimeMinutes": 28,
+    "servings": "4, 4 people",
+    "image": "https://www.recipetineats.com/tachyon/2026/02/Chicken-Au-Poivre_4-copy.jpg",
+    "instructionCount": 4,
+    "tokens": [
+      {
+        "all": [
+          "chicken",
+          "breast",
+          "skinles",
+          "amp",
+          "boneles",
+          "each",
+          "note"
+        ],
+        "strict": [
+          "chicken",
+          "breast"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "vegetable",
+          "oil",
+          "any",
+          "other",
+          "neutral",
+          "flavoured"
+        ],
+        "strict": [
+          "vegetable",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "peppercorn",
+          "coarsely",
+          "crushed",
+          "note"
+        ],
+        "strict": [
+          "black",
+          "peppercorn"
+        ]
+      },
+      {
+        "all": [
+          "brandy",
+          "cognac",
+          "marsala",
+          "note"
+        ],
+        "strict": [
+          "brandy"
+        ]
+      },
+      {
+        "all": [
+          "beef",
+          "stock",
+          "broth",
+          "low",
+          "sodium",
+          "note"
+        ],
+        "strict": [
+          "beef",
+          "stock",
+          "broth"
+        ]
+      },
+      {
+        "all": [
+          "thickened",
+          "heavy",
+          "cream",
+          "any",
+          "other",
+          "full",
+          "fat"
+        ],
+        "strict": [
+          "thickened",
+          "heavy",
+          "cream"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/tuna-carpaccio-recipe/",
+    "title": "Tuna Carpaccio",
+    "ingredients": [
+      "120g / 4.2oz g tuna (, skinless, boneless, cut into 2 pieces (sashimi-grade preferably) (Note 1))",
+      "1/8 tsp sea salt flakes (, or 1 large pinch cooking salt / kosher salt, or small pinch table salt)",
+      "2 pinches Espelette pepper (, or 1 pinch chilli powder or black pepper (Note 2))",
+      "½ tsp finely chopped chive",
+      "Few edible flowers ((optional))",
+      "¾ tsp lemon juice",
+      "3 tsp extra virgin olive oil",
+      "1/8 tsp caster sugar / superfine sugar",
+      "1/4  white onion layer (, (or brown/yellow onion), finely sliced 2mm / 0.08&quot; (Note 3))",
+      "1 1/2 tbsp white wine vinegar (, or apple cider vinegar )",
+      "12 - 16  small slices pane di casa bread (, or other bread , 3 - 4mm / 1/8&quot; thick (Note 4))",
+      "2 tbsp extra virgin olive oil",
+      "Few pinches  cooking salt / kosher salt"
+    ],
+    "cuisine": "Italian, Mediterranean",
+    "mealType": "Starter",
+    "totalTime": "20 mins",
+    "totalTimeMinutes": 20,
+    "servings": "2",
+    "image": "https://www.recipetineats.com/tachyon/2026/04/Tuna-Carpaccio_3.jpg",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "tuna",
+          "skinles",
+          "boneles",
+          "cut",
+          "sashimi",
+          "grade",
+          "preferably",
+          "note"
+        ],
+        "strict": [
+          "tuna"
+        ]
+      },
+      {
+        "all": [
+          "salt",
+          "flak",
+          "pinch",
+          "cooking",
+          "kosher",
+          "table"
+        ],
+        "strict": [
+          "salt",
+          "flak"
+        ]
+      },
+      {
+        "all": [
+          "espelette",
+          "pepper",
+          "chilli",
+          "powder",
+          "black",
+          "note"
+        ],
+        "strict": [
+          "espelette",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "tsp",
+          "finely",
+          "chive"
+        ],
+        "strict": [
+          "tsp",
+          "finely",
+          "chive"
+        ]
+      },
+      {
+        "all": [
+          "edible",
+          "flower"
+        ],
+        "strict": [
+          "edible",
+          "flower"
+        ]
+      },
+      {
+        "all": [
+          "tsp",
+          "lemon",
+          "juice"
+        ],
+        "strict": [
+          "tsp",
+          "lemon",
+          "juice"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "caster",
+          "sugar",
+          "superfine"
+        ],
+        "strict": [
+          "caster",
+          "sugar",
+          "superfine"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "onion",
+          "layer",
+          "brown",
+          "yellow",
+          "finely",
+          "quot",
+          "note"
+        ],
+        "strict": [
+          "white",
+          "onion",
+          "layer",
+          "finely",
+          "quot"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "wine",
+          "vinegar",
+          "apple",
+          "cider"
+        ],
+        "strict": [
+          "white",
+          "wine",
+          "vinegar"
+        ]
+      },
+      {
+        "all": [
+          "slic",
+          "pane",
+          "casa",
+          "bread",
+          "other",
+          "quot",
+          "thick",
+          "note"
+        ],
+        "strict": [
+          "slic",
+          "pane",
+          "casa",
+          "bread"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "pinch",
+          "cooking",
+          "salt",
+          "kosher"
+        ],
+        "strict": [
+          "pinch",
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/poulet-roti-french-roast-chicken/",
+    "title": "Poulet Rôti - French Roast Chicken",
+    "ingredients": [
+      "1.8kg / 4lb  whole chicken ((Note 1))",
+      "1 1/2 tsp herbes de Provence (, buy or make your own (Note 2))",
+      "3  thyme sprigs (, optional)",
+      "3/4 tsp cooking salt / kosher salt (, halve for table salt, +50% for flakes)",
+      "1 tbsp extra virgin olive oil",
+      "100g / 1 stick  unsalted butter (, softened)",
+      "2  garlic cloves (, finely grated)",
+      "3 tsp herbes de Provence ((Note 2))",
+      "1 tsp cooking salt / kosher salt (, halve for table salt, +50% for flakes)",
+      "750g / 1.65lb  starchy potatoes",
+      "8  garlic cloves (, whole, unpeeled)",
+      "3/4 tsp cooking salt / kosher salt (, halve for table salt, +50% for flakes)",
+      "1/2 tsp black pepper",
+      "3 tbsp extra virgin olive oil"
+    ],
+    "cuisine": "French",
+    "mealType": "Dinner",
+    "totalTime": "110 mins",
+    "totalTimeMinutes": 110,
+    "servings": "4",
+    "image": "https://www.recipetineats.com/tachyon/2026/04/Poulet-Roti_6.jpg",
+    "instructionCount": 4,
+    "tokens": [
+      {
+        "all": [
+          "chicken",
+          "note"
+        ],
+        "strict": [
+          "chicken"
+        ]
+      },
+      {
+        "all": [
+          "herb",
+          "provence",
+          "buy",
+          "make",
+          "your",
+          "own",
+          "note"
+        ],
+        "strict": [
+          "herb",
+          "provence"
+        ]
+      },
+      {
+        "all": [
+          "thyme",
+          "sprig"
+        ],
+        "strict": [
+          "thyme",
+          "sprig"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "halve",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "stick",
+          "unsalted",
+          "butter",
+          "softened"
+        ],
+        "strict": [
+          "stick",
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "finely"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "herb",
+          "provence",
+          "note"
+        ],
+        "strict": [
+          "herb",
+          "provence"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "halve",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "starchy",
+          "potato"
+        ],
+        "strict": [
+          "starchy",
+          "potato"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "unpeeled"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "halve",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/beurre-blanc-sauce-recipe/",
+    "title": "Beurre Blanc Sauce",
+    "ingredients": [
+      "1  small eschalot (, finely diced - aka French onion, US: shallot (Note 1))",
+      "1/4 cup white wine (, dry, not sweet or too woody (chardonnay is good) (Note 2))",
+      "2 tbsp white wine vinegar ((Note 3))",
+      "200g / 2 sticks  unsalted butter (, cold, cut in small dice 1cm / 0.4&quot; (keep in fridge until needed))",
+      "1/2 tsp cooking salt / kosher salt (, (or half for table salt, +50% for flakes))",
+      "2 tbsp thickened cream / heavy cream ((Note 4))"
+    ],
+    "cuisine": "French",
+    "mealType": null,
+    "totalTime": "20 mins",
+    "totalTimeMinutes": 20,
+    "servings": "4, 4 people",
+    "image": "https://www.recipetineats.com/tachyon/2026/05/Beurre-blanc-sauce-9.jpg",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "eschalot",
+          "finely",
+          "aka",
+          "french",
+          "onion",
+          "shallot",
+          "note"
+        ],
+        "strict": [
+          "eschalot"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "wine",
+          "dry",
+          "not",
+          "sweet",
+          "too",
+          "woody",
+          "chardonnay",
+          "note"
+        ],
+        "strict": [
+          "white",
+          "wine"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "wine",
+          "vinegar",
+          "note"
+        ],
+        "strict": [
+          "white",
+          "wine",
+          "vinegar"
+        ]
+      },
+      {
+        "all": [
+          "stick",
+          "unsalted",
+          "butter",
+          "cold",
+          "cut",
+          "dice",
+          "quot",
+          "keep",
+          "fridge",
+          "until"
+        ],
+        "strict": [
+          "stick",
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "half",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "thickened",
+          "cream",
+          "heavy",
+          "note"
+        ],
+        "strict": [
+          "thickened",
+          "cream",
+          "heavy"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/country-terrine-recipe/",
+    "title": "Country Terrine - pork and pistachio",
+    "ingredients": [
+      "800g / 28oz  pork belly mince (, ground pork belly (Note 1))",
+      "400g / 14oz  pork mince (, ground pork, regular or lean (Note 1))",
+      "250g / 9oz  chicken livers (, cleaned, diced 1cm/0.4&quot; (Note 2))",
+      "4 tsp cooking / kosher salt",
+      "1 3/4 tsp black pepper",
+      "1/4 cup brandy (, preferably cognac (Note 3))",
+      "1/8 tsp curing salt ((cure #1) - I do not use it (Note 4))",
+      "15g / 1 tbsp  unsalted butter",
+      "1  eschalot (, finely diced (Note 5))",
+      "2  large eggs (, (55g/2oz each in shell) - fridge cold is fine)",
+      "2  egg yolks (, from large eggs (55g/2oz each in shell) - fridge cold is fine)",
+      "1/2 cup thickened cream ((heavy cream))",
+      "1/2 heaped cup unsalted pistachios (, no need to toast it (Note 6))",
+      "Bread slices ((I like baguettes))",
+      "Dijon mustard",
+      "Cornichons or other pickles"
+    ],
+    "cuisine": "French",
+    "mealType": "Starter",
+    "totalTime": "3010 mins",
+    "totalTimeMinutes": 3010,
+    "servings": "15, 15 slices",
+    "image": "https://www.recipetineats.com/tachyon/2026/07/Country-terrine_1.jpg",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "pork",
+          "belly",
+          "mince",
+          "note"
+        ],
+        "strict": [
+          "pork",
+          "belly",
+          "mince"
+        ]
+      },
+      {
+        "all": [
+          "pork",
+          "mince",
+          "regular",
+          "lean",
+          "note"
+        ],
+        "strict": [
+          "pork",
+          "mince"
+        ]
+      },
+      {
+        "all": [
+          "chicken",
+          "liver",
+          "cleaned",
+          "quot",
+          "note"
+        ],
+        "strict": [
+          "chicken",
+          "liver"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "kosher",
+          "salt"
+        ],
+        "strict": [
+          "cooking",
+          "kosher",
+          "salt"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "brandy",
+          "preferably",
+          "cognac",
+          "note"
+        ],
+        "strict": [
+          "brandy"
+        ]
+      },
+      {
+        "all": [
+          "curing",
+          "salt",
+          "cure",
+          "not",
+          "use",
+          "note"
+        ],
+        "strict": [
+          "curing",
+          "salt",
+          "not",
+          "use"
+        ]
+      },
+      {
+        "all": [
+          "unsalted",
+          "butter"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "eschalot",
+          "finely",
+          "note"
+        ],
+        "strict": [
+          "eschalot"
+        ]
+      },
+      {
+        "all": [
+          "egg",
+          "each",
+          "shell",
+          "fridge",
+          "cold"
+        ],
+        "strict": [
+          "egg",
+          "fridge",
+          "cold"
+        ]
+      },
+      {
+        "all": [
+          "egg",
+          "yolk",
+          "each",
+          "shell",
+          "fridge",
+          "cold"
+        ],
+        "strict": [
+          "egg",
+          "yolk",
+          "fridge",
+          "cold"
+        ]
+      },
+      {
+        "all": [
+          "thickened",
+          "cream",
+          "heavy"
+        ],
+        "strict": [
+          "thickened",
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "heaped",
+          "cup",
+          "unsalted",
+          "pistachio",
+          "need",
+          "toast",
+          "note"
+        ],
+        "strict": [
+          "heaped",
+          "cup",
+          "unsalted",
+          "pistachio"
+        ]
+      },
+      {
+        "all": [
+          "bread",
+          "slic",
+          "like",
+          "baguett"
+        ],
+        "strict": [
+          "bread",
+          "slic"
+        ]
+      },
+      {
+        "all": [
+          "dijon",
+          "mustard"
+        ],
+        "strict": [
+          "dijon",
+          "mustard"
+        ]
+      },
+      {
+        "all": [
+          "cornichon",
+          "other",
+          "pickl"
+        ],
+        "strict": [
+          "cornichon"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/50-clove-garlic-soup-recipe/",
+    "title": "50 Clove Garlic Soup",
+    "ingredients": [
+      "3 tbsp / 50g  unsalted butter",
+      "1 2/3 cups / 250g (50 - 60 cloves)  peeled garlic cloves, roughly chopped",
+      "1  small brown or yellow onion ((or 1/2 large), diced small)",
+      "1.5 kg / 3.3 lbs  starchy potato (, peeled and cut into 2.5cm / 1&quot; cubes (Note 3))",
+      "3 cups vegetable stock / broth (, salt-reduced (Note 4))",
+      "3 cups water",
+      "2 tsp cooking / kosher salt (, halve for table salt)",
+      "1/8 tsp white pepper powder",
+      "1/2 cup thickened cream (heavy cream)",
+      "2/3 cup panko breadcrumbs ((Note 5))",
+      "3 tbsp extra virgin olive oil",
+      "1/8 tsp cooking / kosher salt (, halve for table salt)",
+      "2 tsp finely chopped parsley"
+    ],
+    "cuisine": "French",
+    "mealType": "Soup",
+    "totalTime": "45 mins",
+    "totalTimeMinutes": 45,
+    "servings": "5",
+    "image": "https://www.recipetineats.com/tachyon/2026/07/Garlic-Soup_8.jpg",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "unsalted",
+          "butter"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "peeled",
+          "garlic",
+          "clof",
+          "roughly"
+        ],
+        "strict": [
+          "peeled",
+          "garlic",
+          "clof",
+          "roughly"
+        ]
+      },
+      {
+        "all": [
+          "brown",
+          "yellow",
+          "onion"
+        ],
+        "strict": [
+          "brown"
+        ]
+      },
+      {
+        "all": [
+          "starchy",
+          "potato",
+          "peeled",
+          "cut",
+          "quot",
+          "cub",
+          "note"
+        ],
+        "strict": [
+          "starchy",
+          "potato"
+        ]
+      },
+      {
+        "all": [
+          "vegetable",
+          "stock",
+          "broth",
+          "salt",
+          "reduced",
+          "note"
+        ],
+        "strict": [
+          "vegetable",
+          "stock",
+          "broth"
+        ]
+      },
+      {
+        "all": [
+          "water"
+        ],
+        "strict": [
+          "water"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "kosher",
+          "salt",
+          "halve",
+          "table"
+        ],
+        "strict": [
+          "cooking",
+          "kosher",
+          "salt"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "pepper",
+          "powder"
+        ],
+        "strict": [
+          "white",
+          "pepper",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "thickened",
+          "cream",
+          "heavy"
+        ],
+        "strict": [
+          "thickened",
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "panko",
+          "breadcrumb",
+          "note"
+        ],
+        "strict": [
+          "panko",
+          "breadcrumb"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "kosher",
+          "salt",
+          "halve",
+          "table"
+        ],
+        "strict": [
+          "cooking",
+          "kosher",
+          "salt"
+        ]
+      },
+      {
+        "all": [
+          "finely",
+          "parsley"
+        ],
+        "strict": [
+          "finely",
+          "parsley"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/beef-satay-with-thai-peanut-sauce/",
+    "title": "Beef Satay with Thai Peanut Sauce",
+    "ingredients": [
+      "13-16  bamboo skewers (, 16cm / 6.5&quot; long (Note 1))",
+      "600g / 1.2lb   beef rump steak (top sirloin in the US) (, 2.5 cm/1&quot; pieces (Note 2))",
+      "1/4 cup coconut mik (, full fat (I use Ayam, Note 3))",
+      "1 tbsp curry powder ((Note 4))",
+      "1 tsp white sugar",
+      "2 tsp red curry paste ((Note 5))",
+      "1/2 tsp baking soda / bi-carb ((tenderiser, Note 6))",
+      "1 tsp salt",
+      "1 tbsp red curry paste ((Note 5))",
+      "2/3 cup coconut milk (, full fat (I use Ayam, Note 3))",
+      "1/3 cup natural peanut butter (, smooth (Note 7))",
+      "1 1/2 tbsp white sugar",
+      "1 tsp dark soy sauce ((Note 8))",
+      "1/2 tsp salt",
+      "1 tbsp cider vinegar ((Note 9))",
+      "1/3 cup water",
+      "1 1/2 tbsp vegetable oil (, for cooking)",
+      "2 tbsp peanuts (, finely chopped)",
+      "Lime wedges ((optional))",
+      "Coriander / cilantro leaves and sliced red chilli ((optional))"
+    ],
+    "cuisine": "Thai",
+    "mealType": "Starter",
+    "totalTime": "1470 mins",
+    "totalTimeMinutes": 1470,
+    "servings": "12, 12 - 14 skewers",
+    "image": "https://www.recipetineats.com/tachyon/2021/07/Thai-Beef-Satay-with-Peanut-Sauce-SQ.jpg",
+    "instructionCount": 4,
+    "tokens": [
+      {
+        "all": [
+          "bamboo",
+          "skewer",
+          "quot",
+          "long",
+          "note"
+        ],
+        "strict": [
+          "bamboo",
+          "skewer"
+        ]
+      },
+      {
+        "all": [
+          "beef",
+          "rump",
+          "steak",
+          "top",
+          "sirloin",
+          "quot",
+          "note"
+        ],
+        "strict": [
+          "beef",
+          "rump",
+          "steak"
+        ]
+      },
+      {
+        "all": [
+          "coconut",
+          "mik",
+          "full",
+          "fat",
+          "use",
+          "ayam",
+          "note"
+        ],
+        "strict": [
+          "coconut",
+          "mik"
+        ]
+      },
+      {
+        "all": [
+          "curry",
+          "powder",
+          "note"
+        ],
+        "strict": [
+          "curry",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "sugar"
+        ],
+        "strict": [
+          "white",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "curry",
+          "paste",
+          "note"
+        ],
+        "strict": [
+          "red",
+          "curry",
+          "paste"
+        ]
+      },
+      {
+        "all": [
+          "baking",
+          "soda",
+          "carb",
+          "tenderiser",
+          "note"
+        ],
+        "strict": [
+          "baking",
+          "soda",
+          "carb"
+        ]
+      },
+      {
+        "all": [
+          "salt"
+        ],
+        "strict": [
+          "salt"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "curry",
+          "paste",
+          "note"
+        ],
+        "strict": [
+          "red",
+          "curry",
+          "paste"
+        ]
+      },
+      {
+        "all": [
+          "coconut",
+          "milk",
+          "full",
+          "fat",
+          "use",
+          "ayam",
+          "note"
+        ],
+        "strict": [
+          "coconut",
+          "milk"
+        ]
+      },
+      {
+        "all": [
+          "natural",
+          "peanut",
+          "butter",
+          "smooth",
+          "note"
+        ],
+        "strict": [
+          "natural",
+          "peanut",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "sugar"
+        ],
+        "strict": [
+          "white",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "dark",
+          "soy",
+          "sauce",
+          "note"
+        ],
+        "strict": [
+          "dark",
+          "soy",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "salt"
+        ],
+        "strict": [
+          "salt"
+        ]
+      },
+      {
+        "all": [
+          "cider",
+          "vinegar",
+          "note"
+        ],
+        "strict": [
+          "cider",
+          "vinegar"
+        ]
+      },
+      {
+        "all": [
+          "water"
+        ],
+        "strict": [
+          "water"
+        ]
+      },
+      {
+        "all": [
+          "vegetable",
+          "oil",
+          "cooking"
+        ],
+        "strict": [
+          "vegetable",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "peanut",
+          "finely"
+        ],
+        "strict": [
+          "peanut"
+        ]
+      },
+      {
+        "all": [
+          "lime",
+          "wedg"
+        ],
+        "strict": [
+          "lime",
+          "wedg"
+        ]
+      },
+      {
+        "all": [
+          "coriander",
+          "cilantro",
+          "leaf",
+          "red",
+          "chilli"
+        ],
+        "strict": [
+          "coriander",
+          "cilantro",
+          "leaf",
+          "red",
+          "chilli"
         ]
       }
     ]
