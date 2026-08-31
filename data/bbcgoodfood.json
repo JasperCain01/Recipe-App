@@ -257066,7 +257066,7 @@
       "2 tsp ground cumin",
       "1 tsp chilli flakes",
       "200g spinach",
-      "1 x 500g salmon fillets",
+      "1 Aldi Specially Selected Lightly Smoked Scottish Salmon Fillet",
       "2 tbsp tandoori or tikka spice paste",
       "100ml double cream",
       "lemon wedge to serve"
@@ -257149,10 +257149,22 @@
       },
       {
         "all": [
+          "aldi",
+          "specially",
+          "selected",
+          "lightly",
+          "smoked",
+          "scottish",
           "salmon",
           "fillet"
         ],
         "strict": [
+          "aldi",
+          "specially",
+          "selected",
+          "lightly",
+          "smoked",
+          "scottish",
           "salmon",
           "fillet"
         ]
@@ -262541,7 +262553,7 @@
     "title": "Salmon risotto",
     "ingredients": [
       "1 l chicken stock",
-      "4 salmon fillets",
+      "4 Aldi Specially Selected Lightly Smoked Scottish Salmon Fillets",
       "2 tbsp olive oil",
       "50g butter",
       "1 onion very finely diced",
@@ -262572,10 +262584,22 @@
       },
       {
         "all": [
+          "aldi",
+          "specially",
+          "selected",
+          "lightly",
+          "smoked",
+          "scottish",
           "salmon",
           "fillet"
         ],
         "strict": [
+          "aldi",
+          "specially",
+          "selected",
+          "lightly",
+          "smoked",
+          "scottish",
           "salmon",
           "fillet"
         ]
@@ -289465,66 +289489,6 @@
         "strict": [
           "almond",
           "butter"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "bbcgoodfood",
-    "url": "https://www.bbcgoodfood.com/recipes/roasted-chickpeas",
-    "title": "Roasted chickpeas",
-    "ingredients": [
-      "400g can  chickpeas",
-      "2 tsp olive oil",
-      "pinch of  ground cumin",
-      "pinch of paprika"
-    ],
-    "cuisine": null,
-    "mealType": "Snack",
-    "totalTime": "20 mins",
-    "totalTimeMinutes": 20,
-    "servings": "2",
-    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2022/12/Crispy-chickpeas-271f745.jpg?resize=768,713",
-    "instructionCount": 1,
-    "tokens": [
-      {
-        "all": [
-          "can",
-          "chickpea"
-        ],
-        "strict": [
-          "can",
-          "chickpea"
-        ]
-      },
-      {
-        "all": [
-          "olive",
-          "oil"
-        ],
-        "strict": [
-          "olive",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "pinch",
-          "cumin"
-        ],
-        "strict": [
-          "pinch",
-          "cumin"
-        ]
-      },
-      {
-        "all": [
-          "pinch",
-          "paprika"
-        ],
-        "strict": [
-          "pinch",
-          "paprika"
         ]
       }
     ]
