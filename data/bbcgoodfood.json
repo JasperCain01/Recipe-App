@@ -4639,8 +4639,8 @@
   },
   {
     "sourceId": "bbcgoodfood",
-    "url": "https://www.bbcgoodfood.com/recipes/cider-pulled-pork-with-apple-sesame-slaw",
-    "title": "Cider pulled pork with apple & sesame slaw",
+    "url": "https://www.bbcgoodfood.com/recipes/cider-pulled-pork-with-apple-dill-slaw",
+    "title": "Cider pulled pork with apple & dill slaw",
     "ingredients": [
       "1 kg  bone-in pork shoulder",
       "2 onions roughly sliced",
@@ -4825,6 +4825,176 @@
           "appl",
           "cored",
           "matchstick"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "bbcgoodfood",
+    "url": "https://www.bbcgoodfood.com/recipes/fried-kibbeh-bulgur-meat-parcels",
+    "title": "Fried kibbeh (bulgur & meat parcels)",
+    "ingredients": [
+      "325g fine bulgur wheat",
+      "500g  lean beef or lamb mince",
+      "1 small  onion roughly chopped",
+      "½ tsp  ground cinnamon",
+      "1 tsp  Arabic mixed spice or use a standard ground mixed spice",
+      "vegetable oil for frying",
+      "yogurt, hummus, salad and lemon wedges to serve",
+      "1 tbsp  olive oil",
+      "1 onion finely chopped",
+      "250g  beef or lamb mince",
+      "2 tbsp pine nuts (optional)",
+      "pinch of Arabic mixed spice or use a standard ground mixed spice"
+    ],
+    "cuisine": "Middle Eastern",
+    "mealType": "Dinner",
+    "totalTime": "1h",
+    "totalTimeMinutes": 60,
+    "servings": "Makes 22 kibbeh",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2026/08/Fried-kibbeh-whole-161770a.png?resize=768,681",
+    "instructionCount": 6,
+    "tokens": [
+      {
+        "all": [
+          "bulgur",
+          "wheat"
+        ],
+        "strict": [
+          "bulgur",
+          "wheat"
+        ]
+      },
+      {
+        "all": [
+          "lean",
+          "beef",
+          "lamb",
+          "mince"
+        ],
+        "strict": [
+          "lean",
+          "beef"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "roughly"
+        ],
+        "strict": [
+          "onion",
+          "roughly"
+        ]
+      },
+      {
+        "all": [
+          "tsp",
+          "cinnamon"
+        ],
+        "strict": [
+          "tsp",
+          "cinnamon"
+        ]
+      },
+      {
+        "all": [
+          "arabic",
+          "mixed",
+          "spice",
+          "use",
+          "standard"
+        ],
+        "strict": [
+          "arabic",
+          "mixed",
+          "spice"
+        ]
+      },
+      {
+        "all": [
+          "vegetable",
+          "oil",
+          "frying"
+        ],
+        "strict": [
+          "vegetable",
+          "oil",
+          "frying"
+        ]
+      },
+      {
+        "all": [
+          "yogurt",
+          "hummu",
+          "salad",
+          "lemon",
+          "wedg",
+          "serve"
+        ],
+        "strict": [
+          "yogurt",
+          "hummu",
+          "salad",
+          "lemon",
+          "wedg",
+          "serve"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "finely"
+        ],
+        "strict": [
+          "onion",
+          "finely"
+        ]
+      },
+      {
+        "all": [
+          "beef",
+          "lamb",
+          "mince"
+        ],
+        "strict": [
+          "beef"
+        ]
+      },
+      {
+        "all": [
+          "pine",
+          "nut"
+        ],
+        "strict": [
+          "pine",
+          "nut"
+        ]
+      },
+      {
+        "all": [
+          "pinch",
+          "arabic",
+          "mixed",
+          "spice",
+          "use",
+          "standard"
+        ],
+        "strict": [
+          "pinch",
+          "arabic",
+          "mixed",
+          "spice"
         ]
       }
     ]
@@ -117645,7 +117815,7 @@
     "title": "Lamb tagine & sweet potato pie",
     "ingredients": [
       "2 tbsp olive oil",
-      "800g Morrisons Lamb Shoulder Roast Whole fat removed and cut into small pieces",
+      "800g lamb shoulder fat removed and cut into small pieces",
       "1 large onion chopped",
       "3 garlic cloves crushed or grated",
       "thumb-sized piece of ginger grated",
@@ -117683,19 +117853,15 @@
       },
       {
         "all": [
-          "morrison",
           "lamb",
           "shoulder",
-          "roast",
           "fat",
           "removed",
           "cut"
         ],
         "strict": [
-          "morrison",
           "lamb",
           "shoulder",
-          "roast",
           "fat",
           "removed",
           "cut"
@@ -289526,232 +289692,6 @@
         "strict": [
           "parmesan",
           "finely"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "bbcgoodfood",
-    "url": "https://www.bbcgoodfood.com/recipes/chestnut-pecan-loaf-with-harissa-sauce",
-    "title": "Chestnut & pecan loaf with harissa sauce",
-    "ingredients": [
-      "2 tsp rapeseed oil",
-      "1 onion finely chopped",
-      "1 aubergine sliced lengthways and diced",
-      "2 celery sticks finely chopped",
-      "1 tsp dried sage",
-      "½ tsp dried oregano",
-      "3 tbsp thyme leaves",
-      "2 large garlic cloves finely chopped",
-      "2 x 400g cans borlotti beans drained",
-      "1 egg",
-      "25g wholemeal breadcrumbs",
-      "180g pack cooked chestnuts roughly chopped",
-      "50g pecans roughly chopped",
-      "smoked paprika for sprinkling (optional)",
-      "250ml passata",
-      "1 garlic clove finely grated (optional)",
-      "1-2 tsp smoked chilli harissa",
-      "large pinch of dried oregano"
-    ],
-    "cuisine": null,
-    "mealType": "Dinner",
-    "totalTime": "1h 10m",
-    "totalTimeMinutes": 70,
-    "servings": "4",
-    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2022/11/Chestnut-and-pecan-loaf-with-harissa-sauce-21d3bad.jpg?resize=768,713",
-    "instructionCount": 3,
-    "tokens": [
-      {
-        "all": [
-          "rapeseed",
-          "oil"
-        ],
-        "strict": [
-          "rapeseed",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "onion",
-          "finely"
-        ],
-        "strict": [
-          "onion",
-          "finely"
-        ]
-      },
-      {
-        "all": [
-          "aubergine",
-          "eggplant",
-          "lengthway"
-        ],
-        "strict": [
-          "aubergine",
-          "eggplant",
-          "lengthway"
-        ]
-      },
-      {
-        "all": [
-          "celery",
-          "stick",
-          "finely"
-        ],
-        "strict": [
-          "celery",
-          "stick",
-          "finely"
-        ]
-      },
-      {
-        "all": [
-          "sage"
-        ],
-        "strict": [
-          "sage"
-        ]
-      },
-      {
-        "all": [
-          "tsp",
-          "oregano"
-        ],
-        "strict": [
-          "tsp",
-          "oregano"
-        ]
-      },
-      {
-        "all": [
-          "thyme",
-          "leaf"
-        ],
-        "strict": [
-          "thyme",
-          "leaf"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "clof",
-          "finely"
-        ],
-        "strict": [
-          "garlic",
-          "clof",
-          "finely"
-        ]
-      },
-      {
-        "all": [
-          "can",
-          "borlotti",
-          "bean",
-          "drained"
-        ],
-        "strict": [
-          "can",
-          "borlotti",
-          "bean",
-          "drained"
-        ]
-      },
-      {
-        "all": [
-          "egg"
-        ],
-        "strict": [
-          "egg"
-        ]
-      },
-      {
-        "all": [
-          "wholemeal",
-          "breadcrumb"
-        ],
-        "strict": [
-          "wholemeal",
-          "breadcrumb"
-        ]
-      },
-      {
-        "all": [
-          "pack",
-          "chestnut",
-          "roughly"
-        ],
-        "strict": [
-          "pack",
-          "chestnut",
-          "roughly"
-        ]
-      },
-      {
-        "all": [
-          "pecan",
-          "roughly"
-        ],
-        "strict": [
-          "pecan",
-          "roughly"
-        ]
-      },
-      {
-        "all": [
-          "smoked",
-          "paprika",
-          "sprinkling"
-        ],
-        "strict": [
-          "smoked",
-          "paprika",
-          "sprinkling"
-        ]
-      },
-      {
-        "all": [
-          "passata"
-        ],
-        "strict": [
-          "passata"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "clove",
-          "finely"
-        ],
-        "strict": [
-          "garlic",
-          "clove",
-          "finely"
-        ]
-      },
-      {
-        "all": [
-          "smoked",
-          "chilli",
-          "harissa"
-        ],
-        "strict": [
-          "smoked",
-          "chilli",
-          "harissa"
-        ]
-      },
-      {
-        "all": [
-          "pinch",
-          "oregano"
-        ],
-        "strict": [
-          "pinch",
-          "oregano"
         ]
       }
     ]
