@@ -20336,7 +20336,7 @@
     "url": "https://www.bbcgoodfood.com/recipes/waste-nothing-chicken-dumpling-stew",
     "title": "Waste-nothing chicken & dumpling stew",
     "ingredients": [
-      "1 cooked whole chicken (around 2kg), with around 500g meat leftover, plus any fat from the roasting tray reserved",
+      "1 cooked whole chicken (around 2kg), plus any fat from the roasting tray reserved",
       "2 onions finely chopped, skins reserved",
       "2 tsp black peppercorns",
       "3 carrots finely sliced",
@@ -20362,8 +20362,6 @@
         "all": [
           "chicken",
           "around",
-          "meat",
-          "leftover",
           "any",
           "fat",
           "roasting",
@@ -20372,9 +20370,6 @@
         ],
         "strict": [
           "chicken",
-          "around",
-          "meat",
-          "leftover",
           "any",
           "fat",
           "roasting",
@@ -50782,7 +50777,7 @@
       "1 tsp ground cumin",
       "500g lean minced beef",
       "1 beef stock cube",
-      "400g can chopped tomatoes",
+      "400g can Mutti chopped tomatoes",
       "½ tsp dried marjoram",
       "1 tsp sugar (or add a thumbnail-sized piece of dark chocolate along with the beans instead, see tip)",
       "2 tbsp tomato purée",
@@ -50897,10 +50892,12 @@
       {
         "all": [
           "can",
+          "mutti",
           "tomato"
         ],
         "strict": [
           "can",
+          "mutti",
           "tomato"
         ]
       },
@@ -51377,7 +51374,7 @@
     "title": "Best Yorkshire puddings",
     "ingredients": [
       "140g plain flour (this is about 200ml/7fl oz)",
-      "4 eggs (200ml/7fl oz)",
+      "4 Clarence Court eggs (200ml/7fl oz)",
       "200ml milk",
       "sunflower oil for cooking"
     ],
@@ -51402,9 +51399,13 @@
       },
       {
         "all": [
+          "clarence",
+          "court",
           "egg"
         ],
         "strict": [
+          "clarence",
+          "court",
           "egg"
         ]
       },
@@ -86104,7 +86105,7 @@
       "50g light brown soft sugar",
       "½ tsp  ground cinnamon",
       "1 tsp  vanilla extract",
-      "2 tbsp maple syrup",
+      "2 tbsp Bukwud maple syrup",
       "1 egg beaten",
       "320g sheet of ready-rolled puff pastry",
       "25g  icing sugar",
@@ -86176,10 +86177,12 @@
       },
       {
         "all": [
+          "bukwud",
           "maple",
           "syrup"
         ],
         "strict": [
+          "bukwud",
           "maple",
           "syrup"
         ]
@@ -266874,7 +266877,7 @@
     "title": "Ginger shots",
     "ingredients": [
       "60g ginger, skin left on",
-      "400ml fresh apple juice",
+      "400ml Coldpress apple juice",
       "½ lemon juiced"
     ],
     "cuisine": null,
@@ -266899,10 +266902,12 @@
       },
       {
         "all": [
+          "coldpres",
           "apple",
           "juice"
         ],
         "strict": [
+          "coldpres",
           "apple",
           "juice"
         ]
