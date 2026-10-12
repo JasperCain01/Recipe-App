@@ -30955,6 +30955,121 @@
   },
   {
     "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/trio-bruschetta-celery-lime-bruschetta/",
+    "title": "Trio of Bruschetta: Celery and Lime Bruschetta",
+    "ingredients": [
+      "4 slices of good quality crusty bread like sourdough or ciabatta (, sliced 1cm/0.5\" thick, preferably slightly stale)",
+      "1  garlic clove (, halved (unpeeled))",
+      "6  large sticks of celery",
+      "1  garlic clove (, peeled)",
+      "4 tbsp extra virgin olive oil",
+      "1 tbsp lime juice",
+      "1/4 tsp salt (, plus more to taste)",
+      "Black pepper"
+    ],
+    "cuisine": null,
+    "mealType": null,
+    "totalTime": "10 mins",
+    "totalTimeMinutes": 10,
+    "servings": "4",
+    "image": "https://www.recipetineats.com/tachyon/2014/07/Celery-and-Lime-Bruschetta-1.jpg",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "crusty",
+          "bread",
+          "like",
+          "sourdough",
+          "ciabatta",
+          "thick",
+          "preferably",
+          "slightly",
+          "stale"
+        ],
+        "strict": [
+          "crusty",
+          "bread",
+          "like",
+          "sourdough"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clove",
+          "halved",
+          "unpeeled"
+        ],
+        "strict": [
+          "garlic",
+          "clove"
+        ]
+      },
+      {
+        "all": [
+          "stick",
+          "celery"
+        ],
+        "strict": [
+          "stick",
+          "celery"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clove",
+          "peeled"
+        ],
+        "strict": [
+          "garlic",
+          "clove"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "lime",
+          "juice"
+        ],
+        "strict": [
+          "lime",
+          "juice"
+        ]
+      },
+      {
+        "all": [
+          "salt",
+          "more"
+        ],
+        "strict": [
+          "salt"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/lemon-cannellini-bean-bruschetta/",
     "title": "Trio of Bruschetta: Lemon Cannellini Bean",
     "ingredients": [
@@ -31066,121 +31181,6 @@
         ],
         "strict": [
           "salt",
-          "pepper"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/trio-bruschetta-celery-lime-bruschetta/",
-    "title": "Trio of Bruschetta: Celery and Lime Bruschetta",
-    "ingredients": [
-      "4 slices of good quality crusty bread like sourdough or ciabatta (, sliced 1cm/0.5\" thick, preferably slightly stale)",
-      "1  garlic clove (, halved (unpeeled))",
-      "6  large sticks of celery",
-      "1  garlic clove (, peeled)",
-      "4 tbsp extra virgin olive oil",
-      "1 tbsp lime juice",
-      "1/4 tsp salt (, plus more to taste)",
-      "Black pepper"
-    ],
-    "cuisine": null,
-    "mealType": null,
-    "totalTime": "10 mins",
-    "totalTimeMinutes": 10,
-    "servings": "4",
-    "image": "https://www.recipetineats.com/tachyon/2014/07/Celery-and-Lime-Bruschetta-1.jpg",
-    "instructionCount": 3,
-    "tokens": [
-      {
-        "all": [
-          "crusty",
-          "bread",
-          "like",
-          "sourdough",
-          "ciabatta",
-          "thick",
-          "preferably",
-          "slightly",
-          "stale"
-        ],
-        "strict": [
-          "crusty",
-          "bread",
-          "like",
-          "sourdough"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "clove",
-          "halved",
-          "unpeeled"
-        ],
-        "strict": [
-          "garlic",
-          "clove"
-        ]
-      },
-      {
-        "all": [
-          "stick",
-          "celery"
-        ],
-        "strict": [
-          "stick",
-          "celery"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "clove",
-          "peeled"
-        ],
-        "strict": [
-          "garlic",
-          "clove"
-        ]
-      },
-      {
-        "all": [
-          "olive",
-          "oil"
-        ],
-        "strict": [
-          "olive",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "lime",
-          "juice"
-        ],
-        "strict": [
-          "lime",
-          "juice"
-        ]
-      },
-      {
-        "all": [
-          "salt",
-          "more"
-        ],
-        "strict": [
-          "salt"
-        ]
-      },
-      {
-        "all": [
-          "black",
-          "pepper"
-        ],
-        "strict": [
-          "black",
           "pepper"
         ]
       }
@@ -31311,131 +31311,6 @@
         "strict": [
           "cayenne",
           "pepper"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/smoked-salmon-and-egg-breakfast-mille-feuille/",
-    "title": "Smoked Salmon and Egg Breakfast Mille-feuille",
-    "ingredients": [
-      "1  sheet store bought frozen puff pastry (, thawed (25 cm x 25cm / 10\" x 10\"))",
-      "8  eggs",
-      "1/4 cup cream or full cream milk ((double this for creamier eggs - Note 1))",
-      "1/2 to 3/4 tsp salt",
-      "Black pepper",
-      "2 tbsp butter",
-      "6 oz / 200g   smoked salmon",
-      "2/3 cup crème fraîche ((Note 2), plus more for serving (optional))",
-      "2 tbsp chives (, finely chopped, plus more for garnish)"
-    ],
-    "cuisine": null,
-    "mealType": "Breakfast",
-    "totalTime": "30 mins",
-    "totalTimeMinutes": 30,
-    "servings": "8",
-    "image": "https://www.recipetineats.com/tachyon/2015/07/Breakfast-Mille-feuille_680px_5-Main.jpg",
-    "instructionCount": 9,
-    "tokens": [
-      {
-        "all": [
-          "sheet",
-          "frozen",
-          "puff",
-          "pastry",
-          "thawed"
-        ],
-        "strict": [
-          "sheet",
-          "frozen",
-          "puff",
-          "pastry"
-        ]
-      },
-      {
-        "all": [
-          "egg"
-        ],
-        "strict": [
-          "egg"
-        ]
-      },
-      {
-        "all": [
-          "cream",
-          "full",
-          "milk",
-          "double",
-          "thi",
-          "creamier",
-          "egg",
-          "note"
-        ],
-        "strict": [
-          "cream"
-        ]
-      },
-      {
-        "all": [
-          "salt"
-        ],
-        "strict": [
-          "salt"
-        ]
-      },
-      {
-        "all": [
-          "black",
-          "pepper"
-        ],
-        "strict": [
-          "black",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "butter"
-        ],
-        "strict": [
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "smoked",
-          "salmon"
-        ],
-        "strict": [
-          "smoked",
-          "salmon"
-        ]
-      },
-      {
-        "all": [
-          "fra",
-          "che",
-          "note",
-          "more",
-          "serving"
-        ],
-        "strict": [
-          "fra",
-          "che",
-          "more",
-          "serving"
-        ]
-      },
-      {
-        "all": [
-          "chif",
-          "finely",
-          "more",
-          "garnish"
-        ],
-        "strict": [
-          "chif"
         ]
       }
     ]
@@ -31630,6 +31505,197 @@
   },
   {
     "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/smoked-salmon-and-egg-breakfast-mille-feuille/",
+    "title": "Smoked Salmon and Egg Breakfast Mille-feuille",
+    "ingredients": [
+      "1  sheet store bought frozen puff pastry (, thawed (25 cm x 25cm / 10\" x 10\"))",
+      "8  eggs",
+      "1/4 cup cream or full cream milk ((double this for creamier eggs - Note 1))",
+      "1/2 to 3/4 tsp salt",
+      "Black pepper",
+      "2 tbsp butter",
+      "6 oz / 200g   smoked salmon",
+      "2/3 cup crème fraîche ((Note 2), plus more for serving (optional))",
+      "2 tbsp chives (, finely chopped, plus more for garnish)"
+    ],
+    "cuisine": null,
+    "mealType": "Breakfast",
+    "totalTime": "30 mins",
+    "totalTimeMinutes": 30,
+    "servings": "8",
+    "image": "https://www.recipetineats.com/tachyon/2015/07/Breakfast-Mille-feuille_680px_5-Main.jpg",
+    "instructionCount": 9,
+    "tokens": [
+      {
+        "all": [
+          "sheet",
+          "frozen",
+          "puff",
+          "pastry",
+          "thawed"
+        ],
+        "strict": [
+          "sheet",
+          "frozen",
+          "puff",
+          "pastry"
+        ]
+      },
+      {
+        "all": [
+          "egg"
+        ],
+        "strict": [
+          "egg"
+        ]
+      },
+      {
+        "all": [
+          "cream",
+          "full",
+          "milk",
+          "double",
+          "thi",
+          "creamier",
+          "egg",
+          "note"
+        ],
+        "strict": [
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "salt"
+        ],
+        "strict": [
+          "salt"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "butter"
+        ],
+        "strict": [
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "smoked",
+          "salmon"
+        ],
+        "strict": [
+          "smoked",
+          "salmon"
+        ]
+      },
+      {
+        "all": [
+          "fra",
+          "che",
+          "note",
+          "more",
+          "serving"
+        ],
+        "strict": [
+          "fra",
+          "che",
+          "more",
+          "serving"
+        ]
+      },
+      {
+        "all": [
+          "chif",
+          "finely",
+          "more",
+          "garnish"
+        ],
+        "strict": [
+          "chif"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/japanese-salmon-mirin-soy-sauce/",
+    "title": "Japanese Salmon with Mirin and Soy Sauce",
+    "ingredients": [
+      "2  salmon fillets ((5 oz / 150 g each))",
+      "1 tbsp soy sauce",
+      "3 tbsp mirin",
+      "1 tbsp sake",
+      "1/2 tbsp oil"
+    ],
+    "cuisine": "Asian, Japanese",
+    "mealType": null,
+    "totalTime": "7 mins",
+    "totalTimeMinutes": 7,
+    "servings": "2",
+    "image": "https://www.recipetineats.com/tachyon/2014/07/Salmon-Soy-Mirin.jpg",
+    "instructionCount": 5,
+    "tokens": [
+      {
+        "all": [
+          "salmon",
+          "fillet",
+          "each"
+        ],
+        "strict": [
+          "salmon",
+          "fillet"
+        ]
+      },
+      {
+        "all": [
+          "soy",
+          "sauce"
+        ],
+        "strict": [
+          "soy",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "mirin"
+        ],
+        "strict": [
+          "mirin"
+        ]
+      },
+      {
+        "all": [
+          "sake"
+        ],
+        "strict": [
+          "sake"
+        ]
+      },
+      {
+        "all": [
+          "oil"
+        ],
+        "strict": [
+          "oil"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/smoked-salmon-potato-rosti-stack/",
     "title": "Smoked Salmon Potato Rosti Stack",
     "ingredients": [
@@ -31725,72 +31791,6 @@
         "strict": [
           "dill",
           "garnish"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/japanese-salmon-mirin-soy-sauce/",
-    "title": "Japanese Salmon with Mirin and Soy Sauce",
-    "ingredients": [
-      "2  salmon fillets ((5 oz / 150 g each))",
-      "1 tbsp soy sauce",
-      "3 tbsp mirin",
-      "1 tbsp sake",
-      "1/2 tbsp oil"
-    ],
-    "cuisine": "Asian, Japanese",
-    "mealType": null,
-    "totalTime": "7 mins",
-    "totalTimeMinutes": 7,
-    "servings": "2",
-    "image": "https://www.recipetineats.com/tachyon/2014/07/Salmon-Soy-Mirin.jpg",
-    "instructionCount": 5,
-    "tokens": [
-      {
-        "all": [
-          "salmon",
-          "fillet",
-          "each"
-        ],
-        "strict": [
-          "salmon",
-          "fillet"
-        ]
-      },
-      {
-        "all": [
-          "soy",
-          "sauce"
-        ],
-        "strict": [
-          "soy",
-          "sauce"
-        ]
-      },
-      {
-        "all": [
-          "mirin"
-        ],
-        "strict": [
-          "mirin"
-        ]
-      },
-      {
-        "all": [
-          "sake"
-        ],
-        "strict": [
-          "sake"
-        ]
-      },
-      {
-        "all": [
-          "oil"
-        ],
-        "strict": [
-          "oil"
         ]
       }
     ]
@@ -269156,141 +269156,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/peri-naise/",
-    "title": "Homemade Peri-naise",
-    "ingredients": [
-      "3 tbsp Peri Peri Sauce",
-      "3/4 cup mayonnaise",
-      "3/4 cup mayonnaise",
-      "1 tsp smoked paprika ((sub regular paprika))",
-      "1/2 tsp garlic powder ((sub fresh garlic, finely grated))",
-      "1/2 tsp onion powder",
-      "1/4 tsp cayenne pepper ((adjust or remove for not spicy))",
-      "1/2 tsp white sugar",
-      "1 tbsp lemon juice ((or apple cider vinegar))",
-      "1/4 tsp cooking salt / kosher salt"
-    ],
-    "cuisine": "Portuguese",
-    "mealType": null,
-    "totalTime": "5 mins",
-    "totalTimeMinutes": 5,
-    "servings": "0.75, 0.75 cup",
-    "image": "https://www.recipetineats.com/tachyon/2025/09/Peri-naise_2.jpg",
-    "instructionCount": 3,
-    "tokens": [
-      {
-        "all": [
-          "peri",
-          "sauce"
-        ],
-        "strict": [
-          "peri",
-          "sauce"
-        ]
-      },
-      {
-        "all": [
-          "mayonnaise"
-        ],
-        "strict": [
-          "mayonnaise"
-        ]
-      },
-      {
-        "all": [
-          "mayonnaise"
-        ],
-        "strict": [
-          "mayonnaise"
-        ]
-      },
-      {
-        "all": [
-          "smoked",
-          "paprika",
-          "sub",
-          "regular"
-        ],
-        "strict": [
-          "smoked",
-          "paprika"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "powder",
-          "sub",
-          "finely"
-        ],
-        "strict": [
-          "garlic",
-          "powder"
-        ]
-      },
-      {
-        "all": [
-          "onion",
-          "powder"
-        ],
-        "strict": [
-          "onion",
-          "powder"
-        ]
-      },
-      {
-        "all": [
-          "cayenne",
-          "pepper",
-          "adjust",
-          "remove",
-          "not",
-          "spicy"
-        ],
-        "strict": [
-          "cayenne",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "white",
-          "sugar"
-        ],
-        "strict": [
-          "white",
-          "sugar"
-        ]
-      },
-      {
-        "all": [
-          "lemon",
-          "juice",
-          "apple",
-          "cider",
-          "vinegar"
-        ],
-        "strict": [
-          "lemon",
-          "juice"
-        ]
-      },
-      {
-        "all": [
-          "cooking",
-          "salt",
-          "kosher"
-        ],
-        "strict": [
-          "cooking",
-          "salt",
-          "kosher"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/nandos-portuguese-peri-peri-chicken-burger/",
     "title": "Nando's Peri Peri Chicken Burgers",
     "ingredients": [
@@ -271184,197 +271049,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/one-pan-mongolian-beef-noodles-with-broccoli/",
-    "title": "One-Pan Mongolian Beef Noodles with broccoli",
-    "ingredients": [
-      "4  instant noodle cakes (, ~70g/2.5oz each (aka 2 minute noodles, instant ramen noodles), UNCOOKED, (Note 1))",
-      "2 tbsp dark soy sauce ((Note 2))",
-      "3 tbsp hoisin sauce",
-      "2 tbsp Mirin (, or Chinese cooking wine + 2 tsp sugar (Note 3))",
-      "1/4 tsp Chinese Five Spice Powder ((not critical if you don&#39;t have))",
-      "2 tsp sesame oil",
-      "2 tbsp oil (- anything plain flavoured (eg canola, vegetable, peanut))",
-      "2  garlic cloves (, finely minced)",
-      "1  onion (, halved then sliced)",
-      "500g/ 1 lb  beef mince (ground beef)",
-      "5 cups broccoli florets, cut small (, not too big else they get in the way and won&#39;t cook through (Note 4 for other veg))",
-      "2 1/4 cups water"
-    ],
-    "cuisine": "Asian",
-    "mealType": null,
-    "totalTime": null,
-    "totalTimeMinutes": null,
-    "servings": "4",
-    "image": "https://www.recipetineats.com/tachyon/2026/09/One-pan-Mongolian-Beef-Noodles-with-Broccoli-3.jpg",
-    "instructionCount": 2,
-    "tokens": [
-      {
-        "all": [
-          "instant",
-          "noodle",
-          "cak",
-          "each",
-          "aka",
-          "minute",
-          "noodl",
-          "ramen",
-          "uncooked",
-          "note"
-        ],
-        "strict": [
-          "instant",
-          "noodle",
-          "cak",
-          "uncooked"
-        ]
-      },
-      {
-        "all": [
-          "dark",
-          "soy",
-          "sauce",
-          "note"
-        ],
-        "strict": [
-          "dark",
-          "soy",
-          "sauce"
-        ]
-      },
-      {
-        "all": [
-          "hoisin",
-          "sauce"
-        ],
-        "strict": [
-          "hoisin",
-          "sauce"
-        ]
-      },
-      {
-        "all": [
-          "mirin",
-          "chinese",
-          "cooking",
-          "wine",
-          "sugar",
-          "note"
-        ],
-        "strict": [
-          "mirin"
-        ]
-      },
-      {
-        "all": [
-          "chinese",
-          "five",
-          "spice",
-          "powder",
-          "not",
-          "critical",
-          "you",
-          "don",
-          "have"
-        ],
-        "strict": [
-          "chinese",
-          "five",
-          "spice",
-          "powder"
-        ]
-      },
-      {
-        "all": [
-          "sesame",
-          "oil"
-        ],
-        "strict": [
-          "sesame",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "oil",
-          "anything",
-          "plain",
-          "flavoured",
-          "canola",
-          "vegetable",
-          "peanut"
-        ],
-        "strict": [
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "clof",
-          "finely"
-        ],
-        "strict": [
-          "garlic",
-          "clof"
-        ]
-      },
-      {
-        "all": [
-          "onion",
-          "halved",
-          "then"
-        ],
-        "strict": [
-          "onion"
-        ]
-      },
-      {
-        "all": [
-          "beef",
-          "mince"
-        ],
-        "strict": [
-          "beef",
-          "mince"
-        ]
-      },
-      {
-        "all": [
-          "broccoli",
-          "floret",
-          "cut",
-          "not",
-          "too",
-          "big",
-          "else",
-          "they",
-          "get",
-          "way",
-          "won",
-          "cook",
-          "through",
-          "note",
-          "other",
-          "veg"
-        ],
-        "strict": [
-          "broccoli",
-          "floret",
-          "cut"
-        ]
-      },
-      {
-        "all": [
-          "water"
-        ],
-        "strict": [
-          "water"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/cheesy-zucchini-muffins/",
     "title": "Cheesy Zucchini Muffins",
     "ingredients": [
@@ -271682,156 +271356,6 @@
         "strict": [
           "grapeseed",
           "oil"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/ranch-dressing/",
-    "title": "Ranch Dressing",
-    "ingredients": [
-      "1/2 cup buttermilk ((Note 1 for easy substitution))",
-      "1/2 cup mayonnaise (, either store-bought whole egg or homemade)",
-      "1/2 cup sour cream (, full fat)",
-      "1 tsp apple cider vinegar or lemon juice (, or other clear vinegar)",
-      "2 tbsp finely chopped chives (, or 1 tsp dried chives)",
-      "2 tbsp finely chopped parsley (, or 1/2 tsp dried parsley)",
-      "1 tsp dried dill (, or 1 1/2 tbsp finely chopped fresh dill)",
-      "1/2 tsp onion powder",
-      "1/2 tsp garlic powder (, or fresh garlic finely grated using a microplane)",
-      "1/2 tsp cooking salt / kosher salt",
-      "1/4 tsp black pepper"
-    ],
-    "cuisine": "American, Western",
-    "mealType": "Salad",
-    "totalTime": "10 mins",
-    "totalTimeMinutes": 10,
-    "servings": "1.5, 1.5 cups",
-    "image": "https://www.recipetineats.com/tachyon/2026/09/Ranch-Dressing-8.jpg",
-    "instructionCount": 2,
-    "tokens": [
-      {
-        "all": [
-          "buttermilk",
-          "note",
-          "easy",
-          "substitution"
-        ],
-        "strict": [
-          "buttermilk"
-        ]
-      },
-      {
-        "all": [
-          "mayonnaise",
-          "either",
-          "egg"
-        ],
-        "strict": [
-          "mayonnaise"
-        ]
-      },
-      {
-        "all": [
-          "sour",
-          "cream",
-          "full",
-          "fat"
-        ],
-        "strict": [
-          "sour",
-          "cream"
-        ]
-      },
-      {
-        "all": [
-          "apple",
-          "cider",
-          "vinegar",
-          "lemon",
-          "juice",
-          "other",
-          "clear"
-        ],
-        "strict": [
-          "apple",
-          "cider",
-          "vinegar"
-        ]
-      },
-      {
-        "all": [
-          "finely",
-          "chif"
-        ],
-        "strict": [
-          "finely",
-          "chif"
-        ]
-      },
-      {
-        "all": [
-          "finely",
-          "parsley"
-        ],
-        "strict": [
-          "finely",
-          "parsley"
-        ]
-      },
-      {
-        "all": [
-          "dill",
-          "finely"
-        ],
-        "strict": [
-          "dill"
-        ]
-      },
-      {
-        "all": [
-          "onion",
-          "powder"
-        ],
-        "strict": [
-          "onion",
-          "powder"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "powder",
-          "finely",
-          "using",
-          "microplane"
-        ],
-        "strict": [
-          "garlic",
-          "powder"
-        ]
-      },
-      {
-        "all": [
-          "cooking",
-          "salt",
-          "kosher"
-        ],
-        "strict": [
-          "cooking",
-          "salt",
-          "kosher"
-        ]
-      },
-      {
-        "all": [
-          "black",
-          "pepper"
-        ],
-        "strict": [
-          "black",
-          "pepper"
         ]
       }
     ]
@@ -274367,280 +273891,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/polish-cabbage-rolls-golabki-recipe/",
-    "title": "Polish Cabbage Rolls (Golabki)",
-    "ingredients": [
-      "1 head savoy cabbage or green cabbage (, ~1.5kg / 3lbs (Note 1))",
-      "1 tbsp cooking salt / kosher salt (, for cooking water (half for table salt, +50% for flakes))",
-      "4  cups chicken stock / broth",
-      "700g / 25oz  pork mince ((ground pork), preferably not lean (Note 2))",
-      "1  large brown onion (, peeled and kept whole)",
-      "1 1/2 cup panko breadcrumbs (, substitute regular breadcrumbs )",
-      "2 cups cooked white rice",
-      "2  large eggs (, (~55g/2oz shell-on weight))",
-      "3  garlic cloves (, crushed using garlic press)",
-      "1 tbsp dried marjoram (, or half the amount of dried oregano)",
-      "2 1/2 tsp cooking salt / kosher salt (, (half for table salt, +50% for flakes))",
-      "1 tsp black pepper",
-      "2 tbsp finely chopped parsley",
-      "700g / 24oz  tomato passata ((US: pureed tomato) (Note 3))",
-      "1 1/2 tbsp tomato paste",
-      "1/2 tsp cooking salt / kosher salt (, (half for table salt, +50% for flakes))",
-      "1/4 tsp black pepper",
-      "1/2 tsp white sugar",
-      "30g / 2 tbsp  unsalted butter (, cut into a few pieces)",
-      "1/2 tbsp finely chopped parsley"
-    ],
-    "cuisine": "polish",
-    "mealType": "Dinner",
-    "totalTime": "90 mins",
-    "totalTimeMinutes": 90,
-    "servings": "5, 5 - 6 people",
-    "image": "https://www.recipetineats.com/tachyon/2026/09/Cabbage-Rolls_3.jpg",
-    "instructionCount": 5,
-    "tokens": [
-      {
-        "all": [
-          "savoy",
-          "cabbage",
-          "green",
-          "note"
-        ],
-        "strict": [
-          "savoy",
-          "cabbage"
-        ]
-      },
-      {
-        "all": [
-          "cooking",
-          "salt",
-          "kosher",
-          "water",
-          "half",
-          "table",
-          "flak"
-        ],
-        "strict": [
-          "cooking",
-          "salt",
-          "kosher"
-        ]
-      },
-      {
-        "all": [
-          "chicken",
-          "stock",
-          "broth"
-        ],
-        "strict": [
-          "chicken",
-          "stock",
-          "broth"
-        ]
-      },
-      {
-        "all": [
-          "pork",
-          "mince",
-          "preferably",
-          "not",
-          "lean",
-          "note"
-        ],
-        "strict": [
-          "pork",
-          "mince",
-          "preferably",
-          "not",
-          "lean"
-        ]
-      },
-      {
-        "all": [
-          "brown",
-          "onion",
-          "peeled",
-          "kept"
-        ],
-        "strict": [
-          "brown",
-          "onion"
-        ]
-      },
-      {
-        "all": [
-          "panko",
-          "breadcrumb",
-          "substitute",
-          "regular"
-        ],
-        "strict": [
-          "panko",
-          "breadcrumb"
-        ]
-      },
-      {
-        "all": [
-          "white",
-          "rice"
-        ],
-        "strict": [
-          "white",
-          "rice"
-        ]
-      },
-      {
-        "all": [
-          "egg",
-          "shell",
-          "weight"
-        ],
-        "strict": [
-          "egg"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "clof",
-          "crushed",
-          "using",
-          "pres"
-        ],
-        "strict": [
-          "garlic",
-          "clof"
-        ]
-      },
-      {
-        "all": [
-          "marjoram",
-          "half",
-          "amount",
-          "oregano"
-        ],
-        "strict": [
-          "marjoram"
-        ]
-      },
-      {
-        "all": [
-          "cooking",
-          "salt",
-          "kosher",
-          "half",
-          "table",
-          "flak"
-        ],
-        "strict": [
-          "cooking",
-          "salt",
-          "kosher"
-        ]
-      },
-      {
-        "all": [
-          "black",
-          "pepper"
-        ],
-        "strict": [
-          "black",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "finely",
-          "parsley"
-        ],
-        "strict": [
-          "finely",
-          "parsley"
-        ]
-      },
-      {
-        "all": [
-          "tomato",
-          "passata",
-          "pureed",
-          "note"
-        ],
-        "strict": [
-          "tomato",
-          "passata"
-        ]
-      },
-      {
-        "all": [
-          "tomato",
-          "paste"
-        ],
-        "strict": [
-          "tomato",
-          "paste"
-        ]
-      },
-      {
-        "all": [
-          "cooking",
-          "salt",
-          "kosher",
-          "half",
-          "table",
-          "flak"
-        ],
-        "strict": [
-          "cooking",
-          "salt",
-          "kosher"
-        ]
-      },
-      {
-        "all": [
-          "black",
-          "pepper"
-        ],
-        "strict": [
-          "black",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "white",
-          "sugar"
-        ],
-        "strict": [
-          "white",
-          "sugar"
-        ]
-      },
-      {
-        "all": [
-          "unsalted",
-          "butter",
-          "cut"
-        ],
-        "strict": [
-          "unsalted",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "finely",
-          "parsley"
-        ],
-        "strict": [
-          "finely",
-          "parsley"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/fish-en-papillote-recipe/",
     "title": "Fish en Papillote (Fish in a Bag)",
     "ingredients": [
@@ -276024,92 +275274,6 @@
           "soft",
           "boiled",
           "egg"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/french-glazed-carrots-carottes-vichy-recipe/",
-    "title": "French Glazed Carrots (Carottes Vichy)",
-    "ingredients": [
-      "800g / 1.75 lb  carrots (, peeled and sliced into 6mm / 0.2&quot; rounds)",
-      "3/4 cup water",
-      "2 tbsp / 30g  unsalted butter",
-      "4 tsp white sugar",
-      "3/4 tsp cooking salt / kosher salt (, (half for table salt, +50% for flakes))",
-      "2 tsp finely chopped parsley"
-    ],
-    "cuisine": "French, Western",
-    "mealType": "Side",
-    "totalTime": "15 mins",
-    "totalTimeMinutes": 15,
-    "servings": "6, 6 people (as a side)",
-    "image": "https://www.recipetineats.com/tachyon/2026/09/Glazed-Carrots_9.jpg",
-    "instructionCount": 2,
-    "tokens": [
-      {
-        "all": [
-          "carrot",
-          "peeled",
-          "quot",
-          "round"
-        ],
-        "strict": [
-          "carrot"
-        ]
-      },
-      {
-        "all": [
-          "water"
-        ],
-        "strict": [
-          "water"
-        ]
-      },
-      {
-        "all": [
-          "unsalted",
-          "butter"
-        ],
-        "strict": [
-          "unsalted",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "white",
-          "sugar"
-        ],
-        "strict": [
-          "white",
-          "sugar"
-        ]
-      },
-      {
-        "all": [
-          "cooking",
-          "salt",
-          "kosher",
-          "half",
-          "table",
-          "flak"
-        ],
-        "strict": [
-          "cooking",
-          "salt",
-          "kosher"
-        ]
-      },
-      {
-        "all": [
-          "finely",
-          "parsley"
-        ],
-        "strict": [
-          "finely",
-          "parsley"
         ]
       }
     ]
@@ -280451,6 +279615,1603 @@
   },
   {
     "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/creamy-sausage-gnocchi-soup/",
+    "title": "Creamy Sausage Italian Soup",
+    "ingredients": [
+      "500g/ 1 lb  potato gnocchi",
+      "500g/ 1 lb   Italian pork sausage meat",
+      "1 1/2 tbsp olive oil",
+      "1  onion (, diced)",
+      "2  garlic cloves (, finely minced)",
+      "3/4 tsp Italian herb mix ((just the standard mix from grocery stores))",
+      "1/4 tsp red chilli flakes ((red pepper flakes), optional)",
+      "2  celery sticks (, cut into small pieces (think - soup spoon eating size))",
+      "1  large carrot (, peeled and cut into small pieces)",
+      "1/3 cup Chardonnay (or other dry white wine, substitute water (for non-alcoholic))",
+      "1/3 cup flour (, plain / all-purpose)",
+      "4 cups (1 litre)  chicken stock/broth (, low sodium)",
+      "1/2 tsp cooking salt / kosher salt ((halve for table salt, +50% for flakes))",
+      "1/4 tsp black pepper",
+      "1 cup thickened cream / heavy cream",
+      "1/2 cup parmesan (, finely grated, plus more for serving)",
+      "1 1/2 cups baby spinach (, or torn kale leaves)",
+      "Hot crusty bread (for dunking)"
+    ],
+    "cuisine": "Italian-esque",
+    "mealType": "Soup",
+    "totalTime": "30 mins",
+    "totalTimeMinutes": 30,
+    "servings": "5",
+    "image": "https://www.recipetineats.com/tachyon/2026/10/Creamy-Sausage-Gnocchi-Soup-1.jpg",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "potato",
+          "gnocchi"
+        ],
+        "strict": [
+          "potato",
+          "gnocchi"
+        ]
+      },
+      {
+        "all": [
+          "italian",
+          "pork",
+          "sausage",
+          "meat"
+        ],
+        "strict": [
+          "italian",
+          "pork",
+          "sausage",
+          "meat"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "onion"
+        ],
+        "strict": [
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "finely"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "italian",
+          "herb",
+          "mix",
+          "just",
+          "standard",
+          "grocery",
+          "stor"
+        ],
+        "strict": [
+          "italian",
+          "herb",
+          "mix"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "chilli",
+          "flak",
+          "pepper"
+        ],
+        "strict": [
+          "red",
+          "chilli",
+          "flak"
+        ]
+      },
+      {
+        "all": [
+          "celery",
+          "stick",
+          "cut",
+          "think",
+          "soup",
+          "spoon",
+          "eating",
+          "size"
+        ],
+        "strict": [
+          "celery",
+          "stick"
+        ]
+      },
+      {
+        "all": [
+          "carrot",
+          "peeled",
+          "cut"
+        ],
+        "strict": [
+          "carrot"
+        ]
+      },
+      {
+        "all": [
+          "chardonnay",
+          "other",
+          "dry",
+          "white",
+          "wine",
+          "substitute",
+          "water",
+          "non",
+          "alcoholic"
+        ],
+        "strict": [
+          "chardonnay"
+        ]
+      },
+      {
+        "all": [
+          "flour",
+          "plain",
+          "all",
+          "purpose"
+        ],
+        "strict": [
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "litre",
+          "chicken",
+          "stock",
+          "broth",
+          "low",
+          "sodium"
+        ],
+        "strict": [
+          "chicken",
+          "stock",
+          "broth"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "halve",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "thickened",
+          "cream",
+          "heavy"
+        ],
+        "strict": [
+          "thickened",
+          "cream",
+          "heavy"
+        ]
+      },
+      {
+        "all": [
+          "parmesan",
+          "finely",
+          "more",
+          "serving"
+        ],
+        "strict": [
+          "parmesan"
+        ]
+      },
+      {
+        "all": [
+          "baby",
+          "spinach",
+          "torn",
+          "kale",
+          "leaf"
+        ],
+        "strict": [
+          "baby",
+          "spinach"
+        ]
+      },
+      {
+        "all": [
+          "hot",
+          "crusty",
+          "bread",
+          "dunking"
+        ],
+        "strict": [
+          "hot",
+          "crusty",
+          "bread"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/peri-naise/",
+    "title": "Homemade Peri-naise",
+    "ingredients": [
+      "3 tbsp Peri Peri Sauce",
+      "3/4 cup mayonnaise",
+      "3/4 cup mayonnaise",
+      "1 tsp smoked paprika ((sub regular paprika))",
+      "1/2 tsp garlic powder ((sub fresh garlic, finely grated))",
+      "1/2 tsp onion powder",
+      "1/4 tsp cayenne pepper ((adjust or remove for not spicy))",
+      "1/2 tsp white sugar",
+      "1 tbsp lemon juice ((or apple cider vinegar))",
+      "1/4 tsp cooking salt / kosher salt"
+    ],
+    "cuisine": "Portuguese",
+    "mealType": null,
+    "totalTime": "5 mins",
+    "totalTimeMinutes": 5,
+    "servings": "0.75, 0.75 cup",
+    "image": "https://www.recipetineats.com/tachyon/2025/09/Peri-naise_2.jpg",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "peri",
+          "sauce"
+        ],
+        "strict": [
+          "peri",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "mayonnaise"
+        ],
+        "strict": [
+          "mayonnaise"
+        ]
+      },
+      {
+        "all": [
+          "mayonnaise"
+        ],
+        "strict": [
+          "mayonnaise"
+        ]
+      },
+      {
+        "all": [
+          "smoked",
+          "paprika",
+          "sub",
+          "regular"
+        ],
+        "strict": [
+          "smoked",
+          "paprika"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "powder",
+          "sub",
+          "finely"
+        ],
+        "strict": [
+          "garlic",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "powder"
+        ],
+        "strict": [
+          "onion",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "cayenne",
+          "pepper",
+          "adjust",
+          "remove",
+          "not",
+          "spicy"
+        ],
+        "strict": [
+          "cayenne",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "sugar"
+        ],
+        "strict": [
+          "white",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "lemon",
+          "juice",
+          "apple",
+          "cider",
+          "vinegar"
+        ],
+        "strict": [
+          "lemon",
+          "juice"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/ranch-dressing/",
+    "title": "Ranch Dressing",
+    "ingredients": [
+      "1/2 cup buttermilk ((Note 1 for easy substitution))",
+      "1/2 cup mayonnaise (, either store-bought whole egg or homemade)",
+      "1/2 cup sour cream (, full fat)",
+      "1 tsp apple cider vinegar or lemon juice (, or other clear vinegar)",
+      "2 tbsp finely chopped chives (, or 1 tsp dried chives)",
+      "2 tbsp finely chopped parsley (, or 1/2 tsp dried parsley)",
+      "1 tsp dried dill (, or 1 1/2 tbsp finely chopped fresh dill)",
+      "1/2 tsp onion powder",
+      "1/2 tsp garlic powder (, or fresh garlic finely grated using a microplane)",
+      "1/2 tsp cooking salt / kosher salt",
+      "1/4 tsp black pepper"
+    ],
+    "cuisine": "American, Western",
+    "mealType": "Salad",
+    "totalTime": "10 mins",
+    "totalTimeMinutes": 10,
+    "servings": "1.5, 1.5 cups",
+    "image": "https://www.recipetineats.com/tachyon/2026/09/Ranch-Dressing-8.jpg",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "buttermilk",
+          "note",
+          "easy",
+          "substitution"
+        ],
+        "strict": [
+          "buttermilk"
+        ]
+      },
+      {
+        "all": [
+          "mayonnaise",
+          "either",
+          "egg"
+        ],
+        "strict": [
+          "mayonnaise"
+        ]
+      },
+      {
+        "all": [
+          "sour",
+          "cream",
+          "full",
+          "fat"
+        ],
+        "strict": [
+          "sour",
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "apple",
+          "cider",
+          "vinegar",
+          "lemon",
+          "juice",
+          "other",
+          "clear"
+        ],
+        "strict": [
+          "apple",
+          "cider",
+          "vinegar"
+        ]
+      },
+      {
+        "all": [
+          "finely",
+          "chif"
+        ],
+        "strict": [
+          "finely",
+          "chif"
+        ]
+      },
+      {
+        "all": [
+          "finely",
+          "parsley"
+        ],
+        "strict": [
+          "finely",
+          "parsley"
+        ]
+      },
+      {
+        "all": [
+          "dill",
+          "finely"
+        ],
+        "strict": [
+          "dill"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "powder"
+        ],
+        "strict": [
+          "onion",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "powder",
+          "finely",
+          "using",
+          "microplane"
+        ],
+        "strict": [
+          "garlic",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/homemade-italian-sausage-meat/",
+    "title": "Homemade Italian Sausage Meat",
+    "ingredients": [
+      "500 g/ 1 lb  pork mince (ground pork) ( - preferably 20 - 25% fat, otherwise just standard pork mince usually ~17% fat (Note 1))",
+      "1 tbsp dry red wine (, anything not too woody or sweet, optional (Note 2))",
+      "2 tbsp finely chopped parsley (, or 2 tsp dried parsley)",
+      "2 tsp paprika (. regular/sweet (or smoked, for smoky flavour))",
+      "1 tsp cooking salt / kosher salt ((half for table salt, +50% for flakes))",
+      "1/2 tsp black pepper",
+      "1/2 tsp onion powder",
+      "1/2 tsp garlic powder ((substituted 1 large garlic clove finely grated))",
+      "2 tsp fennel seeds (, toasted and coarsely ground  - sub 1 tsp fennel powder (Note 3))",
+      "1/2 tsp dried red chilli flakes / red pepper flakes (, optional (for bit of warm spiciness and little red bits!))",
+      "1/4 tsp dried thyme",
+      "1/4 tsp dried oregano",
+      "1/4 tsp dried basil"
+    ],
+    "cuisine": "Italian, Western",
+    "mealType": null,
+    "totalTime": null,
+    "totalTimeMinutes": null,
+    "servings": "4, 4 servings",
+    "image": "https://www.recipetineats.com/tachyon/2026/10/Homemade-Italian-Sausage-Meat-8.jpg",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "pork",
+          "mince",
+          "preferably",
+          "fat",
+          "otherwise",
+          "just",
+          "standard",
+          "usually",
+          "note"
+        ],
+        "strict": [
+          "pork",
+          "mince"
+        ]
+      },
+      {
+        "all": [
+          "dry",
+          "red",
+          "wine",
+          "anything",
+          "not",
+          "too",
+          "woody",
+          "sweet",
+          "note"
+        ],
+        "strict": [
+          "dry",
+          "red",
+          "wine"
+        ]
+      },
+      {
+        "all": [
+          "finely",
+          "parsley"
+        ],
+        "strict": [
+          "finely",
+          "parsley"
+        ]
+      },
+      {
+        "all": [
+          "paprika",
+          "regular",
+          "sweet",
+          "smoked",
+          "smoky",
+          "flavour"
+        ],
+        "strict": [
+          "paprika"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "half",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "powder"
+        ],
+        "strict": [
+          "onion",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "powder",
+          "substituted",
+          "clove",
+          "finely"
+        ],
+        "strict": [
+          "garlic",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "fennel",
+          "seed",
+          "toasted",
+          "coarsely",
+          "sub",
+          "powder",
+          "note"
+        ],
+        "strict": [
+          "fennel",
+          "seed"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "chilli",
+          "flak",
+          "pepper",
+          "bit",
+          "warm",
+          "spicines"
+        ],
+        "strict": [
+          "red",
+          "chilli",
+          "flak",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "thyme"
+        ],
+        "strict": [
+          "thyme"
+        ]
+      },
+      {
+        "all": [
+          "oregano"
+        ],
+        "strict": [
+          "oregano"
+        ]
+      },
+      {
+        "all": [
+          "basil"
+        ],
+        "strict": [
+          "basil"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/french-glazed-carrots-carottes-vichy-recipe/",
+    "title": "French Glazed Carrots (Carottes Vichy)",
+    "ingredients": [
+      "800g / 1.75 lb  carrots (, peeled and sliced into 6mm / 0.2&quot; rounds)",
+      "3/4 cup water",
+      "2 tbsp / 30g  unsalted butter",
+      "4 tsp white sugar",
+      "3/4 tsp cooking salt / kosher salt (, (half for table salt, +50% for flakes))",
+      "2 tsp finely chopped parsley"
+    ],
+    "cuisine": "French, Western",
+    "mealType": "Side",
+    "totalTime": "15 mins",
+    "totalTimeMinutes": 15,
+    "servings": "6, 6 people (as a side)",
+    "image": "https://www.recipetineats.com/tachyon/2026/09/Glazed-Carrots_9.jpg",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "carrot",
+          "peeled",
+          "quot",
+          "round"
+        ],
+        "strict": [
+          "carrot"
+        ]
+      },
+      {
+        "all": [
+          "water"
+        ],
+        "strict": [
+          "water"
+        ]
+      },
+      {
+        "all": [
+          "unsalted",
+          "butter"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "sugar"
+        ],
+        "strict": [
+          "white",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "half",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "finely",
+          "parsley"
+        ],
+        "strict": [
+          "finely",
+          "parsley"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/polish-cabbage-rolls-golabki-recipe/",
+    "title": "Polish Cabbage Rolls (Golabki)",
+    "ingredients": [
+      "1 head savoy cabbage or green cabbage (, ~1.5kg / 3lbs (Note 1))",
+      "1 tbsp cooking salt / kosher salt (, for cooking water (half for table salt, +50% for flakes))",
+      "4  cups chicken stock / broth",
+      "700g / 25oz  pork mince ((ground pork), preferably not lean (Note 2))",
+      "1  large brown onion (, peeled and kept whole)",
+      "1 1/2 cup panko breadcrumbs (, substitute regular breadcrumbs )",
+      "2 cups cooked white rice",
+      "2  large eggs (, (~55g/2oz shell-on weight))",
+      "3  garlic cloves (, crushed using garlic press)",
+      "1 tbsp dried marjoram (, or half the amount of dried oregano)",
+      "2 1/2 tsp cooking salt / kosher salt (, (half for table salt, +50% for flakes))",
+      "1 tsp black pepper",
+      "2 tbsp finely chopped parsley",
+      "700g / 24oz  tomato passata ((US: pureed tomato) (Note 3))",
+      "1 1/2 tbsp tomato paste",
+      "1/2 tsp cooking salt / kosher salt (, (half for table salt, +50% for flakes))",
+      "1/4 tsp black pepper",
+      "1/2 tsp white sugar",
+      "30g / 2 tbsp  unsalted butter (, cut into a few pieces)",
+      "1/2 tbsp finely chopped parsley"
+    ],
+    "cuisine": "polish",
+    "mealType": "Dinner",
+    "totalTime": "90 mins",
+    "totalTimeMinutes": 90,
+    "servings": "5, 5 - 6 people",
+    "image": "https://www.recipetineats.com/tachyon/2026/09/Cabbage-Rolls_3.jpg",
+    "instructionCount": 5,
+    "tokens": [
+      {
+        "all": [
+          "savoy",
+          "cabbage",
+          "green",
+          "note"
+        ],
+        "strict": [
+          "savoy",
+          "cabbage"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "water",
+          "half",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "chicken",
+          "stock",
+          "broth"
+        ],
+        "strict": [
+          "chicken",
+          "stock",
+          "broth"
+        ]
+      },
+      {
+        "all": [
+          "pork",
+          "mince",
+          "preferably",
+          "not",
+          "lean",
+          "note"
+        ],
+        "strict": [
+          "pork",
+          "mince",
+          "preferably",
+          "not",
+          "lean"
+        ]
+      },
+      {
+        "all": [
+          "brown",
+          "onion",
+          "peeled",
+          "kept"
+        ],
+        "strict": [
+          "brown",
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "panko",
+          "breadcrumb",
+          "substitute",
+          "regular"
+        ],
+        "strict": [
+          "panko",
+          "breadcrumb"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "rice"
+        ],
+        "strict": [
+          "white",
+          "rice"
+        ]
+      },
+      {
+        "all": [
+          "egg",
+          "shell",
+          "weight"
+        ],
+        "strict": [
+          "egg"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "crushed",
+          "using",
+          "pres"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "marjoram",
+          "half",
+          "amount",
+          "oregano"
+        ],
+        "strict": [
+          "marjoram"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "half",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "finely",
+          "parsley"
+        ],
+        "strict": [
+          "finely",
+          "parsley"
+        ]
+      },
+      {
+        "all": [
+          "tomato",
+          "passata",
+          "pureed",
+          "note"
+        ],
+        "strict": [
+          "tomato",
+          "passata"
+        ]
+      },
+      {
+        "all": [
+          "tomato",
+          "paste"
+        ],
+        "strict": [
+          "tomato",
+          "paste"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "half",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "sugar"
+        ],
+        "strict": [
+          "white",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "unsalted",
+          "butter",
+          "cut"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "finely",
+          "parsley"
+        ],
+        "strict": [
+          "finely",
+          "parsley"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/slow-cooked-lamb-ragu-pasta/",
+    "title": "Slow Cooked Rosemary Lamb Ragu",
+    "ingredients": [
+      "1.25 kg / 2.5 lb  boneless lamb shoulder (, excess fat trimmed and cut into 3 equal pieces (Note 1))",
+      "1 tsp cooking salt / kosher salt ((half for table salt, +50% for flakes))",
+      "1/4 tsp black pepper",
+      "2 tbsp olive oil",
+      "1  onion (, finely chopped)",
+      "2  celery sticks (, grated using a box grater (discard stringy bits))",
+      "1  large carrot (, peeled, grated with box grater)",
+      "3  large garlic cloves (, finely minced)",
+      "1 tbsp rosemary (, finely chopped (substitute 2 tsp dried))",
+      "5 x 10cm/4&quot;   sprigs rosemary ((sub 1 1/2 tsp dried))",
+      "2  bay leaves (, preferably fresh else dried)",
+      "1/4 cup tomato paste",
+      "1 1/2 cups red wine",
+      "400g/ 14 oz   canned crushed tomato",
+      "1 1/2 cups chicken stock/broth (, low sodium)",
+      "2  beef stock cubes (, crumbled (I use OXO, crumbles perfectly))",
+      "1/2 tsp black pepper",
+      "3/4 tsp cooking salt / kosher salt ((half for table salt, +50% for flakes))",
+      "500g / 1 lb  pappardelle, mafaldine, rigatoni, capunti paesani ( or other shapes with shredded meat catching abilities! (Note 2))",
+      "1 tbsp cooking salt / kosher salt (, for pasta cooking water)",
+      "Parmesan for serving"
+    ],
+    "cuisine": "Italian",
+    "mealType": null,
+    "totalTime": "210 mins",
+    "totalTimeMinutes": 210,
+    "servings": "6, 6 - 8",
+    "image": "https://www.recipetineats.com/tachyon/2026/10/Slow-cooked-Rosemary-Lamb-Ragu-3.jpg",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "boneles",
+          "lamb",
+          "shoulder",
+          "exces",
+          "fat",
+          "trimmed",
+          "cut",
+          "equal",
+          "note"
+        ],
+        "strict": [
+          "boneles",
+          "lamb",
+          "shoulder"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "half",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "finely"
+        ],
+        "strict": [
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "celery",
+          "stick",
+          "using",
+          "box",
+          "grater",
+          "discard",
+          "stringy",
+          "bit"
+        ],
+        "strict": [
+          "celery",
+          "stick"
+        ]
+      },
+      {
+        "all": [
+          "carrot",
+          "peeled",
+          "box",
+          "grater"
+        ],
+        "strict": [
+          "carrot"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "finely"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "rosemary",
+          "finely",
+          "substitute"
+        ],
+        "strict": [
+          "rosemary"
+        ]
+      },
+      {
+        "all": [
+          "quot",
+          "sprig",
+          "rosemary",
+          "sub"
+        ],
+        "strict": [
+          "quot",
+          "sprig",
+          "rosemary"
+        ]
+      },
+      {
+        "all": [
+          "bay",
+          "leaf",
+          "preferably",
+          "else"
+        ],
+        "strict": [
+          "bay",
+          "leaf"
+        ]
+      },
+      {
+        "all": [
+          "tomato",
+          "paste"
+        ],
+        "strict": [
+          "tomato",
+          "paste"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "wine"
+        ],
+        "strict": [
+          "red",
+          "wine"
+        ]
+      },
+      {
+        "all": [
+          "canned",
+          "crushed",
+          "tomato"
+        ],
+        "strict": [
+          "canned",
+          "crushed",
+          "tomato"
+        ]
+      },
+      {
+        "all": [
+          "chicken",
+          "stock",
+          "broth",
+          "low",
+          "sodium"
+        ],
+        "strict": [
+          "chicken",
+          "stock",
+          "broth"
+        ]
+      },
+      {
+        "all": [
+          "beef",
+          "stock",
+          "cub",
+          "crumbled",
+          "use",
+          "oxo",
+          "crumbl",
+          "perfectly"
+        ],
+        "strict": [
+          "beef",
+          "stock",
+          "cub"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "half",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "pappardelle",
+          "mafaldine",
+          "rigatoni",
+          "capunti",
+          "paesani",
+          "other",
+          "shap",
+          "shredded",
+          "meat",
+          "catching",
+          "ability",
+          "note"
+        ],
+        "strict": [
+          "pappardelle",
+          "mafaldine",
+          "rigatoni",
+          "capunti",
+          "paesani"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "pasta",
+          "water"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "parmesan",
+          "serving"
+        ],
+        "strict": [
+          "parmesan",
+          "serving"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/one-pan-mongolian-beef-noodles-with-broccoli/",
+    "title": "One-Pan Mongolian Beef Noodles with broccoli",
+    "ingredients": [
+      "4  instant noodle cakes (, ~70g/2.5oz each (aka 2 minute noodles, instant ramen noodles), UNCOOKED, (Note 1))",
+      "2 tablespoons dark soy sauce - NOT light soy sauce or all-purpose soy sauce",
+      "3 tablespoons hoisin sauce",
+      "2 tablespoons Mirin (, or Chinese cooking wine + 2 tsp sugar (Note 3))",
+      "1/4 teaspoon Chinese Five Spice Powder ((not critical if you don&#39;t have))",
+      "2 teaspoons sesame oil",
+      "2 tablespoons oil (- anything plain flavoured (eg canola, vegetable, peanut))",
+      "2  garlic cloves (, finely minced)",
+      "1  onion (, halved then sliced)",
+      "500g/ 1 lb  beef mince (ground beef)",
+      "5 cups broccoli florets, cut small (, not too big else they get in the way and won&#39;t cook through (Note 4 for other veg))",
+      "2 1/4 cups water"
+    ],
+    "cuisine": "Asian",
+    "mealType": null,
+    "totalTime": null,
+    "totalTimeMinutes": null,
+    "servings": "4",
+    "image": "https://www.recipetineats.com/tachyon/2026/09/One-pan-Mongolian-Beef-Noodles-with-Broccoli-3.jpg",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "instant",
+          "noodle",
+          "cak",
+          "each",
+          "aka",
+          "minute",
+          "noodl",
+          "ramen",
+          "uncooked",
+          "note"
+        ],
+        "strict": [
+          "instant",
+          "noodle",
+          "cak",
+          "uncooked"
+        ]
+      },
+      {
+        "all": [
+          "dark",
+          "soy",
+          "sauce",
+          "not",
+          "light",
+          "all",
+          "purpose"
+        ],
+        "strict": [
+          "dark",
+          "soy",
+          "sauce",
+          "not",
+          "light"
+        ]
+      },
+      {
+        "all": [
+          "hoisin",
+          "sauce"
+        ],
+        "strict": [
+          "hoisin",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "mirin",
+          "chinese",
+          "cooking",
+          "wine",
+          "sugar",
+          "note"
+        ],
+        "strict": [
+          "mirin"
+        ]
+      },
+      {
+        "all": [
+          "chinese",
+          "five",
+          "spice",
+          "powder",
+          "not",
+          "critical",
+          "you",
+          "don",
+          "have"
+        ],
+        "strict": [
+          "chinese",
+          "five",
+          "spice",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "sesame",
+          "oil"
+        ],
+        "strict": [
+          "sesame",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "oil",
+          "anything",
+          "plain",
+          "flavoured",
+          "canola",
+          "vegetable",
+          "peanut"
+        ],
+        "strict": [
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "finely"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "halved",
+          "then"
+        ],
+        "strict": [
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "beef",
+          "mince"
+        ],
+        "strict": [
+          "beef",
+          "mince"
+        ]
+      },
+      {
+        "all": [
+          "broccoli",
+          "floret",
+          "cut",
+          "not",
+          "too",
+          "big",
+          "else",
+          "they",
+          "get",
+          "way",
+          "won",
+          "cook",
+          "through",
+          "note",
+          "other",
+          "veg"
+        ],
+        "strict": [
+          "broccoli",
+          "floret",
+          "cut"
+        ]
+      },
+      {
+        "all": [
+          "water"
+        ],
+        "strict": [
+          "water"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/baked-macaroni-cheese-with-chicken-broccoli-one-pot/",
     "title": "One Pot Broccoli Chicken Mac and Cheese",
     "ingredients": [
@@ -280701,197 +281462,6 @@
         ],
         "strict": [
           "salt"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/homemade-italian-sausage-meat/",
-    "title": "Homemade Italian Sausage Meat",
-    "ingredients": [
-      "500 g/ 1 lb  pork mince (ground pork) ( - preferably 20 - 25% fat, otherwise just standard pork mince usually ~17% fat (Note 1))",
-      "1 tbsp dry red wine (, anything not too woody or sweet, optional (Note 2))",
-      "2 tbsp finely chopped parsley (, or 2 tsp dried parsley)",
-      "1 tbsp paprika (. regular/sweet (or smoked, for smoky flavour))",
-      "1  1/4 tsp cooking salt / kosher salt ((half for table salt, +50% for flakes))",
-      "1/2 tsp black pepper",
-      "1 tsp onion powder",
-      "1 tsp garlic powder ((substituted 1 large garlic clove finely grated))",
-      "2 tsp fennel seeds (, toasted and coarsely ground  - sub 1 tsp fennel powder (Note 3))",
-      "1/2 tsp dried red chilli flakes / red pepper flakes (, optional (for bit of warm spiciness and little red bits!))",
-      "1/2 tsp dried thyme",
-      "1/2 tsp dried oregano",
-      "1/4 tsp dried basil"
-    ],
-    "cuisine": "Italian, Western",
-    "mealType": null,
-    "totalTime": null,
-    "totalTimeMinutes": null,
-    "servings": "4, 4 servings",
-    "image": "https://www.recipetineats.com/tachyon/2026/10/Homemade-Italian-Sausage-Meat-8.jpg",
-    "instructionCount": 2,
-    "tokens": [
-      {
-        "all": [
-          "pork",
-          "mince",
-          "preferably",
-          "fat",
-          "otherwise",
-          "just",
-          "standard",
-          "usually",
-          "note"
-        ],
-        "strict": [
-          "pork",
-          "mince"
-        ]
-      },
-      {
-        "all": [
-          "dry",
-          "red",
-          "wine",
-          "anything",
-          "not",
-          "too",
-          "woody",
-          "sweet",
-          "note"
-        ],
-        "strict": [
-          "dry",
-          "red",
-          "wine"
-        ]
-      },
-      {
-        "all": [
-          "finely",
-          "parsley"
-        ],
-        "strict": [
-          "finely",
-          "parsley"
-        ]
-      },
-      {
-        "all": [
-          "paprika",
-          "regular",
-          "sweet",
-          "smoked",
-          "smoky",
-          "flavour"
-        ],
-        "strict": [
-          "paprika"
-        ]
-      },
-      {
-        "all": [
-          "cooking",
-          "salt",
-          "kosher",
-          "half",
-          "table",
-          "flak"
-        ],
-        "strict": [
-          "cooking",
-          "salt",
-          "kosher"
-        ]
-      },
-      {
-        "all": [
-          "black",
-          "pepper"
-        ],
-        "strict": [
-          "black",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "onion",
-          "powder"
-        ],
-        "strict": [
-          "onion",
-          "powder"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "powder",
-          "substituted",
-          "clove",
-          "finely"
-        ],
-        "strict": [
-          "garlic",
-          "powder"
-        ]
-      },
-      {
-        "all": [
-          "fennel",
-          "seed",
-          "toasted",
-          "coarsely",
-          "sub",
-          "powder",
-          "note"
-        ],
-        "strict": [
-          "fennel",
-          "seed"
-        ]
-      },
-      {
-        "all": [
-          "red",
-          "chilli",
-          "flak",
-          "pepper",
-          "bit",
-          "warm",
-          "spicines"
-        ],
-        "strict": [
-          "red",
-          "chilli",
-          "flak",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "thyme"
-        ],
-        "strict": [
-          "thyme"
-        ]
-      },
-      {
-        "all": [
-          "oregano"
-        ],
-        "strict": [
-          "oregano"
-        ]
-      },
-      {
-        "all": [
-          "basil"
-        ],
-        "strict": [
-          "basil"
         ]
       }
     ]
