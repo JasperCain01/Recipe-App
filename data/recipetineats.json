@@ -31630,6 +31630,72 @@
   },
   {
     "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/japanese-salmon-mirin-soy-sauce/",
+    "title": "Japanese Salmon with Mirin and Soy Sauce",
+    "ingredients": [
+      "2  salmon fillets ((5 oz / 150 g each))",
+      "1 tbsp soy sauce",
+      "3 tbsp mirin",
+      "1 tbsp sake",
+      "1/2 tbsp oil"
+    ],
+    "cuisine": "Asian, Japanese",
+    "mealType": null,
+    "totalTime": "7 mins",
+    "totalTimeMinutes": 7,
+    "servings": "2",
+    "image": "https://www.recipetineats.com/tachyon/2014/07/Salmon-Soy-Mirin.jpg",
+    "instructionCount": 5,
+    "tokens": [
+      {
+        "all": [
+          "salmon",
+          "fillet",
+          "each"
+        ],
+        "strict": [
+          "salmon",
+          "fillet"
+        ]
+      },
+      {
+        "all": [
+          "soy",
+          "sauce"
+        ],
+        "strict": [
+          "soy",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "mirin"
+        ],
+        "strict": [
+          "mirin"
+        ]
+      },
+      {
+        "all": [
+          "sake"
+        ],
+        "strict": [
+          "sake"
+        ]
+      },
+      {
+        "all": [
+          "oil"
+        ],
+        "strict": [
+          "oil"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/smoked-salmon-potato-rosti-stack/",
     "title": "Smoked Salmon Potato Rosti Stack",
     "ingredients": [
@@ -31725,72 +31791,6 @@
         "strict": [
           "dill",
           "garnish"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/japanese-salmon-mirin-soy-sauce/",
-    "title": "Japanese Salmon with Mirin and Soy Sauce",
-    "ingredients": [
-      "2  salmon fillets ((5 oz / 150 g each))",
-      "1 tbsp soy sauce",
-      "3 tbsp mirin",
-      "1 tbsp sake",
-      "1/2 tbsp oil"
-    ],
-    "cuisine": "Asian, Japanese",
-    "mealType": null,
-    "totalTime": "7 mins",
-    "totalTimeMinutes": 7,
-    "servings": "2",
-    "image": "https://www.recipetineats.com/tachyon/2014/07/Salmon-Soy-Mirin.jpg",
-    "instructionCount": 5,
-    "tokens": [
-      {
-        "all": [
-          "salmon",
-          "fillet",
-          "each"
-        ],
-        "strict": [
-          "salmon",
-          "fillet"
-        ]
-      },
-      {
-        "all": [
-          "soy",
-          "sauce"
-        ],
-        "strict": [
-          "soy",
-          "sauce"
-        ]
-      },
-      {
-        "all": [
-          "mirin"
-        ],
-        "strict": [
-          "mirin"
-        ]
-      },
-      {
-        "all": [
-          "sake"
-        ],
-        "strict": [
-          "sake"
-        ]
-      },
-      {
-        "all": [
-          "oil"
-        ],
-        "strict": [
-          "oil"
         ]
       }
     ]
@@ -269903,218 +269903,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/monster-cookies-recipe/",
-    "title": "Monster Cookies",
-    "ingredients": [
-      "1 cup plain flour / all-purpose flour ((Note 1 for gluten-free))",
-      "1 1/2 cups rolled oats ((Note 2))",
-      "1 tsp baking soda ((bi-carbonate soda), sifted if lumpy (Note 3))",
-      "1/4 tsp cooking salt / kosher salt ((halve for table salt, +50% for flakes))",
-      "125g/ 8 tbsp   unsalted butter (, cut into chunks (for even melting) (also see Note 5 on butter measure))",
-      "3/4 cup creamy peanut butter NOT natural peanut butter",
-      "1  large egg ((~50-55g/2oz in shell), fridge cold is fine)",
-      "1 tsp vanilla extract",
-      "1 cup (tightly packed) brown sugar",
-      "1 cup (200g)  M&amp;Ms (, plain chocolate ones, not peanut or crispy rice)",
-      "1/2 cup (90g)  dark chocolate chips / semi-sweet chips",
-      "3 tbsp (35g)  M&amp;Ms",
-      "2 tbsp (20g)  dark chocolate chips / semi-sweet chips"
-    ],
-    "cuisine": "Western",
-    "mealType": "Dessert",
-    "totalTime": "55 mins",
-    "totalTimeMinutes": 55,
-    "servings": "18, 18 cookies (7.5cm/3\" wide, 2cm/0.8\" thick)",
-    "image": "https://www.recipetineats.com/tachyon/2026/09/Monster-Cookies-4.jpg",
-    "instructionCount": 2,
-    "tokens": [
-      {
-        "all": [
-          "plain",
-          "flour",
-          "all",
-          "purpose",
-          "note",
-          "gluten",
-          "free"
-        ],
-        "strict": [
-          "plain",
-          "flour",
-          "all",
-          "purpose"
-        ]
-      },
-      {
-        "all": [
-          "rolled",
-          "oat",
-          "note"
-        ],
-        "strict": [
-          "rolled",
-          "oat"
-        ]
-      },
-      {
-        "all": [
-          "baking",
-          "soda",
-          "carbonate",
-          "sifted",
-          "lumpy",
-          "note"
-        ],
-        "strict": [
-          "baking",
-          "soda",
-          "sifted",
-          "lumpy"
-        ]
-      },
-      {
-        "all": [
-          "cooking",
-          "salt",
-          "kosher",
-          "halve",
-          "table",
-          "flak"
-        ],
-        "strict": [
-          "cooking",
-          "salt",
-          "kosher"
-        ]
-      },
-      {
-        "all": [
-          "unsalted",
-          "butter",
-          "cut",
-          "chunk",
-          "even",
-          "melting",
-          "also",
-          "see",
-          "note",
-          "measure"
-        ],
-        "strict": [
-          "unsalted",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "creamy",
-          "peanut",
-          "butter",
-          "not",
-          "natural"
-        ],
-        "strict": [
-          "creamy",
-          "peanut",
-          "butter",
-          "not",
-          "natural"
-        ]
-      },
-      {
-        "all": [
-          "egg",
-          "shell",
-          "fridge",
-          "cold"
-        ],
-        "strict": [
-          "egg",
-          "fridge",
-          "cold"
-        ]
-      },
-      {
-        "all": [
-          "vanilla",
-          "extract"
-        ],
-        "strict": [
-          "vanilla",
-          "extract"
-        ]
-      },
-      {
-        "all": [
-          "tightly",
-          "packed",
-          "brown",
-          "sugar"
-        ],
-        "strict": [
-          "brown",
-          "sugar"
-        ]
-      },
-      {
-        "all": [
-          "amp",
-          "plain",
-          "chocolate",
-          "one",
-          "not",
-          "peanut",
-          "crispy",
-          "rice"
-        ],
-        "strict": [
-          "amp"
-        ]
-      },
-      {
-        "all": [
-          "dark",
-          "chocolate",
-          "chip",
-          "semi",
-          "sweet"
-        ],
-        "strict": [
-          "dark",
-          "chocolate",
-          "chip",
-          "semi",
-          "sweet"
-        ]
-      },
-      {
-        "all": [
-          "amp"
-        ],
-        "strict": [
-          "amp"
-        ]
-      },
-      {
-        "all": [
-          "dark",
-          "chocolate",
-          "chip",
-          "semi",
-          "sweet"
-        ],
-        "strict": [
-          "dark",
-          "chocolate",
-          "chip",
-          "semi",
-          "sweet"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/cheesy-zucchini-muffins/",
     "title": "Cheesy Zucchini Muffins",
     "ingredients": [
@@ -279889,202 +279677,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/one-pan-mongolian-beef-noodles-with-broccoli/",
-    "title": "One-Pan Mongolian Beef Noodles with broccoli",
-    "ingredients": [
-      "4  instant noodle cakes (, ~70g/2.5oz each (aka 2 minute noodles, instant ramen noodles), UNCOOKED, (Note 1))",
-      "2 tablespoons dark soy sauce - NOT light soy sauce or all-purpose soy sauce",
-      "3 tablespoons hoisin sauce",
-      "2 tablespoons Mirin (, or Chinese cooking wine + 2 tsp sugar (Note 3))",
-      "1/4 teaspoon Chinese Five Spice Powder ((not critical if you don&#39;t have))",
-      "2 teaspoons sesame oil",
-      "2 tablespoons oil (- anything plain flavoured (eg canola, vegetable, peanut))",
-      "2  garlic cloves (, finely minced)",
-      "1  onion (, halved then sliced)",
-      "500g/ 1 lb  beef mince (ground beef)",
-      "5 cups broccoli florets, cut small (, not too big else they get in the way and won&#39;t cook through (Note 4 for other veg))",
-      "2 1/4 cups water"
-    ],
-    "cuisine": "Asian",
-    "mealType": null,
-    "totalTime": null,
-    "totalTimeMinutes": null,
-    "servings": "4",
-    "image": "https://www.recipetineats.com/tachyon/2026/09/One-pan-Mongolian-Beef-Noodles-with-Broccoli-3.jpg",
-    "instructionCount": 2,
-    "tokens": [
-      {
-        "all": [
-          "instant",
-          "noodle",
-          "cak",
-          "each",
-          "aka",
-          "minute",
-          "noodl",
-          "ramen",
-          "uncooked",
-          "note"
-        ],
-        "strict": [
-          "instant",
-          "noodle",
-          "cak",
-          "uncooked"
-        ]
-      },
-      {
-        "all": [
-          "dark",
-          "soy",
-          "sauce",
-          "not",
-          "light",
-          "all",
-          "purpose"
-        ],
-        "strict": [
-          "dark",
-          "soy",
-          "sauce",
-          "not",
-          "light"
-        ]
-      },
-      {
-        "all": [
-          "hoisin",
-          "sauce"
-        ],
-        "strict": [
-          "hoisin",
-          "sauce"
-        ]
-      },
-      {
-        "all": [
-          "mirin",
-          "chinese",
-          "cooking",
-          "wine",
-          "sugar",
-          "note"
-        ],
-        "strict": [
-          "mirin"
-        ]
-      },
-      {
-        "all": [
-          "chinese",
-          "five",
-          "spice",
-          "powder",
-          "not",
-          "critical",
-          "you",
-          "don",
-          "have"
-        ],
-        "strict": [
-          "chinese",
-          "five",
-          "spice",
-          "powder"
-        ]
-      },
-      {
-        "all": [
-          "sesame",
-          "oil"
-        ],
-        "strict": [
-          "sesame",
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "oil",
-          "anything",
-          "plain",
-          "flavoured",
-          "canola",
-          "vegetable",
-          "peanut"
-        ],
-        "strict": [
-          "oil"
-        ]
-      },
-      {
-        "all": [
-          "garlic",
-          "clof",
-          "finely"
-        ],
-        "strict": [
-          "garlic",
-          "clof"
-        ]
-      },
-      {
-        "all": [
-          "onion",
-          "halved",
-          "then"
-        ],
-        "strict": [
-          "onion"
-        ]
-      },
-      {
-        "all": [
-          "beef",
-          "mince"
-        ],
-        "strict": [
-          "beef",
-          "mince"
-        ]
-      },
-      {
-        "all": [
-          "broccoli",
-          "floret",
-          "cut",
-          "not",
-          "too",
-          "big",
-          "else",
-          "they",
-          "get",
-          "way",
-          "won",
-          "cook",
-          "through",
-          "note",
-          "other",
-          "veg"
-        ],
-        "strict": [
-          "broccoli",
-          "floret",
-          "cut"
-        ]
-      },
-      {
-        "all": [
-          "water"
-        ],
-        "strict": [
-          "water"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/baked-macaroni-cheese-with-chicken-broccoli-one-pot/",
     "title": "One Pot Broccoli Chicken Mac and Cheese",
     "ingredients": [
@@ -281994,6 +281586,1215 @@
         "strict": [
           "lebanese",
           "bread"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/one-pan-mongolian-beef-noodles-with-broccoli/",
+    "title": "One-Pan Mongolian Beef Noodles with broccoli",
+    "ingredients": [
+      "4  instant noodle cakes (, ~70g/2.5oz each (aka 2 minute noodles, instant ramen noodles), UNCOOKED, (Note 1))",
+      "2 tablespoons dark soy sauce - NOT light soy sauce or all-purpose soy sauce",
+      "1/4 cup hoisin sauce (- if yours is not a dark brown colour, noodles may be bit paler)",
+      "2 tablespoons Mirin (, or Chinese cooking wine + 2 tsp sugar (Note 3))",
+      "1/4 teaspoon Chinese Five Spice Powder ((not critical if you don&#39;t have))",
+      "2 teaspoons sesame oil",
+      "2 tablespoons oil (- anything plain flavoured (eg canola, vegetable, peanut))",
+      "2  garlic cloves (, finely minced)",
+      "1  onion (, halved then sliced)",
+      "500g/ 1 lb  beef mince (ground beef)",
+      "5 cups broccoli florets, cut small (, not too big else they get in the way and won&#39;t cook through (Note 4 for other veg))",
+      "2 1/4 cups water"
+    ],
+    "cuisine": "Asian",
+    "mealType": null,
+    "totalTime": "15 mins",
+    "totalTimeMinutes": 15,
+    "servings": "4",
+    "image": "https://www.recipetineats.com/tachyon/2026/09/One-pan-Mongolian-Beef-Noodles-with-Broccoli-3.jpg",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "instant",
+          "noodle",
+          "cak",
+          "each",
+          "aka",
+          "minute",
+          "noodl",
+          "ramen",
+          "uncooked",
+          "note"
+        ],
+        "strict": [
+          "instant",
+          "noodle",
+          "cak",
+          "uncooked"
+        ]
+      },
+      {
+        "all": [
+          "dark",
+          "soy",
+          "sauce",
+          "not",
+          "light",
+          "all",
+          "purpose"
+        ],
+        "strict": [
+          "dark",
+          "soy",
+          "sauce",
+          "not",
+          "light"
+        ]
+      },
+      {
+        "all": [
+          "hoisin",
+          "sauce",
+          "your",
+          "not",
+          "dark",
+          "brown",
+          "colour",
+          "noodl",
+          "may",
+          "bit",
+          "paler"
+        ],
+        "strict": [
+          "hoisin",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "mirin",
+          "chinese",
+          "cooking",
+          "wine",
+          "sugar",
+          "note"
+        ],
+        "strict": [
+          "mirin"
+        ]
+      },
+      {
+        "all": [
+          "chinese",
+          "five",
+          "spice",
+          "powder",
+          "not",
+          "critical",
+          "you",
+          "don",
+          "have"
+        ],
+        "strict": [
+          "chinese",
+          "five",
+          "spice",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "sesame",
+          "oil"
+        ],
+        "strict": [
+          "sesame",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "oil",
+          "anything",
+          "plain",
+          "flavoured",
+          "canola",
+          "vegetable",
+          "peanut"
+        ],
+        "strict": [
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "finely"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "halved",
+          "then"
+        ],
+        "strict": [
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "beef",
+          "mince"
+        ],
+        "strict": [
+          "beef",
+          "mince"
+        ]
+      },
+      {
+        "all": [
+          "broccoli",
+          "floret",
+          "cut",
+          "not",
+          "too",
+          "big",
+          "else",
+          "they",
+          "get",
+          "way",
+          "won",
+          "cook",
+          "through",
+          "note",
+          "other",
+          "veg"
+        ],
+        "strict": [
+          "broccoli",
+          "floret",
+          "cut"
+        ]
+      },
+      {
+        "all": [
+          "water"
+        ],
+        "strict": [
+          "water"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/monster-cookies-recipe/",
+    "title": "Monster Cookies",
+    "ingredients": [
+      "1 cup plain flour / all-purpose flour ((Note 1 for gluten-free))",
+      "1 1/2 cups rolled oats ((Note 2))",
+      "1 tsp baking soda ((bi-carbonate soda), sifted if lumpy (Note 3))",
+      "1/4 tsp cooking salt / kosher salt ((halve for table salt, +50% for flakes))",
+      "125g/ 8 tbsp   unsalted butter (, cut into chunks (for even melting) (also see Note 5 on butter measure))",
+      "3/4 cup creamy peanut butter NOT natural peanut butter",
+      "1  large egg ((~50-55g/2oz in shell), fridge cold is fine)",
+      "1 tsp vanilla extract",
+      "1 cup (tightly packed) brown sugar",
+      "1 cup (200g)  M&amp;Ms (, plain chocolate ones, not peanut or crispy rice - or smarties!)",
+      "1/2 cup (90g)  dark chocolate chips / semi-sweet chips",
+      "3 tbsp (35g)  M&amp;Ms",
+      "2 tbsp (20g)  dark chocolate chips / semi-sweet chips"
+    ],
+    "cuisine": "Western",
+    "mealType": "Dessert",
+    "totalTime": "55 mins",
+    "totalTimeMinutes": 55,
+    "servings": "18, 18 cookies (7.5cm/3\" wide, 2cm/0.8\" thick)",
+    "image": "https://www.recipetineats.com/tachyon/2026/09/Monster-Cookies-4.jpg",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "plain",
+          "flour",
+          "all",
+          "purpose",
+          "note",
+          "gluten",
+          "free"
+        ],
+        "strict": [
+          "plain",
+          "flour",
+          "all",
+          "purpose"
+        ]
+      },
+      {
+        "all": [
+          "rolled",
+          "oat",
+          "note"
+        ],
+        "strict": [
+          "rolled",
+          "oat"
+        ]
+      },
+      {
+        "all": [
+          "baking",
+          "soda",
+          "carbonate",
+          "sifted",
+          "lumpy",
+          "note"
+        ],
+        "strict": [
+          "baking",
+          "soda",
+          "sifted",
+          "lumpy"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "halve",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "unsalted",
+          "butter",
+          "cut",
+          "chunk",
+          "even",
+          "melting",
+          "also",
+          "see",
+          "note",
+          "measure"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "creamy",
+          "peanut",
+          "butter",
+          "not",
+          "natural"
+        ],
+        "strict": [
+          "creamy",
+          "peanut",
+          "butter",
+          "not",
+          "natural"
+        ]
+      },
+      {
+        "all": [
+          "egg",
+          "shell",
+          "fridge",
+          "cold"
+        ],
+        "strict": [
+          "egg",
+          "fridge",
+          "cold"
+        ]
+      },
+      {
+        "all": [
+          "vanilla",
+          "extract"
+        ],
+        "strict": [
+          "vanilla",
+          "extract"
+        ]
+      },
+      {
+        "all": [
+          "tightly",
+          "packed",
+          "brown",
+          "sugar"
+        ],
+        "strict": [
+          "brown",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "amp",
+          "plain",
+          "chocolate",
+          "one",
+          "not",
+          "peanut",
+          "crispy",
+          "rice",
+          "smarty"
+        ],
+        "strict": [
+          "amp"
+        ]
+      },
+      {
+        "all": [
+          "dark",
+          "chocolate",
+          "chip",
+          "semi",
+          "sweet"
+        ],
+        "strict": [
+          "dark",
+          "chocolate",
+          "chip",
+          "semi",
+          "sweet"
+        ]
+      },
+      {
+        "all": [
+          "amp"
+        ],
+        "strict": [
+          "amp"
+        ]
+      },
+      {
+        "all": [
+          "dark",
+          "chocolate",
+          "chip",
+          "semi",
+          "sweet"
+        ],
+        "strict": [
+          "dark",
+          "chocolate",
+          "chip",
+          "semi",
+          "sweet"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/blue-cheese-dressing/",
+    "title": "Blue Cheese Dressing",
+    "ingredients": [
+      "120g / 3 oz  Roquefort, or other creamy blue cheese (- about 1 lightly packed cup when crumbled (Note 1))",
+      "1/4 cup whole-egg mayonnaise ((Note 2))",
+      "1/4 cup sour cream",
+      "1/2 cup buttermilk (, plus more as needed (Note 3 for substitute))",
+      "1/2 tsp garlic powder",
+      "2 tsp apple cider vinegar (, or lemon juice)",
+      "1/4 tsp cooking salt / kosher salt",
+      "1/4 tsp black pepper",
+      "1/2 tsp Worcestershire sauce ((good to add if using mild flavoured blue cheese))"
+    ],
+    "cuisine": "Western",
+    "mealType": "Salad",
+    "totalTime": null,
+    "totalTimeMinutes": null,
+    "servings": "1.75, 1.75 cups",
+    "image": "https://www.recipetineats.com/tachyon/2026/10/Blue-cheese-dressing-9.jpg",
+    "instructionCount": 3,
+    "tokens": [
+      {
+        "all": [
+          "roquefort",
+          "other",
+          "creamy",
+          "blue",
+          "cheese",
+          "lightly",
+          "packed",
+          "cup",
+          "when",
+          "crumbled",
+          "note"
+        ],
+        "strict": [
+          "roquefort"
+        ]
+      },
+      {
+        "all": [
+          "egg",
+          "mayonnaise",
+          "note"
+        ],
+        "strict": [
+          "egg",
+          "mayonnaise"
+        ]
+      },
+      {
+        "all": [
+          "sour",
+          "cream"
+        ],
+        "strict": [
+          "sour",
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "buttermilk",
+          "more",
+          "note",
+          "substitute"
+        ],
+        "strict": [
+          "buttermilk"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "powder"
+        ],
+        "strict": [
+          "garlic",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "apple",
+          "cider",
+          "vinegar",
+          "lemon",
+          "juice"
+        ],
+        "strict": [
+          "apple",
+          "cider",
+          "vinegar"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "worcestershire",
+          "sauce",
+          "add",
+          "using",
+          "mild",
+          "flavoured",
+          "blue",
+          "cheese"
+        ],
+        "strict": [
+          "worcestershire",
+          "sauce"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/shrimp-po-boys-prawns/",
+    "title": "Shrimp Po' Boys (prawns)",
+    "ingredients": [
+      "500g/ 1 lb  large shrimp/prawns (, peeled and deveined - either frozen and thawed (Note 1))",
+      "1  large egg",
+      "1/4 tsp cooking salt / kosher salt (, for sprinkling cooked shrimp/prawns)",
+      "2 - 3 cups canola oil (or other plain oil, for cooking)",
+      "1/3 cup fine cornmeal (, or cornflour/cornstarch (Note 2))",
+      "1/3 cup plain flour / all-purpose flour",
+      "1 tsp cooking salt / kosher salt (, + extra for sprinkling)",
+      "1 tbsp paprika (, sweet/regular)",
+      "2 tsp onion powder",
+      "2 tsp garlic powder",
+      "3/4 tsp dried thyme",
+      "1/4 tsp black pepper",
+      "1/4 tsp cayenne pepper (, optional (for barely-there spiciness))",
+      "2 1/2 tbsp Dijon or yellow mustard ( - Creole mustard if you&#39;ve got it! (Note 3))",
+      "1 tbsp wholegrain mustard ((ie with the little mustard seeds in it), or more smooth mustard (Note 3))",
+      "1 1/4 cups whole-egg mayonnaise ((Note 4))",
+      "2 tsp prepared horseradish ((horseradish cream))",
+      "1 tsp pickle juice ((ie juice from a jar of pickles) or white vinegar)",
+      "1 tsp tabasco",
+      "1  large garlic clove (, finely grated)",
+      "2 tsp paprika (, sweet/regular)",
+      "4  crusty white rolls (, about 20cm / 8&quot; long - or 2 French sticks cut)",
+      "1/4 cup dill pickles (, finely sliced on an angle)",
+      "2  tomatos (, halved and sliced)",
+      "2 cups (packed) shredded cos lettuce (romaine)  (or iceberg)",
+      "Salted table butter (, softened, for spreading on rolls)"
+    ],
+    "cuisine": "Cajun, Louisiana, New Orleans",
+    "mealType": "Lunch",
+    "totalTime": "30 mins",
+    "totalTimeMinutes": 30,
+    "servings": "4",
+    "image": "https://www.recipetineats.com/tachyon/2026/10/Shrimp-Po-Boys-Prawns-7.jpg",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "shrimp",
+          "prawn",
+          "peeled",
+          "deveined",
+          "either",
+          "frozen",
+          "thawed",
+          "note"
+        ],
+        "strict": [
+          "shrimp",
+          "prawn"
+        ]
+      },
+      {
+        "all": [
+          "egg"
+        ],
+        "strict": [
+          "egg"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "sprinkling",
+          "shrimp",
+          "prawn"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "canola",
+          "oil",
+          "other",
+          "plain",
+          "cooking"
+        ],
+        "strict": [
+          "canola",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "cornmeal",
+          "cornflour",
+          "cornstarch",
+          "note"
+        ],
+        "strict": [
+          "cornmeal"
+        ]
+      },
+      {
+        "all": [
+          "plain",
+          "flour",
+          "all",
+          "purpose"
+        ],
+        "strict": [
+          "plain",
+          "flour",
+          "all",
+          "purpose"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "sprinkling"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "paprika",
+          "sweet",
+          "regular"
+        ],
+        "strict": [
+          "paprika"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "powder"
+        ],
+        "strict": [
+          "onion",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "powder"
+        ],
+        "strict": [
+          "garlic",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "thyme"
+        ],
+        "strict": [
+          "thyme"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "cayenne",
+          "pepper",
+          "barely",
+          "there",
+          "spicines"
+        ],
+        "strict": [
+          "cayenne",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "dijon",
+          "yellow",
+          "mustard",
+          "creole",
+          "you",
+          "got",
+          "note"
+        ],
+        "strict": [
+          "dijon"
+        ]
+      },
+      {
+        "all": [
+          "wholegrain",
+          "mustard",
+          "seed",
+          "more",
+          "smooth",
+          "note"
+        ],
+        "strict": [
+          "wholegrain",
+          "mustard"
+        ]
+      },
+      {
+        "all": [
+          "egg",
+          "mayonnaise",
+          "note"
+        ],
+        "strict": [
+          "egg",
+          "mayonnaise"
+        ]
+      },
+      {
+        "all": [
+          "prepared",
+          "horseradish",
+          "cream"
+        ],
+        "strict": [
+          "prepared",
+          "horseradish"
+        ]
+      },
+      {
+        "all": [
+          "pickle",
+          "juice",
+          "jar",
+          "pickl",
+          "white",
+          "vinegar"
+        ],
+        "strict": [
+          "pickle",
+          "juice"
+        ]
+      },
+      {
+        "all": [
+          "tabasco"
+        ],
+        "strict": [
+          "tabasco"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clove",
+          "finely"
+        ],
+        "strict": [
+          "garlic",
+          "clove"
+        ]
+      },
+      {
+        "all": [
+          "paprika",
+          "sweet",
+          "regular"
+        ],
+        "strict": [
+          "paprika"
+        ]
+      },
+      {
+        "all": [
+          "crusty",
+          "white",
+          "roll",
+          "quot",
+          "long",
+          "french",
+          "stick",
+          "cut"
+        ],
+        "strict": [
+          "crusty",
+          "white",
+          "roll"
+        ]
+      },
+      {
+        "all": [
+          "dill",
+          "pickl",
+          "finely",
+          "angle"
+        ],
+        "strict": [
+          "dill",
+          "pickl"
+        ]
+      },
+      {
+        "all": [
+          "tomato",
+          "halved"
+        ],
+        "strict": [
+          "tomato"
+        ]
+      },
+      {
+        "all": [
+          "packed",
+          "shredded",
+          "cos",
+          "lettuce",
+          "romaine",
+          "iceberg"
+        ],
+        "strict": [
+          "shredded",
+          "cos",
+          "lettuce"
+        ]
+      },
+      {
+        "all": [
+          "salted",
+          "table",
+          "butter",
+          "softened",
+          "spreading",
+          "roll"
+        ],
+        "strict": [
+          "salted",
+          "table",
+          "butter"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/chicken-beans-casserole-chicken-cassoulet-recipe/",
+    "title": "JB's Chicken Cassoulet (French Chicken & Bean Casserole)",
+    "ingredients": [
+      "2 tbsp cornflour / cornstarch",
+      "800g / 1.75lb  boneless skinless chicken thigh fillets (, ~6 pieces (Note 1))",
+      "1 tsp cooking salt / kosher salt (, divided (half for table salt, 50% extra for flakes))",
+      "1 tsp black pepper (, divided)",
+      "2 tbsp extra virgin olive oil",
+      "200g / 7oz  streaky bacon (, cut into 1cm / 0.4&quot; pieces)",
+      "2  brown onion (, finely chopped)",
+      "2  carrots (, peeled, quartered lengthways, cut into 1 cm / 0.4&quot; thick pieces)",
+      "3  garlic cloves (, finely minced)",
+      "1 tbsp tomato paste",
+      "2  thyme sprigs ((substitute 1/2 tsp dried thyme))",
+      "2  rosemary sprigs (, ~10cm / 4&quot; long (substitute 1 tsp dried rosemary))",
+      "2  fresh bay leaves (, or dried)",
+      "1/4 cup chardonnay or other dry white wine  (, (sub low-sodium chicken stock))",
+      "1 1/2 cup chicken stock / broth (, low-sodium (homemade if you want))",
+      "3 x 400g / 14oz  cans cannellini beans (, drained (or other beans))",
+      "12  cherry tomatoes",
+      "1/2 cup panko breadcrumbs (, substitute regular breadcrumbs)",
+      "2 tbsp finely chopped parsley (, substitute 2 tsp dried parsley)",
+      "2 tbsp extra virgin olive oil",
+      "1/4 tsp cooking salt / kosher salt (, (half for table salt, 50% extra for flakes))"
+    ],
+    "cuisine": "French",
+    "mealType": "Dinner",
+    "totalTime": "60 mins",
+    "totalTimeMinutes": 60,
+    "servings": "5",
+    "image": "https://www.recipetineats.com/tachyon/2026/10/Chicken-Cassoulet_9.jpg",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "cornflour",
+          "cornstarch"
+        ],
+        "strict": [
+          "cornflour",
+          "cornstarch"
+        ]
+      },
+      {
+        "all": [
+          "boneles",
+          "skinles",
+          "chicken",
+          "thigh",
+          "fillet",
+          "note"
+        ],
+        "strict": [
+          "boneles",
+          "skinles",
+          "chicken",
+          "thigh",
+          "fillet"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "divided",
+          "half",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper",
+          "divided"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "streaky",
+          "bacon",
+          "pancetta",
+          "cut",
+          "quot"
+        ],
+        "strict": [
+          "streaky",
+          "bacon",
+          "pancetta"
+        ]
+      },
+      {
+        "all": [
+          "brown",
+          "onion",
+          "finely"
+        ],
+        "strict": [
+          "brown",
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "carrot",
+          "peeled",
+          "quartered",
+          "lengthway",
+          "cut",
+          "quot",
+          "thick"
+        ],
+        "strict": [
+          "carrot"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "finely"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "tomato",
+          "paste"
+        ],
+        "strict": [
+          "tomato",
+          "paste"
+        ]
+      },
+      {
+        "all": [
+          "thyme",
+          "sprig",
+          "substitute"
+        ],
+        "strict": [
+          "thyme",
+          "sprig"
+        ]
+      },
+      {
+        "all": [
+          "rosemary",
+          "sprig",
+          "quot",
+          "long",
+          "substitute"
+        ],
+        "strict": [
+          "rosemary",
+          "sprig"
+        ]
+      },
+      {
+        "all": [
+          "bay",
+          "leaf"
+        ],
+        "strict": [
+          "bay",
+          "leaf"
+        ]
+      },
+      {
+        "all": [
+          "chardonnay",
+          "other",
+          "dry",
+          "white",
+          "wine",
+          "sub",
+          "low",
+          "sodium",
+          "chicken",
+          "stock"
+        ],
+        "strict": [
+          "chardonnay"
+        ]
+      },
+      {
+        "all": [
+          "chicken",
+          "stock",
+          "broth",
+          "low",
+          "sodium",
+          "you",
+          "want"
+        ],
+        "strict": [
+          "chicken",
+          "stock",
+          "broth"
+        ]
+      },
+      {
+        "all": [
+          "can",
+          "cannellini",
+          "bean",
+          "drained",
+          "other"
+        ],
+        "strict": [
+          "can",
+          "cannellini",
+          "bean"
+        ]
+      },
+      {
+        "all": [
+          "cherry",
+          "tomato"
+        ],
+        "strict": [
+          "cherry",
+          "tomato"
+        ]
+      },
+      {
+        "all": [
+          "panko",
+          "breadcrumb",
+          "substitute",
+          "regular"
+        ],
+        "strict": [
+          "panko",
+          "breadcrumb"
+        ]
+      },
+      {
+        "all": [
+          "finely",
+          "parsley",
+          "substitute"
+        ],
+        "strict": [
+          "finely",
+          "parsley"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "half",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
         ]
       }
     ]
