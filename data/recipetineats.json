@@ -198131,199 +198131,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/nutella-cheesecake-no-bake/",
-    "title": "Nutella Cheesecake (No Bake)",
-    "ingredients": [
-      "200g/ 7oz  Oreo cookies ((1.5 standard packs, Note 1))",
-      "60g / 4 tbsp  unsalted butter (, melted)",
-      "3 tsp gelatine powder ((Note 2))",
-      "1/4 cup water",
-      "500g / 1 lb  cream cheese (, softened (block form, Note 3))",
-      "1/2 cup soft icing sugar / powdered sugar ((Note 4))",
-      "1 cup Nutella ((Note 5))",
-      "1 cup heavy/thickened cream",
-      "1/2 cup heavy/thickened cream",
-      "1/2 cup Nutella",
-      "1/4 cup dark chocolate chips/semi-sweet chocolate chips",
-      "1/4 cup hazelnuts (, lightly toasted then chopped (Note 6))",
-      "1/2 cup heavy/thickened cream ((for whipping))",
-      "3 tbsp Nutella (, warmed)"
-    ],
-    "cuisine": "Western",
-    "mealType": "Dessert",
-    "totalTime": null,
-    "totalTimeMinutes": null,
-    "servings": "12, 12 - 16",
-    "image": "https://www.recipetineats.com/tachyon/2021/03/Nutella-Cheesecake_2.jpg",
-    "instructionCount": 4,
-    "tokens": [
-      {
-        "all": [
-          "oreo",
-          "cooky",
-          "standard",
-          "pack",
-          "note"
-        ],
-        "strict": [
-          "oreo",
-          "cooky"
-        ]
-      },
-      {
-        "all": [
-          "unsalted",
-          "butter",
-          "melted"
-        ],
-        "strict": [
-          "unsalted",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "gelatine",
-          "powder",
-          "note"
-        ],
-        "strict": [
-          "gelatine",
-          "powder"
-        ]
-      },
-      {
-        "all": [
-          "water"
-        ],
-        "strict": [
-          "water"
-        ]
-      },
-      {
-        "all": [
-          "cream",
-          "cheese",
-          "softened",
-          "block",
-          "form",
-          "note"
-        ],
-        "strict": [
-          "cream",
-          "cheese"
-        ]
-      },
-      {
-        "all": [
-          "soft",
-          "icing",
-          "sugar",
-          "powdered",
-          "note"
-        ],
-        "strict": [
-          "soft",
-          "icing",
-          "sugar",
-          "powdered"
-        ]
-      },
-      {
-        "all": [
-          "nutella",
-          "note"
-        ],
-        "strict": [
-          "nutella"
-        ]
-      },
-      {
-        "all": [
-          "heavy",
-          "thickened",
-          "cream"
-        ],
-        "strict": [
-          "heavy",
-          "thickened",
-          "cream"
-        ]
-      },
-      {
-        "all": [
-          "heavy",
-          "thickened",
-          "cream"
-        ],
-        "strict": [
-          "heavy",
-          "thickened",
-          "cream"
-        ]
-      },
-      {
-        "all": [
-          "nutella"
-        ],
-        "strict": [
-          "nutella"
-        ]
-      },
-      {
-        "all": [
-          "dark",
-          "chocolate",
-          "chip",
-          "semi",
-          "sweet"
-        ],
-        "strict": [
-          "dark",
-          "chocolate",
-          "chip",
-          "semi",
-          "sweet"
-        ]
-      },
-      {
-        "all": [
-          "hazelnut",
-          "lightly",
-          "toasted",
-          "then",
-          "note"
-        ],
-        "strict": [
-          "hazelnut"
-        ]
-      },
-      {
-        "all": [
-          "heavy",
-          "thickened",
-          "cream",
-          "whipping"
-        ],
-        "strict": [
-          "heavy",
-          "thickened",
-          "cream"
-        ]
-      },
-      {
-        "all": [
-          "nutella",
-          "warmed"
-        ],
-        "strict": [
-          "nutella"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/ratatouille/",
     "title": "Ratatouille (French Vegetable Stew)",
     "ingredients": [
@@ -282795,6 +282602,892 @@
           "cooking",
           "salt",
           "kosher"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/nigellas-bar-nuts/",
+    "title": "Nigella's Bar Nuts",
+    "ingredients": [
+      "500g/ 16 oz  (4 slightly heaped cups)  unsalted mixed nuts (, roasted (Note 1))",
+      "1 1/2 cups mini pretzels (, or another 100g/3.5oz nuts (scant 1 cup))",
+      "2 1/2 tbsp finely chopped fresh rosemary leaves ((20cm/8\" sprig) (Note 2))",
+      "1/2 tsp cayenne pepper ((faint background warmth, can omit))",
+      "1 tbsp dark brown muscovado sugar (, or regular brown usgar)",
+      "2 1/2 tsp salt flakes (, halve the amount for cooking salt, kosher salt, Fleur de sel, fine sea salt (Note 3))",
+      "2 tbsp (30g)  unsalted butter (, melted)"
+    ],
+    "cuisine": "Western",
+    "mealType": "Drink",
+    "totalTime": "17 mins",
+    "totalTimeMinutes": 17,
+    "servings": "10",
+    "image": "https://www.recipetineats.com/tachyon/2026/10/Bar-nuts-0.jpg",
+    "instructionCount": 4,
+    "tokens": [
+      {
+        "all": [
+          "slightly",
+          "heaped",
+          "cup",
+          "unsalted",
+          "mixed",
+          "nut",
+          "roasted",
+          "note"
+        ],
+        "strict": [
+          "unsalted",
+          "mixed",
+          "nut"
+        ]
+      },
+      {
+        "all": [
+          "mini",
+          "pretzel",
+          "another",
+          "nut",
+          "scant"
+        ],
+        "strict": [
+          "mini",
+          "pretzel"
+        ]
+      },
+      {
+        "all": [
+          "finely",
+          "rosemary",
+          "leaf",
+          "sprig",
+          "note"
+        ],
+        "strict": [
+          "finely",
+          "rosemary",
+          "leaf"
+        ]
+      },
+      {
+        "all": [
+          "cayenne",
+          "pepper",
+          "faint",
+          "background",
+          "warmth",
+          "can",
+          "omit"
+        ],
+        "strict": [
+          "cayenne",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "dark",
+          "brown",
+          "muscovado",
+          "sugar",
+          "regular",
+          "usgar"
+        ],
+        "strict": [
+          "dark",
+          "brown",
+          "muscovado",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "salt",
+          "flak",
+          "halve",
+          "amount",
+          "cooking",
+          "kosher",
+          "fleur",
+          "sel",
+          "note"
+        ],
+        "strict": [
+          "salt",
+          "flak"
+        ]
+      },
+      {
+        "all": [
+          "unsalted",
+          "butter",
+          "melted"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/rich-chocolate-cheesecake-no-bake/",
+    "title": "Rich Chocolate Cheesecake",
+    "ingredients": [
+      "140g / 4.9 oz  Oreo cookies (- WITH the cream filling! (14 oreos, 1 standard Australian sleeve, Note 1))",
+      "50g / 3 tbsp  unsalted butter (, melted)",
+      "200g (6.5 oz)  70% cocoa chocolate for baking (, pretty finely chopped if using block chocolate (Note 2))",
+      "2 tbsp cocoa powder (, no need to sift)",
+      "2 1/2 tbsp boiling hot water (, for blooming cocoa)",
+      "1 cup thickened cream / heavy cream (or a full-fat whipping cream, fridge cold)",
+      "500g / 1 lb  cream cheese (, softened (block form, Note 3))",
+      "1 cup caster sugar / superfine sugar ((Note 4))",
+      "1 tsp vanilla extract",
+      "1/2 cup thickened cream / heavy cream (, or pure cream 35 - 40% fat (Note 5))",
+      "75 g (2.7 oz)  70% cocoa chocolate for baking (finely chopped whether using block, buttons, callets or chips (Note 2))",
+      "1 cup thickened cream / heavy cream (, fridge cold (for whipping))",
+      "1 tbsp caster sugar / superfine sugar",
+      "1/4 tsp vanilla extract",
+      "Any milk chocolate bar (, or leftover 70% or dark chocolate, shaved using a vegetable peeler (Note 2))"
+    ],
+    "cuisine": "Western",
+    "mealType": null,
+    "totalTime": null,
+    "totalTimeMinutes": null,
+    "servings": "12, 12 - 16",
+    "image": "https://www.recipetineats.com/tachyon/2026/10/Chocolate-Cheesecake-no-bake-6.jpg",
+    "instructionCount": 7,
+    "tokens": [
+      {
+        "all": [
+          "oreo",
+          "cooky",
+          "cream",
+          "filling",
+          "standard",
+          "australian",
+          "sleeve",
+          "note"
+        ],
+        "strict": [
+          "oreo",
+          "cooky"
+        ]
+      },
+      {
+        "all": [
+          "unsalted",
+          "butter",
+          "melted"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "cocoa",
+          "chocolate",
+          "baking",
+          "pretty",
+          "finely",
+          "using",
+          "block",
+          "note"
+        ],
+        "strict": [
+          "cocoa",
+          "chocolate",
+          "baking"
+        ]
+      },
+      {
+        "all": [
+          "cocoa",
+          "powder",
+          "need",
+          "sift"
+        ],
+        "strict": [
+          "cocoa",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "boiling",
+          "hot",
+          "water",
+          "blooming",
+          "cocoa"
+        ],
+        "strict": [
+          "boiling",
+          "hot",
+          "water"
+        ]
+      },
+      {
+        "all": [
+          "thickened",
+          "cream",
+          "heavy",
+          "full",
+          "fat",
+          "whipping",
+          "fridge",
+          "cold"
+        ],
+        "strict": [
+          "thickened",
+          "cream",
+          "heavy"
+        ]
+      },
+      {
+        "all": [
+          "cream",
+          "cheese",
+          "softened",
+          "block",
+          "form",
+          "note"
+        ],
+        "strict": [
+          "cream",
+          "cheese"
+        ]
+      },
+      {
+        "all": [
+          "caster",
+          "sugar",
+          "superfine",
+          "note"
+        ],
+        "strict": [
+          "caster",
+          "sugar",
+          "superfine"
+        ]
+      },
+      {
+        "all": [
+          "vanilla",
+          "extract"
+        ],
+        "strict": [
+          "vanilla",
+          "extract"
+        ]
+      },
+      {
+        "all": [
+          "thickened",
+          "cream",
+          "heavy",
+          "pure",
+          "fat",
+          "note"
+        ],
+        "strict": [
+          "thickened",
+          "cream",
+          "heavy"
+        ]
+      },
+      {
+        "all": [
+          "cocoa",
+          "chocolate",
+          "baking",
+          "finely",
+          "whether",
+          "using",
+          "block",
+          "button",
+          "callet",
+          "chip",
+          "note"
+        ],
+        "strict": [
+          "cocoa",
+          "chocolate",
+          "baking"
+        ]
+      },
+      {
+        "all": [
+          "thickened",
+          "cream",
+          "heavy",
+          "fridge",
+          "cold",
+          "whipping"
+        ],
+        "strict": [
+          "thickened",
+          "cream",
+          "heavy"
+        ]
+      },
+      {
+        "all": [
+          "caster",
+          "sugar",
+          "superfine"
+        ],
+        "strict": [
+          "caster",
+          "sugar",
+          "superfine"
+        ]
+      },
+      {
+        "all": [
+          "vanilla",
+          "extract"
+        ],
+        "strict": [
+          "vanilla",
+          "extract"
+        ]
+      },
+      {
+        "all": [
+          "any",
+          "milk",
+          "chocolate",
+          "bar",
+          "leftover",
+          "dark",
+          "shaved",
+          "using",
+          "vegetable",
+          "peeler",
+          "note"
+        ],
+        "strict": [
+          "any",
+          "milk",
+          "chocolate",
+          "bar"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/one-pan-chicken-and-gravy-with-potatoes-and-vegetables/",
+    "title": "One-Pan Chicken and Gravy with Potatoes and Vegetables",
+    "ingredients": [
+      "1 - 1.25kg (2 - 2.5lb)  large bone-in skin-on thighs (4 - 5 pieces) (, ~220-250g / 7 - 8 oz each (Note 1))",
+      "1 tbsp olive oil",
+      "1 1/2 tsp paprika (, regular/sweet)",
+      "1/2 tsp garlic powder",
+      "1/2 tsp onion powder (, or more garlic powder)",
+      "1 tsp dried thyme (, crushed with fingers)",
+      "1 tsp cooking salt / kosher salt ((halve for table salt, double for flakes))",
+      "1/4 tsp black pepper",
+      "600g/ 20oz  baby potatoes (, skin on, cut into 1.75 cm / 0.7&quot; pieces (Note 2))",
+      "3  carrots (, peeled, cut into 7mm / 1/3&quot; thick coins (consider halving very big rounds into half moons))",
+      "1  large red onion (, cut into 1cm / 0.4\" thick wedges)",
+      "2  garlic cloves (, crushed with garlic crusher or finely minced with a knife)",
+      "1 1/2 tbsp olive oil",
+      "1 tsp cooking salt / kosher salt ((halve for table salt, double for flakes))",
+      "1/4 tsp black pepper",
+      "1/3 cup plain flour / all-purpose flour",
+      "2 1/2 cups beef stock/broth (, low sodium (yes, beef, not chicken! Note 3))",
+      "1 tsp dark soy *secret ingredient* (, optional, to make gravy rich brown plus deepens flavour, or use gravy browner (Note 3))",
+      "1/2 tsp black pepper",
+      "1 cup frozen peas (, leave out to thaw while chicken is baking)",
+      "1 tsp thyme leaves (, for sprinkling (100% optional))"
+    ],
+    "cuisine": "Western",
+    "mealType": "Dinner",
+    "totalTime": "55 mins",
+    "totalTimeMinutes": 55,
+    "servings": "4, 4 - 5 people",
+    "image": "https://www.recipetineats.com/tachyon/2026/10/One-pan-chicken-and-gravy-with-potatoes-and-vegetables-2.jpg",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "bone",
+          "skin",
+          "thigh",
+          "each",
+          "note"
+        ],
+        "strict": [
+          "bone",
+          "skin",
+          "thigh"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "paprika",
+          "regular",
+          "sweet"
+        ],
+        "strict": [
+          "paprika"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "powder"
+        ],
+        "strict": [
+          "garlic",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "powder",
+          "more",
+          "garlic"
+        ],
+        "strict": [
+          "onion",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "thyme",
+          "crushed",
+          "finger"
+        ],
+        "strict": [
+          "thyme"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "halve",
+          "table",
+          "double",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "baby",
+          "potato",
+          "skin",
+          "cut",
+          "quot",
+          "note"
+        ],
+        "strict": [
+          "baby",
+          "potato"
+        ]
+      },
+      {
+        "all": [
+          "carrot",
+          "peeled",
+          "cut",
+          "quot",
+          "thick",
+          "coin",
+          "consider",
+          "halving",
+          "very",
+          "big",
+          "round",
+          "half",
+          "moon"
+        ],
+        "strict": [
+          "carrot"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "onion",
+          "cut",
+          "thick",
+          "wedg"
+        ],
+        "strict": [
+          "red",
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "crushed",
+          "crusher",
+          "finely",
+          "knife"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "olive",
+          "oil"
+        ],
+        "strict": [
+          "olive",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "halve",
+          "table",
+          "double",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "plain",
+          "flour",
+          "all",
+          "purpose"
+        ],
+        "strict": [
+          "plain",
+          "flour",
+          "all",
+          "purpose"
+        ]
+      },
+      {
+        "all": [
+          "beef",
+          "stock",
+          "broth",
+          "low",
+          "sodium",
+          "yes",
+          "not",
+          "chicken",
+          "note"
+        ],
+        "strict": [
+          "beef",
+          "stock",
+          "broth"
+        ]
+      },
+      {
+        "all": [
+          "dark",
+          "soy",
+          "secret",
+          "ingredient",
+          "make",
+          "gravy",
+          "rich",
+          "brown",
+          "deepen",
+          "flavour",
+          "use",
+          "browner",
+          "note"
+        ],
+        "strict": [
+          "dark",
+          "soy",
+          "secret",
+          "ingredient"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "frozen",
+          "pea",
+          "leave",
+          "out",
+          "thaw",
+          "while",
+          "chicken",
+          "baking"
+        ],
+        "strict": [
+          "frozen",
+          "pea"
+        ]
+      },
+      {
+        "all": [
+          "thyme",
+          "leaf",
+          "sprinkling"
+        ],
+        "strict": [
+          "thyme",
+          "leaf"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/nutella-cheesecake-no-bake/",
+    "title": "Nutella Cheesecake (No Bake)",
+    "ingredients": [
+      "200g/ 7oz  Oreo cookies ((1.5 standard packs, Note 1))",
+      "60g / 4 tbsp  unsalted butter (, melted)",
+      "3 tsp gelatine powder (- essential (Note 2))",
+      "1/4 cup water",
+      "500g / 1 lb  cream cheese (, softened (block form, Note 3))",
+      "1/2 cup soft icing sugar / powdered sugar ((Note 4))",
+      "1 cup Nutella ((Note 5))",
+      "1 cup heavy/thickened cream",
+      "1/2 cup heavy/thickened cream",
+      "1/2 cup Nutella",
+      "1/4 cup dark chocolate chips/semi-sweet chocolate chips",
+      "1/4 cup hazelnuts (, lightly toasted then chopped (Note 6))",
+      "1/2 cup heavy/thickened cream ((for whipping))",
+      "3 tbsp Nutella (, warmed)"
+    ],
+    "cuisine": "Western",
+    "mealType": "Dessert",
+    "totalTime": null,
+    "totalTimeMinutes": null,
+    "servings": "12, 12 - 16",
+    "image": "https://www.recipetineats.com/tachyon/2021/03/Nutella-Cheesecake_2.jpg",
+    "instructionCount": 4,
+    "tokens": [
+      {
+        "all": [
+          "oreo",
+          "cooky",
+          "standard",
+          "pack",
+          "note"
+        ],
+        "strict": [
+          "oreo",
+          "cooky"
+        ]
+      },
+      {
+        "all": [
+          "unsalted",
+          "butter",
+          "melted"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "gelatine",
+          "powder",
+          "essential",
+          "note"
+        ],
+        "strict": [
+          "gelatine",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "water"
+        ],
+        "strict": [
+          "water"
+        ]
+      },
+      {
+        "all": [
+          "cream",
+          "cheese",
+          "softened",
+          "block",
+          "form",
+          "note"
+        ],
+        "strict": [
+          "cream",
+          "cheese"
+        ]
+      },
+      {
+        "all": [
+          "soft",
+          "icing",
+          "sugar",
+          "powdered",
+          "note"
+        ],
+        "strict": [
+          "soft",
+          "icing",
+          "sugar",
+          "powdered"
+        ]
+      },
+      {
+        "all": [
+          "nutella",
+          "note"
+        ],
+        "strict": [
+          "nutella"
+        ]
+      },
+      {
+        "all": [
+          "heavy",
+          "thickened",
+          "cream"
+        ],
+        "strict": [
+          "heavy",
+          "thickened",
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "heavy",
+          "thickened",
+          "cream"
+        ],
+        "strict": [
+          "heavy",
+          "thickened",
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "nutella"
+        ],
+        "strict": [
+          "nutella"
+        ]
+      },
+      {
+        "all": [
+          "dark",
+          "chocolate",
+          "chip",
+          "semi",
+          "sweet"
+        ],
+        "strict": [
+          "dark",
+          "chocolate",
+          "chip",
+          "semi",
+          "sweet"
+        ]
+      },
+      {
+        "all": [
+          "hazelnut",
+          "lightly",
+          "toasted",
+          "then",
+          "note"
+        ],
+        "strict": [
+          "hazelnut"
+        ]
+      },
+      {
+        "all": [
+          "heavy",
+          "thickened",
+          "cream",
+          "whipping"
+        ],
+        "strict": [
+          "heavy",
+          "thickened",
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "nutella",
+          "warmed"
+        ],
+        "strict": [
+          "nutella"
         ]
       }
     ]
