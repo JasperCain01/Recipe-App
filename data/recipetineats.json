@@ -31317,131 +31317,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/smoked-salmon-and-egg-breakfast-mille-feuille/",
-    "title": "Smoked Salmon and Egg Breakfast Mille-feuille",
-    "ingredients": [
-      "1  sheet store bought frozen puff pastry (, thawed (25 cm x 25cm / 10\" x 10\"))",
-      "8  eggs",
-      "1/4 cup cream or full cream milk ((double this for creamier eggs - Note 1))",
-      "1/2 to 3/4 tsp salt",
-      "Black pepper",
-      "2 tbsp butter",
-      "6 oz / 200g   smoked salmon",
-      "2/3 cup crème fraîche ((Note 2), plus more for serving (optional))",
-      "2 tbsp chives (, finely chopped, plus more for garnish)"
-    ],
-    "cuisine": null,
-    "mealType": "Breakfast",
-    "totalTime": "30 mins",
-    "totalTimeMinutes": 30,
-    "servings": "8",
-    "image": "https://www.recipetineats.com/tachyon/2015/07/Breakfast-Mille-feuille_680px_5-Main.jpg",
-    "instructionCount": 9,
-    "tokens": [
-      {
-        "all": [
-          "sheet",
-          "frozen",
-          "puff",
-          "pastry",
-          "thawed"
-        ],
-        "strict": [
-          "sheet",
-          "frozen",
-          "puff",
-          "pastry"
-        ]
-      },
-      {
-        "all": [
-          "egg"
-        ],
-        "strict": [
-          "egg"
-        ]
-      },
-      {
-        "all": [
-          "cream",
-          "full",
-          "milk",
-          "double",
-          "thi",
-          "creamier",
-          "egg",
-          "note"
-        ],
-        "strict": [
-          "cream"
-        ]
-      },
-      {
-        "all": [
-          "salt"
-        ],
-        "strict": [
-          "salt"
-        ]
-      },
-      {
-        "all": [
-          "black",
-          "pepper"
-        ],
-        "strict": [
-          "black",
-          "pepper"
-        ]
-      },
-      {
-        "all": [
-          "butter"
-        ],
-        "strict": [
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "smoked",
-          "salmon"
-        ],
-        "strict": [
-          "smoked",
-          "salmon"
-        ]
-      },
-      {
-        "all": [
-          "fra",
-          "che",
-          "note",
-          "more",
-          "serving"
-        ],
-        "strict": [
-          "fra",
-          "che",
-          "more",
-          "serving"
-        ]
-      },
-      {
-        "all": [
-          "chif",
-          "finely",
-          "more",
-          "garnish"
-        ],
-        "strict": [
-          "chif"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/oven-baked-honey-chili-lime-salmon-with-potatoes-and-beans-one-tray-meal/",
     "title": "One Tray Oven Baked Honey Chili Lime Salmon with Potatoes and Beans",
     "ingredients": [
@@ -31624,6 +31499,131 @@
         ],
         "strict": [
           "lime"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/smoked-salmon-and-egg-breakfast-mille-feuille/",
+    "title": "Smoked Salmon and Egg Breakfast Mille-feuille",
+    "ingredients": [
+      "1  sheet store bought frozen puff pastry (, thawed (25 cm x 25cm / 10\" x 10\"))",
+      "8  eggs",
+      "1/4 cup cream or full cream milk ((double this for creamier eggs - Note 1))",
+      "1/2 to 3/4 tsp salt",
+      "Black pepper",
+      "2 tbsp butter",
+      "6 oz / 200g   smoked salmon",
+      "2/3 cup crème fraîche ((Note 2), plus more for serving (optional))",
+      "2 tbsp chives (, finely chopped, plus more for garnish)"
+    ],
+    "cuisine": null,
+    "mealType": "Breakfast",
+    "totalTime": "30 mins",
+    "totalTimeMinutes": 30,
+    "servings": "8",
+    "image": "https://www.recipetineats.com/tachyon/2015/07/Breakfast-Mille-feuille_680px_5-Main.jpg",
+    "instructionCount": 9,
+    "tokens": [
+      {
+        "all": [
+          "sheet",
+          "frozen",
+          "puff",
+          "pastry",
+          "thawed"
+        ],
+        "strict": [
+          "sheet",
+          "frozen",
+          "puff",
+          "pastry"
+        ]
+      },
+      {
+        "all": [
+          "egg"
+        ],
+        "strict": [
+          "egg"
+        ]
+      },
+      {
+        "all": [
+          "cream",
+          "full",
+          "milk",
+          "double",
+          "thi",
+          "creamier",
+          "egg",
+          "note"
+        ],
+        "strict": [
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "salt"
+        ],
+        "strict": [
+          "salt"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "butter"
+        ],
+        "strict": [
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "smoked",
+          "salmon"
+        ],
+        "strict": [
+          "smoked",
+          "salmon"
+        ]
+      },
+      {
+        "all": [
+          "fra",
+          "che",
+          "note",
+          "more",
+          "serving"
+        ],
+        "strict": [
+          "fra",
+          "che",
+          "more",
+          "serving"
+        ]
+      },
+      {
+        "all": [
+          "chif",
+          "finely",
+          "more",
+          "garnish"
+        ],
+        "strict": [
+          "chif"
         ]
       }
     ]
@@ -222408,205 +222408,6 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/strawberry-cheesecake/",
-    "title": "Strawberry Cheesecake",
-    "ingredients": [
-      "200g / 7oz  Arnott's Marie crackers or other plain biscuit (Aus) or 28 Graham Cracker squares ((Note 1))",
-      "120 g / 8 tbsp  unsalted butter (, melted)",
-      "1 lb / 500g  cream cheese (, softened (Note 2))",
-      "2 tbsp plain flour ((all purpose flour))",
-      "1 tsp vanilla extract",
-      "1/2 cup sour cream ((full fat, sub sour cream))",
-      "1 1/2  cups caster sugar (superfine sugar)",
-      "Zest of 1 lemon",
-      "3  eggs (, at room temperature)",
-      "500g / 1 lb   strawberries (, half diced and half halved)",
-      "2 tbsp lemon juice OR water ((Note 3))",
-      "1/2 cup white sugar",
-      "1/2 tsp vanilla extract",
-      "1 1/2 tsp cornflour/cornstarch",
-      "2 tbsp water"
-    ],
-    "cuisine": "Western",
-    "mealType": "Dessert",
-    "totalTime": "445 mins",
-    "totalTimeMinutes": 445,
-    "servings": "12",
-    "image": "https://www.recipetineats.com/tachyon/2018/12/Strawberry-Cheesecake_8.jpg",
-    "instructionCount": 4,
-    "tokens": [
-      {
-        "all": [
-          "arnott",
-          "marie",
-          "cracker",
-          "other",
-          "plain",
-          "biscuit",
-          "aus",
-          "graham",
-          "squar",
-          "note"
-        ],
-        "strict": [
-          "arnott",
-          "marie",
-          "cracker"
-        ]
-      },
-      {
-        "all": [
-          "unsalted",
-          "butter",
-          "melted"
-        ],
-        "strict": [
-          "unsalted",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "cream",
-          "cheese",
-          "softened",
-          "note"
-        ],
-        "strict": [
-          "cream",
-          "cheese"
-        ]
-      },
-      {
-        "all": [
-          "plain",
-          "flour",
-          "all",
-          "purpose"
-        ],
-        "strict": [
-          "plain",
-          "flour"
-        ]
-      },
-      {
-        "all": [
-          "vanilla",
-          "extract"
-        ],
-        "strict": [
-          "vanilla",
-          "extract"
-        ]
-      },
-      {
-        "all": [
-          "sour",
-          "cream",
-          "full",
-          "fat",
-          "sub"
-        ],
-        "strict": [
-          "sour",
-          "cream"
-        ]
-      },
-      {
-        "all": [
-          "caster",
-          "sugar",
-          "superfine"
-        ],
-        "strict": [
-          "caster",
-          "sugar"
-        ]
-      },
-      {
-        "all": [
-          "zest",
-          "lemon"
-        ],
-        "strict": [
-          "zest",
-          "lemon"
-        ]
-      },
-      {
-        "all": [
-          "egg",
-          "room",
-          "temperature"
-        ],
-        "strict": [
-          "egg"
-        ]
-      },
-      {
-        "all": [
-          "strawberry",
-          "half",
-          "halved"
-        ],
-        "strict": [
-          "strawberry"
-        ]
-      },
-      {
-        "all": [
-          "lemon",
-          "juice",
-          "water",
-          "note"
-        ],
-        "strict": [
-          "lemon",
-          "juice"
-        ]
-      },
-      {
-        "all": [
-          "white",
-          "sugar"
-        ],
-        "strict": [
-          "white",
-          "sugar"
-        ]
-      },
-      {
-        "all": [
-          "vanilla",
-          "extract"
-        ],
-        "strict": [
-          "vanilla",
-          "extract"
-        ]
-      },
-      {
-        "all": [
-          "cornflour",
-          "cornstarch"
-        ],
-        "strict": [
-          "cornflour",
-          "cornstarch"
-        ]
-      },
-      {
-        "all": [
-          "water"
-        ],
-        "strict": [
-          "water"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/blueberry-cheesecake/",
     "title": "Blueberry Cheesecake",
     "ingredients": [
@@ -229648,233 +229449,6 @@
         ],
         "strict": [
           "pecan"
-        ]
-      }
-    ]
-  },
-  {
-    "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/black-forest-cake/",
-    "title": "Black Forest Cake (Schwarzwälder Kirschtorte)",
-    "ingredients": [
-      "6  large eggs (, at room temperature (Note 7))",
-      "1 tsp vanilla extract",
-      "1 1/4 cup caster sugar ((superfine sugar))",
-      "1/2 cup dutch processed cocoa powder ((or unsweetened regular cocoa power, Note 1))",
-      "2/3 cup plain flour ((all-purpose flour))",
-      "150g / 10.5 tbsp  unsalted butter (, melted and cooled)",
-      "670g / 23.5 oz  pitted morello cherries in syrup (sour cherries, in jar or can) (, drained and juice reserved (Note 2))",
-      "1/3 cup kirsch or cherry liqueur ((optional – sub with more reserved cherry juice, Note 3))",
-      "1/2 cup caster sugar ((superfine sugar))",
-      "4 tsp cornflour / cornstarch",
-      "4 cups / 1 litre   thickened / heavy cream ((Note 4))",
-      "2 tsp vanilla",
-      "1/3 cup soft icing sugar / powdered sugar ((Australia: Not pure icing sugar, Note 5))",
-      "100g / 3.5 oz  dark chocolate / bittersweet chocolate",
-      "12  maraschino or fresh cherries ((for decorating top of cake))"
-    ],
-    "cuisine": "German",
-    "mealType": "Dessert",
-    "totalTime": "60 mins",
-    "totalTimeMinutes": 60,
-    "servings": "12, 12 - 16 slices",
-    "image": "https://www.recipetineats.com/tachyon/2021/05/Black-Forest-Cake-new_8-1.jpg",
-    "instructionCount": 5,
-    "tokens": [
-      {
-        "all": [
-          "egg",
-          "room",
-          "temperature",
-          "note"
-        ],
-        "strict": [
-          "egg"
-        ]
-      },
-      {
-        "all": [
-          "vanilla",
-          "extract"
-        ],
-        "strict": [
-          "vanilla",
-          "extract"
-        ]
-      },
-      {
-        "all": [
-          "caster",
-          "sugar",
-          "superfine"
-        ],
-        "strict": [
-          "caster",
-          "sugar"
-        ]
-      },
-      {
-        "all": [
-          "dutch",
-          "processed",
-          "cocoa",
-          "powder",
-          "unsweetened",
-          "regular",
-          "power",
-          "note"
-        ],
-        "strict": [
-          "dutch",
-          "processed",
-          "cocoa",
-          "powder"
-        ]
-      },
-      {
-        "all": [
-          "plain",
-          "flour",
-          "all",
-          "purpose"
-        ],
-        "strict": [
-          "plain",
-          "flour"
-        ]
-      },
-      {
-        "all": [
-          "unsalted",
-          "butter",
-          "melted",
-          "cooled"
-        ],
-        "strict": [
-          "unsalted",
-          "butter"
-        ]
-      },
-      {
-        "all": [
-          "pitted",
-          "morello",
-          "cherry",
-          "syrup",
-          "sour",
-          "jar",
-          "can",
-          "drained",
-          "juice",
-          "reserved",
-          "note"
-        ],
-        "strict": [
-          "pitted",
-          "morello",
-          "cherry",
-          "syrup"
-        ]
-      },
-      {
-        "all": [
-          "kirsch",
-          "cherry",
-          "liqueur",
-          "sub",
-          "more",
-          "reserved",
-          "juice",
-          "note"
-        ],
-        "strict": [
-          "kirsch"
-        ]
-      },
-      {
-        "all": [
-          "caster",
-          "sugar",
-          "superfine"
-        ],
-        "strict": [
-          "caster",
-          "sugar"
-        ]
-      },
-      {
-        "all": [
-          "cornflour",
-          "cornstarch"
-        ],
-        "strict": [
-          "cornflour",
-          "cornstarch"
-        ]
-      },
-      {
-        "all": [
-          "litre",
-          "thickened",
-          "heavy",
-          "cream",
-          "note"
-        ],
-        "strict": [
-          "litre",
-          "thickened",
-          "heavy",
-          "cream"
-        ]
-      },
-      {
-        "all": [
-          "vanilla"
-        ],
-        "strict": [
-          "vanilla"
-        ]
-      },
-      {
-        "all": [
-          "soft",
-          "icing",
-          "sugar",
-          "powdered",
-          "australia",
-          "not",
-          "pure",
-          "note"
-        ],
-        "strict": [
-          "soft",
-          "icing",
-          "sugar",
-          "powdered"
-        ]
-      },
-      {
-        "all": [
-          "dark",
-          "chocolate",
-          "bittersweet"
-        ],
-        "strict": [
-          "dark",
-          "chocolate",
-          "bittersweet"
-        ]
-      },
-      {
-        "all": [
-          "maraschino",
-          "cherry",
-          "decorating",
-          "top",
-          "cake"
-        ],
-        "strict": [
-          "maraschino"
         ]
       }
     ]
@@ -282982,6 +282556,524 @@
   },
   {
     "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/homemade-everything-bagel-seasoning/",
+    "title": "Homemade Everything Bagel Seasoning",
+    "ingredients": [
+      "4 tsp white sesame seeds",
+      "2 tsp black sesame seeds",
+      "1 1/2 tsp poppy seeds",
+      "1 3/4 tsp onion flakes (or granules (Note 1))",
+      "1 3/4 tsp garlic flakes (or granules (Note 1))",
+      "1 tsp sea salt flakes (, or halve for cooking salt / kosher salt (table salt not recommended, too fine))"
+    ],
+    "cuisine": "American",
+    "mealType": null,
+    "totalTime": "5 mins",
+    "totalTimeMinutes": 5,
+    "servings": "4, 4 tbsp",
+    "image": "https://www.recipetineats.com/tachyon/2026/11/Everything-Seasoning_4.jpg",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "white",
+          "sesame",
+          "seed"
+        ],
+        "strict": [
+          "white",
+          "sesame",
+          "seed"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "sesame",
+          "seed"
+        ],
+        "strict": [
+          "black",
+          "sesame",
+          "seed"
+        ]
+      },
+      {
+        "all": [
+          "poppy",
+          "seed"
+        ],
+        "strict": [
+          "poppy",
+          "seed"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "flak",
+          "granul",
+          "note"
+        ],
+        "strict": [
+          "onion",
+          "flak"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "flak",
+          "granul",
+          "note"
+        ],
+        "strict": [
+          "garlic",
+          "flak"
+        ]
+      },
+      {
+        "all": [
+          "salt",
+          "flak",
+          "halve",
+          "cooking",
+          "kosher",
+          "table",
+          "not",
+          "recommended",
+          "too"
+        ],
+        "strict": [
+          "salt",
+          "flak"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/nutella-cheesecake-no-bake/",
+    "title": "Nutella Cheesecake (No Bake)",
+    "ingredients": [
+      "200g/ 7oz  Oreo cookies ((1.5 standard packs, Note 1))",
+      "60g / 4 tbsp  unsalted butter (, melted)",
+      "3 tsp gelatine powder (- essential (Note 2))",
+      "1/4 cup water",
+      "500g / 1 lb  cream cheese (, softened (block form, Note 3))",
+      "1/2 cup soft icing sugar / powdered sugar ((Note 4))",
+      "1 cup Nutella ((Note 5))",
+      "1 cup heavy/thickened cream",
+      "1/2 cup heavy/thickened cream",
+      "1/2 cup Nutella",
+      "1/4 cup dark chocolate chips/semi-sweet chocolate chips",
+      "1/4 cup hazelnuts (, lightly toasted then chopped (Note 6))",
+      "1/2 cup heavy/thickened cream ((for whipping))",
+      "3 tbsp Nutella (, warmed)"
+    ],
+    "cuisine": "Western",
+    "mealType": "Dessert",
+    "totalTime": null,
+    "totalTimeMinutes": null,
+    "servings": "12, 12 - 16",
+    "image": "https://www.recipetineats.com/tachyon/2021/03/Nutella-Cheesecake_2.jpg",
+    "instructionCount": 4,
+    "tokens": [
+      {
+        "all": [
+          "oreo",
+          "cooky",
+          "standard",
+          "pack",
+          "note"
+        ],
+        "strict": [
+          "oreo",
+          "cooky"
+        ]
+      },
+      {
+        "all": [
+          "unsalted",
+          "butter",
+          "melted"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "gelatine",
+          "powder",
+          "essential",
+          "note"
+        ],
+        "strict": [
+          "gelatine",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "water"
+        ],
+        "strict": [
+          "water"
+        ]
+      },
+      {
+        "all": [
+          "cream",
+          "cheese",
+          "softened",
+          "block",
+          "form",
+          "note"
+        ],
+        "strict": [
+          "cream",
+          "cheese"
+        ]
+      },
+      {
+        "all": [
+          "soft",
+          "icing",
+          "sugar",
+          "powdered",
+          "note"
+        ],
+        "strict": [
+          "soft",
+          "icing",
+          "sugar",
+          "powdered"
+        ]
+      },
+      {
+        "all": [
+          "nutella",
+          "note"
+        ],
+        "strict": [
+          "nutella"
+        ]
+      },
+      {
+        "all": [
+          "heavy",
+          "thickened",
+          "cream"
+        ],
+        "strict": [
+          "heavy",
+          "thickened",
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "heavy",
+          "thickened",
+          "cream"
+        ],
+        "strict": [
+          "heavy",
+          "thickened",
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "nutella"
+        ],
+        "strict": [
+          "nutella"
+        ]
+      },
+      {
+        "all": [
+          "dark",
+          "chocolate",
+          "chip",
+          "semi",
+          "sweet"
+        ],
+        "strict": [
+          "dark",
+          "chocolate",
+          "chip",
+          "semi",
+          "sweet"
+        ]
+      },
+      {
+        "all": [
+          "hazelnut",
+          "lightly",
+          "toasted",
+          "then",
+          "note"
+        ],
+        "strict": [
+          "hazelnut"
+        ]
+      },
+      {
+        "all": [
+          "heavy",
+          "thickened",
+          "cream",
+          "whipping"
+        ],
+        "strict": [
+          "heavy",
+          "thickened",
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "nutella",
+          "warmed"
+        ],
+        "strict": [
+          "nutella"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/black-forest-cake/",
+    "title": "Black Forest Cake (Schwarzwälder Kirschtorte)",
+    "ingredients": [
+      "6  large eggs (, at room temperature (Note 7))",
+      "1 tsp vanilla extract",
+      "1 1/4 cup caster sugar ((superfine sugar))",
+      "1/2 cup dutch processed cocoa powder ((or unsweetened regular cocoa power, Note 1))",
+      "2/3 cup plain flour ((all-purpose flour))",
+      "150g / 10.5 tbsp  unsalted butter (, melted and cooled)",
+      "670g / 23.5 oz  pitted morello cherries in syrup (sour cherries, in jar or can) (, drained and juice reserved (Note 2))",
+      "1/3 cup kirsch or cherry liqueur ((optional – sub with more reserved cherry juice, Note 3))",
+      "1/2 cup caster sugar ((superfine sugar))",
+      "4 tsp cornflour / cornstarch",
+      "4 cups / 1 litre   thickened / heavy cream ((Note 4))",
+      "2 tsp vanilla",
+      "1/3 cup soft icing sugar / powdered sugar ((Australia: Not pure icing sugar, Note 5))",
+      "100g / 3.5 oz  dark chocolate / bittersweet chocolate",
+      "12  maraschino or fresh cherries ((for decorating top of cake))"
+    ],
+    "cuisine": "German",
+    "mealType": "Dessert",
+    "totalTime": "60 mins",
+    "totalTimeMinutes": 60,
+    "servings": "12, 12 - 16 slices",
+    "image": "https://www.recipetineats.com/tachyon/2021/05/Black-Forest-Cake-new_8-1.jpg",
+    "instructionCount": 5,
+    "tokens": [
+      {
+        "all": [
+          "egg",
+          "room",
+          "temperature",
+          "note"
+        ],
+        "strict": [
+          "egg"
+        ]
+      },
+      {
+        "all": [
+          "vanilla",
+          "extract"
+        ],
+        "strict": [
+          "vanilla",
+          "extract"
+        ]
+      },
+      {
+        "all": [
+          "caster",
+          "sugar",
+          "superfine"
+        ],
+        "strict": [
+          "caster",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "dutch",
+          "processed",
+          "cocoa",
+          "powder",
+          "unsweetened",
+          "regular",
+          "power",
+          "note"
+        ],
+        "strict": [
+          "dutch",
+          "processed",
+          "cocoa",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "plain",
+          "flour",
+          "all",
+          "purpose"
+        ],
+        "strict": [
+          "plain",
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "unsalted",
+          "butter",
+          "melted",
+          "cooled"
+        ],
+        "strict": [
+          "unsalted",
+          "butter"
+        ]
+      },
+      {
+        "all": [
+          "pitted",
+          "morello",
+          "cherry",
+          "syrup",
+          "sour",
+          "jar",
+          "can",
+          "drained",
+          "juice",
+          "reserved",
+          "note"
+        ],
+        "strict": [
+          "pitted",
+          "morello",
+          "cherry",
+          "syrup"
+        ]
+      },
+      {
+        "all": [
+          "kirsch",
+          "cherry",
+          "liqueur",
+          "sub",
+          "more",
+          "reserved",
+          "juice",
+          "note"
+        ],
+        "strict": [
+          "kirsch"
+        ]
+      },
+      {
+        "all": [
+          "caster",
+          "sugar",
+          "superfine"
+        ],
+        "strict": [
+          "caster",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "cornflour",
+          "cornstarch"
+        ],
+        "strict": [
+          "cornflour",
+          "cornstarch"
+        ]
+      },
+      {
+        "all": [
+          "litre",
+          "thickened",
+          "heavy",
+          "cream",
+          "note"
+        ],
+        "strict": [
+          "litre",
+          "thickened",
+          "heavy",
+          "cream"
+        ]
+      },
+      {
+        "all": [
+          "vanilla"
+        ],
+        "strict": [
+          "vanilla"
+        ]
+      },
+      {
+        "all": [
+          "soft",
+          "icing",
+          "sugar",
+          "powdered",
+          "australia",
+          "not",
+          "pure",
+          "note"
+        ],
+        "strict": [
+          "soft",
+          "icing",
+          "sugar",
+          "powdered"
+        ]
+      },
+      {
+        "all": [
+          "dark",
+          "chocolate",
+          "bittersweet"
+        ],
+        "strict": [
+          "dark",
+          "chocolate",
+          "bittersweet"
+        ]
+      },
+      {
+        "all": [
+          "maraschino",
+          "cherry",
+          "decorating",
+          "top",
+          "cake"
+        ],
+        "strict": [
+          "maraschino"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
     "url": "https://www.recipetineats.com/one-pan-chicken-and-gravy-with-potatoes-and-vegetables/",
     "title": "One-Pan Chicken and Gravy with Potatoes and Vegetables",
     "ingredients": [
@@ -283002,7 +283094,7 @@
       "1/4 tsp black pepper",
       "1/3 cup plain flour / all-purpose flour",
       "2 1/2 cups beef stock/broth (, low sodium (yes, beef, not chicken! Note 3))",
-      "1 tsp dark soy *secret ingredient* (, optional, to make gravy rich brown plus deepens flavour, or use gravy browner (Note 3))",
+      "1 tsp dark soy *secret ingredient* (, optional, to make gravy rich brown plus deepens flavour, or use gravy browner (Note 4))",
       "1/2 tsp black pepper",
       "1 cup frozen peas (, leave out to thaw while chicken is baking)",
       "1 tsp thyme leaves (, for sprinkling (100% optional))"
@@ -283300,43 +283392,50 @@
   },
   {
     "sourceId": "recipetineats",
-    "url": "https://www.recipetineats.com/nutella-cheesecake-no-bake/",
-    "title": "Nutella Cheesecake (No Bake)",
+    "url": "https://www.recipetineats.com/strawberry-cheesecake/",
+    "title": "Strawberry Cheesecake",
     "ingredients": [
-      "200g/ 7oz  Oreo cookies ((1.5 standard packs, Note 1))",
-      "60g / 4 tbsp  unsalted butter (, melted)",
-      "3 tsp gelatine powder (- essential (Note 2))",
-      "1/4 cup water",
-      "500g / 1 lb  cream cheese (, softened (block form, Note 3))",
-      "1/2 cup soft icing sugar / powdered sugar ((Note 4))",
-      "1 cup Nutella ((Note 5))",
-      "1 cup heavy/thickened cream",
-      "1/2 cup heavy/thickened cream",
-      "1/2 cup Nutella",
-      "1/4 cup dark chocolate chips/semi-sweet chocolate chips",
-      "1/4 cup hazelnuts (, lightly toasted then chopped (Note 6))",
-      "1/2 cup heavy/thickened cream ((for whipping))",
-      "3 tbsp Nutella (, warmed)"
+      "200g / 7oz  Arnott's Marie crackers or other plain biscuit (Aus) or 28 Graham Cracker squares ((Note 1))",
+      "120 g / 8 tbsp  unsalted butter (, melted)",
+      "1 lb / 500g  cream cheese (, softened (Note 2))",
+      "2 tbsp plain flour ((all purpose flour))",
+      "1 tsp vanilla extract",
+      "1/2 cup sour cream ((full fat, substitute with thick plain yogurt))",
+      "1 1/2  cups caster sugar (superfine sugar)",
+      "Zest of 1 lemon",
+      "3  eggs (, at room temperature)",
+      "500g / 1 lb   strawberries (, half diced and half halved)",
+      "2 tbsp lemon juice OR water ((Note 3))",
+      "1/2 cup white sugar",
+      "1/2 tsp vanilla extract",
+      "1 1/2 tsp cornflour/cornstarch",
+      "2 tbsp water"
     ],
     "cuisine": "Western",
     "mealType": "Dessert",
-    "totalTime": null,
-    "totalTimeMinutes": null,
-    "servings": "12, 12 - 16",
-    "image": "https://www.recipetineats.com/tachyon/2021/03/Nutella-Cheesecake_2.jpg",
+    "totalTime": "445 mins",
+    "totalTimeMinutes": 445,
+    "servings": "12",
+    "image": "https://www.recipetineats.com/tachyon/2018/12/Strawberry-Cheesecake_8.jpg",
     "instructionCount": 4,
     "tokens": [
       {
         "all": [
-          "oreo",
-          "cooky",
-          "standard",
-          "pack",
+          "arnott",
+          "marie",
+          "cracker",
+          "other",
+          "plain",
+          "biscuit",
+          "aus",
+          "graham",
+          "squar",
           "note"
         ],
         "strict": [
-          "oreo",
-          "cooky"
+          "arnott",
+          "marie",
+          "cracker"
         ]
       },
       {
@@ -283352,31 +283451,9 @@
       },
       {
         "all": [
-          "gelatine",
-          "powder",
-          "essential",
-          "note"
-        ],
-        "strict": [
-          "gelatine",
-          "powder"
-        ]
-      },
-      {
-        "all": [
-          "water"
-        ],
-        "strict": [
-          "water"
-        ]
-      },
-      {
-        "all": [
           "cream",
           "cheese",
           "softened",
-          "block",
-          "form",
           "note"
         ],
         "strict": [
@@ -283386,108 +283463,802 @@
       },
       {
         "all": [
-          "soft",
-          "icing",
-          "sugar",
-          "powdered",
-          "note"
+          "plain",
+          "flour",
+          "all",
+          "purpose"
         ],
         "strict": [
-          "soft",
-          "icing",
-          "sugar",
-          "powdered"
+          "plain",
+          "flour"
         ]
       },
       {
         "all": [
-          "nutella",
-          "note"
+          "vanilla",
+          "extract"
         ],
         "strict": [
-          "nutella"
+          "vanilla",
+          "extract"
         ]
       },
       {
         "all": [
-          "heavy",
-          "thickened",
-          "cream"
-        ],
-        "strict": [
-          "heavy",
-          "thickened",
-          "cream"
-        ]
-      },
-      {
-        "all": [
-          "heavy",
-          "thickened",
-          "cream"
-        ],
-        "strict": [
-          "heavy",
-          "thickened",
-          "cream"
-        ]
-      },
-      {
-        "all": [
-          "nutella"
-        ],
-        "strict": [
-          "nutella"
-        ]
-      },
-      {
-        "all": [
-          "dark",
-          "chocolate",
-          "chip",
-          "semi",
-          "sweet"
-        ],
-        "strict": [
-          "dark",
-          "chocolate",
-          "chip",
-          "semi",
-          "sweet"
-        ]
-      },
-      {
-        "all": [
-          "hazelnut",
-          "lightly",
-          "toasted",
-          "then",
-          "note"
-        ],
-        "strict": [
-          "hazelnut"
-        ]
-      },
-      {
-        "all": [
-          "heavy",
-          "thickened",
+          "sour",
           "cream",
-          "whipping"
+          "full",
+          "fat",
+          "substitute",
+          "thick",
+          "plain",
+          "yogurt"
         ],
         "strict": [
-          "heavy",
-          "thickened",
+          "sour",
           "cream"
         ]
       },
       {
         "all": [
-          "nutella",
-          "warmed"
+          "caster",
+          "sugar",
+          "superfine"
         ],
         "strict": [
-          "nutella"
+          "caster",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "zest",
+          "lemon"
+        ],
+        "strict": [
+          "zest",
+          "lemon"
+        ]
+      },
+      {
+        "all": [
+          "egg",
+          "room",
+          "temperature"
+        ],
+        "strict": [
+          "egg"
+        ]
+      },
+      {
+        "all": [
+          "strawberry",
+          "half",
+          "halved"
+        ],
+        "strict": [
+          "strawberry"
+        ]
+      },
+      {
+        "all": [
+          "lemon",
+          "juice",
+          "water",
+          "note"
+        ],
+        "strict": [
+          "lemon",
+          "juice"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "sugar"
+        ],
+        "strict": [
+          "white",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "vanilla",
+          "extract"
+        ],
+        "strict": [
+          "vanilla",
+          "extract"
+        ]
+      },
+      {
+        "all": [
+          "cornflour",
+          "cornstarch"
+        ],
+        "strict": [
+          "cornflour",
+          "cornstarch"
+        ]
+      },
+      {
+        "all": [
+          "water"
+        ],
+        "strict": [
+          "water"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/bagels-recipe/",
+    "title": "Bagels",
+    "ingredients": [
+      "4 1/4 cups bread flour (, white (Note 1))",
+      "1 1/2 cups tap water (, warm (not hot))",
+      "1 3/4 tsp (6 g)  instant yeast / rapid rise yeast ((check it&#39;s still alive, Note 2 - also see Note 2 about active dry yeast))",
+      "2 tbsp (25 g)  white sugar ((any type - caster or regular))",
+      "2 3/4 tsp (15 g)  cooking salt / kosher salt ((if measuring with teaspoons, halve for table salt, +50% for salt flakes))",
+      "2 litres / 2 quarts  water",
+      "3 tbsp honey ((Note 3))",
+      "1 3/4 tsp (10 g)  baking soda ((bicarbonate of soda) (Note 3))",
+      "1  egg white (, at room temperature (from large egg 55 – 60g / 2 oz each))",
+      "1/2 tsp water",
+      "Everything Bagel Seasoning ((1 full batch will top 8 bagels, 1 1/2 tsp per bagel))",
+      "12 tsp white sesame seeds ((1 1/2 tsp per bagel))",
+      "8 tsp poppyseeds ((1 tsp per bagel))"
+    ],
+    "cuisine": "Western",
+    "mealType": null,
+    "totalTime": "1620 mins",
+    "totalTimeMinutes": 1620,
+    "servings": "8, 8 bagels",
+    "image": "https://www.recipetineats.com/tachyon/2026/11/Bagels_2.jpg",
+    "instructionCount": 5,
+    "tokens": [
+      {
+        "all": [
+          "bread",
+          "flour",
+          "white",
+          "note"
+        ],
+        "strict": [
+          "bread",
+          "flour"
+        ]
+      },
+      {
+        "all": [
+          "tap",
+          "water",
+          "warm",
+          "not",
+          "hot"
+        ],
+        "strict": [
+          "tap",
+          "water"
+        ]
+      },
+      {
+        "all": [
+          "instant",
+          "yeast",
+          "rapid",
+          "rise",
+          "check",
+          "still",
+          "alive",
+          "note",
+          "also",
+          "see",
+          "active",
+          "dry"
+        ],
+        "strict": [
+          "instant",
+          "yeast",
+          "rapid",
+          "rise"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "sugar",
+          "any",
+          "type",
+          "caster",
+          "regular"
+        ],
+        "strict": [
+          "white",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher",
+          "measuring",
+          "teaspoon",
+          "halve",
+          "table",
+          "flak"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "litr",
+          "quart",
+          "water"
+        ],
+        "strict": [
+          "litr",
+          "quart",
+          "water"
+        ]
+      },
+      {
+        "all": [
+          "honey",
+          "note"
+        ],
+        "strict": [
+          "honey"
+        ]
+      },
+      {
+        "all": [
+          "baking",
+          "soda",
+          "bicarbonate",
+          "note"
+        ],
+        "strict": [
+          "baking",
+          "soda"
+        ]
+      },
+      {
+        "all": [
+          "egg",
+          "white",
+          "room",
+          "temperature",
+          "each"
+        ],
+        "strict": [
+          "egg",
+          "white"
+        ]
+      },
+      {
+        "all": [
+          "water"
+        ],
+        "strict": [
+          "water"
+        ]
+      },
+      {
+        "all": [
+          "everything",
+          "bagel",
+          "seasoning",
+          "full",
+          "batch",
+          "will",
+          "top",
+          "per"
+        ],
+        "strict": [
+          "everything",
+          "bagel",
+          "seasoning"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "sesame",
+          "seed",
+          "per",
+          "bagel"
+        ],
+        "strict": [
+          "white",
+          "sesame",
+          "seed"
+        ]
+      },
+      {
+        "all": [
+          "poppyseed",
+          "per",
+          "bagel"
+        ],
+        "strict": [
+          "poppyseed"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/whipped-ricotta-one-pot-chicken-pasta/",
+    "title": "Whipped ricotta one pot chicken pasta",
+    "ingredients": [
+      "500g/1 lb   chicken thigh fillets (, cut into small bite size pieces (or breast or tenderloin))",
+      "1/2 tsp cooking salt/kosher salt",
+      "1/4 tsp black pepper",
+      "220g/ 7 oz  jar sun-dried tomato stripes in oil (, drained (RESERVE OIL) (Note 1))",
+      "3 tbsp oil  (from the sun dried tomato jar)",
+      "1  small onion (, finely diced)",
+      "2  garlic cloves (, finely minced)",
+      "1 tbsp tomato paste ((ok if you don't have))",
+      "1/4 cup dry white wine (, optional (Note 2))",
+      "400g/14 oz  canned crushed tomato",
+      "350g / 12oz   fusilli pasta (spirals) (, penne, ziti, macaroni, small shells or similar, uncooked)",
+      "1 litre / 4 cups  chicken stock/broth (, low sodium (sub water plus 1/2 tsp salt))",
+      "1/4 tsp cooking salt/kosher salt",
+      "1/4 tsp black pepper",
+      "1 cup basil leaves (, roughly chopped (can survive without), plus extra for garnish)",
+      "1/2 cup ricotta ((Paesanella is my preferred brand), full fat)",
+      "4 tbsp milk (, preferably full fat)",
+      "1/4 cup (packed) finely grated parmesan (, sub pinch of salt)"
+    ],
+    "cuisine": "Western",
+    "mealType": null,
+    "totalTime": "30 mins",
+    "totalTimeMinutes": 30,
+    "servings": "4, 4 - 5 people",
+    "image": "https://www.recipetineats.com/tachyon/2025/04/One-pot-whipped-ricotta-chicken-pasta-with-sun-dried-tomatoes_6a.jpg",
+    "instructionCount": 8,
+    "tokens": [
+      {
+        "all": [
+          "chicken",
+          "thigh",
+          "fillet",
+          "cut",
+          "bite",
+          "size",
+          "breast",
+          "tenderloin"
+        ],
+        "strict": [
+          "chicken",
+          "thigh",
+          "fillet"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "jar",
+          "sun",
+          "tomato",
+          "strip",
+          "oil",
+          "drained",
+          "reserve",
+          "note"
+        ],
+        "strict": [
+          "jar",
+          "sun",
+          "tomato",
+          "strip",
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "oil",
+          "sun",
+          "tomato",
+          "jar"
+        ],
+        "strict": [
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "onion",
+          "finely"
+        ],
+        "strict": [
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "finely"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "tomato",
+          "paste",
+          "you",
+          "don",
+          "have"
+        ],
+        "strict": [
+          "tomato",
+          "paste"
+        ]
+      },
+      {
+        "all": [
+          "dry",
+          "white",
+          "wine",
+          "note"
+        ],
+        "strict": [
+          "dry",
+          "white",
+          "wine"
+        ]
+      },
+      {
+        "all": [
+          "canned",
+          "crushed",
+          "tomato"
+        ],
+        "strict": [
+          "canned",
+          "crushed",
+          "tomato"
+        ]
+      },
+      {
+        "all": [
+          "fusilli",
+          "pasta",
+          "spiral",
+          "penne",
+          "ziti",
+          "macaroni",
+          "shell",
+          "similar",
+          "uncooked"
+        ],
+        "strict": [
+          "fusilli",
+          "pasta"
+        ]
+      },
+      {
+        "all": [
+          "litre",
+          "chicken",
+          "stock",
+          "broth",
+          "low",
+          "sodium",
+          "sub",
+          "water",
+          "salt"
+        ],
+        "strict": [
+          "litre",
+          "chicken",
+          "stock",
+          "broth"
+        ]
+      },
+      {
+        "all": [
+          "cooking",
+          "salt",
+          "kosher"
+        ],
+        "strict": [
+          "cooking",
+          "salt",
+          "kosher"
+        ]
+      },
+      {
+        "all": [
+          "black",
+          "pepper"
+        ],
+        "strict": [
+          "black",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "basil",
+          "leaf",
+          "roughly",
+          "can",
+          "survive",
+          "without",
+          "garnish"
+        ],
+        "strict": [
+          "basil",
+          "leaf",
+          "garnish"
+        ]
+      },
+      {
+        "all": [
+          "ricotta",
+          "paesanella",
+          "preferred",
+          "brand",
+          "full",
+          "fat"
+        ],
+        "strict": [
+          "ricotta",
+          "full",
+          "fat"
+        ]
+      },
+      {
+        "all": [
+          "milk",
+          "preferably",
+          "full",
+          "fat"
+        ],
+        "strict": [
+          "milk"
+        ]
+      },
+      {
+        "all": [
+          "packed",
+          "finely",
+          "parmesan",
+          "sub",
+          "pinch",
+          "salt"
+        ],
+        "strict": [
+          "finely",
+          "parmesan"
+        ]
+      }
+    ]
+  },
+  {
+    "sourceId": "recipetineats",
+    "url": "https://www.recipetineats.com/quick-chinese-bbq-pork-mince-bowls/",
+    "title": "Quick Chinese BBQ Pork Bowls",
+    "ingredients": [
+      "1 tbsp oil",
+      "1/2  onion (, chopped)",
+      "2  garlic cloves (, finely minced)",
+      "500g/ 1 lb   pork mince / ground pork ((or chicken or turkey))",
+      "1 tbsp (tightly packed) brown sugar ((or 1 1/2 tbsp honey))",
+      "3 tbsp hoisin sauce ((avoid orange hoisin eg. Ayam, Note 1))",
+      "1 tbsp dark soy sauce ((Note 2))",
+      "3/4 tsp Chinese five spice powder",
+      "Pinch white pepper (, or black pepper)",
+      "1/8 tsp red food colouring (, optional (for touch of Chinese BBQ Pork colour!))",
+      "White rice",
+      "Green onion (, finely sliced, and/or white sesame seeds)",
+      "Fresh veggies for the side - cucumber slices (, tomato, grated carrot, steamed broccoli)"
+    ],
+    "cuisine": "Chinese",
+    "mealType": null,
+    "totalTime": null,
+    "totalTimeMinutes": null,
+    "servings": "4",
+    "image": "https://www.recipetineats.com/tachyon/2026/11/Chinese-BBQ-Pork-Bowls-8.jpg",
+    "instructionCount": 2,
+    "tokens": [
+      {
+        "all": [
+          "oil"
+        ],
+        "strict": [
+          "oil"
+        ]
+      },
+      {
+        "all": [
+          "onion"
+        ],
+        "strict": [
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "garlic",
+          "clof",
+          "finely"
+        ],
+        "strict": [
+          "garlic",
+          "clof"
+        ]
+      },
+      {
+        "all": [
+          "pork",
+          "mince",
+          "chicken",
+          "turkey"
+        ],
+        "strict": [
+          "pork",
+          "mince"
+        ]
+      },
+      {
+        "all": [
+          "tightly",
+          "packed",
+          "brown",
+          "sugar",
+          "honey"
+        ],
+        "strict": [
+          "brown",
+          "sugar"
+        ]
+      },
+      {
+        "all": [
+          "hoisin",
+          "sauce",
+          "avoid",
+          "orange",
+          "ayam",
+          "note"
+        ],
+        "strict": [
+          "hoisin",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "dark",
+          "soy",
+          "sauce",
+          "note"
+        ],
+        "strict": [
+          "dark",
+          "soy",
+          "sauce"
+        ]
+      },
+      {
+        "all": [
+          "chinese",
+          "five",
+          "spice",
+          "powder"
+        ],
+        "strict": [
+          "chinese",
+          "five",
+          "spice",
+          "powder"
+        ]
+      },
+      {
+        "all": [
+          "pinch",
+          "white",
+          "pepper",
+          "black"
+        ],
+        "strict": [
+          "pinch",
+          "white",
+          "pepper"
+        ]
+      },
+      {
+        "all": [
+          "red",
+          "food",
+          "colouring",
+          "touch",
+          "chinese",
+          "bbq",
+          "pork",
+          "colour"
+        ],
+        "strict": [
+          "red",
+          "food",
+          "colouring"
+        ]
+      },
+      {
+        "all": [
+          "white",
+          "rice"
+        ],
+        "strict": [
+          "white",
+          "rice"
+        ]
+      },
+      {
+        "all": [
+          "green",
+          "onion",
+          "finely",
+          "white",
+          "sesame",
+          "seed"
+        ],
+        "strict": [
+          "green",
+          "onion"
+        ]
+      },
+      {
+        "all": [
+          "veggy",
+          "side",
+          "cucumber",
+          "slic",
+          "tomato",
+          "carrot",
+          "steamed",
+          "broccoli"
+        ],
+        "strict": [
+          "veggy",
+          "side",
+          "cucumber",
+          "slic"
         ]
       }
     ]
