@@ -10,6 +10,7 @@
     "build": "tsc && vite build",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
+    "test": "vitest run",
     "preview": "vite preview",
     "build-index": "node scripts/build-index.mjs",
     "dev:worker": "wrangler dev --config worker/wrangler.toml"
@@ -33,6 +34,7 @@
     "globals": "^17.5.0",
     "typescript": "^5.6.3",
     "vite": "^8.0.10",
+    "vitest": "^5.1.1",
     "wrangler": "^3.90.0"
   }
 }
