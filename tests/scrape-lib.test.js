@@ -60,13 +60,10 @@ describe("extractRecipeFromHtml", () => {
     });
   });
 
-  // KNOWN BUG, pinned with it.fails so the suite stays green until it is fixed.
   // A named HowToSection is the standard schema.org shape for sectioned
-  // instructions, but asStringArray() checks `name` before `itemListElement`,
-  // so the section's title is returned and every step inside it is lost. When
-  // the bug is fixed this test will start passing and it.fails will report it:
-  // change it.fails to it.
-  it.fails("expands named HowToSection instructions into their steps", () => {
+  // instructions. Regression: the section's name used to be returned instead
+  // of its steps, losing every step inside it.
+  it("expands named HowToSection instructions into their steps", () => {
     const html = page(
       ldJson({
         "@type": "Recipe",
@@ -90,6 +87,18 @@ describe("extractRecipeFromHtml", () => {
       "Coat the chicken.",
       "Grill.",
     ]);
+
+    // A HowToStep whose directions are nested rather than given as text.
+    const nested = page(
+      ldJson({
+        "@type": "Recipe",
+        name: "Nested",
+        recipeInstructions: [
+          { "@type": "HowToStep", name: "Step 1", itemListElement: [{ "@type": "HowToDirection", text: "Whisk." }] },
+        ],
+      }),
+    );
+    expect(extractRecipeFromHtml(nested, "u").instructions).toEqual(["Whisk."]);
   });
 
   it("skips an unparseable JSON-LD block and a non-recipe block to find the recipe after them", () => {

@@ -308,9 +308,12 @@ function asStringArray(value) {
   if (typeof value === "object") {
     // Schema HowToStep: { "@type": "HowToStep", "text": "..." }
     if (value.text) return [asString(value.text)].filter(Boolean);
-    if (value.name && !value.text) return [asString(value.name)].filter(Boolean);
-    // HowToSection: { "@type": "HowToSection", "itemListElement": [...] }
+    // HowToSection: { "@type": "HowToSection", "name": "Marinate", "itemListElement": [...] }
+    // Checked before `name`: a section's name is only its heading, and its
+    // steps are in itemListElement. (Also covers a HowToStep whose directions
+    // are nested as itemListElement rather than given as text.)
     if (value.itemListElement) return asStringArray(value.itemListElement);
+    if (value.name) return [asString(value.name)].filter(Boolean);
   }
   return [];
 }

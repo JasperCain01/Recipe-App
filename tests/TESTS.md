@@ -19,7 +19,7 @@ Severity describes what goes wrong for users if the guarded behaviour breaks:
 | Test | Purpose | Severity |
 |---|---|---|
 | finds a Recipe inside a Yoast-style @graph and normalises every field | The full shape `extractRecipeFromHtml` returns, from the nested layout most WordPress recipe sites use: title, trimmed description, image from an ImageObject array, ISO durations formatted, array fields joined, ingredients, steps, nutrition and author. | High |
-| expands named HowToSection instructions into their steps (`it.fails`, **known bug**) | Sectioned methods (`HowToSection` with a `name`) currently come back as their section titles, with every step inside them lost, because `asStringArray()` checks `name` before `itemListElement`. Pinned as an expected failure so the suite stays green. When the bug is fixed this test will report itself; change `it.fails` to `it`. | High |
+| expands named HowToSection instructions into their steps | Sectioned methods (`HowToSection` with a `name`) yield the steps inside each section, as do steps whose directions are nested. Regression: the scraper used to return the section titles and drop every step in them. | High |
 | skips an unparseable JSON-LD block and a non-recipe block to find the recipe after them | One malformed block on a page doesn't hide its recipe; `@type` arrays are recognised. | Medium |
 | formats ISO durations, falls back to cookTime, and passes non-ISO text through | `PT1H30M` → `1h 30m`, which `recipe-meta` then converts to minutes for the time filter. | Medium |
 | throws distinct errors for a page with no structured data and one with no Recipe | The build log can tell "page blocked or redesigned" from "not a recipe page". | Low |
